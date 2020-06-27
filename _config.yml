@@ -22,7 +22,7 @@ title: Ted Kim
 email: tedkim97@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My Blog/Portfolio Site
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "tedkim97.github.io" # the subpath of your site, e.g. /blog
 url: "tedkim97.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  tedkim97
 linkedin_username: tedkim
