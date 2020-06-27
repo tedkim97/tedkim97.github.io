@@ -1,0 +1,1253 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "id": "Young Jeezy"
+        },
+        {
+            "id": "Compton's Most Wanted"
+        },
+        {
+            "id": "Noreaga"
+        },
+        {
+            "id": "Three 6 Mafia"
+        },
+        {
+            "id": "Snoop Dogg"
+        },
+        {
+            "id": "Luke"
+        },
+        {
+            "id": "50 Cent"
+        },
+        {
+            "id": "U.N.L.V."
+        },
+        {
+            "id": "Pusha T"
+        },
+        {
+            "id": "MC Eiht"
+        },
+        {
+            "id": "Jadakiss"
+        },
+        {
+            "id": "Eazy-E"
+        },
+        {
+            "id": "Mobb Deep"
+        },
+        {
+            "id": "Royce da 5'9\""
+        },
+        {
+            "id": "Roxanne Shante"
+        },
+        {
+            "id": "T.I."
+        },
+        {
+            "id": "Eminem"
+        },
+        {
+            "id": "Cam'ron"
+        },
+        {
+            "id": "Company Flow"
+        },
+        {
+            "id": "Jay-Z"
+        },
+        {
+            "id": "Rick Ross"
+        },
+        {
+            "id": "Lauryn Hill"
+        },
+        {
+            "id": "Nas"
+        },
+        {
+            "id": "MC Lyte"
+        },
+        {
+            "id": "2Pac"
+        },
+        {
+            "id": "MC Shan"
+        },
+        {
+            "id": "Remy Ma"
+        },
+        {
+            "id": "Drake"
+        },
+        {
+            "id": "LL Cool J"
+        },
+        {
+            "id": "Tim Dog"
+        },
+        {
+            "id": "DJ Quik"
+        },
+        {
+            "id": "Gucci Mane"
+        },
+        {
+            "id": "Boogie Down Productions"
+        },
+        {
+            "id": "Common"
+        },
+        {
+            "id": "Canibus"
+        },
+        {
+            "id": "Dr. Dre"
+        },
+        {
+            "id": "Ice Cube"
+        },
+        {
+            "id": "BDP"
+        },
+        {
+            "id": "Kool Moe Dee"
+        },
+        {
+            "id": "Tha Dogg Pound"
+        },
+        {
+            "id": "The Notorious B.I.G."
+        },
+        {
+            "id": "Cypress Hill"
+        },
+        {
+            "id": "Capone-N-Noreaga"
+        },
+        {
+            "id": "Nicki Minaj"
+        },
+        {
+            "id": "Lil Kim"
+        },
+        {
+            "id": "Falling in Reverse"
+        },
+        {
+            "id": "Santaflow"
+        },
+        {
+            "id": "Meek Mill"
+        },
+        {
+            "id": "B.o.B"
+        },
+        {
+            "id": "TYSON "
+        },
+        {
+            "id": "Lil Wayne"
+        },
+        {
+            "id": "Tempo"
+        },
+        {
+            "id": "Residente"
+        },
+        {
+            "id": "Trippie Redd "
+        },
+        {
+            "id": "Machine Gun Kelly"
+        },
+        {
+            "id": "Nick Cannon"
+        },
+        {
+            "id": "Megan Thee Stallion"
+        },
+        {
+            "id": "Bustdown"
+        },
+        {
+            "id": "The Black Squad"
+        },
+        {
+            "id": "E.D.I. Mean"
+        },
+        {
+            "id": "Gangsta Dresta"
+        },
+        {
+            "id": "B.G. Knocc Out"
+        },
+        {
+            "id": "Poison Clan"
+        },
+        {
+            "id": "Prince Eazy"
+        },
+        {
+            "id": "Charlie Clips"
+        },
+        {
+            "id": "Neil DeGrasse Tyson"
+        },
+        {
+            "id": "Suge Knight"
+        },
+        {
+            "id": "The-Dream"
+        },
+        {
+            "id": "D12"
+        },
+        {
+            "id": "Hitman Holla"
+        },
+        {
+            "id": "Jim Jones"
+        },
+        {
+            "id": "Dresta"
+        },
+        {
+            "id": "Tadoe"
+        },
+        {
+            "id": "The Outlawz"
+        },
+        {
+            "id": "French Montana"
+        },
+        {
+            "id": "Ty Nitty"
+        },
+        {
+            "id": "Chief Keef"
+        },
+        {
+            "id": "Young Noble"
+        },
+        {
+            "id": "Carmen"
+        },
+        {
+            "id": "Escape the Fate"
+        },
+        {
+            "id": "Ja Rule"
+        },
+        {
+            "id": "Michel'le"
+        },
+        {
+            "id": "Mariah Carey"
+        },
+        {
+            "id": "Puff Daddy"
+        },
+        {
+            "id": "Prodigy"
+        },
+        {
+            "id": "MC Antoinette"
+        },
+        {
+            "id": "Kid N Play"
+        },
+        {
+            "id": "Puffy"
+        },
+        {
+            "id": "Ghostface Killah"
+        },
+        {
+            "id": "Mystikal"
+        },
+        {
+            "id": "Shyne"
+        },
+        {
+            "id": "Xzibit"
+        },
+        {
+            "id": "Queensbridge"
+        },
+        {
+            "id": "Haitian Jack"
+        },
+        {
+            "id": "Marley Marl"
+        },
+        {
+            "id": "Junior M.A.F.I.A."
+        },
+        {
+            "id": "Mack 10"
+        },
+        {
+            "id": "Cold 187um"
+        },
+        {
+            "id": "Cormega"
+        },
+        {
+            "id": "King Tut"
+        },
+        {
+            "id": "Dave Mays"
+        },
+        {
+            "id": "Lil Flip"
+        },
+        {
+            "id": "Dilated Peoples"
+        },
+        {
+            "id": "MC Hammer"
+        },
+        {
+            "id": "Raekwon"
+        },
+        {
+            "id": "Chino XL"
+        },
+        {
+            "id": "Jeru the Damaja"
+        },
+        {
+            "id": "Jerry Heller"
+        },
+        {
+            "id": "New York Rappers"
+        },
+        {
+            "id": "South Bronx"
+        },
+        {
+            "id": "L.O.D."
+        },
+        {
+            "id": "Max Green"
+        },
+        {
+            "id": "Ice-T"
+        },
+        {
+            "id": "Tragedy Khadafi"
+        },
+        {
+            "id": "Kurupt"
+        },
+        {
+            "id": "Bad Boy"
+        },
+        {
+            "id": "Jeezy"
+        },
+        {
+            "id": "Juice Crew"
+        },
+        {
+            "id": "Limp Bizkit"
+        },
+        {
+            "id": "Kanye West"
+        },
+        {
+            "id": "Wyclef"
+        },
+        {
+            "id": "The Fugees"
+        },
+        {
+            "id": "Kelis"
+        },
+        {
+            "id": "Tory Lanez"
+        },
+        {
+            "id": "Stan Spit"
+        },
+        {
+            "id": "Stretch"
+        },
+        {
+            "id": "Def Squad"
+        },
+        {
+            "id": "Fat Joe"
+        },
+        {
+            "id": "WC"
+        },
+        {
+            "id": "Jimmy Henchmen"
+        },
+        {
+            "id": "DJ Premier"
+        },
+        {
+            "id": "Keith Murray"
+        },
+        {
+            "id": "Sole"
+        },
+        {
+            "id": "Foxy Brown"
+        },
+        {
+            "id": "Bone Thugs-N-Harmony"
+        },
+        {
+            "id": "Entire Murder Inc. Roster"
+        },
+        {
+            "id": "N.W.A"
+        },
+        {
+            "id": "6ix9ine"
+        },
+        {
+            "id": "Porta"
+        },
+        {
+            "id": "De La Soul"
+        },
+        {
+            "id": "Benzino"
+        },
+        {
+            "id": "Nature"
+        },
+        {
+            "id": "Everlast"
+        }
+    ],
+    "links": [
+        {
+            "weight": 1,
+            "source": "Young Jeezy",
+            "target": "Gucci Mane"
+        },
+        {
+            "weight": 1,
+            "source": "Compton's Most Wanted",
+            "target": "Tim Dog"
+        },
+        {
+            "weight": 1,
+            "source": "Noreaga",
+            "target": "Tragedy Khadafi"
+        },
+        {
+            "weight": 2,
+            "source": "Three 6 Mafia",
+            "target": "Bone Thugs-N-Harmony"
+        },
+        {
+            "weight": 1,
+            "source": "Snoop Dogg",
+            "target": "Kurupt"
+        },
+        {
+            "weight": 1,
+            "source": "Snoop Dogg",
+            "target": "Suge Knight"
+        },
+        {
+            "weight": 4,
+            "source": "Snoop Dogg",
+            "target": "Eazy-E"
+        },
+        {
+            "weight": 1,
+            "source": "Snoop Dogg",
+            "target": "Gangsta Dresta"
+        },
+        {
+            "weight": 2,
+            "source": "Snoop Dogg",
+            "target": "B.G. Knocc Out"
+        },
+        {
+            "weight": 2,
+            "source": "Snoop Dogg",
+            "target": "Luke"
+        },
+        {
+            "weight": 2,
+            "source": "Snoop Dogg",
+            "target": "Tim Dog"
+        },
+        {
+            "weight": 1,
+            "source": "Snoop Dogg",
+            "target": "Dresta"
+        },
+        {
+            "weight": 1,
+            "source": "Luke",
+            "target": "Kid N Play"
+        },
+        {
+            "weight": 2,
+            "source": "Luke",
+            "target": "Dr. Dre"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Nas"
+        },
+        {
+            "weight": 2,
+            "source": "50 Cent",
+            "target": "Jadakiss"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Mobb Deep"
+        },
+        {
+            "weight": 3,
+            "source": "50 Cent",
+            "target": "Ja Rule"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Kelis"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Shyne"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Fat Joe"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Lil Kim"
+        },
+        {
+            "weight": 1,
+            "source": "50 Cent",
+            "target": "Entire Murder Inc. Roster"
+        },
+        {
+            "weight": 1,
+            "source": "U.N.L.V.",
+            "target": "Mystikal"
+        },
+        {
+            "weight": 2,
+            "source": "Pusha T",
+            "target": "Lil Wayne"
+        },
+        {
+            "weight": 3,
+            "source": "Pusha T",
+            "target": "Drake"
+        },
+        {
+            "weight": 2,
+            "source": "MC Eiht",
+            "target": "DJ Quik"
+        },
+        {
+            "weight": 4,
+            "source": "Eazy-E",
+            "target": "Dr. Dre"
+        },
+        {
+            "weight": 1,
+            "source": "Eazy-E",
+            "target": "Tha Dogg Pound"
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "Def Squad"
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "L.O.D."
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "Keith Murray"
+        },
+        {
+            "weight": 6,
+            "source": "Mobb Deep",
+            "target": "2Pac"
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "E.D.I. Mean"
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "Young Noble"
+        },
+        {
+            "weight": 2,
+            "source": "Mobb Deep",
+            "target": "The Outlawz"
+        },
+        {
+            "weight": 1,
+            "source": "Mobb Deep",
+            "target": "Foxy Brown"
+        },
+        {
+            "weight": 1,
+            "source": "Royce da 5'9\"",
+            "target": "D12"
+        },
+        {
+            "weight": 2,
+            "source": "Roxanne Shante",
+            "target": "BDP"
+        },
+        {
+            "weight": 1,
+            "source": "T.I.",
+            "target": "Lil Flip"
+        },
+        {
+            "weight": 2,
+            "source": "Eminem",
+            "target": "Dilated Peoples"
+        },
+        {
+            "weight": 2,
+            "source": "Eminem",
+            "target": "Everlast"
+        },
+        {
+            "weight": 2,
+            "source": "Eminem",
+            "target": "Limp Bizkit"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Dave Mays"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Benzino"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Mariah Carey"
+        },
+        {
+            "weight": 4,
+            "source": "Eminem",
+            "target": "Nick Cannon"
+        },
+        {
+            "weight": 2,
+            "source": "Eminem",
+            "target": "Machine Gun Kelly"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Suge Knight"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Hitman Holla"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Charlie Clips"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Prince Eazy"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "The Black Squad"
+        },
+        {
+            "weight": 1,
+            "source": "Eminem",
+            "target": "Eminem"
+        },
+        {
+            "weight": 1,
+            "source": "Cam'ron",
+            "target": "Nas"
+        },
+        {
+            "weight": 1,
+            "source": "Cam'ron",
+            "target": "Stan Spit"
+        },
+        {
+            "weight": 1,
+            "source": "Company Flow",
+            "target": "Sole"
+        },
+        {
+            "weight": 1,
+            "source": "Jay-Z",
+            "target": "Carmen"
+        },
+        {
+            "weight": 4,
+            "source": "Jay-Z",
+            "target": "Nas"
+        },
+        {
+            "weight": 2,
+            "source": "Jay-Z",
+            "target": "2Pac"
+        },
+        {
+            "weight": 1,
+            "source": "Jay-Z",
+            "target": "E.D.I. Mean"
+        },
+        {
+            "weight": 1,
+            "source": "Jay-Z",
+            "target": "Young Noble"
+        },
+        {
+            "weight": 1,
+            "source": "Jay-Z",
+            "target": "Prodigy"
+        },
+        {
+            "weight": 1,
+            "source": "Rick Ross",
+            "target": "Common"
+        },
+        {
+            "weight": 1,
+            "source": "Lauryn Hill",
+            "target": "The Fugees"
+        },
+        {
+            "weight": 1,
+            "source": "Lauryn Hill",
+            "target": "Wyclef"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "Jim Jones"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "Prodigy"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "Nature"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "Cormega"
+        },
+        {
+            "weight": 2,
+            "source": "Nas",
+            "target": "2Pac"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "E.D.I. Mean"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "Young Noble"
+        },
+        {
+            "weight": 1,
+            "source": "Nas",
+            "target": "The Notorious B.I.G."
+        },
+        {
+            "weight": 1,
+            "source": "MC Lyte",
+            "target": "MC Antoinette"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Bad Boy"
+        },
+        {
+            "weight": 5,
+            "source": "2Pac",
+            "target": "The Notorious B.I.G."
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Xzibit"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "De La Soul"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Puff Daddy"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Jimmy Henchmen"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Haitian Jack"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "Stretch"
+        },
+        {
+            "weight": 1,
+            "source": "2Pac",
+            "target": "King Tut"
+        },
+        {
+            "weight": 2,
+            "source": "2Pac",
+            "target": "Puffy"
+        },
+        {
+            "weight": 2,
+            "source": "2Pac",
+            "target": "Junior M.A.F.I.A."
+        },
+        {
+            "weight": 2,
+            "source": "2Pac",
+            "target": "Lil Kim"
+        },
+        {
+            "weight": 2,
+            "source": "2Pac",
+            "target": "Chino XL"
+        },
+        {
+            "weight": 1,
+            "source": "MC Shan",
+            "target": "South Bronx"
+        },
+        {
+            "weight": 2,
+            "source": "MC Shan",
+            "target": "BDP"
+        },
+        {
+            "weight": 1,
+            "source": "MC Shan",
+            "target": "Boogie Down Productions"
+        },
+        {
+            "weight": 3,
+            "source": "Remy Ma",
+            "target": "Nicki Minaj"
+        },
+        {
+            "weight": 1,
+            "source": "Remy Ma",
+            "target": "Drake"
+        },
+        {
+            "weight": 1,
+            "source": "Remy Ma",
+            "target": "Lil Wayne"
+        },
+        {
+            "weight": 1,
+            "source": "Drake",
+            "target": "Common"
+        },
+        {
+            "weight": 1,
+            "source": "Drake",
+            "target": "Kanye West"
+        },
+        {
+            "weight": 3,
+            "source": "Drake",
+            "target": "Meek Mill"
+        },
+        {
+            "weight": 4,
+            "source": "LL Cool J",
+            "target": "Kool Moe Dee"
+        },
+        {
+            "weight": 2,
+            "source": "LL Cool J",
+            "target": "Ice-T"
+        },
+        {
+            "weight": 2,
+            "source": "LL Cool J",
+            "target": "MC Hammer"
+        },
+        {
+            "weight": 2,
+            "source": "LL Cool J",
+            "target": "Canibus"
+        },
+        {
+            "weight": 2,
+            "source": "Tim Dog",
+            "target": "N.W.A"
+        },
+        {
+            "weight": 2,
+            "source": "Tim Dog",
+            "target": "Dr. Dre"
+        },
+        {
+            "weight": 1,
+            "source": "Tim Dog",
+            "target": "DJ Quik"
+        },
+        {
+            "weight": 1,
+            "source": "Tim Dog",
+            "target": "Ice Cube"
+        },
+        {
+            "weight": 1,
+            "source": "Tim Dog",
+            "target": "Michel'le"
+        },
+        {
+            "weight": 1,
+            "source": "Gucci Mane",
+            "target": "Jeezy"
+        },
+        {
+            "weight": 1,
+            "source": "Boogie Down Productions",
+            "target": "Juice Crew"
+        },
+        {
+            "weight": 1,
+            "source": "Boogie Down Productions",
+            "target": "Marley Marl"
+        },
+        {
+            "weight": 1,
+            "source": "Boogie Down Productions",
+            "target": "Queensbridge"
+        },
+        {
+            "weight": 1,
+            "source": "Common",
+            "target": "French Montana"
+        },
+        {
+            "weight": 2,
+            "source": "Common",
+            "target": "Ice Cube"
+        },
+        {
+            "weight": 1,
+            "source": "Common",
+            "target": "Mack 10"
+        },
+        {
+            "weight": 1,
+            "source": "Common",
+            "target": "WC"
+        },
+        {
+            "weight": 1,
+            "source": "Dr. Dre",
+            "target": "Gangsta Dresta"
+        },
+        {
+            "weight": 2,
+            "source": "Dr. Dre",
+            "target": "B.G. Knocc Out"
+        },
+        {
+            "weight": 1,
+            "source": "Dr. Dre",
+            "target": "Dresta"
+        },
+        {
+            "weight": 1,
+            "source": "Ice Cube",
+            "target": "Jerry Heller"
+        },
+        {
+            "weight": 1,
+            "source": "Ice Cube",
+            "target": "N.W.A"
+        },
+        {
+            "weight": 1,
+            "source": "Ice Cube",
+            "target": "Cypress Hill"
+        },
+        {
+            "weight": 1,
+            "source": "BDP",
+            "target": "Juice Crew"
+        },
+        {
+            "weight": 1,
+            "source": "BDP",
+            "target": "Marley Marl"
+        },
+        {
+            "weight": 1,
+            "source": "Tha Dogg Pound",
+            "target": "B.G. Knocc Out"
+        },
+        {
+            "weight": 1,
+            "source": "Tha Dogg Pound",
+            "target": "Dresta"
+        },
+        {
+            "weight": 1,
+            "source": "Tha Dogg Pound",
+            "target": "Cold 187um"
+        },
+        {
+            "weight": 1,
+            "source": "Tha Dogg Pound",
+            "target": "New York Rappers"
+        },
+        {
+            "weight": 1,
+            "source": "Tha Dogg Pound",
+            "target": "Capone-N-Noreaga"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "E.D.I. Mean"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "Young Noble"
+        },
+        {
+            "weight": 2,
+            "source": "The Notorious B.I.G.",
+            "target": "The Outlawz"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "Jeru the Damaja"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "Raekwon"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "Ghostface Killah"
+        },
+        {
+            "weight": 1,
+            "source": "The Notorious B.I.G.",
+            "target": "DJ Premier"
+        },
+        {
+            "weight": 3,
+            "source": "Nicki Minaj",
+            "target": "Lil Kim"
+        },
+        {
+            "weight": 2,
+            "source": "Lil Kim",
+            "target": "The Outlawz"
+        },
+        {
+            "weight": 1,
+            "source": "Lil Kim",
+            "target": "Foxy Brown"
+        },
+        {
+            "weight": 1,
+            "source": "Falling in Reverse",
+            "target": "Escape the Fate"
+        },
+        {
+            "weight": 1,
+            "source": "Falling in Reverse",
+            "target": "Max Green"
+        },
+        {
+            "weight": 1,
+            "source": "Santaflow",
+            "target": "Porta"
+        },
+        {
+            "weight": 2,
+            "source": "B.o.B",
+            "target": "Neil DeGrasse Tyson"
+        },
+        {
+            "weight": 1,
+            "source": "B.o.B",
+            "target": "TYSON "
+        },
+        {
+            "weight": 1,
+            "source": "Lil Wayne",
+            "target": "The-Dream"
+        },
+        {
+            "weight": 4,
+            "source": "Tempo",
+            "target": "Residente"
+        },
+        {
+            "weight": 1,
+            "source": "Trippie Redd ",
+            "target": "6ix9ine"
+        },
+        {
+            "weight": 1,
+            "source": "Megan Thee Stallion",
+            "target": "Tory Lanez"
+        },
+        {
+            "weight": 1,
+            "source": "Bustdown",
+            "target": "Kid N Play"
+        },
+        {
+            "weight": 1,
+            "source": "E.D.I. Mean",
+            "target": "Bad Boy"
+        },
+        {
+            "weight": 1,
+            "source": "E.D.I. Mean",
+            "target": "Xzibit"
+        },
+        {
+            "weight": 1,
+            "source": "Poison Clan",
+            "target": "Kid N Play"
+        },
+        {
+            "weight": 1,
+            "source": "D12",
+            "target": "Dilated Peoples"
+        },
+        {
+            "weight": 1,
+            "source": "D12",
+            "target": "Limp Bizkit"
+        },
+        {
+            "weight": 1,
+            "source": "D12",
+            "target": "Everlast"
+        },
+        {
+            "weight": 1,
+            "source": "Tadoe",
+            "target": "6ix9ine"
+        },
+        {
+            "weight": 2,
+            "source": "The Outlawz",
+            "target": "Puffy"
+        },
+        {
+            "weight": 2,
+            "source": "The Outlawz",
+            "target": "Junior M.A.F.I.A."
+        },
+        {
+            "weight": 2,
+            "source": "The Outlawz",
+            "target": "Chino XL"
+        },
+        {
+            "weight": 1,
+            "source": "Ty Nitty",
+            "target": "Def Squad"
+        },
+        {
+            "weight": 1,
+            "source": "Ty Nitty",
+            "target": "L.O.D."
+        },
+        {
+            "weight": 1,
+            "source": "Ty Nitty",
+            "target": "Keith Murray"
+        },
+        {
+            "weight": 1,
+            "source": "Chief Keef",
+            "target": "6ix9ine"
+        },
+        {
+            "weight": 1,
+            "source": "Young Noble",
+            "target": "Bad Boy"
+        },
+        {
+            "weight": 1,
+            "source": "Young Noble",
+            "target": "Xzibit"
+        }
+    ]
+}

@@ -1,6 +1,30 @@
 ---
 layout: page
-title: "Technical Posts"
+title: "Technical Content"
+order: 2
+permalink: technical
 ---
 
-[Enter Table of Contents for technical posts with here]
+Here are my more technical past-projects or guides. If you find anything that's incorrect or have any improvements feel free to shoot me an email. 
+
+<ul class="list-of-posts">
+{% for node in site.posts %}
+{% if node.technical == true %}
+  {% if node.layout == "post" %}
+  <li class="sans-marker">
+    <a href="{{ node.url }}"> <b> {{ node.title }} </b> </a> <br>
+    {% if node.subtitle != nil %}
+    <span> <i> {{ node.subtitle }} </i> </span> <br>
+    {% endif %}
+    <span> {{ node.date | date: '%B %d, %Y'}} </span> <br>
+    {% if node.concepts %}
+      {% for concept in node.concepts %}
+        <span class="post-concept">{{ concept }}</span>
+      {% endfor %}
+      <br>
+    {% endif %}
+  </li>
+  {% endif %}
+{% endif %}
+{% endfor %}
+</ul>

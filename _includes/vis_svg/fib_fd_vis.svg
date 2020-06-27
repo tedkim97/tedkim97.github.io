@@ -1,0 +1,47 @@
+<svg viewBox="0 0 400 400">
+  <g transform="scale(1,-1)translate(20,-380)">
+    <g class="links">
+      <line class="link" stroke="#ccc" stroke-width="10" x1="180" y1="0" x2="180" y2="106.66666666666667"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="180" y1="106.66666666666667" x2="90" y2="213.33333333333334"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="180" y1="106.66666666666667" x2="270" y2="213.33333333333334"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="90" y1="213.33333333333334" x2="60" y2="320"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="90" y1="213.33333333333334" x2="120" y2="320"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="270" y1="213.33333333333334" x2="240" y2="320"/>
+      <line class="link" stroke="#ccc" stroke-width="10" x1="270" y1="213.33333333333334" x2="300" y2="320"/>
+    </g>
+    <g class="nodes">
+      <g>
+        <circle class="node" cx="180" cy="0" r="20"/>
+        <text text-anchor="middle" x="220" y="0" dx="12" dy=".35em" transform="scale(1,-1)translate(0,0)">fib(0)</text>
+      </g>
+      <g>
+        <circle class="node" cx="180" cy="106.66666666666667" r="20"/>
+        <text text-anchor="middle" x="220" y="106.66666666666667" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-213.33333333333334)">fib(1)</text>
+      </g>
+      <g>
+        <circle class="node" cx="90" cy="213.33333333333334" r="20"/>
+        <text text-anchor="middle" x="130" y="213.33333333333334" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-426.6666666666667)">fib(2)</text>
+      </g>
+      <g>
+        <circle class="node" cx="270" cy="213.33333333333334" r="20"/>
+        <text text-anchor="middle" x="310" y="213.33333333333334" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-426.6666666666667)">fib(3)</text>
+      </g>
+      <g>
+        <circle class="node" cx="60" cy="320" r="20"/>
+        <text text-anchor="middle" x="50" y="360" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-720)">fib(4)</text>
+      </g>
+      <g>
+        <circle class="node" cx="120" cy="320" r="20"/>
+        <text text-anchor="middle" x="110" y="360" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-720)">fib(5)</text>
+      </g>
+      <g>
+        <circle class="node" cx="240" cy="320" r="20"/>
+        <text text-anchor="middle" x="230" y="360" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-720)">fib(6)</text>
+      </g>
+      <g>
+        <circle class="node" cx="300" cy="320" r="20"/>
+        <text text-anchor="middle" x="290" y="360" dx="12" dy=".35em" transform="scale(1,-1)translate(0,-720)">fib(7)</text>
+      </g>
+    </g>
+  </g>
+</svg>

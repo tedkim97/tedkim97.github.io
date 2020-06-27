@@ -4,22 +4,28 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.subtitle %} <span class="post-subtitle">{{ page.subtitle }}</span> {% endif %}
+  {% if page.enable_latex == true %}
+  <script defer type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+  <script defer type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  {% endif %}
+  {% if page.enable_d3 == true %} <script src="https://d3js.org/d3.v6.min.js"></script> {% endif %}
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+{% if page.curated %}
+  {% include curated_posts.html %}
+{% elsif page.tags %}
+  {% include advanced_related_posts.html %}
+{% else %}
+  <h3><a href="{{ site.url }}"> I don't really have anything related for now, so check out the homepage!</a></h3>
+{% endif %}

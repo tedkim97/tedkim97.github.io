@@ -1,0 +1,206 @@
+<center>
+  <div id='disschart'></div>
+</center>
+<script>
+
+// Page Dimensions
+let RADIUS = 20;
+let margin = {top: RADIUS, right: RADIUS, bottom: 3 * RADIUS, left: RADIUS};
+let width = 700 - margin.right - margin.left;
+let height = 700 - margin.top - margin.bottom;
+
+// Zoom Functions
+const zoom = d3.zoom()
+  .on('zoom', (event) => {
+    svg.attr('transform', event.transform);
+  })  
+  .scaleExtent([0.07, 0.7]);
+
+let transformIden = d3.zoomIdentity.translate(405,258).scale(0.13);
+
+// SVG Declarations
+const svg = d3.select('div#disschart').append('svg')
+  .attr('viewBox', [0, 0, height + margin.top + margin.bottom, width + margin.left + margin.right])
+  .attr('preserveAspectRatio', 'xMidYMid meet')
+  .call(zoom)
+  .append('g');
+
+svg.call(zoom.transform, transformIden)
+  
+// Text Attributes
+const font_family = 'Arial';
+const text_stroke_width = '5';
+
+// Node Attributes
+const nodeColor = '#2e8b57';
+const highlightColor = '#4b0092';
+const highlightStroke = '#000000'
+const reg_width = '1';
+const highlightWidth = '6';
+
+// Toggle for highlighting
+let toggle = 0;
+
+d3.json('data/diss_track_data.json').then(data => {
+  // Load lookup table of edges by index
+  let linkedByIndex = {};
+  data.links.forEach((link) => {
+    linkedByIndex[`${link.source},${link.target}`] = true;
+  });
+
+  const neighborOrSelf = (a, b) => {
+    let cond1 = linkedByIndex[`${a.id},${b.id}`] === true;
+    let cond2 = linkedByIndex[`${b.id},${a.id}`] === true;
+    let cond3 = a.id === b.id;
+    return (cond1 || cond2 || cond3);
+  }
+
+  const containsArtist = (link, artist) => {
+    return (link.source.id === artist.id || link.target.id === artist.id);
+  }
+
+  // Initialize the edges
+  let edgeContainer = svg
+    .append('g')
+    .attr('class', 'edges')
+    .selectAll('line')
+    .data(data.links)
+    .enter()
+    .append('g');
+
+  let links = edgeContainer.append('line')
+    .style('stroke', '#aaa')
+    .style('stroke-width', '10');
+
+  // Initialize the nodes
+  // We want to draw the nodes after because we want them on top
+  let nodes = svg
+    .append('g')
+    .attr('class','nodes')
+    .selectAll('circle')
+    .data(data.nodes)
+    .enter()
+    .append('g');
+
+
+  // Special node highlighting
+  const highlightConnectedNodes = (event, d) => {
+    let connectedNodes = nodes.filter(o => neighborOrSelf(o, d));
+    connectedNodes.raise();
+    connectedNodes.selectAll('circle')
+      .style('fill', highlightColor)
+      .style('stroke', highlightStroke)
+      .style('stroke-width', highlightWidth);
+    connectedNodes.selectAll('text')
+      .style('visibility', 'visible');
+  };
+
+  // Remove special node highlighting
+  const removedConnectedHighlights = (event, d) => {
+    nodes.selectAll('circle')
+      .style('fill', nodeColor)
+      .style('stroke', 'none')
+      .style('stroke-width', reg_width);
+    nodes.selectAll('text')
+      .style('visibility','hidden');
+  };
+
+  // Hide nodes not connected to d
+  const hideOtherNodes = (event, d) => {
+    let otherNodes = nodes.filter(o => !neighborOrSelf(o, d));
+    otherNodes.selectAll('circle')
+      .style('opacity', 0.15);
+  };
+
+  // Revert the hiding of nodes not connected to d
+  const revertOtherNodes = (event, d) => {
+    let otherNodes = nodes.filter(o => !neighborOrSelf(o, d));
+    otherNodes.selectAll('circle')
+      .style('opacity', 1);
+  };
+
+  // Hide non connecting edges to node d
+  const hideNonconnectedEdges = (event, d) => {
+    edgeContainer.selectAll('line')
+      .filter(l => !containsArtist(l, d))
+      .style('opacity', 0.15);
+  };
+
+  // Rever the hiding of edges
+  const revertEdges = (event, d) => {
+    edgeContainer.selectAll('line')
+      .style('opacity', 1);
+  };
+
+  nodes.append('circle')
+    .attr('r', RADIUS) 
+    .style('fill', nodeColor)
+    .style('stroke', 'none')
+    .style('stroke-width', reg_width)
+    .on('mouseover', (event, d) => {
+      if(toggle === 0) {
+        highlightConnectedNodes(event,d);
+        hideOtherNodes(event, d);
+        hideNonconnectedEdges(event, d);
+      }
+    })
+    .on('mouseout', (event, d) => {
+      if(toggle === 0) {
+        removedConnectedHighlights(event, d);
+        revertOtherNodes(event, d);
+        revertEdges(event, d);
+      }
+    })
+    .on('dblclick', (event, d) => {
+      if (toggle === 0) {
+        highlightConnectedNodes(event, d);
+        hideOtherNodes(event, d);
+        hideNonconnectedEdges(event, d);
+        toggle = 1;
+      } else {
+        removedConnectedHighlights(event, d);
+        revertOtherNodes(event, d);
+        revertEdges(event, d);
+        toggle = 0;
+      }
+    });
+
+
+  nodes.append('text')
+    .text(d => d.id)
+    .attr('text-anchor', 'middle')
+    .attr('fill', 'black')
+    .attr('font-family', font_family)
+    .attr('dy', '-30')
+    .style('stroke-width', text_stroke_width)
+    .style('visibility', 'hidden');
+
+  let simulation = d3.forceSimulation(data.nodes)
+    .force('link', d3.forceLink()
+                  .id(d => d.id)
+                  .links(data.links)
+          )
+    .force('charge', d3.forceManyBody().strength(-600))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .on('end', ticked);
+
+  // This function is run at each iteration of the force algorithm, updating the nodes position.
+  function ticked() {
+    links
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y);
+    nodes
+         .attr('transform', d => `translate(${d.x},${d.y})`);
+  }
+
+}).catch(error => {
+  svg.append('g')
+      .append('text')
+      .text(`Visualization failed to load:\n\"${error}\"`)
+      .attr('x', '50%')
+      .attr('y', '50%');
+});
+
+</script>
