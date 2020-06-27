@@ -3,9 +3,11 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-<!-- title: homepage -->
+permalink: /
 ---
 
-content test
+# Home
 
-$ \sum_n (x) $
+HOMEPAGE TEST
+
+$ \sum_n {x} $
