@@ -2,6 +2,7 @@
 layout: page
 title: CV
 order: 4
+published: false
 ---
 
 ## Education

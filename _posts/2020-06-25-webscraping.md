@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Scraping
-published: false
+published: true
 permalink: /webscraping
 frontpage: true
 technical: true
