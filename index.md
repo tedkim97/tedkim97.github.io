@@ -5,9 +5,13 @@ title: Home
 order: 1
 ---
 
-HOMEPAGE TEST
+Welcome to my blog - here are some of my write-ups that I'm proud of!
 
-$ \sum_n {x} $
-
-
-Skip through all the boring stuff and see the stuff that I am _relatively_ proud of
+{% assign pages_list = site.posts %}
+{% for node in pages_list %}
+{% if node.frontpage == true %}
+  {% if node.layout == "post" %}
+  	<a href="{{ node.url }}">{{ node.title }}</a><br>
+  {% endif %}
+{% endif %}
+{% endfor %}

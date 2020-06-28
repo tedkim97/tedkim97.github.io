@@ -186,11 +186,11 @@ a.sidebar-nav-item:focus {
 
 
 .ted-theme .sidebar {
-  background-color: #84991c;
+  background-color: #2E8B57;
 }
 .ted-theme .content a,
 .ted-theme .related-posts li a:hover {
-  color: #84991c;
+  color: #2E8B57;
 }
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */

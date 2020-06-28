@@ -5,4 +5,4 @@ order: 3
 permalink: tomfoolery
 ---
 
-[Enter Table of Contents for posts with Fun Stuff & Hobbies Here]
+Here are my past projects relating to my hobbies or off-shoot projects. Not everything in this page will appeal to you, and that's fine!
