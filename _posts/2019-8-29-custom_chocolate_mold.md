@@ -17,7 +17,7 @@ Working with chocolate is s urprisingly complex and expensive.
 This is NOT a recipe or a guide. Just technical documentation and observations I've had through while making a custom chocolate bar. Use this to judge out what you need to do!
 
 # Context
-My dad's birthday was coming in a month, and I was inspired by a [video about making custom chocolate bars](https://youtu.be/O5SwGr-84c4). The chocolate in the video looked like this: ![fig1](/figures/chocolate_fig1.PNG){: .center-image } 
+My dad's birthday was coming in a month, and I was inspired by a [video about making custom chocolate bars](https://youtu.be/O5SwGr-84c4). The chocolate in the video looked like this: ![fig1](/figures/chocolate_fig1.png){: .center-image } 
 
 My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I thought this would be simple, but my experiences making this chocolate bar has been unbelievably complicated and painful.
 
