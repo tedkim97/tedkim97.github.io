@@ -1,19 +1,26 @@
 ---
 layout: page
-title: About Me
+title: About
 order: 5
 ---
 
-This is the my blog/portfolio website that I finally had time to during the global pandemic (Everyone has a blog these days so I might as well have my own). This is a dump from all of my current/past work experiences
+## About Me
+I am currently a systems engineer at McMaster-Carr. I completed undergrad at the 
+University of Chicago with a bachelors of arts in **computer science** with a specialization in machine learning and **economics**.
 
-I'm sorry if this content looks awful on mobile - this isn't really designed for mobile users.
+I'm interested in applying machine learning to simple problems for increased automation capabilities, and understanding media through data science techniques.  
 
-Despite enjoying social media, I don't believe in sharing social media with everyone 
+## About this Site
+This is my dual blog-portfolio site that I finally had time to do during Covid-19 (everyone has a blog these days so I might as well have my own). This is a dump from all of my past work experiences. I'm sorry if this content isn't great on mobile - this isn't really designed for mobile users.
 
 Here are some places you can find me by:  
 [Github](https://github.com/tedkim97)  
 [Linkedin](https://www.linkedin.com/in/ted-kim/)
 
-## Details about the Site
+### Details about the Site
 
-This site is hosted on github pages using Jekyll as the static site generator. I'm using the [hyde theme](https://github.com/poole/hyde).
+##### How did you set this up?
+This site is hosted on github pages using Jekyll as the static site generator, and using the poole/hyde theme for the website. 
+
+##### Why the color?
+because I have awful tastes
