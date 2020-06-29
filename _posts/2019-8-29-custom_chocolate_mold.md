@@ -157,7 +157,7 @@ Despite this solution being promised as *idiot proof* by the internet - I could 
 # Results & Conclusion
 In Conclusion, Chocolate is stupid.
 
-Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, membership fees it came up to a $200.
+Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, hacker-space membership fees it came up to a $200.
 
 ![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } 
 <center> <font size="2"> <i>
@@ -165,11 +165,13 @@ One of the final products! I wish I had taken more pictures...
 </i> </font> </center>
 <br>
 
-In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily drop certain ideas (like *needing* to thermoform the chocolate bar or not finding alternative ways to temper chocolate) after a few road blocks.
+In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily give-up on certain ideas (like *needing* to thermoform a bar mold or not finding alternative ways to temper chocolate) after a few road blocks. My stubbornness and desire to make certain solutions work definitely hurt more than it helped this time.
 
 ### Next Steps (if there are any)
 
-This process has been enlightening and made me realize that chocolate is some incredibly serious business. If there is a next time, I would experiment with buying cocoa butter and trying to form seeds with a seeded cocoa butter called ["cocoa butter silk"](https://chocolatealchemy.com/how-to-make-cocoa-butter-silk). Of course, chocolate companies sell this silk - Callebaut calls is [Mycryo](https://www.callebaut.com/en-GB/chocolate-cocoa-nuts/ncb-hd706/mycryo). Finally, I would love to get my hands on cocoa nibs and make chocolate liquor from scratch. 
+This process has been enlightening and made me realize that chocolate is some incredibly serious business. If there is a next time, I would experiment with buying cocoa butter and trying to form seeds with a seeded cocoa butter called ["cocoa butter silk"](https://chocolatealchemy.com/how-to-make-cocoa-butter-silk). Chocolate companies sell this silk, for instance Callebaut calls it [Mycryo](https://www.callebaut.com/en-GB/chocolate-cocoa-nuts/ncb-hd706/mycryo) - but the spirit of this blog is to do it (relatively) from scratch. 
+
+Next, I would love to get my hands on cocoa nibs and make chocolate liquor from scratch. 
 
 # Excellent Resources that I didn't link in the blogpost
 
