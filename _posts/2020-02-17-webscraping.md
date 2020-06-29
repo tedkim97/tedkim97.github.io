@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An Actual Guide to Web Scraping
+title: An Actual Guide to Web Scraping [not completed]
 published: true
 permalink: /webscraping
 frontpage: true
