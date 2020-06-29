@@ -90,22 +90,22 @@ The next part of the project was to create the actual bar shape for my dad's pre
 
 Since this is a chocolate bar with words, we can create a simple one-part mold by thermoforming a piece of plastic onto a master model. I had access to more sophisticated tools on hand because I had access to the University's [Media, Arts & Design Center](https://arts.uchicago.edu/explore/initiatives/media-arts-data-and-design-center-madd-center)! Meaning that I had a couple of ways to form a template. The only complication is that I wanted precision, clean edges, and clean curves.
 
-##### 3D Printing (Not It)
+##### 3D Printing (No)
 Although 3D printing is great for prototyping model and could give me computerized precision to form the actual bar - the actual printing time and resolution (texture of the print) made it impractical as a way of creating templates, in addition to being a waste of filament. 
 
-##### Carving Wood (Not It)
+##### Carving Wood (No)
 I like the idea of using wood as the master template, but carving was too imprecise/messy. Any handwriting in the wood would look awful if it were done by me. 
 
-##### CNC'ing Wood (Not It)
+##### CNC'ing Wood (No)
 A Computer Numerical Control carving/milling/engraving machine would be perfect for my goals, but the CNC machine available was a desktop engraver. A couple of test runs with this machine were not very promising. The engraver wasn't strong/consistent enough to cleanly shave off wood for an engraving. I wish I had taken a picture, but the results weren't amazing. 
 
-##### Laser Cutting Wood
-This is a hacky solution, but I ended up using multiple passes on a laster cutter (Universal Laser Systems VLS 6.6) to make multiple passes on a piece of wood - to slowly burn the top later of the wood. This approach is not an ideal use of a laser cutter, but it was the only option that provided me the precision and automatic computer fonts I wanted. An added bonus is that the vectorization used lets me create bars as big/small I want without having to create a new design each time.
+##### Laser Cutting Wood (Yes)
+This is a hacky solution, but I ended up using multiple passes on a laster cutter (Universal Laser Systems VLS 6.6) on a piece of wood. Each pass burns/etches a layer of wood that gives it a deep (and accurate) engraving. This approach is not an ideal use of a laser cutter, but it was the only option that provided me the precision and automatic computer fonts I wanted. An added bonus is that the vectorization within the template allowes me to create bars as big/small I want with a simple resize in Adobe Illustrator.
 
-The bar was 16.7cm x 7.5cm and came in two main variants: 
+These two bars had the same text (16.7cm x 7.5cm), but etched in two different ways: 
 ![chocolate template](/figures/chocolate_fig2.jpg){: .center-image } 
 <center> <font size="2"> <i>
-Identical wordings, but two variants: words engraved in (top) and words engraved out (bottom).
+Identical wordings, but different etching technique: words engraved in (top) and words engraved out (bottom).
 </i> </font> </center>
 <br>
 
