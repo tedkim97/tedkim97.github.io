@@ -131,7 +131,7 @@ The example channel I saw used Makyuu FormBox (which is just a mini-thermoformin
 
 I validated whether polycarbonate is food safe, and easy to use for thermoforming etc. Then I bought a few sheets of polycarbonate on amazon. Unfortunately I assumed that the Makyuu formbox would get hot enough to properly heat the polycarbonate (it did not) that I purchased online, but even with an additional heatgun it wasn't hot enough to reach proper molding temperatures. In order to make it work, I had to use Makyuu's **proprietary**[^2] "food safe" sheets (that I couldn't find any additional information online if they were ACTUALLY food safe aside from the company website).
 
-[^2] Honestly fuck this >:(
+[^2]: Honestly fuck this >:(
 
 ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image } 
 <center> <font size="2"> <i>
@@ -145,7 +145,7 @@ Earlier I described how to *abstractly* temper chocolate. The only issue with al
 
 **My problem was that all of my chocolate had melted and reformed into a huge mess!** I had literally no seed chocolates. Creating tempered chocolate from scratch is possible, just incredibly hard.[^3] 
 
-[^3] Almost a year later, I realized I could have bought 100% cocoa chocolate from Whole Foods and used that as my seed. This would have solved all my problems...
+[^3]: Almost a year later, I realized I could have bought 100% cocoa chocolate from Whole Foods and used that as my seed. This is a HUGE mistake on my end...
 
 There are a ton of ways to temper chocolate from scratch that involve a [marble table](https://www.callebaut.com/en-US/node/74#popup), double boiler, [sous vide, food processor & heatgun](https://www.seriouseats.com/2014/12/the-food-lab-best-way-to-temper-chocolate.html), and a [microwave](https://youtu.be/p5_kheJtQO4). 
 
