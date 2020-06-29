@@ -55,11 +55,11 @@ Tempering heating, cooling, and reheating of chocolate to crystallize the fat in
 
 Tempering is the reason why when your chocolate bar melts and you try to fix it through freezing, the bar melts in your hand and doesn't taste right. The heat melted all of the crystals, and when the chocolate reformed sub ideal crystals reformed with the beta crystals. 
 
-There's actually a couple of different ways to temper chocolate, but they all follow the same pattern of heating chocolate around 45&deg;C (melt **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to mold into whatever shape you want. 
+There's actually a couple of different ways to temper chocolate, but they all follow the same pattern of: heating chocolate around 45&deg;C (melting **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to pour the chocolate into whatever shape you want. 
 
 ![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image } 
 <center> <font size="2"> <i>
-An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get what I'm talking about
+An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get an idea of the process
 </i> </font> </center>
 <br>
 
@@ -67,16 +67,16 @@ An example of the temperatures shifts when tempering chocolate. If the linked im
 # Sourcing Chocolate
 
 ### "Couverture" Chocolate
-Another complication with tempering chocolate is that you can't temper any chocolate. Because the cocoa butter is critical, you need a high quality chocolate that has a high % of cocoa butter (called "couverture" chocolate. 
+Another complication with tempering chocolate is that you can't temper all chocolate. Because cocoa butter is critical to tempering, you need a high quality chocolate that has a high % of cocoa butter (called "couverture" chocolate). 
 
 Sometimes chocolate companies will use vegetable oil as the fat in their chocolate bars - instead of cocoa - as a cost saving measure. Fortunately, it's really easy to sort out these lesser quality chocolates by reading the ingredients list (if you see "vegetable oil" in the ingredient lists, it's not suitable). 
 
 ### Difficulties in acquiring high quality chocolate
 At the time, buying couverture chocolate was *incredibly* hard. The supermarket chocolate all had some vegetable oil in the ingredients list, and the only way I could get high quality chocolate is to buy fancy chocolate bar brand (like Callebaut, Ghirardelli, Godiva, Guittard, etc) - but their chocolates were all flavored and sub-ideal cocoa butter %. Even these brand- names baking chips weren't suitable. 
 
-High quality chocolate seemed to only be sold wholesale, meaning I had to buy a ton at once (which is not good for a one-time gift) or I had to buy smaller packages from online retailers at disproportionately high price. There also didn't seem to be any chocolate stores in chicago that were accessible by public transportation, and I couldn't just leave work to buy chocolate. 
+High quality chocolate seemed to only be sold wholesale, meaning I had to buy a ton at once (which is not good for a one-time gift) or I had to buy smaller packages from online retailers at disproportionately high price. There also didn't seem to be any chocolate stores in Chicago that were accessible by public transportation, and I couldn't just leave work to buy chocolate. 
 
-In the end, I just bit the bullet and dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate also melted during shipping anyways (R.I.P $5)
+In the end, I just dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate also melted during shipping anyways (R.I.P $5)
 
 # Creating A Model & Mold
 
@@ -131,7 +131,7 @@ The example channel I saw used Makyuu FormBox (which is just a mini-thermoformin
 
 I validated whether polycarbonate is food safe, and easy to use for thermoforming etc. Then I bought a few sheets of polycarbonate on amazon. Unfortunately I assumed that the Makyuu formbox would get hot enough to properly heat the polycarbonate (it did not) that I purchased online, but even with an additional heatgun it wasn't hot enough to reach proper molding temperatures. In order to make it work, I had to use Makyuu's **proprietary**[^2] "food safe" sheets (that I couldn't find any additional information online if they were ACTUALLY food safe aside from the company website).
 
-[^2]: Honestly fuck this >:(
+[^2]: This is honestly the worst >:( . I understand WHY a lot of businesses do this, but it doesn't mean I have to like it.
 
 ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image } 
 <center> <font size="2"> <i>
@@ -143,7 +143,7 @@ One of the final molds! This is a different variant with my dad's (censored) nam
 
 Earlier I described how to *abstractly* temper chocolate. The only issue with all of these methods for tempering chocolate is that these methods normally include a "seed" chocolate that starts a chain reaction of beta crystal formation (a.k.a the seeding method).
 
-**My problem was that all of my chocolate had melted and reformed into a huge mess!** I had literally no seed chocolates. Creating tempered chocolate from scratch is possible, just incredibly hard.[^3] 
+**My problem was that all of my chocolate had melted and reformed into a huge blob** I had no seed chocolates. Creating tempered chocolate from scratch is possible, just incredibly hard.[^3] 
 
 [^3]: Almost a year later, I realized I could have bought 100% cocoa chocolate from Whole Foods and used that as my seed. This is a HUGE mistake on my end...
 
@@ -151,13 +151,13 @@ There are a ton of ways to temper chocolate from scratch that involve a [marble 
 
 All of these methods (except for the sous vide) involved a thermometer or something else I didn't have. Fortunately my friend had a sous vide, and so I went sous vide method! The added benefit of the sous vide is that it is idiot proof! As long as you use the correct temperatures, the chocolate should be able to temper properly.
 
-### Problems with tempering
-Despite this solution being promised as *idiot proof* by the internet - I could never get the chocolate to temper. This had to do with the fact that my chocolate came untempered, so the exact methods described in other articles wouldn't work. In theory I could have formed beta crystals with the sous vide method from scratch, but I was leaving the chocolate in the heated water bath for too little time (1-2 hours) and without proper agitation. If I had to do it from scratch, I would have to constantly shake up the chocolate in the (HOT) water for 3-7 hours. Due to my dad's birthday coming up - I had just given up and poured the chocolate into my molds.
+### "Idiot Proof" is a Lie
+Despite this solution being promised as *idiot proof* by the internet - I could never get the chocolate to temper. This had to do with the fact that my chocolate came untempered, so the exact methods described in other articles wouldn't work. In theory I could have formed beta crystals with the sous vide method from scratch, but I was leaving the chocolate in the heated water bath for too little time (1-2 hours) and without proper agitation. If I had to do it from scratch, I would have to constantly shake up the chocolate in the (HOT) water for 3-7 hours. Due to my deadline - I had just given up and poured the chocolate into my molds.
 
 # Results & Conclusion
 In Conclusion, Chocolate is stupid.
 
-I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, membership fees it came up to a $200.
+Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, membership fees it came up to a $200.
 
 ![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } 
 <center> <font size="2"> <i>
