@@ -113,7 +113,7 @@ Identical wordings, but different etching technique: words engraved in (top) and
 ### Creating a Mold
 
 ##### Various Silicone Rubber/Mold Making Approaches
-Oddly enough, I had a difficult time getting my hands on liquid rubber/putty molds. I lived in a major city (Chicago), so all these other resources should have been accessible. However, the hardware stores near me didn't have them in stock and the only choice on Amazon was $50. [Services that sell putties/liquids for creating food molds](https://www.makeyourownmolds.com/) exist. At the time I was stingy because the shipping costs were so high, so I avoided using them. In retrospect, I should have at least experimented with these expensive silicone because the alternative approaches ended up *indirectly* costing a lot of money. 
+Oddly enough, I had a difficult time getting my hands on liquid rubber/putty molds. I lived in a major city (Chicago), so all these other resources should have been accessible. However, the hardware stores near me didn't have them in stock and the only choice on Amazon was $50. [Services that sell putties/liquids for creating food molds](https://www.makeyourownmolds.com/) exist. At the time I was stingy because the shipping costs were so high, so I avoided using them. In retrospect, I should have at least experimented with these expensive silicone because the alternative approaches ended up *indirectly* costing a lot of money (traveling, wasted materials, time). 
 
 ##### Thermoforming A Mold
 
@@ -133,15 +133,15 @@ The example channel I saw used Makyuu FormBox (which is just a mini-thermoformin
 
 I validated whether polycarbonate is food safe, and easy to use for thermoforming etc. Then I bought a few sheets of polycarbonate on amazon. Unfortunately I assumed that the Makyuu formbox would get hot enough to properly heat the polycarbonate (it did not) that I purchased online, but even with an additional heatgun it wasn't hot enough to reach proper molding temperatures. In order to make it work, I had to use Makyuu's **proprietary**[^2] "food safe" sheets (that I couldn't find any additional information online if they were ACTUALLY food safe aside from the company website).
 
-[^2]: This is honestly the worst >:( . I understand WHY a lot of businesses do this, but it doesn't mean I have to like it.
+[^2]: This is the worst and I hate your company if you do this. I understand WHY businesses do this, but it doesn't mean I have to like it.
 
 ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image } 
 <center> <font size="2"> <i>
-One of the final molds! This is a different variant with my dad's (censored) name 
+One of the final molds! The text is a different and contains my dad's (censored) name 
 </i> </font> </center>
 <br>
 
-# Tempering Chocolate
+# Actually Tempering Chocolate
 
 Earlier I described how to *abstractly* temper chocolate. The only issue with all of these methods for tempering chocolate is that these methods normally include a "seed" chocolate that starts a chain reaction of beta crystal formation (a.k.a the seeding method).
 
@@ -167,7 +167,7 @@ One of the final products! I wish I had taken more pictures...
 </i> </font> </center>
 <br>
 
-In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily give-up on certain ideas (like *needing* to thermoform a bar mold or not finding alternative ways to temper chocolate) after a few road blocks. My stubbornness and desire to make certain solutions work definitely hurt more than it helped this time.
+In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily give-up on certain ideas (like *needing* to thermoform a bar mold or not finding alternative ways to temper chocolate) after a few road blocks. My stubbornness and desire to make certain solutions work definitely hurt more than it helped this time. I'd advise anyone else to learn from my mistake and be willing to try alternative approaches.
 
 ### Next Steps (if there are any)
 
@@ -183,5 +183,5 @@ Next, I would love to get my hands on cocoa nibs and make chocolate liquor from 
 [Tempering Chocolate (from a chocolate company)](https://www.callebaut.com/en-US/chocolate-video/technique/tempering/cocoa-butter)  
 [Tempering Chocolate (from serious eats)](https://www.seriouseats.com/2014/12/the-food-lab-best-way-to-temper-chocolate.html)  
 
-# Footnotes
+# Commentary Footnotes
 
