@@ -173,10 +173,11 @@ This process has been enlightening and made me realize that chocolate is some in
 
 # Excellent Resources that I didn't link in the blogpost
 
-Additional Readings on Chocolate (Cacao Bean to Bar): 
-[Chocolate Alchemist - highly recommend](https://chocolatealchemy.com/)
-[Ann Reardon's tutorial on Chocolate from bean to bar](https://youtu.be/1XUeSYHec30)
-[Tempering Chocolate (from a chocolate company)](https://www.callebaut.com/en-US/chocolate-video/technique/tempering/cocoa-butter)
-[Tempering Chocolate (from serious eats)](https://www.seriouseats.com/2014/12/the-food-lab-best-way-to-temper-chocolate.html)
+**Additional Readings on Chocolate (Cacao Bean to Bar):**  
+[Chocolate Alchemist - highly recommend](https://chocolatealchemy.com/)  
+[Ann Reardon's tutorial on Chocolate from bean to bar](https://youtu.be/1XUeSYHec30)  
+[Tempering Chocolate (from a chocolate company)](https://www.callebaut.com/en-US/chocolate-video/technique/tempering/cocoa-butter)  
+[Tempering Chocolate (from serious eats)](https://www.seriouseats.com/2014/12/the-food-lab-best-way-to-temper-chocolate.html)  
 
+# Footnotes
 
