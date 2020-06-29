@@ -16,7 +16,7 @@ author: Ted
 My experiences experimenting with chocolate was surprisingly complex (and expensive). This is just some documentation/narration of my experiences trying to make a custom chocolate bar. If you're interested in making your own chocolate bar, I recommend reading to get an idea on moving forward. 
 
 # Context
-My dad's birthday was coming in a month, and I was inspired by a [video about making custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
+My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
 ![fig1](/figures/chocolate_fig1.png){: .center-image }
 <center> <font size="2"> <i>
@@ -24,16 +24,16 @@ The final product in the video
 </i> </font> </center>  
 <br> 
 
-My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I thought this would be simple, but my experiences making this chocolate bar has been unbelievably complicated and painful.
+My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I assumed this would be really simple (melt, pour, and cool chocolate), but my experiences with chocolate have been incredibly complicated and painful.
 
 # Requirements
 
-1. The Chocolate Should Be High Quality 
+1. The Chocolate should be high quality 
 - The chocolate has to taste good (in chocolate standards)
 - It'd be silly investing time and energy to only re-gift a Hershey's chocolate bar).
-2. Relatively inexpensive 
+2. (Relatively) Inexpensive 
 - I'm willing to drop a decent amount of money for this birthday gift, but I'm not going to spend hundreds of dollars 
-3. Classy - the chocolate bar should look professional.
+3. The Chocolate should look professional.
 - The chocolate in the linked video looks good, but I feel like it's missing a fancy flair.
 
 
@@ -51,11 +51,11 @@ SugarHero provides an excellent comparison of tempered vs untempered chocolate
 <br>
 
 ### What is tempering?
-Tempering heating, cooling, and reheating of chocolate to crystallize the fat in the cocoa butter (of the chocolate) into one of six possible forms (beta crystals). When you've properly tempered chocolate the fats in your chocolate will have a stable crystalline structure called the "beta crystal form". 
+Tempering is the heating, cooling, and reheating of chocolate to crystallize the fat in the cocoa butter (of the chocolate) into one of six possible forms (beta crystals). When you've properly tempered chocolate, the fats in your chocolate will have a stable crystalline structure called the "beta crystal form". 
 
-Tempering is the reason why when your chocolate bar melts and you try to fix it through freezing, the bar melts in your hand and doesn't taste right. The heat melted all of the crystals, and when the chocolate reformed sub ideal crystals reformed with the beta crystals. 
+Tempering is the reason why when your chocolate bar melts and you try to fix it through freezing, the bar melts in your hand and doesn't taste right. The heat melted the ideal crystals, and when the chocolate reformed sub-ideal crystals replaced the majority of the beta crystals. 
 
-There's actually a couple of different ways to temper chocolate, but they all follow the same pattern of: heating chocolate around 45&deg;C (melting **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to pour the chocolate into whatever shape you want. 
+There's a handful of different ways to temper chocolate, but they all follow the same pattern of: heating chocolate around 45&deg;C (melting **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to pour the chocolate into whatever shape you want. 
 
 ![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image } 
 <center> <font size="2"> <i>
@@ -69,24 +69,26 @@ An example of the temperatures shifts when tempering chocolate. If the linked im
 ### "Couverture" Chocolate
 Another complication with tempering chocolate is that you can't temper all chocolate. Because cocoa butter is critical to tempering, you need a high quality chocolate that has a high % of cocoa butter (called "couverture" chocolate). 
 
-Sometimes chocolate companies will use vegetable oil as the fat in their chocolate bars - instead of cocoa - as a cost saving measure. Fortunately, it's really easy to sort out these lesser quality chocolates by reading the ingredients list (if you see "vegetable oil" in the ingredient lists, it's not suitable). 
+Chocolate companies will use vegetable oil as the fat in their chocolate bars - instead of cocoa - as a cost saving measure. Fortunately, it's really easy to sort out these lesser quality chocolates by reading the ingredients list (if you see "vegetable oil" in the ingredient lists, it's not suitable). 
 
 ### Difficulties in acquiring high quality chocolate
-At the time, buying couverture chocolate was *incredibly* hard. The supermarket chocolate all had some vegetable oil in the ingredients list, and the only way I could get high quality chocolate is to buy fancy chocolate bar brand (like Callebaut, Ghirardelli, Godiva, Guittard, etc) - but their chocolates were all flavored and sub-ideal cocoa butter %. Even these brand- names baking chips weren't suitable. 
+Buying couverture chocolate was *incredibly* hard. The supermarket chocolate all had vegetable oil as an ingredient, and the only way I could get high quality chocolate is to buy fancy chocolate bar brand (like Callebaut, Ghirardelli, Godiva, Guittard, etc) - but their chocolates were all flavored and sub-ideal cocoa butter %. Even brand-names baking chips weren't suitable. 
 
 High quality chocolate seemed to only be sold wholesale, meaning I had to buy a ton at once (which is not good for a one-time gift) or I had to buy smaller packages from online retailers at disproportionately high price. There also didn't seem to be any chocolate stores in Chicago that were accessible by public transportation, and I couldn't just leave work to buy chocolate. 
 
-In the end, I just dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate also melted during shipping anyways (R.I.P $5)
+In the end, I just dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate also melted during shipping anyways (R.I.P $5).
+
+My recommendation for buying high quality is just buying fancy brand-name bars that display the percentage of cocoa on them - despite the high average cost.
 
 # Creating A Model & Mold
 
 ### (Aside) If you have deep pockets
-[Professional services](https://tomric.com/custom-sculpting/) that create custom chocolate molds and packaging exists! The problem is that they're geared towards professional clients, and are too expensive for a hobbyist - so that option was instantly out.
+[Professional services](https://tomric.com/custom-sculpting/) that create custom chocolate molds and packaging exists! The problem is that they're geared towards professional clients, and are too expensive for a hobbyist.
 
 ### Creating A Model
 The next part of the project was to create the actual bar shape for my dad's present. I had a couple of ideas in mind, but ultimately I wanted to say "Happy Birthday Dad" in English or Korean (아버지 생일 축하합니다 - a formal way of wishing happy birthday).
 
-Since this is a chocolate bar with some words on it, we can create a simple one-part mold by thermoforming a piece of plastic onto a master model. I actually had some nice tools on hand because I had access to the University's [Media, Arts & Design Center](https://arts.uchicago.edu/explore/initiatives/media-arts-data-and-design-center-madd-center)! Meaning that I had a couple of ways to form a template. The only complication is that I wanted precision, clean edges, and clean curves.
+Since this is a chocolate bar with words, we can create a simple one-part mold by thermoforming a piece of plastic onto a master model. I had access to more sophisticated tools on hand because I had access to the University's [Media, Arts & Design Center](https://arts.uchicago.edu/explore/initiatives/media-arts-data-and-design-center-madd-center)! Meaning that I had a couple of ways to form a template. The only complication is that I wanted precision, clean edges, and clean curves.
 
 ##### 3D Printing (Not It)
 Although 3D printing is great for prototyping model and could give me computerized precision to form the actual bar - the actual printing time and resolution (texture of the print) made it impractical as a way of creating templates, in addition to being a waste of filament. 
