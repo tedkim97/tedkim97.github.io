@@ -169,12 +169,12 @@ Websites normally have a `robots.txt` file that indicates *who* can interact wit
 ### Privacy & Ethics
 I have met plenty of people that try to scrape information from social media - which is incredibly unethical. All social media sites have rules and clauses against this and you'll be violating their TOS.
 
-
 ### Legal Complications
-
-The rules and regulations in web scraping are complicated - there exists lawsuits and rulings about web scraping. As of 2020, the rulings are being appealed, so I recommend that you google the current status of web scraping. 
-
-I will say that it is generally hard to find someone running a scraper unless the crawler(s) are being deployed at a massive scale.   
+The rules and regulations in web scraping are complicated - there exists lawsuits and rulings about web scraping. As of 2020, the rulings are being appealed, so I recommend googling whether web scraping is punishable by death. On another note, I will say that it can be hard to find someone running a crawler unless it is being deployed on a massive scale.
 
 
 # Conclusion
+
+In conclusion, I hope this article gave you a more complete understanding of how to build a scraper, and retool it for your specific needs.
+
+In addition, you have a nice set of advanced topics to increase the flexibility/speed of your 
