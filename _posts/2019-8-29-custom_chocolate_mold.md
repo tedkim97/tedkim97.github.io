@@ -53,7 +53,7 @@ SugarHero provides an excellent comparison of tempered vs untempered chocolate
 ### What is tempering?
 Tempering heating, cooling, and reheating of chocolate to crystallize the fat in the cocoa butter (of the chocolate) into one of six possible forms (beta crystals). When you've properly tempered chocolate the fats in your chocolate will have a stable crystalline structure called the "beta crystal form". 
 
-Tempering is the reason why when your chocolate bar melts and you try to save it buying freezing it, the solid bar melts in your hand and has a weird texture. The heat melted all of the crystals, and when the chocolate reformed sub ideal crystals reformed with the beta crystals. 
+Tempering is the reason why when your chocolate bar melts and you try to fix it through freezing, the bar melts in your hand and doesn't taste right. The heat melted all of the crystals, and when the chocolate reformed sub ideal crystals reformed with the beta crystals. 
 
 There's actually a couple of different ways to temper chocolate, but they all follow the same pattern of heating chocolate around 45&deg;C (melt **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to mold into whatever shape you want. 
 
