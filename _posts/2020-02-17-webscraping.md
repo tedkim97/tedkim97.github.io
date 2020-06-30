@@ -13,15 +13,9 @@ funstuff: false
 
 # Introduction
 
-*Disclaimer:* This article is a written article of a presentation I gave on web scraping. 
+My problem with popular tutorials on web scraping is that they teach you how to scrape for an example site! While it does its job and might work for simple cases, these tutorials don't teach enough about the fundamentals of the web or troubleshooting basic issues to let beginners extend their crawlers.
 
-My problem with the tutorials is that they teach you how to build a web scraper/crawler for an example site, and it works for that use case! These tutorials don't teach enough about  fundamentals or troubleshooting basic issues to let beginners solve their own problems.
-
-As a result, I wanted to take a "medium-level" approach in this tutorial.
-
-Such that this article doesn't exhaustively cover the topics related to web scraping, but allows someone fairly new to acquire the terminology and look around for themselves. 
-
-This article takes a "medium-level" approach to web scraping. Meaning that it's not so "high-level" where complications are abstracted, and the activity is not enriching, but also not so "low-level" where the activity is excessively time-consuming or frustrating. The target audience should be familiar with programming, but an expert may not learn anything new. 
+As a result, I wanted to take a "medium-level" approach in this tutorial. This article won't exhaustively cover every topic tangential to web scraping, but allows a beginner to acquire terminology and concepts to be able to research and learn for themselves. This means this article won't be so "high-level" where every complication is abstracted, making the activity not enriching, but also not so "low-level" where the activity is excessively time-consuming and slow. 
 
 # Understanding Web Scraping
 

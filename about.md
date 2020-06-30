@@ -2,6 +2,7 @@
 layout: page
 title: About
 order: 5
+permalink: about
 ---
 
 ## About Me
