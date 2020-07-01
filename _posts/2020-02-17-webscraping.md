@@ -124,9 +124,11 @@ Adding "salt" to your anonymyzing scheme
 Although, you should note *this isn't perfect*. If someone malciious had your anonymizing scheme, they could brute force usernames from different websites and such.
 
 ##### Saving HTML
-You might observe that saving HTML pages to your disk is unnecessary! A crawler could just request pages and extract data from them in memory. However, in the process of testing and debugging a crawler, an individual is going to have to repeat different variations of the code if you make mistakes. The crawler will be making a lot of repeat requests to the server as a result - which is an unnecessary cost to the developer (in addition to a potential IP ban). 
+When you're scraping, store a copy of the webpages (the html) onto whatever device you store data.
 
-As a result, I advise saving page sources. 
+You might observe that saving HTML pages to your disk is unnecessary! A crawler could just request pages, keep them in memory, and extract data. However, in the process of testing and debugging a crawler, someone might execute different variations of the code to fix any problems they have. If you do this without a local copy of the webpages, the crawler will make a lot of repeat requests to the server as a result - which is an unnecessary cost to the web host (in addition to a potential IP ban). In addition, storing the source pages will allow you to **validate the correctness** of whatever data you've extracted. 
+
+As a result, it's not worth saving write endurance on your . 
 
 
 
@@ -137,10 +139,25 @@ The reason why this is a problem is because uses can't just make a POST request 
 
 In addition, sites will use javascript to load in
 
+https://www.selenium.dev/
+
+Selenium - you might notice that Selenium has Implicit Waits - which will pause the webdriver until a certain element loads - allowing you to load the information, and then scrape.
+
+This brilliant and you should use this feature! However, I personally have never gotten Implicit Waits to work. I've looked at documentation and examples on the internet, but I have *never* gotten Implicit Waits to work properly.
+
+Maybe I could have spent 1-2 more hours trying to solve the problem, but I just judged that it was faster to `time.sleep(5)` the driver, and move on.
+
+With this approach, I could be wasting a lot of time waiting even though the contents of the page has loaded. In addition, the driver might not be waiting enough (which destroys the point of the implicit waits), but  in my experiences `time.sleep` has never been that big of a deal. 
+
+
 ### Common Issues: Rate Limits
 
 ### Common Issues: 2FA
 Cellphone modules (I'm pretty sure this is what those phone spam services use)
+
+Online phone number services, some of these services exist - I'm not sure well they work as they're usually behind a paywall.
+
+Free services (google voice, skype) does not work incredibly well. These companies won't allow you to register a phone number with these services.
 
 # Web Scraping Example
 
@@ -154,7 +171,12 @@ Web scraping can benefit significantly from parallelizing the task. Having multi
 
 ### IO Blocks
 Reading from File
+
+Just remember adding more threads can increase everything. Remember that when you're reading from a 
+Hard Disk Drive, you could (potentially) be limited by how fast the disk spins on your HDD!
+
 Bandwidth
+In addition, network bandwidth can be a limitation. 
 
 # Understanding HTML & URLs
 Now that we know the abstract steps to web scraping, the next step is to figure out *which* pages to scrape and *what* to scrape. In order to do that let's take a step 
