@@ -46,6 +46,17 @@ html {
   }
 }
 
+/*still deciding on whether I want the scrollbar or not*/
+
+/*html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}*/
+
 /*
  *Image Centering
  */
