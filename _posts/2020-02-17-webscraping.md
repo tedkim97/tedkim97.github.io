@@ -34,6 +34,11 @@ No access to official data or APIs (ex: scrape products and their information fr
 
 ![fig1](/figures/webscraping_fig1.png){: .center-image }
 
+<center> <font size="2"> <i>
+An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get an idea of the process
+</i> </font> </center>
+<br>
+
 
 Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)![fig2](figures/webscraping_fig2.png){: .center-image }
 
