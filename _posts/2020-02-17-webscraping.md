@@ -13,11 +13,9 @@ funstuff: false
 
 # Introduction
 
-My problem with popular tutorials on web scraping is that they teach you how to scrape for an example site! While it does its job and might work for simple cases, these tutorials don't teach enough about the fundamentals of the web or troubleshooting basic issues to let beginners extend their crawlers.
+My problem with popular tutorials on web scraping is that they teach you how to scrape for an example site! While it does its job and might work for simple cases, these tutorials don't teach enough about the fundamentals of the web or troubleshooting basic issues to let beginners extend their crawlers. As a result, I wanted to take a "medium-level" approach in this tutorial. This means this article won't be so "high-level" where every complication is abstracted, making the activity not enriching, but also not so "low-level" where the activity is excessively time-consuming and slow. Hopefully this explanation should let a beginner acquire topics related to scraping, and be able to research and learn for themselves. 
 
-As a result, I wanted to take a "medium-level" approach in this tutorial. This article won't cover every topic tangential to web scraping, but allows a beginner to acquire terminology and concepts to be able to research and learn for themselves. This means this article won't be so "high-level" where every complication is abstracted, making the activity not enriching, but also not so "low-level" where the activity is excessively time-consuming and slow. 
-
-**How to use**: You don't have to read the whole thing - this blog post was a lot longer than I intended it to be! Just read the parts that are applicable to you. In addition, I always recommend doing additional research!
+**NOTE**: You don't need to read the whole thing - this blog post was a lot longer than I intended it to be (in retrospect I should have just broken this up). Just read the parts that are applicable to you. In addition, I always recommend doing additional research!
 
 # Understanding Web Scraping
 
@@ -266,39 +264,67 @@ The process of extracting data will ultimately be an iterative process
 
 ### HTML?
 
-HTML (Hypertext Markup Language) is the standard markup language for information on the web. HTML (along with CSS, JS, and more) is responsible for building all the pretty websites on the web. Websites will have an underlying HTML source that instructs your browser to display content properly.
+HTML (Hypertext Markup Language) is the standard markup language for information on the web. HTML (along with CSS, JS, and more) is responsible for building all the pretty websites on the web. Websites have an underlying source that instructs your browser to display content properly, Building the contents of this site (like items on a store page) to be dynamic involves creating well-structured HTML (i.e don't randomly create elements and tags to store product information). Assuming the site maintains this structure, a crawler can exploit that to extract data on a larger scale. Not all websites are identical, and the more fluent we are with web dev the faster we can build the crawler. 
 
 ![fig1](/figures/webscraping_fig3.jpg){: .center-image }
 <center> <font size="2"> <i>
 A webpages content in browser (top) and its underlying source (bottom). Not pictured: CSS.
 </i> </font> </center>  
-<br> 
+<br>
+
+##### HTML Tags & Elements
+HTML is featured around "elements". Look at any HTML file and you'll see tags like <div>, <p>, <h>, <img>, etc. Furthermore, HTML & CSS allows us to create classed elements with custom styling defined in a `.css` file. These tags give us a structure of nested elements - where the tag actually hints at whats inside. 
 
 
-Having a basic understanding of HTML allows us to exploit the structure of a webpage and make parsing data simple and 
-predictable. Different websites will have different structures, and the more fluent we are the faster we build the crawler. 
+##### Iterating (Quick and Dirty)
+
+The approach I take is open the downloaded HTML in a browser or sublime. I find an example data point (like "ABC Mason Jar") I want to find and "CTRL + F" through the file for a match. The desired data should have some element or tag that indicates that its usage (like <div class="productname">). Assuming the web developers were consistent, the pattern you picked should repeat on different pages. 
+
+Then we can use `beautifulsoup4` to find elements fitting that like "<div class=productname>". You don't need to be super precise here, in the worst case scenario you can collect excess information, and find clever ways of excluding that information 
+
 
 ## URL?
 
+URL (Uniform Resource Locator) is a reference to a web resource that specifies its location and a mechanism for retrieving it. They're links to parts of a website/service.
+
+
 Even though they might not always be intelligible to us (i.e amazon.com/soap/dp/B07M63H81H?pf_rd_r=7NDCD524VXDHCMBVQGS9&pf_rd_p=8f819d9f-3f10-459c-877d-64ffa525d3b4&pd_rd_r=b5353e1b-cc55-40e2-8050-4105565358f1&pd_rd_w=LaiQz&pd_rd_wg=NCNvQ&ref_=pd_gw_bia_d0).
 
-### What i
+Understanding the structure of URLs is important because webservices (should) have well-structured URLs
+
+Although web addresses may seem random, they are not random
+
+With some experimentation, one can puzzle together the structure of URLs
+
+We can use the structure of URLs to make clear decisions for what to scrape (ex: amazon.com/masonjars?page=1) 
+
+A better example is to go to `ultimate-guitar.com` and click on "tabs". Below are some URLs I collected by clicking around.
 
 
-The website/web service will have internal API's that build the website using Javascript. These API's are not made public, and reverse engineering these points can be a pain. 
+```bash
+ultimate-guitar.com/explore?
+ultimate-guitar.com/explore?page=3
+ultimate-guitar.com/explore?type[]=Ukelele%20Chords
+ultimate-guitar.com/explore?type[]=Ukelele%20Chords&page=4
+ultimate-guitar.com/explore?type[]=page=4&Ukelele%20Chords
+ultimate-guitar.com/explore?type[]=page=4&Guitar%20Chords
+```
+You can see that these URLs isn't throwing you a 404! It seems that this site has a relatively simple url scheme!
+
+NOTE: These “?” are actually query strings used to pass values to ask the webserver
+
+For a deeper understanding of getting/sending URLS, one should research “REST” (Representational state transfer) for webservices 
+
 
 # Rules & Regulations
 
 ### Robots.txt
-Websites normally have a `robots.txt` file that indicates *who* can interact with the website and *how*. Almost every major website will have one. I will note that plenty of people ignore these files though. 
-
-### Privacy & Ethics
-I have met plenty of people that try to scrape information from social media - which is incredibly unethical. All social media sites have rules and clauses against this and you'll be violating their TOS.
+Websites normally have a `robots.txt` file that indicates *who* can interact with the website and *how*. Almost every major website will have one. 
 
 ### Legal Complications
 The rules and regulations in web scraping are complicated - there exists lawsuits and rulings about web scraping. As of 2020, the rulings are being appealed, so I recommend googling whether web scraping is punishable by death. On another note, I will say that it can be hard to find someone running a crawler unless it is being deployed on a massive scale.
 
-# Alternatives from Scratch?
+# Alternatives to Building from Scratch?
 
 There are plenty of services/platforms that can abstract a lot of the work in web scraping. I don't have any personal experiences with them, but I feel like I should let readers know they exist. [Octoparse](https://www.octoparse.com/) and [Scrapy](https://scrapy.org/) are some that I've heard about.
 
