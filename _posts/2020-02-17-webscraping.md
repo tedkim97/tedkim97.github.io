@@ -2,6 +2,7 @@
 layout: post
 title: A (more) complete guide to Web Scraping
 published: true
+enable_latex: true
 permalink: /webscraping
 frontpage: true
 technical: true
@@ -84,13 +85,17 @@ def download_urls(list_of_urls):
 	return 
 
 def store_data(data):
-	# Store Data
+	'''
+	Store Data
+	'''
 
 def scrape_saved_html(data_dir):
 	for fname in os.listdir(data_dir):
 		with open(fname, 'rb') as f:
 			soup = BeautifulSoup(f.read(), 'html.parser')
-			# Extract Information
+			'''
+			Extract Information
+			'''
 			store_data(extracted_info)
 	return 
 
@@ -132,17 +137,17 @@ A good cryptographic hash function should be:
 - **Avalanche Effect** : A change in a bit of the original input should drastically change the resulting hash - preventing any correlation between hashes of similar inputs.
 - **Easy to compute** : this system wouldn't be very usable if it were slow to compute
 
-With these properties, we have a potential anonymizing scheme that allows for consistent identification when hashing an ID (determinism), you cannot have accidental duplicates (collision resistant), you cannot find the ID given a hash (one-way), you cannot try to puzzle patterns through hashes (Avalanche effect), and it's fast (easy to compute). However, naked hash functions by themselves are not good at anonymizing data. 
+With these properties, we have a potential anonymizing scheme that allows for consistent identification when hashing an ID (determinism), you cannot have faulty duplicate ID's (collision resistance), you cannot find the ID given a hash (one-way), you cannot try to solve for patterns through hashes (Avalanche effect), and it's fast (easy to compute). However, naked hash functions alone are not good enough.
 
 In fact, there is a pretty easy attack to this approach. Since usernames are *meant* to be public - an attacker could run a couple of hashing algorithms on those publicly available usernames, and sees if any of the generated hashes match your dataset. This is basically an easier version of a popular encrypted password attack (the rainbow table attack)! 
 
 As a result, a popular technique to circumvent this is to "salt" information - which is the processing of appending information to the input, to completely change the output. An example would be `hash(x||blargh) != hash(x)`. Now as long the attacker doesn't know your salting patterns, they won't be able to find ID's as easily. 
 
-Despite all this effort, you can't truly anonymize data as long as the salting technique and CHF are known. For example this paper "Introduction To The Hash Function as a Personal Data Pseudonymisation Technique" lists some strengths and weaknesses of using hashing as a pseudonymization schemes[^1].
+Despite all this effort, you can't truly anonymize data as long as the salting technique and CHF are known (we can recover user ID's if we have a list of usernames and the salt+hash scheme). For example this paper "Introduction To The Hash Function as a Personal Data Pseudonymisation Technique" lists some strengths and weaknesses of using hashing as a pseudonymization schemes[^1]. 
 
 [^1]: https://edps.europa.eu/sites/edp/files/publication/19-10-30_aepd-edps_paper_hash_final_en.pdf
 
-When implementing these cryptographic functions, I recommend using a library (like `pycryptodome`). 
+Implementing cryptographic hash functions is complicated, so I recommend using a library (like `pycryptodome`). 
 
 ##### Don't Be Bad
 If you're trying to use web scraping to detect botting or [astroturfing](https://en.wikipedia.org/wiki/Astroturfing#:~:text=Astroturfing%20is%20the%20practice%20of,is%20supported%20by%20grassroots%20participants.), I encourage you to do that! However, don't do it to bad things like sell people's information or undermine democracy.
@@ -153,7 +158,7 @@ One common issue people face is dealing with use interactivity/extracting inform
 
 An fix to this solution is to use [selenium](https://www.selenium.dev/)[^2] - a tool for automating browser tasks - to control a browser section and scrape through the human computer interface. People primarily use Selenium for automate web testing, but for our purposes we can use it to run a crawler. 
 
-[^2]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the small, unergonomic aspects are worth the flexibility.
+[^2]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
 
 ##### Selenium: one way to deal with interaction
 Selenium offers several ways to located page elements, and you should read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for more details. Below is an example where you locate a "load more" button by identifying the button's class name. 
@@ -163,63 +168,81 @@ from selenium import webdriver
 
 button_class = 'masonry-load-more-button'
 driver = webdriver.Chrome(options=browser_options)
-driver.get(SOMEURL)
+driver.get('somewebsite.com/test')
 
 try:
     load_button = driver.find_element_by_class_name(button_class)
     load_button.click()
-    time.sleep(2)
-    # Scrape contents after loading more
+    time.sleep(2) # give the content time to load
+    '''
+    scrape content
+    '''
 except:
 	print("failed to find button")
 ```
-In addition, Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). 
+Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). 
 
 It's up to you to decide how to locate the right elements to interact with, and how to ignore the wrong buttons. 
 
 ##### Selenium Tip: Handling Exceptions
-Selenium throws exceptiosn - if you don't want to reset your crawler everytime you run into the exceptions, you should run some try/catch clauses n your crawler.
+Selenium throws exceptions for situations where it can't execute an instruction. If you don't want to reset your crawler every-time you run into the exceptions, you should run some try/catch clauses n your crawler.
 
-Keep in mind, that if you want to work with specific exceptions, you need to import them from selenium
+Keep in mind, that if you want to work with specific exceptions, you need to import them from selenium like 
 ```python
 from selenium.common.exceptions import NoSuchElementException
 ```
-
 ##### Selenium Tip: Manage Browser Version 
-
-Updating your local version of your chrome/firefox browser can interfere with Selenium, giving you a common excpetion
-like `blah blah: Message: session not created: This version of ChromeDriver only supports Chrome version XYZ`. The solution is to install a compatible webdriver from the internet.
-
-There is another solution (although I am not a fan of this approach) detailed in this [stack exchange post](https://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path/52878725#52878725).
+If you try to open a webdriver, and get an error like `...: Message: session not created: This version of ChromeDriver only supports Chrome version XYZ`. The solution is to install a compatible webdriver from the internet. There is another solution that requires no additional configuration detailed in this [stack exchange post](https://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path/52878725#52878725) if you don't want to manage something like that.
 
 ##### Selenium Tip: Headless Mode
+You'll notice that when you run the the crawler through selenium, a browser session will pop up on the screen. If you don't want this, you can hide the screen (but keep the activity) by adding a `"--headless"` option to your webdriver settings. Below is an example of how to use this feature in python. 
+
+```python
+from selenium import webdriver
+
+browser_options = webdriver.ChromeOptions()
+browser_options.add_argument('--incognito')
+browser_options.add_argument("--headless");
+
+driver = webdriver.Chrome(options=browser_options)
+driver.get(url)
+```
 
 ##### Selenium Tip: Detaching
 I'm not sure if this works anymore, but you can detach your browser so that when it completes, the browser session stays intact. This is helpful for visually debugging.
 
-`# browser_options.add_experimental_option("detach", True)`
-
 ```python
 browser_options = webdriver.ChromeOptions()
-browser_options.add_argument('--incognito')
-# browser_options.add_experimental_option("detach", True)
-browser_options.add_argument("--headless");
+browser_options.add_experimental_option("detach", True)
 ```
 
-##### Selenium Tip: Implicit Waits
-you might notice that Selenium has Implicit Waits - which will pause the webdriver until a certain element loads - allowing you to load the information, and then scrape.
+##### Selenium Tip: Implicit Waits/Waiting
+Selenium offers Implicit Waits - which is a way of pausing the web driver until a certain element exists (like when a button is done loading, or if a certain tag appears). This can create a more robust scraper that's less likely to miss information. However, I personally have never gotten Implicit Waits to work. I've looked at documentation and examples on the internet, but I have *never* gotten Implicit Waits to work for me. I could be misunderstanding how ImplicitWaits worked, coding it incorrectly, or it's an issue with the Selenium Python binding (not likely), but I have never gotten it to work. 
 
-This brilliant and you should use this feature! However, I personally have never gotten Implicit Waits to work. I've looked at documentation and examples on the internet, but I have *never* gotten Implicit Waits to work properly.
+I could have spent 1-2 more hours trying to solve the problem, but I just judged that it was faster to `time.sleep(5)` the driver, and move on. This approach as obvious drawbacks. I could be wasting a lot of time waiting even though the contents of the page has loaded. In addition, the driver might not be waiting enough (which destroys the point of the implicit waits), but in my experiences `time.sleep` has been an adequate solution. 
 
-I could be misunderstanding how ImplicitWaits worked, coding it incorrectly, or maybe it's an issue with the Selenium Python binding, but I have never gotten it to work. 
+```python
+from selenium import webdriver
+import time
 
-Maybe I could have spent 1-2 more hours trying to solve the problem, but I just judged that it was faster to `time.sleep(5)` the driver, and move on.
+browser_options = webdriver.ChromeOptions()
+browser_options.add_argument('--incognito')
+browser_options.add_argument("--headless");
 
-This approach as obvious drawbacks. I could be wasting a lot of time waiting even though the contents of the page has loaded. In addition, the driver might not be waiting enough (which destroys the point of the implicit waits), but in my experiences `time.sleep` has been an adequate solution. 
-
-
+driver = webdriver.Chrome(options=browser_options)
+driver.get(url)
+time.sleep(5)
+'''
+Scrape Content
+'''
+```
 
 ### Common Issues: Rate Limits
+Websites will put in rate limits on the number of page visits per hour (ex: you can only request 100 twitter handles per hour), and you will never be able to beat this limit. This limit is placed to prevent people from tracking social media information, and it's very effective.
+
+[As of now (according to Statista) there are around 1.7 billion daily active facebook users](https://www.statista.com/statistics/346167/facebook-global-dau/). If we are limited to 100 profile requests per hour, even if we visit **1%** of the DAU, then it would take **170,000 hours**, or **7,083.3 days** to requests those users... Adding machines can speed this up, but each additional machine will only bring a marginally smaller reduction in time[^3].
+
+[^3]: In case you need a mathematical demonstration... We can model a function that tells us the total time to finish scraping like: $$ f(n) = \frac{T}{n} $$ where $$n$$ is our number of crawlers. Our derivative with respect to $$n$$ is $$f'(n) = -\frac{T}{n^2}$$. This means that an increase in $$n$$ results in a decrease of $$f'(n)$$ - meaning that the rate of growth for $$f(n)$$ is slowly decreasing.
 
 ### Common Issues: 2FA
 Cellphone modules (I'm pretty sure this is what those phone spam services use)
@@ -228,21 +251,92 @@ Online phone number services, some of these services exist - I'm not sure well t
 
 Free services (google voice, skype) does not work incredibly well. These companies won't allow you to register a phone number with these services.
 
-# Web Scraping Example
+
+https://github.com/pablo/huawei-modem-python-api-client
+
+
+https://www.adafruit.com/category/281
+
+https://www.adafruit.com/product/1946
+
+https://mcsarge.blogspot.com/
 
 # Advanced Concepts and Design
 
 ### Parallelization
-Web scraping can benefit significantly from parallelizing the task. Having multiple scraping processes run at once is a straightforward extension with Pythons `thread` library. 
+Web scraping can benefit significantly from parallelizing the task. Having multiple scraping processes run at once is a straightforward extension with Pythons `thread` library. Each scraping process is independent of each other, so you won't have to worry about shared data-structures and such.
 
-### IO Blocks
+Hardware can't be abstracted
+
 Reading from File
 
 Just remember adding more threads can increase everything. Remember that when you're reading from a 
 Hard Disk Drive, you could (potentially) be limited by how fast the disk spins on your HDD!
 
+
 Bandwidth
 In addition, network bandwidth can be a limitation. 
+
+If you don't have enough network bandwidth, or drive bandwidth, parallelziing these tasks might not do much. 
+
+---------------------------------------------------------------------------------------
+In addition, writing to a single file with a multi-threaded approach is more involved (multiple threads cannot just write to a single file arbitrarily). What you could do is use a python binding to a database application that abstracts multi-threaded writes (like pymongo).
+
+
+Bandwidth 
+
+Adding more threads isn't perfect, and it can't 
+
+realize that not everything can be done at once
+
+Writing to 
+
+
+
+```python
+import threading
+
+num_threads = 10
+URLS = ['xyz.com/page1', 'xyz.com/page2', 'xyz.com/page3', ...]
+index_slice = len(URLS) / num_threads
+
+def download_html(datadir, urls):
+	for link in urls:
+		'''
+		Request Page 
+		'''
+		saveto(datadir, data)
+	return
+
+for i in range(num_threads):
+	thread_arg = ('mydata/', URLS[(i * index_slice): (i+1) * index_slice])
+	tmpt = threading.Thread(target=download_html, args=thread_arg)
+	tmpt.start()
+```
+
+For extracting
+```python
+import threading
+import os
+
+num_threads = 10
+PAGES = ['mydata/{}'.format(fname) for fname in os.listdir('mydata/')]
+index_slice = len(PAGES) / num_threads
+
+def scrape_data(webpages: list, additional_params):
+	for src in webpages:
+		'''
+		Scrape 
+		'''
+		writeto(database, scraped_data)
+	return
+
+for i in range(num_threads):
+	thread_arg = (PAGES[(i * index_slice): (i+1) * index_slice], 'abc', 6)
+	tmpt = threading.Thread(target=scrape_data, args=thread_arg)
+	tmpt.start()
+```
+
 
 # Understanding HTML & URLs
 Now that we know the abstract steps to web scraping, the next step is to figure out *how* to scrape and *which* pages to scrape. 
