@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A (more) in-depth guide to Web Scraping
+title: A (more) complete guide to Web Scraping
 published: true
 permalink: /webscraping
 frontpage: true
@@ -13,27 +13,32 @@ funstuff: false
 
 # Introduction
 
-My problem with popular tutorials on web scraping is that they teach you how to scrape for an example site! While it does its job and might work for simple cases, these tutorials don't teach enough about the fundamentals of the web or troubleshooting basic issues to let beginners extend their crawlers. As a result, I wanted to take a "medium-level" approach in this tutorial. This means this article won't be so "high-level" where every complication is abstracted, making the activity not enriching, but also not so "low-level" where the activity is excessively time-consuming and slow. Hopefully this explanation should let a beginner acquire topics related to scraping, and be able to research and learn for themselves. 
+My problem with popular tutorials on web scraping is that they teach you how to scrape for in a specific situation. While the tutorial does its job and might work for simple cases, these tutorials don't teach enough about the fundamentals of the web, or troubleshooting techniques to let beginners extend their crawlers. As a result, I wanted to take a "medium-level" approach in this tutorial. This means this article won't be so "high-level" where every complication is abstracted (removing the learning process), but also not so "low-level" where the activity is excessively time-consuming and slow. Hopefully this explanation should let a beginner acquire topics related to scraping, and be able to research and learn for themselves. 
 
-**NOTE**: You don't need to read the whole thing - this blog post was a lot longer than I intended it to be (in retrospect I should have just broken this up). Just read the parts that are applicable to you. In addition, I always recommend doing additional research!
+**NOTE**: You don't need to read the whole piece - this blog post was a lot longer than I intended it to be (in retrospect I should have just broken this up). Just read the parts that are applicable to you. In addition, I always recommend doing additional research!
 
 # Understanding Web Scraping
-
 Web scraping is the process of automatically extracting information from the web. Bots and crawlers leverage the structure of websites (html & js) and their addresses (url) to extract data automatically and consistently.
 
 ### Why should I scrape from the web?
-Situations where you would like to scrape from the web are rather niche; however, if you need: 
+Situations where you would want to scrape from the web are rather niche; however, if you need: 
 - A new idea involving predictions on some user behavior
 - Novel data for an original research project
-- Something new from Kaggle datasets for your ***sick*** machine learning skills
+- Something different from existing Kaggle datasets for your ***sick*** machine learning skills
 
 ### Use Cases of Web Scraping
-The data you need may exist - whether it's from tech companies (Google, Facebook, etc) or data vendors (Bloomberg, Equifax, etc). The problem is that the capital or security clearance needed isn't worth it for a hobby or experiment.
+The data you want may exist - whether it's from tech companies (Google, Facebook, etc) or data vendors (Bloomberg, Equifax, etc). The problem is that the capital or security clearance needed isn't worth it for a hobby or small experiment.
 
-No access to official data or APIs (ex: scrape products and their information from various retailers) 
 ![fig1](/figures/webscraping_fig1.png){: .center-image }
+<center> <font size="2"> <i>
+No access to official data or APIs (ex: scrape products and their information from various retailers) 
+</i> </font> </center>  
+<br> 
 
-Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)![fig2](figures/webscraping_fig2.png){: .center-image }
+![fig2](figures/webscraping_fig2.png){: .center-image }
+<center> <font size="2"> <i>
+Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)</i> </font> </center>  
+<br> 
 
 ### Limitations of Web scraping
 Building a crawler can't solve all of your data-collection needs.
@@ -47,12 +52,12 @@ When allocating time into a data-project, it's important to remember these detai
 # Building the crawler
 
 ### Setup
-I use python 3.7 with `beautifulsoup4` and `requests`. You don't need these libraries to scrape! You could replace `beautifulsoup4` with regular expressions, and `requests` with Python's native HTTP library (or make your own). However using high-level libraries make web scraping *significantly* easier (remember where you want to be spending the majority of your time).
+Even though a lot of web scraping tutorials are in Python (cause it's a lot easier), it's really language-agnostic. I use python 3.7 with `beautifulsoup4` and `requests`. You don't need these libraries to scrape! You could replace `beautifulsoup4` with regular expressions, and `requests` with Python's native HTTP library (or make your own). However using high-level libraries make web scraping *significantly* easier (remember where you want to be spending the majority of your time).
 
-Building a crawler is an iterative process - testing your requests and extraction methods using an interactive shell allows you to prototype a crawler much more quickly. For instance, I like testing my crawler's accuracy using a jupyter notebook.
+Building a crawler is an iterative process - testing your requests and extraction methods using an interactive shell allows you to prototype a crawler much more quickly. For instance, I like testing my crawler's accuracy using a `jupyter notebook`.
 
 ### Web Scraping (Abstractly)
-You can think of web scraping as a series of these steps. Implementation of these steps is important because it determines how information is collected. In addition, it's completely language-agnostic (but I highly recommend python).
+Let's conceptualize web scraping as a series of steps. Implementation of these steps is important, but listing abstract steps helps us understand what we need to do. 
 
 1. Figure out which URLs (web addresses) to visit
 - You could decide by following a pattern of urls (i.e xyz.com/page=1; xyz.com/page=2, etc)
@@ -64,7 +69,8 @@ You can think of web scraping as a series of these steps. Implementation of thes
 5. Save the structured data
 
 ### Psuedocode template 
-With some minor tweaks this could should work for simple sites
+With some minor tweaks this could should work for simple sites. [insert joke about how Python is pseudocode]
+
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -94,71 +100,63 @@ if __name__ == "__main__":
 	scrape_saved_html('/')
 	print("done scraping")
 ```
+
 ### Advisable Practices
-I hesitate to say "best" (which is why I don't) because I am not a leading practitioner on scraping/crawling. However, I think that some of these practices below should be followed.
+I hesitate to say "best" (which is why I don't) because I am not an authority on scraping/crawling. However, I think that some of these practices below should be followed.
 
 ##### Save HTML
-When you're scraping, store a copy of the webpages (the HTML) onto whatever device you store data.
+When you're scraping, store a copy of the page (the HTML) onto a storage device (an external drive, the drive your OS is on, a network attached storage, etc).
 
-You might observe that saving HTML pages to your disk is unnecessary! A crawler could just request pages, keep them in memory, and extract data. However, in the process of testing and debugging a crawler, someone might execute different variations of the code to fix any problems they have. If you do this without a local copy of the webpages, the crawler will make a lot of repeat requests to the host as a result - which is an unnecessary cost to the host, waste of your bandwidth, and may result in an IP ban. In addition, storing the source pages will allow you to look for any mistakes and **validate the correctness** of your data. Optimizing for write endurance on your drives it just not worth it. 
+You might observe that saving HTML pages to your disk is unnecessary! A crawler could just request pages, keep them in memory, and extract data, and free the memory after extracting. However, in the process of testing and debugging a crawler, someone might execute different variations of the code to fix any problems they have. If you do this without a local copy of the webpages, the crawler will make a lot of repeat requests to the host as a result - which is an unnecessary cost to the host, waste of your bandwidth, and may result in an IP ban. In addition, storing the source pages will allow you to look for any mistakes and **validate the correctness** of your data. Optimizing for write endurance on your drives it just not worth it. 
 
 ##### Anonymize/Pseudonymize Data 
 Anonymize your data to protect people's privacy. In addition, make sure you anonymize your data in a **meaningful way**. If you Anonymize data with a lookup table, you can recover the person's ID by a reverse lookup - you aren't protecting anyone's identity. 
 
-However, if you need to be able to identify behaviors over time, submissions by an individual, or a group of individuals deleting the ID may not be helpful. There are two approaches: anonymization and pseudonymization. Anonymization prevents re-identification of a data point that can't be used to identify anyone while Pseudonymization allows the data point to be **recovered given additional information**.
+However, if you need to be able to identify behaviors over time, submissions by an individual, or a group of individuals deleting the ID may not be helpful. There are two approaches: anonymization and pseudonymization. Anonymization prevents re-identification of a data point that can't be used to identify anyone while Pseudonymization allows the data point to be recovered **given additional information**.
 
 **Anonymization: Deleting the ID**:
 Just deleting the ID of the data point is the best way of maintaining anonymity. 
 
-**Pseudonymization: Salted Cryptographic Hashes**:
-Disclaimer: this isn't a perfect solution! There are plenty of articles that point out the problems with this approach - mainly that it can't *truly* anonymize data
+**Anoymization/Pseudonymization: Salted Cryptographic Hashes**:
 
-Cryptographic hashing and salting are common practice in storing passwords. This is why a company can't tell you what your password is when you forget - the company doesn't know it themselves, just the salted hash of your password.
+***Disclaimer***: this isn't a perfect solution! There are plenty of articles that point out the problems with this approach - mainly that it can't *truly* anonymize data. However, this solution works pretty well for a pseudonymization scheme.
 
-An added benefit is that a cryptographic hash can take any length input and outputs a fixed size hash. 
+Cryptographic hashing is a way of taking an input of any length, and outputting a (seemingly)random fixed size hash. The reason why they're important is that cryptographic hash functions have a set of properties that make it ideal for certain security applications. Fun fact, cryptographic hashing and salting are common practice in storing passwords. This is why a company can't tell you what your password is when you forget - the company doesn't know it themselves, just the salted hash of your password.
 
-We will abstract the engineering of cryptographic hash functions and just look at some of their properties and why they might be helpful for our use case. A good cryptographic hash function should be: 
+We will ignore the engineering of cryptographic hash functions and look at their properties, and why they might be helpful for our use case. 
+
+A good cryptographic hash function should be: 
 - **Deterministic** : Hashing some value with the hash function will always be the same w.r.t the value. (`SHA256('abc') == SHA256('abc')`)
-- **(Practically) Collision Free** : Practically speaking, (good) cryptographic functions are injective, meaning you won't find two inputs that result in the same outputted hash (or a "collision"). Collisions are *possible* (making them not *truly* injective), but very unlikely. Refer to [this stack exchange post](https://stackoverflow.com/questions/4014090/is-it-safe-to-ignore-the-possibility-of-sha-collisions-in-practice#:~:text=For%20instance%2C%20with%20SHA%2D256,second%20to%20about%2010%2D15.) if you want an idea of how unlikely. 
-- **Easy to compute**: 
-- **One-way** : This means that it should be difficult to find the inverse of `hash(x)`. Assuming you're using a popular hashing method, this should be given. If you could quickly invert SHA-256 you'd rule the world.
+- **(Practically) Collision Free/High Collision Resistant** : (Good) cryptographic hash functions are collision resistant, meaning you won't find two inputs that result in the same outputted hash (or a "collision"). In reality, collisions are *possible* (making them not *truly* injective), but very unlikely. Refer to [this stack exchange post](https://stackoverflow.com/questions/4014090/is-it-safe-to-ignore-the-possibility-of-sha-collisions-in-practice#:~:text=For%20instance%2C%20with%20SHA%2D256,second%20to%20about%2010%2D15.) if you want an idea of how unlikely.
+- **One-way (No inverse)** : This means that it should be difficult to find the inverse of `hash(x)` besides brute-forcing all X's. Assuming you're using a popular hashing method, this should be given. If you could quickly invert SHA-256 you would be the most powerful person alive. This property is also called Pre-image resistance.
+- **Avalanche Effect** : A change in a bit of the original input should drastically change the resulting hash - preventing any correlation between hashes of similar inputs.
+- **Easy to compute** : this system wouldn't be very usable if it were slow to compute
 
-However, naked hash functions by themselves are not good at anonymizing data.
+With these properties, we have a potential anonymizing scheme that allows for consistent identification when hashing an ID (determinism), you cannot have accidental duplicates (collision resistant), you cannot find the ID given a hash (one-way), you cannot try to puzzle patterns through hashes (Avalanche effect), and it's fast (easy to compute). However, naked hash functions by themselves are not good at anonymizing data. 
 
-It's not perfect - there are plenty of research detailing the flaws of this approach. 
+In fact, there is a pretty easy attack to this approach. Since usernames are *meant* to be public - an attacker could run a couple of hashing algorithms on those publicly available usernames, and sees if any of the generated hashes match your dataset. This is basically an easier version of a popular encrypted password attack (the rainbow table attack)! 
 
-For example this paper "Introduction To The Hash Function as a Personal Data Pseudonymisation Technique" lists some strengths and weaknesses of using hasing as a pseudonymization schemes[^1].
+As a result, a popular technique to circumvent this is to "salt" information - which is the processing of appending information to the input, to completely change the output. An example would be `hash(x||blargh) != hash(x)`. Now as long the attacker doesn't know your salting patterns, they won't be able to find ID's as easily. 
+
+Despite all this effort, you can't truly anonymize data as long as the salting technique and CHF are known. For example this paper "Introduction To The Hash Function as a Personal Data Pseudonymisation Technique" lists some strengths and weaknesses of using hashing as a pseudonymization schemes[^1].
 
 [^1]: https://edps.europa.eu/sites/edp/files/publication/19-10-30_aepd-edps_paper_hash_final_en.pdf
 
-
-When implementing anonymization, I recommend using a library (like `pycryptodome`).  
-
-
-
-However, regular cryptographic hashes are not enough. Anyone with the same cryptopgraphic hash function could guess very commonly used usernames from other popular websites (if people re-use passwords, they definitely re-use usernames). 
-
-Although, you should note *this isn't perfect*. If someone malicious had your anonymizing scheme, they could brute force usernames from different websites and such.
+When implementing these cryptographic functions, I recommend using a library (like `pycryptodome`). 
 
 ##### Don't Be Bad
 If you're trying to use web scraping to detect botting or [astroturfing](https://en.wikipedia.org/wiki/Astroturfing#:~:text=Astroturfing%20is%20the%20practice%20of,is%20supported%20by%20grassroots%20participants.), I encourage you to do that! However, don't do it to bad things like sell people's information or undermine democracy.
 
-### Common Issues: Interactivity and JS
+### Using Selenium to deal with interactivity and Javascript
 
-One common issue people face is dealing with use interactivity/extracting information from pages with javascript. Modern websites won't load all of the information on the page at once. Instead they'll display information with a button press. Another situation is that a website may involve some sort of login (although if they have a login, scraping is probably against TOS). The reason why this is a problem is because our naive crawler can't just make a POST request to press a button, or with login credentials and expect to get back login access.
+One common issue people face is dealing with use interactivity/extracting information from pages with javascript. Modern websites won't load all of the information on the page at once. Instead they'll display information with a button press. Another situation is that a website may involve some sort of login (although if they have a login, scraping is probably against TOS). The reason why this is a problem is because our naive crawler can't just make a POST request to press a button, or with login credentials and expect to get back login access (it's a whole process with tokens, authorizations, etc).
 
-This is a very complicated problem because login and javascript requires user interaction within the browser. 
+An fix to this solution is to use [selenium](https://www.selenium.dev/)[^2] - a tool for automating browser tasks - to control a browser section and scrape through the human computer interface. People primarily use Selenium for automate web testing, but for our purposes we can use it to run a crawler. 
 
-An fix to this solution is to use [selenium](https://www.selenium.dev/) which is a tool for automating browser tasks. People primarily use Selenium for automate web testing, but for our purposes we can use it to run a crawler. 
+[^2]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the small, unergonomic aspects are worth the flexibility.
 
-
-### Selenium: one way to deal with interaction
+##### Selenium: one way to deal with interaction
 Selenium offers several ways to located page elements, and you should read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for more details. Below is an example where you locate a "load more" button by identifying the button's class name. 
-
-Selenium offers a way of retrieving the first example that fits the criteria, or every element that fits the criteria.
-
-It's up to you to decide how to find the right element to interac twith.
-
 
 ```python
 from selenium import webdriver
@@ -175,10 +173,9 @@ try:
 except:
 	print("failed to find button")
 ```
+In addition, Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). 
 
-For example, you can find them by 
-
-Even though working with the Selenium Python API can be a bit clunky (importing a lot of different subpackages), the unergonomic aspects are worth the power you can do
+It's up to you to decide how to locate the right elements to interact with, and how to ignore the wrong buttons. 
 
 ##### Selenium Tip: Handling Exceptions
 Selenium throws exceptiosn - if you don't want to reset your crawler everytime you run into the exceptions, you should run some try/catch clauses n your crawler.

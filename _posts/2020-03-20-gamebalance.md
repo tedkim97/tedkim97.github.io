@@ -104,3 +104,21 @@ I'd argue that it's really easy to climb any competitive game is by recognizing 
 
 # I propose the balance should be approaches from a structual perspective
 
+
+# Balance cannot be described "objectively"
+Because "people" play videogames (and not robots ... yet) balance needs to be understood subjectively as well. However, jnust because balance is subjective, doesn't mean that we should throw about rigor in balance.
+
+Psychology exists as a field, and we do research around it
+
+
+
+# The problem is that Players aren't a homogeneous group at all
+Even though it seems pretty clear that League of Legends, Starcraft, Overwatch, Fortnite, Apex Legends, etc are competitive games, 
+
+games in general have a pretty diverse playerbase.
+
+Bartle's Taxonomy is an idea, derived from a user study of different video game players, that establishes this.
+
+Some people play competitive games to win, some play to overhwelmly dominate, some play to create things/explore aspects of the game, etc. 
+
+The popularity of the game helps establish a community that supports these decisiosn.
