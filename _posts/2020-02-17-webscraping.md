@@ -108,7 +108,7 @@ if __name__ == '__main__':
 	print('done scraping')
 ```
 # Understanding HTML & URLs
-Now that we know the abstract steps to web scraping, the next step is to figure out *how* to scrape and *which* pages to scrape. Having some understanding of the web will make steps (1) and (4) (requesting and parsing) much easier. 
+Now that we know the abstract steps to web scraping, the next step is to figure out *how* to scrape and *which* pages to scrape. Having some understanding of the web will make requesting and parsing (steps 1 and 4) easier. 
 
 On a high level, HTML represents the content of the page while a URL indicates it's location. A website will have well structured pages (HTML) and well structured locations (pages). Using our understanding of HTML, we can exploit the structure of websites (HTML DOM) to make parsing our desired data simple and predictable (the how), and our understanding of URLs to know which pages to go to (the which). 
 
@@ -197,8 +197,8 @@ Despite all this effort, you can't truly anonymize data as long as the salting t
 
 Implementing cryptographic hash functions is complicated, so I recommend using a library (like `pycryptodome`). 
 
-### Don't Be Bad
-Be a good person! If you're trying to use web scraping to detect botting or [astroturfing](https://en.wikipedia.org/wiki/Astroturfing#:~:text=Astroturfing%20is%20the%20practice%20of,is%20supported%20by%20grassroots%20participants.), I encourage you to do that! However, don't do it to bad things like sell people's information or undermine democracy.
+### Be Good!
+Don't scrape for bad purposes! If you're trying to use web scraping to detect botting or [astroturfing](https://en.wikipedia.org/wiki/Astroturfing#:~:text=Astroturfing%20is%20the%20practice%20of,is%20supported%20by%20grassroots%20participants.), I encourage you to do that! However, don't do it to bad things like sell people's information or undermine democracy.
 
 # Common Issues: Dealing with interactivity and Javascript
 
@@ -210,7 +210,7 @@ An fix to this solution is to use [selenium](https://www.selenium.dev/)[^3] - a 
 
 [^3]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
 
-### Selenium: one way to deal with interaction
+### Selenium
 Selenium offers several ways to located page elements, and you should read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for more details. Below is an example where you locate a "load more" button by identifying the button's class name. 
 
 ```python
