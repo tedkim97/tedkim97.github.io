@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A (more) in depth guide to Web Scraping
+title: A (More) complete guide to Web Scraping
 published: true
 enable_latex: true
 permalink: /webscraping
@@ -208,7 +208,7 @@ One common issue people face is dealing with use interactivity/extracting inform
 
 Another situation is that a website may involve some sort of login (although if they have a login, scraping is probably against TOS). The reason why this is a problem is that our naive crawler can't just make a POST request with login credentials or press a button. and expect to get back login access (it's a whole process with tokens, authorizations, etc).
 
-A fix to this solution is to use [selenium](https://www.selenium.dev/)[^3] - a tool for automating browser tasks - to control a browser section and scrape through the human computer interface. People primarily use Selenium for automating web testing, but we can use it to run a crawler. 
+A fix to this problem is to use [selenium](https://www.selenium.dev/)[^3] - a tool for automating browser tasks - to control a browser section and scrape through the human computer interface. People primarily use Selenium for automating web testing, but we can use it to run a crawler. 
 
 [^3]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
 
