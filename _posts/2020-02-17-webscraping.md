@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A (more) complete guide to Web Scraping
+title: A (more) in depth guide to Web Scraping
 published: true
 enable_latex: true
 permalink: /webscraping
@@ -23,7 +23,8 @@ Web scraping is the process of automatically extracting information from the web
 
 ### Why should I scrape from the web?
 Situations where you would want to scrape from the web are rather niche; however, if you need: 
-- A new idea involving predictions on some user behavior
+- Want to make a cool visualization 
+- Data to explore a new idea involving predictions on user behavior
 - Novel data for an original research project
 - Something different from existing Kaggle datasets for your ***sick*** machine learning skills
 
