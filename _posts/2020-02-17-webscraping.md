@@ -309,15 +309,15 @@ Websites will put in rate limits on the number of page visits per hour (ex: you 
 
 ### Cellular Modules
 We can use a USB cellphone module to connect a SIM card to your computer. Here are some links to products that can help you do this:
-- [Adafruit product 1](https://www.adafruit.com/category/281) - programmed through Arduino and can interface with PySerial
-- [Adafruit product 2](https://www.adafruit.com/product/1946)
-- Huawei e8372 - a 4G LTE dongle. An added benefit is that there is a [wonderful python library](https://github.com/pablo/huawei-modem-python-api-client) that interfaces with this device for you! One of the contributors describes it in [his blog](https://mcsarge.blogspot.com/)
+- [Adafruit product 1](https://www.adafruit.com/category/281) - programmed through Arduino and can interface with PySerial. The downside being that it requires a LIPO battery to power the cellular module (in addition to the power the Arduino gets from USB).
+- [Adafruit product 2](https://www.adafruit.com/product/1946) - see above
+- Huawei e8372 - a 4G LTE dongle that is powered solely through USB. There is a [wonderful python library](https://github.com/pablo/huawei-modem-python-api-client) that interfaces with this device for you! One of the contributors describes it in [his blog](https://mcsarge.blogspot.com/)
 
 **PRO**: Customizable, Robust
 **CON**: Very expensive (cost of dongles, arduino, and a new SIM with phone plan)
 
 ### Text Forwarding Services (Android only)
-If you have an android phone, and you're willing to download a sketchy app - there are app services that can new texts and forward them to your email. I would **not** recommended this if you care about security. You could always write your own android app that does the exact same thing if you're comfortable. 
+If you have an android phone, there are apps that can read texts and forward them to your email. I would **not** recommended this if you care about security. If you're desperate, you could program your own android app that does the same thing. 
 
 **PRO**: Cheap and easy if you already have an android phone
 **CON**: Incredibly sketchy and inconsistent
