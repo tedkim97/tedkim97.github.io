@@ -165,12 +165,12 @@ You might observe that saving HTML pages to your disk is unnecessary! A crawler 
 If you do this without a local copy of the webpages, the crawler will make a lot of repeat requests to the host as a result - which is an unnecessary cost to the host, waste of your bandwidth, and may result in an IP ban. In addition, storing the source pages will allow you to look for mistakes and **validate the correctness** of your data. In summary, optimizing write endurance on drives is not worth it. 
 
 ### Anonymize/Pseudonymize Data 
+There are two approaches to sanitizing data: anonymization and pseudonymization. Anonymization prevents re-identification of a data point that can't be used to identify anyone while Pseudonymization allows the data point to be recovered **given additional information**.
+
 You should anonymize data to protect people's privacy, and make sure your anonymization scheme does its job effectively. An example of a bad anonymization scheme is a lookup table (ex: john doe => 1, jane doe => 2). If you Anonymize data with this lookup table, you can recover the person's ID by reversing the lookup - protecting no one's data.
 
 **Anonymization: Deleting the ID**:
-Just deleting the ID of the data point is the best way of maintaining anonymity. 
-
-However, if you need to be able to identify behaviors over time, submissions by an individual, or a group of individuals deleting the ID may not be helpful. There are two approaches: anonymization and pseudonymization. Anonymization prevents re-identification of a data point that can't be used to identify anyone while Pseudonymization allows the data point to be recovered **given additional information**.
+Just deleting the ID of the data point is the best way of maintaining anonymity. However, if you need to be able to identify behaviors over time or execute 'joins' across different datasets deleting ID only hurts your work. If you need an alternative, the solution below may help you out. 
 
 **Anonymization/Pseudonymization: Salted Cryptographic Hashes**:
 

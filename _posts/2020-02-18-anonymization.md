@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Anonymization Schemes
-published: false
+published: true
 permalink: /data_anonymization
 frontpage: false
 technical: true
@@ -12,32 +12,34 @@ funstuff: false
 {:toc}
 
 # Introduction
-Ignoring the intense ethical debate, the reality is that "big data" is going to be an increasingly important part of society. [As of now, facial recognition technology has been reeled back by big tech companies](https://www.vox.com/recode/2020/6/10/21287194/amazon-microsoft-ibm-facial-recognition-moratorium-police), but the reality is that people [don't need faces to identify you](https://www.scmp.com/tech/start-ups/article/2187600/chinese-police-surveillance-gets-boost-ai-start-watrix-technology-can). Even if legislators were to outlaw all tracking technologies, [tracking individuals is very easy with smartphone app location services](https://www.nytimes.com/interactive/2018/12/10/business/location-data-privacy-apps.html). Moreover, the (incredible) book "Weapons of Math Destruction"[^1], the author describes **even more** alarming practices in the big data industry and calls for a more critical examination of "black box" models that dominate our lives. 
+Ignoring the question whether people want "big data" in their lives or not, "big data" is going to be an increasingly important part of society. [As of now, facial recognition technology has been reeled back by big tech companies](https://www.vox.com/recode/2020/6/10/21287194/amazon-microsoft-ibm-facial-recognition-moratorium-police), but the reality is that people [don't need faces to identify you](https://www.scmp.com/tech/start-ups/article/2187600/chinese-police-surveillance-gets-boost-ai-start-watrix-technology-can). Even if legislators were to outlaw all tracking technologies, [tracking individuals is very easy with smartphone app location services](https://www.nytimes.com/interactive/2018/12/10/business/location-data-privacy-apps.html). Moreover, the (incredible) book "Weapons of Math Destruction"[^1], the author describes **even more** alarming practices in the big data industry and calls for a more critical examination of "black box" models that dominate our lives. 
 
 [^1]: I also recommend taking a look at Cathy O'Neil's [blog](https://mathbabe.org/) and articles in Bloomberg.
 
-I agree with her stance, and I would go as far as to say that we should add more strict regulations in the data world. This post isn't explicitly about models, but about how we treat privacy - mainly data anonymization policies. A couple of big security leaks has shown us that we need much better practices in the data industry.
+I agree with her stance, and I would go as far as to say that we should add stricter regulations in the data world. This post isn't explicitly about "black box" models, but about how we protect data and privacy - mainly implementation of data anonymization policies. 
 
 **NOTE:** This is post is a slightly modified excerpt from a bigger blog post I wrote on web scraping. I cut this segment out because a shorter post would be much more digestible for someone just looking for some ideas/explanations. 
 
-### Anonymize/Pseudonymize Data!
-I have a theory[^2] a large amount of security vulnerabilities and breaches are made not because an engineer did their job poorly, but rather because good security is cumbersome to use. 
+# Anonymize/Pseudonymize Data!
+A couple of big security leaks has shown us that we need much better practices in the data industry. I have a *personal* theory[^2] that security vulnerabilities and breaches are made not because an engineer did their job out of laziness, but rather because good security interferes with usability and is cumbersome to use. 
 
 [^2]: Only a theory!
 
-Plenty of people re-use passwords because remembering a unique password for each service you use is incredibly hard! If an individual tried, they would probably write down their passwords online or on a piece of paper - adding a different kind of vulnerability. Even though the security of the blockchain and cryptocurrencies has been proven uncrackable - [people still steal crypto](https://selfkey.org/list-of-cryptocurrency-exchange-hacks/) because of shortcuts users and exchanges make to make security "easy". It's easier to create one admin account to a database, rather than hassle with multiple user accounts with varying levels of access.
+Plenty of people re-use passwords because remembering a unique password for each service you use is incredibly hard! If an individual tried, they would probably write down their passwords online or on a piece of paper - adding a different kind of vulnerability. Even though the security of the blockchain and cryptocurrencies has been proven uncrackable - [people can steal crypto](https://selfkey.org/list-of-cryptocurrency-exchange-hacks/) because of shortcuts users and exchanges make to make security "easy". It's easier to create one admin account to a database, rather than hassle with multiple user accounts with varying levels of access.
 
-In a similar vein, I think people don't anonymize data out of malice or greed, but rather  because it adds a lot of complications to working with data. However, if we want a better regulated data economy, we need to follow effective practices when sanitizing our data. An example of a bad anonymization scheme is a lookup table (ex: john doe => 1, jane doe => 2). If you Anonymize data with this lookup table, you can recover the person's ID by reversing the lookup - protecting no one.
+In a similar vein, I think people don't anonymize data out of malice or greed, but rather  because it adds seemingly "unnecessary" complexity to working with data. However, if we want a better regulated data economy, we need to start from the basics and follow better practices when sanitizing data. 
 
-**Anonymization: Deleting the ID**:
-Just deleting the identifier of a data point is the best way of maintaining anonymity. 
+An example of a bad anonymization scheme is a lookup table (ex: john doe => 1, jane doe => 2). If you Anonymize data with this lookup table, you can recover the person's ID by reversing the lookup - protecting no one.
 
-**But what if we need consistent identification?**
-If you need to be able to identify behaviors over time, submissions by an individual, or a group of individuals deleting the ID hinders your work. 
+# Absolute Anonymization: Deleting the ID:
+Just deleting specific identifiers of data point is the best way of maintaining anonymity (i.e phone numbers, SSN, names, usernames, etc). 
 
-It's important to realize that there are two approaches to sanitizing our data: anonymization and pseudonymization. Anonymization prevents re-identification of a data point that can't be used to identify anyone while Pseudonymization allows the data point to be recovered **given additional information**. In that vein, let's explore Cryptographic Hashes and Salting as a way of sanitizing data.
+# But what if we need to perform joins, or need to attribute activity to a user?
+Anonymization can interfere with common "big data" processing techniques. For example, we aren't able to easily match up user behavior across sources (ex: performing SQL joins across different datasets). Furthermore, deleting IDs hinders analyzing user behavior over time, user submissions, or examining group of individuals. 
 
-**Anonymization/Pseudonymization: Salted Cryptographic Hashes**:
+There is another approach to sanitizing our data: pseudonymization. **Anonymization** prevents re-identification of a data point that can't be used to identify anyone while **Pseudonymization** allows information to be recovered **given additional information**. In that vein, let's explore Cryptographic Hashes and Salting as a way of sanitizing data.
+
+# Anonymization/Pseudonymization: Salted Cryptographic Hashes:
 Cryptographic hashing is a method of taking an input of any length and outputting a (seemingly)random fixed-size hash. The reason why they're important is that cryptographic hash functions have a set of properties that make it ideal for certain security applications. Fun fact, cryptographic hashing and salting are common practice in storing passwords. This is why a company can't tell you what your password is when you forget - the company doesn't know it themselves, just the salted hash of your password.
 
 We will ignore the engineering of cryptographic hash functions and look at their properties, and why they might be helpful for our use case. 
@@ -64,7 +66,7 @@ Implementing cryptographic hash functions is complicated, so I recommend using a
 ***Disclaimer***: this isn't a perfect solution! There are plenty of articles that point out the problems with this approach - mainly that it can't *truly* anonymize data. However, this solution works pretty well for a pseudonymization scheme.
 
 
-# In Conclusion
+# Conclusion
 Overall, we've gone over the engineering and logic behind a more sophisticated pseudonymization scheme to protect user privacy (aside from just deleting IDs). This post is not necessarily a recommendation for this technique, but an exploration of its strengths and weaknesses. 
 
 I want to emphasize that this pseudonymization scheme is definitely not perfect - nothing is perfect! It's important to analyze your approach to sanitation and realize that the devil is in the details (especially with cryptography). An example is that the ["One-time pad"](https://en.wikipedia.org/wiki/One-time_pad) **encryption** is provably, perfectly secure (uncrackable)! However, if you have multiple messages encrypted with the same pad, you can recover the pad, and then recover all the encrypted messages (from uncrackable to vulnerable through a slight misuse of the encryption scheme). 
