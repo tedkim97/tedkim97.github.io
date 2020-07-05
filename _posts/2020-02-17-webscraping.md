@@ -14,7 +14,7 @@ funstuff: false
 
 # Introduction
 
-My critique of popular tutorials on web scraping is that they teach you how to scrape for a specific situation. While the tutorial does its job and work for simple cases, these tutorials don't teach enough about the fundamentals of the web, or troubleshooting techniques to let beginners extend their crawlers. I struggled to find solutions for my problems and had to stitch various resources from books, the internet, and my experiments. 
+My critique of popular tutorials on web scraping is that they teach you how to scrape for a specific situation. While the tutorial does its job and work for simple cases, these tutorials don't teach enough about the fundamentals of the web, or troubleshooting techniques to let beginners extend their crawlers. I struggled to find complete solutions for my problems and had to stitch various resources from books, the internet, and my experiments. 
 
 As a result, I wanted to take a "more complete" approach in this tutorial. This means this article won't be so "high-level" where every complication is abstracted (removing the learning process), but also not so "low-level" where the activity is excessively time-consuming and slow. Hopefully, this explanation should let a beginner acquire topics related to scraping, and be able to research and learn for themselves. 
 
