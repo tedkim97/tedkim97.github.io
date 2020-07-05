@@ -12,24 +12,24 @@ funstuff: false
 {:toc}
 
 # Introduction
-The naive implementation of web scrapers can't handle the "modern" web - mainly the interactions that web services expect *humans* to use. Luckily, there are solutions to deal with this. If you have issues with login credentials and page interactivity, I recommend skimming through this.
+The naive implementation of python web scrapers (the ones that use the [`requests` library)](https://requests.readthedocs.io/en/master/) can't always handle the "modern" web - mainly the interactions that web services expect *humans* (mainly javascript and authorization) to use[^1]. Fortunately, there are solutions! If you have issues with login credentials and page interactivity, I recommend skimming through this post.
+ 
+[^1]: It doesn't mean that the library is useless for web scraping - it's very useful for 90% of the cases out there.
 
 **NOTE:** This is post is a slightly modified excerpt from a bigger blog post I wrote on web scraping. I cut out this segment because a shorter post would be much more digestible for someone just looking to solve a problem. 
 
 # Web Scraping and Javascript
 
-A problem in scraping is that a website may involve some sort of login[^1]. The reason why this is a problem is that our naive crawler can't just make a POST request with login credentials or press a button. and expect to get back login access (it's a whole process with tokens, authorizations, etc).
+A problem in scraping is that a website may involve some sort of login[^2] or interaction. The reason why this is a problem is that our naive crawler can't just make a POST request with login credentials or press a button. and expect to get back login access (it's a whole process with tokens, authorizations, etc). Moreover, modern websites don't load information on a page at once. If you're looking at a product page, you have to press a button ("more details", "load more", "expand") to display the whole information on the page.
 
-[^1]: Although if they have a login, scraping is probably against TOS and their `robots.txt`
+[^2]: Although if they have a login, scraping is probably against TOS and their `robots.txt`
 
-Moreover, modern websites don't load information on a page at once. If you're looking at a product page, you have to press a button ("more details", "load more", "expand") to display the whole information on the page.
+A hack/fix to this problem is to use [selenium](https://www.selenium.dev/)[^3] - a tool mainly used for automating browser testing - to control a browser session and scrape through that interface. Again, people primarily use Selenium for automating web testing, but we can use it to run a crawler. 
 
-A fix to this problem is to use [selenium](https://www.selenium.dev/)[^2] - a tool for automating browser tasks - to control a browser section and scrape through the human computer interface. People primarily use Selenium for automating web testing, but we can use it to run a crawler. 
+[^3]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
 
-[^2]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
-
-### Selenium
-Selenium offers several ways to located page elements, and you should read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for more details. Below is an example where you locate a "load more" button by identifying the button's class name. 
+### Selenium: Locating Elements
+Below is a simple example where you locate a "load more" button by identifying the button's class name and "clicking" it through selenium. 
 
 ```python
 from selenium import webdriver
@@ -41,14 +41,25 @@ driver.get('somewebsite.com/test')
 try:
     load_button = driver.find_element_by_class_name(button_class)
     load_button.click()
-    time.sleep(2) # give the content time to load
+    time.sleep(2) # give time for the content to load
     '''
-    scrape content
+    download html
     '''
 except:
+	'''
+	NOTE: the webdriver might fail to find the button for several reasons.
+	Common reasons include: 
+	1) typo in the class name
+	2) the Internet did not load the button in time
+	3) the button does not exist on the page (ever) 
+	'''
 	print("failed to find button")
 ```
 Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). It's up to you to decide how to locate the right elements to interact with, and how to ignore the wrong buttons. 
+
+Keep in mind there is more than one way of identifying elements in Selenium - you can also locate them by `id`, `name`, `xpath`, `link_text`, `partial_link_text`, `tag_name`, and `css_selector`. I recommend you read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for proper usage and details. 
+
+**REMEMBER:** Make sure you save the page source **after** you've interacted with the page and all information has been loaded.
 
 ##### Selenium Tip: Handling Exceptions
 Selenium throws exceptions for situations where it can't execute an instruction. If you don't want to reset your crawler every time you run into the exceptions, you should run some try/catch clauses in your crawler. If you want to handle specific exceptions, you need to import them from selenium like: 

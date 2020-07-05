@@ -212,8 +212,8 @@ A fix to this problem is to use [selenium](https://www.selenium.dev/)[^3] - a to
 
 [^3]: Even though working with the Selenium Python API can be a bit clunky (long class names, importing a lot of different subpackages), the minor, unergonomic aspects are worth the flexibility.
 
-### Selenium
-Selenium offers several ways to located page elements, and you should read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for more details. Below is an example where you locate a "load more" button by identifying the button's class name. 
+### Selenium: Locating Elements
+Below is a simple example where you locate a "load more" button by identifying the button's class name and "clicking" it through selenium. 
 
 ```python
 from selenium import webdriver
@@ -225,14 +225,25 @@ driver.get('somewebsite.com/test')
 try:
     load_button = driver.find_element_by_class_name(button_class)
     load_button.click()
-    time.sleep(2) # give the content time to load
+    time.sleep(2) # give time for the content to load
     '''
-    scrape content
+    download html
     '''
 except:
+	'''
+	NOTE: the webdriver might fail to find the button for several reasons.
+	Common reasons include: 
+	1) typo in the class name
+	2) the Internet did not load the button in time
+	3) the button does not exist on the page (ever) 
+	'''
 	print("failed to find button")
 ```
 Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). It's up to you to decide how to locate the right elements to interact with, and how to ignore the wrong buttons. 
+
+Keep in mind there is more than one way of identifying elements in Selenium - you can also locate them by `id`, `name`, `xpath`, `link_text`, `partial_link_text`, `tag_name`, and `css_selector`. I recommend you read the [documentation](https://selenium-python.readthedocs.io/locating-elements.html) for proper usage and details. 
+
+**REMEMBER:** Make sure you save the page source **after** you've interacted with the page and all information has been loaded.
 
 ##### Selenium Tip: Handling Exceptions
 Selenium throws exceptions for situations where it can't execute an instruction. If you don't want to reset your crawler every time you run into the exceptions, you should run some try/catch clauses in your crawler. If you want to handle specific exceptions, you need to import them from selenium like: 
