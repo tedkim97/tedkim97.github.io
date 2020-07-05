@@ -42,8 +42,9 @@ try:
     load_button = driver.find_element_by_class_name(button_class)
     load_button.click()
     time.sleep(2) # give time for the content to load
+    web_content = driver.page_source
     '''
-    download html
+    save web_content
     '''
 except:
 	'''
@@ -63,6 +64,7 @@ Keep in mind there is more than one way of identifying elements in Selenium - yo
 
 ##### Selenium Tip: Handling Exceptions
 Selenium throws exceptions for situations where it can't execute an instruction. If you don't want to reset your crawler every time you run into the exceptions, you should run some try/catch clauses in your crawler. If you want to handle specific exceptions, you need to import them from selenium like: 
+
 ```python
 from selenium.common.exceptions import NoSuchElementException
 
@@ -108,5 +110,14 @@ browser_options.add_experimental_option("detach", True)
 Selenium offers Implicit Waits - which is a way of pausing the web driver until a certain element exists (like when a button is done loading, or if a certain tag appears). This can create a more robust scraper that's less likely to miss information. **However, I personally have never gotten Implicit Waits to work. I've looked at documentation and examples on the internet, but I have *never* gotten Implicit Waits to work for me**. I could be misunderstanding how ImplicitWaits worked, coding it incorrectly, or it's an issue with the Selenium Python binding (not likely), but I have never gotten it to work. 
 
 I could have spent 1-2 more hours trying to solve the problem, but I just judged that it was faster to `time.sleep(5)` the driver, and move on. This approach has drawbacks. I could be wasting a lot of time waiting even though the contents of the page has loaded. In addition, the driver might not be waiting long enough (which destroys the point of the implicit waits), but in my experiences `time.sleep` has been an adequate solution. 
+
+# Conclusion
+In conclusion, we've gone over some use cases and examples of using `Selenium` to deal with interactivity in web pages. This post only goes over *some* (not all) of the potential `Selenium` has to offer when it comes to web scraping. 
+
+I encourage readers to search for better ways of approaching this problem. I ***personally dislike*** using Selenium as a scraping method[^4], but the reality is that Selenium is (1) **easy to learn** and (2) **flexible**. 
+
+If you have a particular requirements for a crawling product - Selenium is probably sub-ideal. However, spending weeks engineering better solutions is not an efficient allocation of time for a crawler that runs for an hour. 
+
+[^4]: wait what??
 
 # Footnotes

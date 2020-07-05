@@ -226,8 +226,9 @@ try:
     load_button = driver.find_element_by_class_name(button_class)
     load_button.click()
     time.sleep(2) # give time for the content to load
+    web_content = driver.page_source
     '''
-    download html
+    save web_content
     '''
 except:
 	'''
