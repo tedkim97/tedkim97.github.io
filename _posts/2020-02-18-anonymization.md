@@ -65,8 +65,10 @@ Implementing cryptographic hash functions is complicated, so I recommend using a
 
 
 # In Conclusion
-Overall, we've gone over the engineering and logic behind a more sophisticated pseudonymization scheme to protect user privacy (aside from just deleting IDs). This post is not necessarily a recommendation for this technique, but an exploration of it's strengths and weaknesses. Whatever approach you take, it's important to check (1) if it aligns with your purposes and (2) has reasonable weaknesses.
+Overall, we've gone over the engineering and logic behind a more sophisticated pseudonymization scheme to protect user privacy (aside from just deleting IDs). This post is not necessarily a recommendation for this technique, but an exploration of its strengths and weaknesses. 
 
-I want to emphasize that this pseudonymization scheme is good, but not perfect! It's important to think about your approach to sanitation, and realize that the devil is in the details (especially with cryptography). An example is that the ["One-time pad"](https://en.wikipedia.org/wiki/One-time_pad) **encryption** is provably, perfectly secure (uncrackable)! However, if you have multiple messages encrypted with the same pad, you can recover the pad, and all of the messages encrypted with that pad (from uncrackable to vulnerable through a slight misuse of the encryption scheme).
+I want to emphasize that this pseudonymization scheme is definitely not perfect - nothing is perfect! It's important to think about your approach to sanitation, and realize that the devil is in the details (especially with cryptography). An example is that the ["One-time pad"](https://en.wikipedia.org/wiki/One-time_pad) **encryption** is provably, perfectly secure (uncrackable)! However, if you have multiple messages encrypted with the same pad, you can recover the pad, and all of the messages encrypted with that pad (from uncrackable to vulnerable through a slight misuse of the encryption scheme). 
+
+Whatever approach you take, it's important to analyze the weaknesses your solution has. It's up to you to determine if the weaknesses are acceptable, and prevent your schema from being misused.
 
 # Footnotes
