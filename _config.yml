@@ -35,7 +35,7 @@ github.repo: www.github.com/tedkim97
 plugins:
   - jekyll-feed
 
-permalin: /:categories/:title/
+permalink: /:categories/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
