@@ -2,7 +2,6 @@
 layout: post
 title: Making a Custom Chocolate Bar
 published: true
-categories: blog
 frontpage: true
 technical: false
 funstuff: true
