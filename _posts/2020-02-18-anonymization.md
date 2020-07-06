@@ -2,7 +2,7 @@
 layout: post
 title: Anonymization Schemes
 published: true
-permalink: blog/data_anonymization
+permalink: data_anonymization
 frontpage: false
 technical: true
 funstuff: false

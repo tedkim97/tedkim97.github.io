@@ -2,7 +2,7 @@
 layout: post
 title: Making a Custom Chocolate Bar
 published: true
-permalink: blog/custom_chocolate_bars
+permalink: custom_chocolate_bars
 frontpage: true
 technical: false
 funstuff: true
