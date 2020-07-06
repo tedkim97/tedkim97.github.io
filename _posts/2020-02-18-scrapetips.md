@@ -2,7 +2,7 @@
 layout: post
 title: Dealing with Interactivity for Scraping
 published: true
-permalink: /webscraping_tips
+permalink: blog/webscraping_tips
 frontpage: false
 technical: true
 funstuff: false

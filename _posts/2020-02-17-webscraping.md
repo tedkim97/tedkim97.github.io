@@ -3,7 +3,7 @@ layout: post
 title: A (More) complete guide to Web Scraping
 published: true
 enable_latex: true
-permalink: /webscraping
+permalink: blog/webscraping
 frontpage: true
 technical: true
 funstuff: false

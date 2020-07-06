@@ -2,7 +2,7 @@
 layout: post
 title: Game Balance Philosophy
 published: false
-permalink: /IMBA
+permalink: blog/IMBA
 frontpage: false
 technical: false
 funstuff: true
