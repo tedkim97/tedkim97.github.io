@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Making a Custom Chocolate Bar
+permalink: custom_chocolate_bars
 published: true
 frontpage: true
 technical: false
@@ -8,7 +9,6 @@ funstuff: true
 author: Ted
 ---
 
-<!-- permalink: custom_chocolate_bars -->
 
 <!-- * TOC
 {:toc} -->
