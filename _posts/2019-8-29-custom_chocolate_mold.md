@@ -21,7 +21,7 @@ My dad's birthday was coming in a month, and I was inspired by a [video about ho
 
 <img src="/figures/chocolate_fig1.png" loading="lazy" class="center-image"/> 
 
-<img src="/figures/chocolate_fig1.png" data-echo="/img/actualimage.jpg" class="center-image"> 
+<img src="/figures/loading.jpg" data-echo="/figures/chocolate_fig1.png" class="center-image"> 
 
 ![fig1](/figures/chocolate_fig1.png){: .center-image }
 <center> <font size="2"> <i>
