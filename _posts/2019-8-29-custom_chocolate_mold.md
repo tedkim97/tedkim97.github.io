@@ -130,7 +130,7 @@ Oddly enough, I had a difficult time getting my hands on liquid rubber/putty mol
 Anyways, the idea behind thermoforming is to heat a piece of plastic where it's flexible, wrap it over the model, and use vacuums underneath to suck out air to form a tight fit. This has the added benefit of creating thin plastic molds that are easily storable, last a long time, and easy to work with (i.e get the chocolate out).
 
 <!-- ![chocolate template](/figures/chocolate_fig3.jpg){: .center-image } -->
-<img src="/figures/chocolate_fig3.jpg" loading="lazy" alt="chocolate template" class="center-image"/> 
+<img src="/figures/chocolate_fig3.jpg" loading="lazy" alt="thermoforming" class="center-image"/> 
 <center> <font size="2"> <i>
 A generalized visualization for thermoforming in our use case
 </i> </font> </center>
@@ -172,7 +172,7 @@ In Conclusion, Chocolate is stupid.
 Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, hacker-space membership fees it came up to a $200.
 
 <!-- ![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } -->
-<img src="/figures/chocolate_fig5.jpg" loading="lazy" alt="chocolate template" class="center-image"/>
+<img src="/figures/chocolate_fig5.jpg" loading="lazy" alt="chocolate" class="center-image"/>
 <center> <font size="2"> <i>
 One of the final products! I wish I had taken more pictures... 
 </i> </font> </center>
