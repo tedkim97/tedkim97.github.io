@@ -19,10 +19,9 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 # Context
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
-<img src="/figures/chocolate_fig1.png" loading="lazy"/> {: .center-image }
+<img src="/figures/chocolate_fig1.png" loading="lazy" class="center-image"/> 
 
-<img src="/figures/chocolate_fig1.png" data-echo="/img/actualimage.jpg"> {: .center-image }
-
+<img src="/figures/chocolate_fig1.png" data-echo="/img/actualimage.jpg" class="center-image"> 
 
 ![fig1](/figures/chocolate_fig1.png){: .center-image }
 <center> <font size="2"> <i>
