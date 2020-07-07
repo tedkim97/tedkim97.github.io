@@ -119,7 +119,8 @@ On a high level, HTML represents the content of the page while a URL indicates i
 ### HTML?
 HTML (Hypertext Markup Language) is the standard markup language for information on the web. HTML (along with CSS, JS, and more) is responsible for building all the pretty websites on the web. Websites have an underlying source that instructs your browser to display content properly. Building the contents of this site (like items on a store page) to be dynamic involves creating well-structured HTML (i.e don't randomly create elements and tags to store product information). Assuming the site maintains this structure, a crawler can exploit that to extract data on a larger scale. Not all websites are identical, and the more fluent we are with web dev the faster we can build the crawler. 
 
-![fig1](/figures/webscraping_fig3.jpg){: .center-image }
+<!-- ![fig1](/figures/webscraping_fig3.jpg){: .center-image } -->
+<img src="/figures/webscraping_fig3.png" loading="lazy" alt="fig3" class="center-image"/>
 <center> <font size="2"> <i>
 A webpages content in browser (top) and its underlying source (bottom). Not pictured: CSS.
 </i> </font> </center>  
