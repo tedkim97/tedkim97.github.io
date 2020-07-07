@@ -122,3 +122,12 @@ Bartle's Taxonomy is an idea, derived from a user study of different video game 
 Some people play competitive games to win, some play to overhwelmly dominate, some play to create things/explore aspects of the game, etc. 
 
 The popularity of the game helps establish a community that supports these decisiosn.
+
+
+### Case Study: Archon Toilet
+
+There was a period where infestor broodlord was stronger, the only way to beat it was through the archon toilet.
+
+It was exciting to watch and amusing, but at the same time - incredibly broken
+
+Example of using something broken to beat something broken
