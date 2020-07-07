@@ -114,7 +114,7 @@ I could have spent 1-2 more hours trying to solve the problem, but I just judged
 # Conclusion
 In conclusion, we've gone over some use cases and examples of using `Selenium` to deal with interactivity in web pages. This post only goes over *some* (not all) of the potential `Selenium` has to offer when it comes to web scraping. 
 
-I encourage readers to search for better ways of approaching this problem. I ***personally dislike*** using Selenium as a scraping method[^4], but the reality is that Selenium is (1) **easy to learn** and (2) **flexible**. 
+I encourage readers to search for better ways of approaching this problem. I ***personally dislike*** using Selenium as a scraping method[^4], but the reality is that Selenium is **easy to learn** and **flexible**. 
 
 If you have a particular requirements for a crawling product - Selenium is probably sub-ideal. However, spending weeks engineering better solutions is not an efficient allocation of time for a crawler that runs for an hour. 
 

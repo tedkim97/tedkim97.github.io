@@ -19,6 +19,11 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 # Context
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
+<img src="/figures/chocolate_fig1.png" loading="lazy"/> {: .center-image }
+
+<img src="/figures/chocolate_fig1.png" data-echo="/img/actualimage.jpg"> {: .center-image }
+
+
 ![fig1](/figures/chocolate_fig1.png){: .center-image }
 <center> <font size="2"> <i>
 The final product in the video
@@ -45,7 +50,7 @@ A good chocolate bar is **tempered** which is defined by a glossy appearance, fi
 
 [^1]: Personally, I think bloomed chocolate tastes fine, but the texture definitely makes it an unpleasant experience.  
 
-![Tempered vs Untempered](https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg)
+![Tempered vs Untempered](https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg){: .center-image } 
 <center> <font size="2"> <i>
 SugarHero provides an excellent comparison of tempered vs untempered chocolate
 </i> </font> </center>
