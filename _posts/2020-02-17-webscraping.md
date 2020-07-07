@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A (More) complete guide to Web Scraping
+title: A (More) Complete Guide To Web Scraping
 published: true
 enable_latex: true
 permalink: webscraping
