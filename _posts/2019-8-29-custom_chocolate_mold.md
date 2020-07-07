@@ -19,11 +19,10 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 # Context
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
-<img src="/figures/chocolate_fig1.png" loading="lazy" class="center-image"/> 
+<!-- <img src="/figures/loading.jpg" data-echo="/figures/chocolate_fig1.png" class="center-image">  -->
 
-<img src="/figures/loading.jpg" data-echo="/figures/chocolate_fig1.png" class="center-image"> 
-
-![fig1](/figures/chocolate_fig1.png){: .center-image }
+<!-- ![fig1](/figures/chocolate_fig1.png){: .center-image } -->
+<img src="/figures/chocolate_fig1.png" loading="lazy" alt="fig1" class="center-image"/> 
 <center> <font size="2"> <i>
 The final product in the video
 </i> </font> </center>  
@@ -45,11 +44,12 @@ My dad really likes sugar, so a custom chocolate bar seemed like a great birthda
 # The Ideal Chocolate is Tempered
 I *assumed* that if you melted chocolate it would cool down pack to its original form. Meaning melting good chocolate => good chocolate. However, it's much more complicated than that.
 
-A good chocolate bar is **tempered** which is defined by a glossy appearance, firmness, and makes a sound when you break it. On the other hand, untempered has a dullness, melts in your hands, and after a few days can develop a weird look and texture (which is when the chocolate "blooms" [^1]. We can see an example below of the visual differences between a piece of tempered and untempered chocolate.
+A good chocolate bar is **tempered** which is defined by a glossy appearance, firmness, and makes a sound when you break it. On the other hand, untempered has a dull finish, melts in your hands, and after a few days can develop a weird look and texture (which is when the chocolate "blooms" [^1]. We can see an example below of the visual differences between a piece of tempered and untempered chocolate.
 
 [^1]: Personally, I think bloomed chocolate tastes fine, but the texture definitely makes it an unpleasant experience.  
 
-![Tempered vs Untempered](https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg){: .center-image } 
+<!-- ![Tempered vs Untempered](https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg){: .center-image } -->
+<img src="https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg" loading="lazy" alt="fig1" class="center-image"/> 
 <center> <font size="2"> <i>
 SugarHero provides an excellent comparison of tempered vs untempered chocolate
 </i> </font> </center>
@@ -62,7 +62,8 @@ Tempering is the reason why when your chocolate bar melts and you try to fix it 
 
 There's a handful of different ways to temper chocolate, but they all follow the same pattern of: heating chocolate around 45&deg;C (melting **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to pour the chocolate into whatever shape you want. 
 
-![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image } 
+<!-- ![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image }  -->
+<img src="https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg" loading="lazy" alt="tempered chocolate curve" class="center-image"/> 
 <center> <font size="2"> <i>
 An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get an idea of the process
 </i> </font> </center>
@@ -108,7 +109,9 @@ A Computer Numerical Control carving/milling/engraving machine would be perfect 
 This is a hacky solution, but I ended up using multiple passes on a laster cutter (Universal Laser Systems VLS 6.6) on a piece of wood. Each pass burns/etches a layer of wood that gives it a deep (and accurate) engraving. This approach is not an ideal use of a laser cutter, but it was the only option that provided me the precision and automatic computer fonts I wanted. An added bonus is that the vectorization within the template allowes me to create bars as big/small I want with a simple resize in Adobe Illustrator.
 
 These two bars had the same text (16.7cm x 7.5cm), but etched in two different ways: 
-![chocolate template](/figures/chocolate_fig2.jpg){: .center-image } 
+
+<!-- ![chocolate mold](/figures/chocolate_fig2.jpg){: .center-image }  -->
+<img src="/figures/chocolate_fig2.jpg" loading="lazy" alt="chocolate mold" class="center-image"/> 
 <center> <font size="2"> <i>
 Identical wordings, but different etching technique: words engraved in (top) and words engraved out (bottom).
 </i> </font> </center>
@@ -126,7 +129,8 @@ Oddly enough, I had a difficult time getting my hands on liquid rubber/putty mol
 
 Anyways, the idea behind thermoforming is to heat a piece of plastic where it's flexible, wrap it over the model, and use vacuums underneath to suck out air to form a tight fit. This has the added benefit of creating thin plastic molds that are easily storable, last a long time, and easy to work with (i.e get the chocolate out).
 
-![chocolate template](/figures/chocolate_fig3.jpg){: .center-image } 
+<!-- ![chocolate template](/figures/chocolate_fig3.jpg){: .center-image } -->
+<img src="/figures/chocolate_fig3.jpg" loading="lazy" alt="chocolate template" class="center-image"/> 
 <center> <font size="2"> <i>
 A generalized visualization for thermoforming in our use case
 </i> </font> </center>
@@ -140,7 +144,8 @@ I validated whether polycarbonate is food safe, and easy to use for thermoformin
 
 [^2]: This is the worst and I hate your company if you do this. I understand WHY businesses do this, but it doesn't mean I have to like it.
 
-![chocolate template](/figures/chocolate_fig4.jpg){: .center-image } 
+<!-- ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image }  -->
+<img src="/figures/chocolate_fig4.jpg" loading="lazy" alt="chocolate template" class="center-image"/>
 <center> <font size="2"> <i>
 One of the final molds! The text is a different and contains my dad's (censored) name 
 </i> </font> </center>
@@ -166,7 +171,8 @@ In Conclusion, Chocolate is stupid.
 
 Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, hacker-space membership fees it came up to a $200.
 
-![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } 
+<!-- ![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } -->
+<img src="/figures/chocolate_fig5.jpg" loading="lazy" alt="chocolate template" class="center-image"/>
 <center> <font size="2"> <i>
 One of the final products! I wish I had taken more pictures... 
 </i> </font> </center>
