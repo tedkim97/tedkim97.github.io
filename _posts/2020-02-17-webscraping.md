@@ -317,7 +317,7 @@ Websites will put in rate limits on the number of page visits per hour (ex: you 
 
 [As of now (according to Statista) there are around 1.7 billion daily active facebook users](https://www.statista.com/statistics/346167/facebook-global-dau/). If we are limited to 100 profile requests per hour, even if we visit **1%** of the DAU, then it would take **170,000 hours**, or **7,083.3 days** to requests those users... Adding machines can speed this up, but each additional machine will only bring a marginally smaller reduction in time[^4].
 
-[^4]: In case you need a mathematical demonstration... We can model a function that tells us the total time to finish scraping like: $$ f(n) = \frac{T}{n} $$ where $$n$$ is our number of crawlers. Our derivative with respect to $$n$$ is $$f'(n) = -\frac{T}{n^2}$$. This means that an increase in $$n$$ results in a decrease of $$f'(n)$$ - meaning that the rate of growth for $$f(n)$$ is slowly decreasing.
+[^4]: In case you need a math demo: We can model a function that tells us the total time to finish scraping like: $$ f(n) = \frac{T}{n} $$ where $$n$$ is our number of crawlers. Our derivative with respect to $$n$$ is $$f'(n) = -\frac{T}{n^2}$$. This means that an increase in $$n$$ results in a decrease of $$f'(n)$$ - meaning that the rate of growth for $$f(n)$$ is slowly decreasing.
 
 # Common Issues: 2FA
 
