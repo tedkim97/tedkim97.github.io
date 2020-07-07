@@ -33,13 +33,15 @@ Situations that require scraping are niche; however, if you need data for:
 ### Use Cases of Web Scraping
 The data you want exists somewhere (how else would it exist?) - whether it's on a companies servers, massive tech aggregator, or data vendors. The problem is that the capital or security clearance needed isn't worth it for a hobby or small experiment.
 
-![fig1](/figures/webscraping_fig1.png){: .center-image }
+<!-- ![fig1](/figures/webscraping_fig1.png){: .center-image } -->
+<img src="/figures/webscraping_fig1.png" loading="lazy" alt="fig1" class="center-image"/>
 <center> <font size="2"> <i>
 No access to official data or APIs (ex: scrape products and their information from various retailers) 
 </i> </font> </center>  
 <br> 
 
-![fig2](figures/webscraping_fig2.png){: .center-image }
+<!-- ![fig2](figures/webscraping_fig2.png){: .center-image } -->
+<img src="/figures/webscraping_fig2.png" loading="lazy" alt="fig2" class="center-image"/>
 <center> <font size="2"> <i>
 Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)</i> </font> </center>  
 <br> 
