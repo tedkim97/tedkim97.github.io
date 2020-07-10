@@ -2,6 +2,7 @@
 layout: post
 title: Making a Custom Chocolate Bar
 permalink: custom_chocolate_bars
+subtitle: Trials and tribulations related to chocolatiering
 published: true
 frontpage: true
 technical: false
