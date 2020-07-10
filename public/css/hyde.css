@@ -46,6 +46,13 @@ html {
   }
 }
 
+.post-subtitle {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
 /*still deciding on whether I want the scrollbar or not*/
 
 /*html::-webkit-scrollbar {
