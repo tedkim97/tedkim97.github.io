@@ -2,7 +2,7 @@
 layout: post
 title: Making a Custom Chocolate Bar
 permalink: custom_chocolate_bars
-subtitle: Trials and tribulations in my amateur chocolatier adventures
+subtitle: Trials and tribulations of an amateur chocolatier
 published: true
 frontpage: true
 technical: false
