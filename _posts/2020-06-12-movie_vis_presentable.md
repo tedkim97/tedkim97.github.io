@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualization Critique: Making a more "data-rich" 
+title: Visualization Critique: Making a more \"data-rich\" 
 subtitle: My critique of some popular "movie barcode" visualizations on reddit, and some changes I would make
 published: false
 enable_latex: false

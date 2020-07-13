@@ -3,7 +3,7 @@ layout: post
 title: Making a Black Garlic
 permalink: black_garlic
 subtitle: I make black garlic. It's relatively easy
-published: true
+published: false
 frontpage: false
 technical: false
 funstuff: true
