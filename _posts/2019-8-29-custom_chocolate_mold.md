@@ -76,20 +76,20 @@ An example of the temperatures shifts when tempering chocolate. If the linked im
 ### "Couverture" Chocolate
 Another complication with tempering chocolate is that you can't temper all chocolate. Because cocoa butter is critical to tempering, you need a high quality chocolate that has a high % of cocoa butter (called "couverture" chocolate). 
 
-Chocolate companies will use vegetable oil as the fat in their chocolate bars - instead of cocoa - as a cost saving measure. Fortunately, it's really easy to sort out these lesser quality chocolates by reading the ingredients list (if you see "vegetable oil" in the ingredient lists, it's not suitable). 
+Chocolate companies will use vegetable oil as the fat in their chocolate bars (instead of cocoa) as a cost saving measure. Fortunately, it's really easy to sort out these lesser quality chocolates by reading the ingredients list (if you see "vegetable oil" in the ingredient lists, it's not suitable). 
 
 ### Difficulties in acquiring high quality chocolate
 Buying couverture chocolate was *incredibly* hard. The supermarket chocolate all had vegetable oil as an ingredient, and the only way I could get high quality chocolate is to buy fancy chocolate bar brand (like Callebaut, Ghirardelli, Godiva, Guittard, etc) - but their chocolates were all flavored and sub-ideal cocoa butter %. Even brand-names baking chips weren't suitable. 
 
 High quality chocolate seemed to only be sold wholesale, meaning I had to buy a ton at once (which is not good for a one-time gift) or I had to buy smaller packages from online retailers at disproportionately high price. There also didn't seem to be any chocolate stores in Chicago that were accessible by public transportation, and I couldn't just leave work to buy chocolate. 
 
-In the end, I just dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate also melted during shipping anyways (R.I.P $5).
+In the end, I just dropped $60 on 2 pounds of chocolate (with an additional anti-melt protection fee). The chocolate melted during shipping anyways (R.I.P $5).
 
-My recommendation for buying high quality is just buying fancy brand-name bars that display the percentage of cocoa on them - despite the high average cost.
+Unless you plan to eat chocolate for months, my recommendation for buying high quality ("couverture") chocolate is just buying fancy, brand-name bars that display the percentage of cocoa on them - despite the high average cost.
 
 # Creating A Model & Mold
 
-### (Aside) If you have deep pockets
+### (Aside) If you have deep pockets...
 [Professional services](https://tomric.com/custom-sculpting/) that create custom chocolate molds and packaging exists! The problem is that they're geared towards professional clients, and are too expensive for a hobbyist.
 
 ### Creating A Model
@@ -104,10 +104,10 @@ Although 3D printing is great for prototyping model and could give me computeriz
 I like the idea of using wood as the master template, but carving was too imprecise/messy. Any handwriting in the wood would look awful if it were done by me. 
 
 ##### CNC'ing Wood (No)
-A Computer Numerical Control carving/milling/engraving machine would be perfect for my goals, but the CNC machine available was a desktop engraver. A couple of test runs with this machine were not very promising. The engraver wasn't strong/consistent enough to cleanly shave off wood for an engraving. I wish I had taken a picture, but the results weren't amazing. 
+A Computer Numerical Control carving/milling/engraving machine *would* be perfect for my goals, but the CNC machine available was a desktop engraver. A couple of test runs with this machine were not very promising. The engraver wasn't strong/consistent enough to cleanly shave off wood for an engraving. I wish I had taken a picture, but the results weren't amazing. 
 
 ##### Laser Cutting Wood (Yes)
-This is a hacky solution, but I ended up using multiple passes on a laster cutter (Universal Laser Systems VLS 6.6) on a piece of wood. Each pass burns/etches a layer of wood that gives it a deep (and accurate) engraving. This approach is not an ideal use of a laser cutter, but it was the only option that provided me the precision and automatic computer fonts I wanted. An added bonus is that the vectorization within the template allowes me to create bars as big/small I want with a simple resize in Adobe Illustrator.
+This is a hacky solution, but I ended up using multiple passes on a laser cutter (Universal Laser Systems VLS 6.6) on a piece of wood. Each pass burns/etches a layer of wood that gives it a deep (and accurate) engraving. This approach is not an ideal use of a laser cutter, but it was the only option that provided me the precision and automatic computer fonts I wanted. An added bonus is that the vectorization within the template allows me to create bars as big/small I want with a simple resize in Adobe Illustrator.
 
 These two bars had the same text (16.7cm x 7.5cm), but etched in two different ways: 
 
@@ -120,6 +120,7 @@ Identical wordings, but different etching technique: words engraved in (top) and
 
 
 ### Creating a Mold
+Now that we had a positive model (our chocolate bar), I needed to create a negative mold in that shape. 
 
 ##### Various Silicone Rubber/Mold Making Approaches
 Oddly enough, I had a difficult time getting my hands on liquid rubber/putty molds. I lived in a major city (Chicago), so all these other resources should have been accessible. However, the hardware stores near me didn't have them in stock and the only choice on Amazon was $50. [Services that sell putties/liquids for creating food molds](https://www.makeyourownmolds.com/) exist. At the time I was stingy because the shipping costs were so high, so I avoided using them. In retrospect, I should have at least experimented with these expensive silicone because the alternative approaches ended up *indirectly* costing a lot of money (traveling, wasted materials, time). 
@@ -144,6 +145,8 @@ The example channel I saw used Makyuu FormBox (which is just a mini-thermoformin
 I validated whether polycarbonate is food safe, and easy to use for thermoforming etc. Then I bought a few sheets of polycarbonate on amazon. Unfortunately I assumed that the Makyuu formbox would get hot enough to properly heat the polycarbonate (it did not) that I purchased online, but even with an additional heatgun it wasn't hot enough to reach proper molding temperatures. In order to make it work, I had to use Makyuu's **proprietary**[^2] "food safe" sheets (that I couldn't find any additional information online if they were ACTUALLY food safe aside from the company website).
 
 [^2]: This is the worst and I hate your company if you do this. I understand WHY businesses do this, but it doesn't mean I have to like it.
+
+**Note for people who want to do something similar:** If you look closely at my wooden chocolate bar models, you'll see **very small** drill holes in the engraved parts of both molds. This is to let the vacuum (under the thermoformer) suck out more air and more tightly wrap the mold. This did not have any noticeable effects on the plastic mold and produced better engravings - I would recommend doing this.
 
 <!-- ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image }  -->
 <img src="/figures/chocolate_fig4.jpg" loading="lazy" alt="chocolate template" class="center-image"/>
