@@ -45,7 +45,7 @@ My dad really likes sugar, so a custom chocolate bar seemed like a great birthda
 # The Ideal Chocolate is Tempered
 I *assumed* that if you melted chocolate it would cool down pack to its original form. Meaning melting good chocolate => good chocolate. However, it's much more complicated than that.
 
-A good chocolate bar is **tempered** which is defined by a glossy appearance, firmness, and makes a sound when you break it. On the other hand, untempered has a dull finish, melts in your hands, and after a few days can develop a weird look and texture (which is when the chocolate "blooms" [^1]. We can see an example below of the visual differences between a piece of tempered and untempered chocolate.
+A good chocolate bar is **tempered** which is defined by a glossy appearance, firmness, and sound when broken. On the other hand, untempered has a dull finish, soft at room temperature, melts in your hands, and after a few days can develop a weird look and texture (which is when the chocolate "blooms" [^1]). We can see an example below of the visual differences between a piece of tempered and untempered chocolate.
 
 [^1]: Personally, I think bloomed chocolate tastes fine, but the texture definitely makes it an unpleasant experience.  
 
