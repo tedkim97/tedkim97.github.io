@@ -20,14 +20,7 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 # Context
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
-<!-- <img src="/figures/loading.jpg" data-echo="/figures/chocolate_fig1.png" class="center-image">  -->
-
-<!-- ![fig1](/figures/chocolate_fig1.png){: .center-image } -->
-<img src="/figures/chocolate_fig1.png" loading="lazy" alt="fig1" class="center-image"/> 
-<center> <font size="2"> <i>
-The final product in the video
-</i> </font> </center>  
-<br> 
+{% include caption_image.html imgpath="/figures/chocolate_fig1.png" alt="fig1" caption="The final product in the video" %}
 
 My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I assumed this would be really simple (melt, pour, and cool chocolate), but my experiences with chocolate have been incredibly complicated and painful.
 
@@ -49,12 +42,8 @@ A good chocolate bar is **tempered** which is defined by a glossy appearance, fi
 
 [^1]: Personally, I think bloomed chocolate tastes fine, but the texture definitely makes it an unpleasant experience.  
 
-<!-- ![Tempered vs Untempered](https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg){: .center-image } -->
-<img src="https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg" loading="lazy" alt="fig1" class="center-image"/> 
-<center> <font size="2"> <i>
-SugarHero provides an excellent comparison of tempered vs untempered chocolate
-</i> </font> </center>
-<br>
+{% include caption_image.html imgpath="https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg" alt="fig2" caption="SugarHero provides an excellent comparison of tempered vs untempered chocolate" %}
+
 
 ### What is tempering?
 Tempering is the heating, cooling, and reheating of chocolate to crystallize the fat in the cocoa butter (of the chocolate) into one of six possible forms (beta crystals). When you've properly tempered chocolate, the fats in your chocolate will have a stable crystalline structure called the "beta crystal form". 

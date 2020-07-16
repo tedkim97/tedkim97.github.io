@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualization Critique\&#58; Making a more \"data-rich\" 
+title: Visualization Critique\&#58; Making a more "data-rich" visualization
 subtitle: My critique of some popular "movie barcode" visualizations on reddit, and some changes I would make
 published: false
 enable_latex: false
@@ -38,9 +38,15 @@ https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_ml/py_km
 https://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/
 
 # Introduction
-This is a critique, for reaons, exploration of an alternative visualization 
+This is an alternative visualziation of a popular series of visualaitions on r/dataisbeautiful - movie barcodes/movie lines?.
+
 
 IGNORING THE ***INCREDIBLY*** COMMERCIAL ASPECTS OF THESE VISUALIZATIONS
+
+
+**describe the visualizaiton**
+
+
 
 # Critique 
 
