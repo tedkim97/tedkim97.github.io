@@ -34,18 +34,12 @@ Situations that require scraping are niche; however, if you need data for:
 ### Use Cases of Web Scraping
 The data you want exists somewhere (how else would it exist?) - whether it's on a companies servers, massive tech aggregator, or data vendors. The problem is that the capital or security clearance needed isn't worth it for a hobby or small experiment.
 
-<!-- ![fig1](/figures/webscraping_fig1.png){: .center-image } -->
-<img src="/figures/webscraping_fig1.png" loading="lazy" alt="fig1" class="center-image"/>
-<center> <font size="2"> <i>
-No access to official data or APIs (ex: scrape products and their information from various retailers) 
-</i> </font> </center>  
-<br> 
+{% assign caption1 = "No access to official data or APIs (ex: scrape products and their information from various retailers)" %}
+{% include caption_image.html imgpath= "/figures/webscraping_fig1.png" alt="fig1" caption=caption1%}
 
-<!-- ![fig2](figures/webscraping_fig2.png){: .center-image } -->
-<img src="/figures/webscraping_fig2.png" loading="lazy" alt="fig2" class="center-image"/>
-<center> <font size="2"> <i>
-Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)</i> </font> </center>  
-<br> 
+{% assign caption2 = "Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)" %}
+{% include caption_image.html imgpath= "/figures/webscraping_fig2.png" alt="fig2" caption=caption2%}
+
 
 ### Limitations of Web scraping
 Building a crawler can't solve all of your data collection needs.
@@ -120,12 +114,9 @@ On a high level, HTML represents the content of the page while a URL indicates i
 ### HTML?
 HTML (Hypertext Markup Language) is the standard markup language for information on the web. HTML (along with CSS, JS, and more) is responsible for building all the pretty websites on the web. Websites have an underlying source that instructs your browser to display content properly. Building the contents of this site (like items on a store page) to be dynamic involves creating well-structured HTML (i.e don't randomly create elements and tags to store product information). Assuming the site maintains this structure, a crawler can exploit that to extract data on a larger scale. Not all websites are identical, and the more fluent we are with web dev the faster we can build the crawler. 
 
-<!-- ![fig1](/figures/webscraping_fig3.jpg){: .center-image } -->
-<img src="/figures/webscraping_fig3.png" loading="lazy" alt="fig3" class="center-image"/>
-<center> <font size="2"> <i>
-A webpages content in browser (top) and its underlying source (bottom). Not pictured: CSS.
-</i> </font> </center>  
-<br>
+{% assign caption3 = "A webpages content in browser (top) and its underlying source (bottom). Not pictured: CSS." %}
+{% include caption_image.html imgpath= "/figures/webscraping_fig3.jpg" alt="fig3" caption=caption3%}
+
 
 ##### HTML Tags & Elements
 The HTML (or HTML DOM) is featured around "elements", which are treated as objects. Look at any HTML file and you'll see tags like <div>, <p>, <h>, <img>, etc. Furthermore, HTML & CSS allows us to create classed elements with custom styling defined in a `.css` file. These tags are structured in a tree structure - where the tag actually hints at whats inside. Finding these elements can be done by ID, tag name, class name, CSS selectors, and HTML object collections[^1].
