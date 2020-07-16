@@ -126,12 +126,9 @@ I validated whether polycarbonate is food safe, and easy to use for thermoformin
 
 **Note for people who want to do something similar:** If you look closely at my wooden chocolate bar models, you'll see **very small** drill holes in the engraved parts of both molds. This is to let the vacuum (under the thermoformer) suck out more air and more tightly wrap the mold. This did not have any noticeable effects on the plastic mold and produced better engravings - I would recommend doing this.
 
-<!-- ![chocolate template](/figures/chocolate_fig4.jpg){: .center-image }  -->
-<img src="/figures/chocolate_fig4.jpg" loading="lazy" alt="chocolate template" class="center-image"/>
-<center> <font size="2"> <i>
-One of the final molds! The text is a different and contains my dad's (censored) name 
-</i> </font> </center>
-<br>
+{% assign caption6 = "One of the final molds! The text is a different and contains my dad's (censored) name " %}
+{% include caption_image.html imgpath= "/figures/chocolate_fig4.jpg" alt="chocolate template" caption=caption6%}
+
 
 # Actually Tempering Chocolate
 
@@ -153,12 +150,9 @@ In Conclusion, Chocolate is stupid.
 
 Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, hacker-space membership fees it came up to a $200.
 
-<!-- ![chocolate template](/figures/chocolate_fig5.jpg){: .center-image } -->
-<img src="/figures/chocolate_fig5.jpg" loading="lazy" alt="chocolate" class="center-image"/>
-<center> <font size="2"> <i>
-One of the final products! I wish I had taken more pictures... 
-</i> </font> </center>
-<br>
+{% assign caption7 = "One of the final products! I wish I had taken more pictures... " %}
+{% include caption_image.html imgpath= "/figures/chocolate_fig5.jpg" alt="final chocolate" caption=caption7%}
+
 
 In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily give-up on certain ideas (like *needing* to thermoform a bar mold or not finding alternative ways to temper chocolate) after a few road blocks. My stubbornness and desire to make certain solutions work definitely hurt more than it helped this time. I'd advise anyone else to learn from my mistake and be willing to try alternative approaches.
 
