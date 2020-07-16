@@ -20,7 +20,8 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 # Context
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
-{% include caption_image.html imgpath="/figures/chocolate_fig1.png" alt="fig1" caption="The final product in the video" %}
+{% assign caption1 = "The final product in the video" %}
+{% include caption_image.html imgpath="/figures/chocolate_fig1.png" alt="fig1" caption=caption1 %}
 
 My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I assumed this would be really simple (melt, pour, and cool chocolate), but my experiences with chocolate have been incredibly complicated and painful.
 
@@ -42,8 +43,8 @@ A good chocolate bar is **tempered** which is defined by a glossy appearance, fi
 
 [^1]: Personally, I think bloomed chocolate tastes fine, but the texture definitely makes it an unpleasant experience.  
 
-{% include caption_image.html imgpath="https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg" alt="fig2" caption="SugarHero provides an excellent comparison of tempered vs untempered chocolate" %}
-
+{% assign caption2 = "SugarHero provides an excellent comparison of tempered vs untempered chocolate"%}
+{% include caption_image.html imgpath="https://www.sugarhero.com/wp-content/uploads/2013/03/temper-chocolate-7_thumb.jpg" alt="fig2" caption=caption2%}
 
 ### What is tempering?
 Tempering is the heating, cooling, and reheating of chocolate to crystallize the fat in the cocoa butter (of the chocolate) into one of six possible forms (beta crystals). When you've properly tempered chocolate, the fats in your chocolate will have a stable crystalline structure called the "beta crystal form". 
@@ -52,13 +53,9 @@ Tempering is the reason why when your chocolate bar melts and you try to fix it 
 
 There's a handful of different ways to temper chocolate, but they all follow the same pattern of: heating chocolate around 45&deg;C (melting **all** crystals in the chocolate), letting the chocolate cool to 31&deg;C (three of the other crystals forms will melt at this temperature - promoting beta crystal formation), and maintaining that temperature to pour the chocolate into whatever shape you want. 
 
-<!-- ![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image }  -->
-<img src="https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg" loading="lazy" alt="tempered chocolate curve" class="center-image"/> 
-<center> <font size="2"> <i>
-An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get an idea of the process
-</i> </font> </center>
-<br>
 
+{% assign caption3 = "An example of the temperatures shifts when tempering chocolate. If the linked image link fails, look up [chocolate tempering curve] to get an idea of the process" %}
+{% include caption_image.html imgpath= "https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg" alt="tempered chocolate curve" caption=caption3%}
 
 # Sourcing Chocolate
 
@@ -100,12 +97,8 @@ This is a hacky solution, but I ended up using multiple passes on a laser cutter
 
 These two bars had the same text (16.7cm x 7.5cm), but etched in two different ways: 
 
-<!-- ![chocolate mold](/figures/chocolate_fig2.jpg){: .center-image }  -->
-<img src="/figures/chocolate_fig2.jpg" loading="lazy" alt="chocolate mold" class="center-image"/> 
-<center> <font size="2"> <i>
-Identical wordings, but different etching technique: words engraved in (top) and words engraved out (bottom).
-</i> </font> </center>
-<br>
+{% assign caption4 = "Identical wordings, but different etching technique: words engraved in (top) and words engraved out (bottom)" %}
+{% include caption_image.html imgpath= "/figures/chocolate_fig2.jpg" alt="chocolate mold" caption=caption4%}
 
 
 ### Creating a Mold
@@ -120,12 +113,8 @@ Oddly enough, I had a difficult time getting my hands on liquid rubber/putty mol
 
 Anyways, the idea behind thermoforming is to heat a piece of plastic where it's flexible, wrap it over the model, and use vacuums underneath to suck out air to form a tight fit. This has the added benefit of creating thin plastic molds that are easily storable, last a long time, and easy to work with (i.e get the chocolate out).
 
-<!-- ![chocolate template](/figures/chocolate_fig3.jpg){: .center-image } -->
-<img src="/figures/chocolate_fig3.jpg" loading="lazy" alt="thermoforming" class="center-image"/> 
-<center> <font size="2"> <i>
-A generalized visualization for thermoforming in our use case
-</i> </font> </center>
-<br>
+{% assign caption5 = "A generalized visualization for thermoforming in our use case" %}
+{% include caption_image.html imgpath= "/figures/chocolate_fig3.jpg" alt="thermoforming" caption=caption5%}
 
 The University's art center (with a thermoforming set-up) was closed for the summer so I had absolutely no access to a high quality machine. There are guides about making Vacuum Forming/Thermoforming machine at home, where the power and quality could be much higher for the same price. I did not have the time, space or desire to make this machine in the 2 weeks I had. If you're curious here are some resource excellent resources. [D.I.Y Thermoforming 1](https://youtu.be/DWWq2hH7imA), [D.I.Y Thermoforming 2](https://youtu.be/Tugr2juVWuk), [D.I.Y Thermoforming 3](https://youtu.be/Gx66mS7U2vY).
 
