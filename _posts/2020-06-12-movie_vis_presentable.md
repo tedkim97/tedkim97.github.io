@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visualization Critique & Improvements &#58; Movie Barcode Visualizations
-subtitle: My critique popular movie visualization subgenre (on reddit) and my take on the genre
+title: A Critique of Movie Visualizations & Improvements &#58; Movie Barcodes 
+subtitle: My critique of popular movie visualization subgenre (on reddit) and my take on the genre
 published: true
 enable_latex: false
 permalink: /vis_critique
@@ -10,59 +10,70 @@ technical: true
 funstuff: true
 ---
 
-**This is a much shorter version of my writeup on my movie visualization, if you're interested in the methodology, indepth coverage/reasoning, code commentary, go to here**
-
-# Visualization
-Before we get into the some methodology and the critique, below is the visualization.
-
-Each 1px wide column of this visualization represents  
-
-*Link MY visualizations here*
-
-An alternative visualization is ones that use the most prominent colors (color that appears the most):
-
-And another visualization is one that uses the least prominent colors (colors that appear the list):
-
-
+##### This is a shorter, more "deliverable" version of my writeup on my movie visualization, if you're interested in the methodology, reasoning, code commentary, background research click (I actually haven't done it yet)
 
 # Introduction
-This is an alternative movie visualization in the series of "movie barcodes" that are popular on [reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/). While these barcodes are cool data visualizations about the frames of a movie[^1] - I think that there is some room to improve these visualizations to communicate more about colors (and how they're used) in the movies we process.
+There are a series of movie "barcode" visualizations that are fairly popular on the internet (I've seen them a lot on [reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/)). An example that I like is ["The average color of every 10th frame of The Lion King (1994) from beginning to end"](https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/).
 
-[^1]: Ignoring the ***incredibly*** commercial aspects of the visualizations...
-
-# Critique 
-Below are some embedded links to the visualizations, with their links. These are fairly straightforward visualizations, so I won't re-describe them to you.
-
-{% assign caption1 = "made by /u/SylphKnot" %}
-<center><b>"The average color of every 10th frame of The Lion King (1994) from beginning to end"</b></center>
+{% assign caption1 = "An example of a popular movie visualization made by /u/SylphKnot" %}
 {% include caption_image.html imgpath="https://preview.redd.it/3w2kfg8xhmn31.jpg?width=1024&auto=webp&s=90658c02b89e48c95964c35c1e126b0357afbdb5" alt=example1 caption=caption1 %}
 
+While these barcodes are cool visualizations about the still images (frames) of a movie, I think these visualizations could show richer detail about the colors used in our movie. This post is about my *attempt* at making a visualization scheme that shows more about how color is used while preserving the artistic qualities.
+
+# The Visualization
+Since the critique and description of techniques are a bit long, let's start with looking at a few (alternative) proposals I have for movie visualizations. 
+
+##### How to read:
+Each one pixel wide (1px) column of this visualization represents a frame sampled from the movie while the colors in each column represent the "significant"[^1] colors extracted from the frames. Their height is proportional to how frequently the color was used in the frame (i.e the bigger the portion, the more frequently the color appeared).
+
+A frame was sampled from the target movie every 24 frames, and the movies I processed were 23.98 frames per second, meaning each column approximates a second in the film.
+
+[^1]: "Significant" as in colors extracted from a clustering algorithm.
+
+### Labeled Barcode
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="QRhzs9m"><a href="https://imgur.com/QRhzs9m">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+### The Original Image Barcode
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="xYcu3Gz"><a href="https://imgur.com/xYcu3Gz">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+In addition to creating this psuedo-stacked-area color chart, I tried creating some visualizations derived from the original.
+
+### An alternative visualization: The most frequent colors
+This was created by taking the top pixel in each column of our original visualization, and creating a new one from it.
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="frmAQ3Q"><a href="https://imgur.com/frmAQ3Q">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+### An alternative visualization: the least frequent colors
+This was created by taking the bottom pixel in each column of our original visualization.
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="FghC82P"><a href="https://imgur.com/FghC82P">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+### The colors of the movie shown with equal representation
+Instead of representing colors by their frequency on the frame, we just represent them all equally. You'll notice some redundancies (as in very similar) in the colors chosen in some of the columns due to our color extraction method (more on that later).
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="aCfh7sW"><a href="https://imgur.com/aCfh7sW">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+
+# Critique 
+I already showed one example of a barcode visualization in the introduction. Below are two more popular examples (with their links). The titles usually explain the visualization, so I won't re-describe them to you.
+
 {% assign caption2 = "made by /u/julekca" %}
-<center><b>"Blade Runner 2049..... represented by 1600 captures of the movie. Each of these is resized to 1px wide and extracted with the same time interval."</b></center>
+###### ["Blade Runner 2049..... represented by 1600 captures of the movie. Each of these is resized to 1px wide and extracted with the same time interval."](https://redd.it/d7nw9p)
 {% include caption_image.html imgpath="https://preview.redd.it/tkmqnoywz3o31.jpg?width=1024&auto=webp&s=e5294d737152749b3e389af16a0765f5551cf12d" alt="example2" caption=caption2 %}
 
 {% assign caption3 = "made by /u/julekca" %}
-<center><b>"The sleek colors of "Joker" by Todd Phillips. One circular line = one frame, for a total of 1600 frames extracted at regular intervals from the movie. Its beginning lies in the middle of the disc and spreads outwards"</b></center>
+###### ["The sleek colors of "Joker" by Todd Phillips. One circular line = one frame, for a total of 1600 frames extracted at regular intervals from the movie. Its beginning lies in the middle of the disc and spreads outwards"](https://redd.it/fmdhhr)
 
 {% include caption_image.html imgpath="https://preview.redd.it/cykcrmp3f0o41.jpg?width=768&auto=webp&s=2f193147669ae7e10864da6e75ab3c6106f8aeb3" alt="example3" caption=caption3 %}
 
+### Petty Complaints
+Some complaints I have are minor. For example, authors describe sampling frames so that the movies are the same barcode length (i.e removing movie length), averaging colors for the sake of prettiness, or (seemingly) clipping out the bottom or top of the frame. These moves seemed to be done to make the visualization more focused on **art** rather than **data** - which is "okay". Movies are art, and a visualization about movies can be artistic as well. 
 
-These visualizations feel more focused on **art** rather than **data**. There's nothing wrong with that - movies are art, and a visualization about movies can be artistic as well.
+### Actual Critique
+My two main critiques of these visualizations is that these visualizations **skew colors differently from human perception**, and they **don't visualize the variety of colors** in movies. 
 
-However, I feel like these visualizations are on the cusp of communicating something much richer and interesting than just. 
+Both average and interpolated visualizations are close to showing something much richer than average color or resized frames. 
 
+For example, our lion king visualization shows an interesting use of colors over time, but fails to show the variety of colors over time. 
 
-Some critiques are minor is that they arbitrarily normalize all these movies to the same length (i.e removing movie length), and averages colors for the sake of prettiness.
-
-These visualizations opt to show variance in the visualizations through time (i.e like a scatter plot) 
-
-### Averaging doesn't represent colors (well)
-This is just a general critique that is applied to colors.
-
-Even though these 1px slices seem to represent color schemes and motifs in the film, it doens't capture the beauty/variety of colors. **In a sense - they fail to show variance**
-
-
-If we tried making an analogy onto a different visualization, this is what the "averaging" barcode shows:
+If we tried to make an analogy onto a different visualization, this is what the "averaging" barcode shows:
 {% assign lp1 = "a lineplot" %}
 {% include caption_image.html imgpath="https://www.mathworks.com/help/examples/graphics/win64/SpecifyLineWidthMarkerSizeAndMarkerColorExample_01.png" alt="lineplot1" caption=lp1%}
 
@@ -70,36 +81,81 @@ And this is what I would like to see:
 {% assign lp2 = "a lineplot with error bars" %}
 {% include caption_image.html imgpath="https://www.mathworks.com/help/examples/graphics/win64/ModifyErrorBarsAfterCreationExample_01.png" alt="lineplot2" caption=lp2%}
 
-Averages are a perfect representation of color, and accurately represent our understanding of colors. EX Mixing Pure Red and Green gives us [COLOR], Pure Blakc and Pure White gives us Grey.
+The Bladerunner visualization is able to show us color over time, but focuses on the content of the frame, rather than color. I ran an implementation of the barcode visualization described in the [blade runner post](https://redd.it/d7nw9p) on "The Simpson's Movie". If you look carefully at the slices over time - you can see slices of the character's faces - stitched together (like Homer and Marge) because the frame was centered on these characters at those times.
 
-Averaging gives us a perfect representation of mixing colors. If we averaged an image that's half red and half blue, it would give us purple. 
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="HKidawr"><a href="https://imgur.com/HKidawr">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
+### Averaging doesn't represent colors well
 
-Similarly, if there were more red than blue in the image, the picture would take a redder shade (just like mixing paint would).
+Literally speaking, averaging colors represent mixing. For example averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes and the more red pixels, the more pink it becomes. 
 
 The problem is that this average is not natural for how humans perceive color. 
 
-
-*** SOME VARIATION OF THE SAME THING BELOW ***
 However, this average doesn't let us understand how "colorful" a movie is, or how a scene will employ a variety of colors at once.
 
 
 My problem is that averages don't represent the variety of color (or variation).
 
-Averages don't represent colors well. Although (in RGB color space) there can be high correlation between the R, G, B vectors - the variety of colors (and how randomly they appear) is not represetned by averages.
+Averages don't represent colors well. Although (in RGB color space) there can be high correlation between the R, G, B vectors - the variety of colors (and how randomly they appear) is not represented by averages.
 
-*** END**** 
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/DvFPIRy"><a href="//imgur.com/a/DvFPIRy">Examples of Averaging Colors in Images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
-The other visualization (Bicubic downsampling of each frame) seems to do a better job - displaying the average of the rows in each image, it only provides averages of the rows in the frame, but not the variety in the colors used in the frame. 
+----------------------------------------
 
-### Using Interpolation is compressing frames rather than representing colors
 
-### Minor Critique: Normalizing movies to the same time length 
+Averages (can) represents data poorly. Extreme cases (like a skewed histogram or a U-shaped distribution) will have averages don't represent the underlying distribution at all. A common fix is to use a different metric (like the median) or include information about the variance or skew of the distribution. 
 
-# Requirements
+Even though these 1px slices seem to represent color schemes and motifs in the film, it doens't capture the beauty/variety of colors. **In a sense - they fail to show variance**
+
+
+### Interpolation isn't about colors (but the center of the frame)
+The other visualization (interpolation of each frame) seems to do a better job of showing variety and color - just peeking at the visualization, we can see that there is a lot of different colors on the x & y axis. 
+
+The only problem is that this technique when resizing to (1, image_height) only provides a vertical slice of the image. 
+
+
+Interpolation is the process of reducing the image size down (we see that the image is progressively squeezed).
+
+Interpolation of the images don't actually end up focusing on the **colors** in the frame, but rather whats in the center.
+
+
+Not the variety in the colors used in the frame. 
+
+**For this one, I recommend actually going to imgur and zooming in to see the difference**
+
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/th0wXPm"  ><a href="//imgur.com/a/th0wXPm">Examples of interpolation on images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+Using Interpolation is compressing frames rather than representing colors
+
+
+### Concessions with Compression
+Dealing with compression and lossy representations 
+
+In this project i end up decreasing the sizes of the image processed on, and 
+
+However, I think there is only a marginal loss in quality/information.
+
+If I *really* wanted to experiment with the pure version, I would be stealing the tapes of these films from theaters. 
+
+**If i wanted a pure representation, I would probably have used a lossless original version**
+
+
+### The Movies
+The movies I chose were Coco, Mad Max: Fury Road, Despicable Me, Shrek, The Simpsons Movie, and Spider-Man: Into the Spider-Verse.
+
+There wasn't a huge rationale behind the choices of these movies, these were the movies that came to mind when I thought "movies with distinct colors".
 
 # Problems with MY visualization
 I think the "1px" limit is to restraining, and doesn't allow for a careful examination of a movie. I think this 1 pixel width limit could be fixed by adding some interactivity (like zooming).
+
+In addition, I think the original visualization is too confusing to explain in words. 
+
+If I had more time, I'd grab a small portion of the image and explain the structure visually.
+
+# The Gallery
+Below is an imgur album with some of the visualizations I created
+
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/9RQDEkD"  ><a href="//imgur.com/a/9RQDEkD">Colors of (proportional)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 ### These visualizations are not a 100% representation of color
 Issues with represneting colors in data
@@ -112,6 +168,24 @@ KMeans is still not a pure representation of colors
 
 # The Machine Learning Bit; Color Quanitization with K Means
 
+# An Analysis of the some Visualizations
+Off the bat, looking at a few of these images show that the *light* prevents us from getting
+
+which isn't very surprising given how 5/6 of the movies chosen were animated.
+
+
+### Comparisons: a short clip as an example
+I think we can try the a clip from the "Stargate Sequence - 2001: A Space Odyssey" to capture a better idea.
+
+https://youtu.be/ebmwYqoUp44?t=6
+
+The clip is from (0:06 to 1:15).
+
+Comparison of each image
+
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/f4asdaM"><a href="//imgur.com/a/f4asdaM">Space Odyssey Visualizations (sample_rate = 12, slice_width=16)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+
 # Conclusion & Next Steps
 
 I'd like to apply a TF-IDF weighting scheme to this movie catalog - 
@@ -119,10 +193,10 @@ I'd like to apply a TF-IDF weighting scheme to this movie catalog -
 WHere colors (r,g,b) act as words and a "document" would be a movie. 
 
 ### What about the black bars?
-The black bars actually show up as smaller frames (i.e 1920 x 1080) is really (1920 x 800) or something
+The black bars aren't actually a part of the frame - for example a 1080p movie (1920 x 1080) will show as a (1920 x 800) frame or something similar.
 
 ### How did you source these movies?
-Yargh
+yohoho and a bottle of rum
 
 This way, we are able to emphasize/pickout colors that are unique to a movie, and ignoring excessively common colors (i.e (0,0,0), (255, 255, 255)) 
 
@@ -131,7 +205,7 @@ https://nateaff.com/2017/09/11/lego-topic-models/#:~:text=Color%20TF%2DIDF&text=
 https://www.kaggle.com/nateaff/finding-lego-color-themes-with-topic-models
 
 # Code & Stuff
-
+**Insert link to the repo here**
 
 
 # Links
