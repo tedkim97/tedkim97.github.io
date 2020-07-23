@@ -11,7 +11,10 @@ Here are my more technical past-projects/mini projects. If you find anything tha
 {% for node in pages_list %}
 {% if node.technical == true %}
   {% if node.layout == "post" %}
-  	<a href="{{ node.url }}">{{ node.title }}</a><br>
+  	<a href="{{ node.url }}"> <b> {{ node.title }} </b> </a> <br>
+  	<span> <i> {{ node.subtitle }} </i> </span> <br>
+  	<span> {{ node.date | date: '%B %d, %Y'}} </span>
+  	<br> <br>
   {% endif %}
 {% endif %}
 {% endfor %}

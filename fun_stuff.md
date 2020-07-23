@@ -11,7 +11,10 @@ Here are my past projects relating to my hobbies or off-shoot projects. Not ever
 {% for node in pages_list %}
 {% if node.funstuff == true %}
   {% if node.layout == "post" %}
-  	<a href="{{ node.url }}">{{ node.title }}</a><br>
+  	<a href="{{ node.url }}"> <b> {{ node.title }} </b> </a> <br>
+  	<span> <i> {{ node.subtitle }} </i> </span> <br>
+  	<span> {{ node.date | date: '%B %d, %Y'}} </span>
+  	<br> <br>
   {% endif %}
 {% endif %}
 {% endfor %}

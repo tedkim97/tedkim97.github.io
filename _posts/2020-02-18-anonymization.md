@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Anonymization Schemes
+subtitle: A technique for anonymization and/or pseudonymization
 published: true
 permalink: data_anonymization
 frontpage: false

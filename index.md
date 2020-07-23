@@ -14,7 +14,10 @@ Feel free to skip/skim parts that aren't interesting. I write these blog posts f
 {% for node in pages_list %}
 {% if node.frontpage == true %}
   {% if node.layout == "post" %}
-  	<a href="{{ node.url }}">{{ node.title }}</a><br>
+  	<a href="{{ node.url }}"> <b> {{ node.title }} </b> </a> <br>
+  	<span> <i> {{ node.subtitle }} </i> </span> <br>
+  	<span> {{ node.date | date: '%B %d, %Y'}} </span>
+  	<br> <br>
   {% endif %}
 {% endif %}
 {% endfor %}

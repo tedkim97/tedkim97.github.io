@@ -1,10 +1,10 @@
 ---
 layout: post
-title: A Critique of Movie Visualizations & Improvements &#58; Movie Barcodes 
+title: Movie Visualization Critique & Improvements &#58; Movie Barcodes 
 subtitle: My critique of popular movie visualization subgenre (on reddit) and my take on the genre
 published: true
 enable_latex: false
-permalink: /vis_critique
+permalink: /barcode_critique
 frontpage: true
 technical: true
 funstuff: true
@@ -140,11 +140,6 @@ If I *really* wanted to experiment with the pure version, I would be stealing th
 **If i wanted a pure representation, I would probably have used a lossless original version**
 
 
-### The Movies
-The movies I chose were Coco, Mad Max: Fury Road, Despicable Me, Shrek, The Simpsons Movie, and Spider-Man: Into the Spider-Verse.
-
-There wasn't a huge rationale behind the choices of these movies, these were the movies that came to mind when I thought "movies with distinct colors".
-
 # Problems with MY visualization
 I think the "1px" limit is to restraining, and doesn't allow for a careful examination of a movie. I think this 1 pixel width limit could be fixed by adding some interactivity (like zooming).
 
@@ -153,7 +148,9 @@ In addition, I think the original visualization is too confusing to explain in w
 If I had more time, I'd grab a small portion of the image and explain the structure visually.
 
 # The Gallery
-Below is an imgur album with some of the visualizations I created
+Below is an imgur album with some of the visualizations I created with visualizations done on Coco, Mad Max: Fury Road, Despicable Me, Shrek, The Simpsons Movie, and Spider-Man: Into the Spider-Verse. In addition to picking different movies, I also chose a preset number of cluster centers to extract colors from (k=3, 5, 8).
+
+There wasn't a huge rationale behind the choices of these movies, these were the movies that came to mind when I thought "movies with distinct colors".
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/9RQDEkD"  ><a href="//imgur.com/a/9RQDEkD">Colors of (proportional)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
@@ -192,11 +189,27 @@ I'd like to apply a TF-IDF weighting scheme to this movie catalog -
 
 WHere colors (r,g,b) act as words and a "document" would be a movie. 
 
+# FAQ
 ### What about the black bars?
 The black bars aren't actually a part of the frame - for example a 1080p movie (1920 x 1080) will show as a (1920 x 800) frame or something similar.
 
 ### How did you source these movies?
 yohoho and a bottle of rum
+
+### Is this processing technique runnable on a laptop?
+Probably not. I have a fairly beefy desktop and it took 7-8 hours to process a 2 hour movie.
+
+### What about filtering out common colors (ex: removing (0,0,0) and (255,255,255) pixels)?
+I've thought about it, and it's feasible to do. The problem is that it doesn't catch a fairly significant amount of pixels that aren't pitch black (0,0,0) but extremely close, such as (0,0,3) or (5,0,1).
+
+### What about exploring with other color spaces (HSV, HSL, CIELab, etc?)  
+I thought about it, and I am still looking into it. At the moment it seemed easier to work everything in a simple R, G, B vector. Even though alternative color spaces and conversions are *relatively* simple, it still takes a lot of effort adjusting. 
+
+I've also thought about using k-means with an alternative distance metric, or maybe a distance metric specific to color (like a modern CIE distance metric). However, KMeans is not guaranteed to converge with any arbitrary measure of distance I choose. 
+
+### What about an alternative clustering method?
+I've thought about spectral clustering (but it doesn't seems overkill for this problem), and I'm aware of other clustering methods out there - but I have not experimented with other methods.
+
 
 This way, we are able to emphasize/pickout colors that are unique to a movie, and ignoring excessively common colors (i.e (0,0,0), (255, 255, 255)) 
 
@@ -207,24 +220,22 @@ https://www.kaggle.com/nateaff/finding-lego-color-themes-with-topic-models
 # Code & Stuff
 **Insert link to the repo here**
 
-
-# Links
+# Sources & Links
+##### Various Barcode Related Things
 https://moviebarcode.tumblr.com/
 https://thecolorsofmotion.com/
 https://kottke.org/19/02/movie-color-palettes
+https://github.com/jyotiska/movie-barcode/blob/master/movie_barcode.py
+https://zerowidthjoiner.net/movie-barcode-generator
 https://www.reddit.com/r/dataisbeautiful/comments/gc4mbi/oc_visualizations_of_movies_in_one_figure/
 https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/
 https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/
 https://www.reddit.com/r/dataisbeautiful/comments/fmdhhr/oc_the_sleek_colors_of_joker_by_todd_phillips_one/
-https://zerowidthjoiner.net/movie-barcode-generator
-
 https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/
-
 https://www.reddit.com/r/dataisbeautiful/comments/d8ue6x/inspired_by_recent_blade_runner_barcode_both/
 
-https://github.com/jyotiska/movie-barcode/blob/master/movie_barcode.py
 
-# ML Links
+##### Machine Learning Related Things
 https://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html#:~:text=In%20the%20image%20processing%20literature,example%2C%20uses%20such%20a%20palette.
 
 https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
