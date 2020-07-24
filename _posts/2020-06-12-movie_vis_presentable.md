@@ -82,34 +82,17 @@ The Bladerunner visualization is able to show color over time, but focuses on th
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="HKidawr"><a href="https://imgur.com/HKidawr">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 # Averaging misrepresents colors
-Averaging colors for movies have three problems that stem from: 
-- darkening or brightening shades of colors due to (0,0,0) and (255,255,255) pixels   
-- misrepresenting images with a variety of colors
+Averaging colors for movies are a problem because they: 
+- Alter "lightness" and/or "saturation" due to (0,0,0) and (255,255,255) pixels   
+- Collapse a variety of colors into a single, unrelated color 
 
-Averages (can) represents data poorly. Extreme cases (like a skewed histogram or a U-shaped distribution) will have averages don't represent the underlying distribution at all. A common fix is to use a different metric (like the median) or include information about the variance or skew of the distribution. 
+To be fair, averaging colors is a perfect representation of mixing them. For example, averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes; the more red pixels, the pinker it becomes. **The problem is averaging is not how humans perceive color.** People don't see a red & blue painting and think "purple"! 
 
-Even though these 1px slices seem to represent color schemes and motifs in the film, it doesn't capture the beauty/variety of colors. **In a sense - they fail to show variance**
+In addition, averaging can be a poor metric for certain distribution. Extreme cases (like a skewed histogram or a U-shaped distribution) will tell us nothing. A common fix is to use a different measure (like the median) or include information about the variance or skew of the distribution. 
 
+Even though these one pixel slices can capture color schemes used in the film, averaging colors alters the palette and fails to capture the different colors in them. This is important for movies as the composition of a frame is dominated by lighting. Whether it's a scene shot at night, in a bright white room, or in a shadow these seemingly innocuous colors dominate the average. This visualization scheme becomes worse the more colors are added into the frame (like a shot of the rainbow, or a garden, etc).
 
-### Darkening/Brighting of colors
-This is more important for movies as the composition of a frame is dominated by lighting. Whether it's a scene shot at night, in a bright white room, or in a shadow these seemingly innocuous colors dominate the average. 
-
-### Misrepresentation of colorful images
-
-In the imgur album below, we can see some comparisons of an image, and it's resulting average color. 
-
-To be fair, averaging colors is a perfect representation of mixing them. For example, averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes; the more red pixels, the pinker it becomes. **The problem is that this average is not how humans perceive color.** People don't see a red & blue painting and think "purple" (at least the last time I checked).  
-
-This average becomes a worse metric the more colors are added to the image. 
-
-Averages can unnecessairly darken/brighten shades of colors present in pictures. 
-
-However, this average doesn't let us understand how "colorful" a movie is, or how a scene will employ a variety of colors at once.
-
-
-My problem is that averages don't represent the variety of color (or variation).
-
-Averages don't represent colors well. Although (in RGB color space) there can be high correlation between the R, G, B vectors - the variety of colors (and how randomly they appear) is not represented by averages.
+Below is an imgur album that demonstrates some of the ideas that I'm talking about. On the left, there is an original image, and on the right is a generated color from averaging them. 
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/DvFPIRy"><a href="//imgur.com/a/DvFPIRy">Examples of Averaging Colors in Images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
@@ -121,50 +104,29 @@ The only problem is that downsampling frames to a size (image_height x 1) only *
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/th0wXPm"  ><a href="//imgur.com/a/th0wXPm">Examples of interpolation on images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
-# Methodology
-The barcodes were created with opencv2, PIL, numpy, and scikit-learn. The annotations and labels were create with matplotlib. [The git repository is here]()
+# Creating the Visualization
+The barcodes were created with opencv2, PIL, numpy, and scikit-learn. The annotations and labels were create with matplotlib. Creating these visualizations took 6-7 hours for a 2 hour movie with an 8-core processor at 4.1 GHz. 
+
+(The git repository link will be put here soon)
 
 ### Color Quantization using KMeans
-I've vaguely refererred to clustering up to this 
+I've vaguely referred to "extracting colors" with a clustering algorithm, but I'll be more specific here. When analyzing an image, the number of "colors" will probably be less the the number of unique (R,G,B) values. While humans can semantically understand the number of unique colors in an image (red, turquoise, brown) a computer can have a much harder time doing that. For example, a black image (to a human) could be composed of 40 values close to (0,0,0) such as (0,0,1), (1,0,2), (0,1,0), etc. While I could pause every second and tally the colors used in the film, I would prefer not to do that. 
 
-We can use a classical machine learning algorithm in order to automatically extract 
+The solution to this problem is to extract colors algorithmically using the ["color quantization"](https://en.wikipedia.org/wiki/Color_quantization) approach. The idea is reduce the number of colors in an image, and representing the image with a reduced (and lossy) color palette. In this example, we could represent the black pixels with (0,0,0) or (0, 4, 2).
 
-### Making Movies more Computable/ Computationally Tractable
+There are a lot of approaches to quantization, but *machine learning* (clustering) is a fairly popular choice. The tradeoff is that clustering can take a decent amount of time depending on the number of clusters or size of the dataset, and if we're running a clustering algorithm on several thousand frames of a movie, the overall processing time can be long. 
 
+### Making Movies more Computable/Computationally Tractable
+Another issue is that each individual frame is too large for (relatively quick) processing through quantization. A (1920 x 1080) frame will result in \~2,000,000 million pixels. While having more, high fidelity data is nice - there is a tradeoff. 
 
-# Problems with MY visualization
-I think the "1px" limit is to restraining, and doesn't really allow for a granular examination of the movie (unless)
-careful examination of a movie. I think this 1 pixel width limit could be fixed by adding some interactivity (like zooming).
-
-In addition, I think the original visualization is too confusing to explain in words. 
-
-If I had more time, I'd grab a small portion of the image and explain the structure visually.
-
-It takes a hella long time to cpmute
-
-### These visualizations are not a 100% representation of color
-Issues with represneting colors in data
-Issues with represneting colors when taking a photo
-Averaging/compression can dampen colors
-Down-sampling (which is what I had to do for this visualization) reduces details and can cause small shifts in colors
-KMeans is still not a pure representation of colors
-
-### Concessions with Compression
-Dealing with compression and lossy representations 
-
-In this project i end up decreasing the sizes of the image processed on, and 
-
-However, I think there is only a marginal loss in quality/information.
-
-If I *really* wanted to experiment with the pure version, I would be stealing the tapes of these films from theaters. 
-
-**If i wanted a pure representation, I would probably have used a lossless original version**
-
+As a result, I resized frames (with interpolation) into a fourth of their original size. A (1920 x 1080) frame becomes (480 x 270) - which is only \~130,000 pixels. This resizing does result in a loss of image quality, and shifts in the coloring of the pixels, but when I examined the original and resized images, they seemed pretty close. 
 
 # Demonstrative Comparisons: A short clip from the "2001: The Space Odysesey"
-Let's try a clip from the ["Stargate Sequence - 2001: A Space Odyssey"](https://youtu.be/ebmwYqoUp44?t=6) to get a better idea between all of the visualizations. The clip I worked with is from (0:06 to 1:15) which is a wispy, moving color sequence (I'm not sure how to describe it, you need to see it for yourself). To make the extracted colors more visible, the width of each "slice" in the barcode was increased for each visualization. In addition, the sampling rate was increased. 
+Let's try a clip from the ["Stargate Sequence - 2001: A Space Odyssey"](https://youtu.be/ebmwYqoUp44?t=6) to get a better idea between all of the visualizations. The clip I is from 0:06 to 1:15. The sequence is a ... wispy (?) motion of colored light (?) on a dark background (just watch it yourself). To make the extracted colors more visible, the width of each "slice" in the barcode was increased for each visualization. In addition, the sampling rate was increased. 
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/f4asdaM"><a href="//imgur.com/a/f4asdaM">Space Odyssey Visualizations (sample_rate = 12, slice_width=16)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+In the average barcode, we see that the dark background has muted the "vibrancy" in each of the colors. Since most of the frames are monochromatic (colors of the same hue), we don't see how averages collapse color variation. In the interpolated barcode, the reason why the colors are so bright is because the center frame is illuminated by a white light. Finally, our extracted color visualization is able to capture the colors used in each frame, but represent the transition in the light streams as well. Using a higher number of cluster centers also doesn't show a human-perceivable difference in color.
 
 # The Gallery (Other Visualizations)
 Below is an album with some of the visualizations I created with visualizations done on "Coco", "Mad Max: Fury Road", "Despicable Me", "Shrek", "The Simpsons Movie", and "Spider-Man: Into the Spider-Verse". In addition to different movies, I also chose a preset number of cluster centers to extract colors (k=3, k=5, k=8)[^2]. 
@@ -175,24 +137,47 @@ The number of clusters does change the visualization, but after 5 clusters there
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/9RQDEkD"  ><a href="//imgur.com/a/9RQDEkD">Colors of (proportional)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
-# An Analysis The Gallery 
-Off the bat, looking at a few of these images show that the *light* prevents us from getting
+Off the bat, looking at a few of these images show that the *light* prevents us from getting the "pure" color palette I desire. This isn't very surprising given how lighting plays a big role in live-action and computer graphic films. 
 
-which isn't very surprising given how 5/6 of the movies chosen were animated.
+# Problems with MY visualization
+Of course, this visualization idea is ... not perfect.
 
+Aesthetically, I think the visualization is not as good as any of the examples I showed earlier. The pixelation of my version is a bit ugly. In addition, if you pay attention to the bottom of some of the visualizations, you'll see tiny black pixels that were caused my rounding errors (oops).
+
+Computationally, these visualizations take too long to create - I'm aware of the tradeoff, but something tells me that there is a much better approach to quantizing our movie colors. 
+
+As a visualization, the "1 pixel" width prevents a closer examination of the movie (unless you zoom in with photoshop or something). This limit could be fixed by adding some interactivity (like zoom or crop) in D3, but that might be done later. Furthermore, the layout of the colors themselves can make understanding the visualization confusing.  
+
+Out of the alternative I made, I think all of them ("most frequent", "least frequent", "equal representation") are much prettier and cooler, but come at the expense of communicating **less** about the movie. 
+
+Finally, I think my approach to fitting information into the barcode form factor is wrong. When I calculated proportion, I made this visualization more of a stacked area graph or a density time series - which is probably more fitting and visually appealing for what I'm trying to do (and I will try... later). 
+
+{% assign capex1 = "serialmentor.com giving an example of a stacked proportion chart"%}
+{% include caption_image.html imgpath="https://serialmentor.com/dataviz/visualizing_proportions_files/figure-html/health-vs-age-1.png" alt="fig3" caption=capex1%}
+
+
+### Concessions with Compression
+Compression is great and necessary to do create these in a reasonable amount of time, The purist in me sometimes gets upset when I think about not analyzing the original 8k resolution movie. Whenever this happened, I remind myself that I'm already working with an imperfect representation of the original movie (a 1080p version). If I *really* wanted to visualize the pure version, I would be stealing hard-drives from movie studios. 
+
+To reiterate moments where we have loss of information: 
+- Representing colors in photos
+- Down-sampling reduces details and can cause small shifts in colors
+- KMeans does not give you the "best" representation of colors
+- 1080p movies
 
 # Conclusion & Next Steps
+In conclusion, I tried improving a genre of barcode visualizations by using some machine learning to process our data. I think achieved my goal of showing a richer study of colors in movies; however, the visualization is not perfect. As of now, there are quite a few flaws without any good solutions. 
 
-I'd like to apply a TF-IDF weighting scheme to this movie catalog - 
+In the future, I plan to create other, non-barcode visualizations (like a stacked time-series) from the other visualizations I've created.
 
-WHere colors (r,g,b) act as words and a "document" would be a movie. 
+In addition, I would like to explore other methods of extracting colors from the movie. You can observe the the "most frequent" colors often are very dark pixels (cause of lighting). As a result, I'm thinking about applying a TF-IDF weighting scheme to a movie - treating the "frames" as documents and the "colors (r,g,b)" as words. The reason why I haven't done it yet is because programming one from scratch is a lot of work, and I'm resorting on jamming an implementation into scikit-learn's version last).  
 
 # FAQ
 ##### What about the black bars?
 The black bars aren't actually a part of the frame - for example a 1080p movie (1920 x 1080) will show as a (1920 x 800) frame or something similar.
 
 ##### How did you source these movies?
-yohoho and a bottle of rum
+Yarghhh me matey
 
 ##### Is this processing technique runnable on a laptop?
 Probably not. I have a fairly beefy desktop and it took 7-8 hours to process a 2 hour movie.
@@ -206,36 +191,15 @@ I tried representing a standard deviation for each R, G, B vector, and creating 
 ##### What about exploring with other color spaces (HSV, HSL, CIELab, etc?)  
 I thought about it, and I am still looking into it. At the moment it seemed easier to work everything in a simple R, G, B vector. Even though alternative color spaces and conversions are *relatively* simple, it still takes a lot of effort adjusting. 
 
-I've also thought about using k-means with an alternative distance metric, or maybe a distance metric specific to color (like a modern CIE distance metric). However, KMeans is not guaranteed to converge with any arbitrary measure of distance I choose. 
+I've also thought about using k-means with an alternative distance metric, or maybe a distance metric specific to color (like a modern CIE distance metric). However, KMeans is not guaranteed to converge with an arbitrary measure of distance. 
 
 ##### What about an alternative clustering method?
 I've thought about spectral clustering (but it doesn't seems overkill for this problem), and I'm aware of other clustering methods out there - but I have not experimented with other methods.
 
-
-This way, we are able to emphasize/pickout colors that are unique to a movie, and ignoring excessively common colors (i.e (0,0,0), (255, 255, 255)) 
-
-https://nateaff.com/2017/09/11/lego-topic-models/#:~:text=Color%20TF%2DIDF&text=In%20text%20mining%2C%20stop%20words,the%20majority%20of%20brick%20colors.
-
-https://www.kaggle.com/nateaff/finding-lego-color-themes-with-topic-models
-
 # Code & Stuff
-**Insert link to the repo here**
+**REPO TO BE ADDED SOON**
 
 # Sources & Links
-##### Various Barcode Related Things
-https://moviebarcode.tumblr.com/
-https://thecolorsofmotion.com/
-https://kottke.org/19/02/movie-color-palettes
-https://github.com/jyotiska/movie-barcode/blob/master/movie_barcode.py
-https://zerowidthjoiner.net/movie-barcode-generator
-https://www.reddit.com/r/dataisbeautiful/comments/gc4mbi/oc_visualizations_of_movies_in_one_figure/
-https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/
-https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/
-https://www.reddit.com/r/dataisbeautiful/comments/fmdhhr/oc_the_sleek_colors_of_joker_by_todd_phillips_one/
-https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/
-https://www.reddit.com/r/dataisbeautiful/comments/d8ue6x/inspired_by_recent_blade_runner_barcode_both/
-
-
 ##### Machine Learning Related Links
 [Color Quantization (scikit)](https://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html#:~:text=In%20the%20image%20processing%20literature,example%2C%20uses%20such%20a%20palette.)
 
@@ -244,5 +208,24 @@ https://www.reddit.com/r/dataisbeautiful/comments/d8ue6x/inspired_by_recent_blad
 [Blogpost on Finding Dominant Colors in Image](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
 [Another blogpost on Finding Dominant Colors in a Movie Poster)](https://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/)
+
+##### An example of TF-IDF on color!
+[A Blog Post on Lego Color](https://nateaff.com/2017/09/11/lego-topic-models/#:~:text=Color%20TF%2DIDF&text=In%20text%20mining%2C%20stop%20words,the%20majority%20of%20brick%20colors.)
+
+[A corresponding kaggle notebook](https://www.kaggle.com/nateaff/finding-lego-color-themes-with-topic-models)
+
+##### Various Barcode Related Things
+[Site that sells average color barcodes](https://thecolorsofmotion.com/),
+[Tumblr blog of barcodes](https://moviebarcode.tumblr.com/),
+[Someone elses code](https://github.com/jyotiska/movie-barcode/blob/master/movie_barcode.py),
+[Barcode generating software!](https://zerowidthjoiner.net/movie-barcode-generator),
+[A site that I used to validate my test vis](https://kottke.org/19/02/movie-color-palettes),
+[Reddit post](https://www.reddit.com/r/dataisbeautiful/comments/d8ue6x/inspired_by_recent_blade_runner_barcode_both/),
+[Another reddit post](https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/),
+[Another reddit post](https://www.reddit.com/r/dataisbeautiful/comments/fmdhhr/oc_the_sleek_colors_of_joker_by_todd_phillips_one/),
+[Another reddit post](https://www.reddit.com/r/dataisbeautiful/comments/d7nw9p/oc_blade_runner_2049_represented_by_1600_captures/),
+[Even more](https://www.reddit.com/r/dataisbeautiful/comments/gc4mbi/oc_visualizations_of_movies_in_one_figure/),
+[I was not exaggerating when I said these were popular on the internet](https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/),
+
 
 # Footnotes
