@@ -10,8 +10,6 @@ technical: true
 funstuff: true
 ---
 
-##### This is a shorter, more "deliverable" version of my writeup on my movie visualization, if you're interested in the methodology, reasoning, code commentary, background research click (I actually haven't written all of it yet)
-
 # Introduction
 There are a series of movie "barcode" visualizations that are fairly popular on the internet (I've seen them a lot on [reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/)). An example that I like is ["The average color of every 10th frame of The Lion King (1994) from beginning to end"](https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/).
 
