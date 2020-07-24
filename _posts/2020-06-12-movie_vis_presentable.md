@@ -105,9 +105,9 @@ The only problem is that downsampling frames to a size (image_height x 1) only *
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/th0wXPm"  ><a href="//imgur.com/a/th0wXPm">Examples of interpolation on images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 # Creating the Visualization
-The barcodes were created with opencv2, PIL, numpy, and scikit-learn. The annotations and labels were create with matplotlib. Creating these visualizations took 6-7 hours for a 2 hour movie with an 8-core processor at 4.1 GHz. 
+The barcodes were created with opencv2, PIL, numpy, and scikit-learn. The annotations and labels were create with matplotlib. Creating these visualizations took 6-7 hours for a 2 hour movie with an 8-core processor at 4.1 GHz (100% usage). [Here is a link to the repo](https://github.com/tedkim97/movie_visualizations).
 
-(The git repository link will be put here soon)
+https://github.com/tedkim97/movie_visualizations
 
 ### Color Quantization using KMeans
 I've vaguely referred to "extracting colors" with a clustering algorithm, but I'll be more specific here. When analyzing an image, the number of "colors" will probably be less the the number of unique (R,G,B) values. While humans can semantically understand the number of unique colors in an image (red, turquoise, brown) a computer can have a much harder time doing that. For example, a black image (to a human) could be composed of 40 values close to (0,0,0) such as (0,0,1), (1,0,2), (0,1,0), etc. While I could pause every second and tally the colors used in the film, I would prefer not to do that. 
@@ -199,7 +199,7 @@ I've also thought about using k-means with an alternative distance metric, or ma
 I've thought about spectral clustering (but it doesn't seems overkill for this problem), and I'm aware of other clustering methods out there - but I have not experimented with other methods.
 
 # Code & Stuff
-**REPO TO BE ADDED SOON**
+[Link to the repo](https://github.com/tedkim97/movie_visualizations)
 
 # Sources & Links
 ##### Machine Learning Related Links
