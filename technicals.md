@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Serious Content"
+title: "Technical Content"
 order: 2
 permalink: technical
 ---
