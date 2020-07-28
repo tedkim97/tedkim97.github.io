@@ -202,7 +202,7 @@ I've thought about spectral clustering (but it doesn't seems overkill for this p
 
 [Blogpost on Finding Dominant Colors in Image](http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/)
 
-[Another blogpost on Finding Dominant Colors in a Movie Poster)](https://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/)
+[Another blogpost on Finding Dominant Colors in a Movie Poster](https://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/)
 
 ##### An example of TF-IDF on color!
 [A Blog Post on Lego Color](https://nateaff.com/2017/09/11/lego-topic-models/#:~:text=Color%20TF%2DIDF&text=In%20text%20mining%2C%20stop%20words,the%20majority%20of%20brick%20colors.)
