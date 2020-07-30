@@ -5,7 +5,7 @@ order: 3
 permalink: tomfoolery
 ---
 
-Here are my past projects relating to my hobbies or off-shoot projects. Not everything in this page will appeal to you, and that's fine!
+Here are my past projects relating to my hobbies, off-shoot projects, or musings. Not everything in this page will appeal to you, and that's fine!
 
 {% assign pages_list = site.posts %}
 {% for node in pages_list %}
