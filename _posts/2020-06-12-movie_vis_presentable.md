@@ -84,7 +84,7 @@ Averaging colors for movies are a problem because they:
 
 To be fair, averaging colors is a perfect representation of mixing them. For example, averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes; the more red pixels, the pinker it becomes. **The problem is averaging is not how humans perceive color.** People don't see a red & blue painting and think "purple"! 
 
-In addition, averaging can be a poor metric for certain distribution. Extreme cases (like a skewed histogram or a U-shaped distribution) will tell us nothing. A common fix is to use a different measure (like the median) or include information about the variance or skew of the distribution. 
+Moreover, averaging can be a poor metric for certain distribution. Extreme cases (like a skewed histogram or a U-shaped distribution) will tell us nothing. A common fix is to use a different measure (like the median) or include information about the variance or skew of the distribution. 
 
 Even though these one-pixel slices can capture color schemes used in the film, averaging color alters the palette and fails to capture the different colors in them. This is important for movies as the composition of a frame is dominated by lighting. Whether it's a scene shot at night, in a bright room, or some gray environment these non-intrusive colors dominate the average. This visualization scheme becomes worse the more colors are added into the frame (like a shot of the rainbow, or a garden, etc).
 
@@ -139,7 +139,7 @@ Off the bat, looking at a few of these images show that the *light* prevents us 
 
 # Problems with the proposed visualization
 This visualization idea is not perfect.
-- Aesthetically, the visualization is not as pretty as any of the examples I showed earlier. The pixelation of my version is a bit ugly. In addition, if you pay attention to the bottom of some of the visualizations, you'll see tiny black pixels that were caused by rounding errors (oops).
+- Aesthetically, the visualization is not as pretty as any of the examples I showed earlier. The pixelation of my version is a bit ugly. If you pay attention to the bottom of some of the visualizations, you'll see tiny black pixels that were caused by rounding errors (oops).
 - Computationally, these visualizations take too long to create - I'm aware of the tradeoff, but my instinct tells me that there is a much better approach to quantizing our movie colors. 
 - Visually, the "1-pixel" width prevents a closer examination of the movie (unless you zoom in with photoshop or something). This limit could be fixed by adding some interactivity (like zoom or crop) in D3, but that might be done later. Furthermore, the layout of the colors themselves can make understanding the visualization confusing.  
 
