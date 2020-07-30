@@ -150,7 +150,7 @@ Finally, I think my approach to fitting information into the barcode form factor
 
 
 ### Concessions with Compression
-Compression is great and necessary to create these in a reasonable amount of time, The purist in me sometimes gets upset when I think about not analyzing the original 8k resolution movie. Whenever this happened, I remind myself that I'm already working with an imperfect representation of the original movie (a 1080p version). If I *really* wanted to visualize the pure version, I would be processing the original 120GB version of each movie from the studio. 
+Compression is great and necessary to create these visualizations in a reasonable amount of time, The purist in me sometimes gets upset when I think about not analyzing the original 8k resolution movie. Whenever this happened, I remind myself that I'm already working with an imperfect representation of the original movie (a 1080p version). If I *really* wanted to visualize the pure version, I would be processing the original 120GB version of each movie from the studio. 
 
 To recap moments where we have loss of information: 
 - Representing colors in photos
@@ -170,7 +170,7 @@ In the near-future, I would like to explore other methods of extracting colors f
 The black bars aren't actually a part of the frame - for example a 1080p movie (1920 x 1080) will show as a (1920 x 800) frame or something similar.
 
 ##### How did you source these movies?
-Yarghhh me matey
+Yarghhh me matey (I think you can figure it out from there).
 
 ##### Is this processing technique runnable on a laptop?
 Probably not. I have a fairly beefy desktop and it took 7-8 hours to process a 2 hour movie.
