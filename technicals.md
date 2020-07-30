@@ -5,7 +5,7 @@ order: 2
 permalink: technical
 ---
 
-Here are my more technical past-projects/mini projects. If you find anything that's incorrect or have any improvements feel free to shoot me an email. 
+Here are my more technical past-projects or guides. If you find anything that's incorrect or have any improvements feel free to shoot me an email. 
 
 {% assign pages_list = site.posts %}
 {% for node in pages_list %}
