@@ -82,9 +82,7 @@ Averaging colors for movies are a problem because they:
 - Alter "lightness" and/or "saturation" due to (0,0,0) and (255,255,255) pixels   
 - Collapse a variety of colors into a single, unrelated color 
 
-To be fair, averaging colors is a perfect representation of mixing them. For example, averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes; the more red pixels, the pinker it becomes. **The problem is averaging is not how humans perceive color.** People don't see a red & blue painting and think "purple"! 
-
-Moreover, averaging can be a poor metric for certain distribution. Extreme cases (like a skewed histogram or a U-shaped distribution) will tell us nothing. A common fix is to use a different measure (like the median) or include information about the variance or skew of the distribution. 
+To be fair, averaging colors is a perfect representation of mixing them. For example, averaging a half blue and half red image is like mixing red and blue paint. The average will result in purple. The more blue pixels we add, the more violet the mixture becomes; the more red pixels, the pinker it becomes. **The problem is averaging is not how humans perceive color.** People don't see a red & blue painting and think "purple"! Moreover, averaging can be a poor metric for certain distribution. Averages for extreme cases (like a skewed histogram or a U-shaped distribution) tell us nothing. A common fix is to use a different measure (like the median) or include information about the variance or skew of the distribution. 
 
 Even though these one-pixel slices can capture color schemes used in the film, averaging color alters the palette and fails to capture the different colors in them. This is important for movies as the composition of a frame is dominated by lighting. Whether it's a scene shot at night, in a bright room, or some gray environment these non-intrusive colors dominate the average. This visualization scheme becomes worse the more colors are added into the frame (like a shot of the rainbow, or a garden, etc).
 
