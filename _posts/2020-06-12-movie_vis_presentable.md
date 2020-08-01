@@ -110,7 +110,7 @@ The solution to this problem is to extract colors algorithmically using the ["co
 
 There are a lot of approaches to quantization, but *machine learning* (clustering) is a fairly popular choice. The tradeoff is that clustering can take a decent amount of time depending on the number of clusters or size of the dataset, and if we're running a clustering algorithm on several thousand frames of a movie, the overall processing time is long. Below are some examples of color quantization run on some random images/frames. 
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/IaiP8tc"><a href="//imgur.com/a/IaiP8tc">Comparisons of Average vs Color Quanitifaction</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/IaiP8tc"><a href="//imgur.com/a/IaiP8tc">Comparisons of Average vs Color Quanitifaction</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 ### Making Movies more Computable/Computationally Tractable
 Another problem is that each individual frame is too large for (relatively quick) processing through quantization. A (1920 x 1080) frame will result in \~2,000,000 million pixels. While having more, high fidelity data is nice - there is a tradeoff. 
