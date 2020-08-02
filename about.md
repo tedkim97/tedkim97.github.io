@@ -13,6 +13,8 @@ This is my dual blog-portfolio site that I finally had time to do during Covid-1
 
 I try to not upload content that already exists on the internet (ex: these 5 numpy tips will blow your mind!! How to do a linear regression!!) unless I can (try) to add value to it. I try to upload posts for completeness and correctness - meaning that their might be a lot of redundant bits.  
 
+If you have a really large monitor, I recommend keeping your window at half width.
+
 You can check out my [Github](https://github.com/tedkim97) or [Linkedin](https://www.linkedin.com/in/ted-kim/).
 
 ### Details about the Site
