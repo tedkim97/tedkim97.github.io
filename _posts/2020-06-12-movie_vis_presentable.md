@@ -108,7 +108,7 @@ I've referred to "extracting colors" with a clustering algorithm, but I'll be mo
 
 The solution to this problem is to extract colors algorithmically using the ["color quantization"](https://en.wikipedia.org/wiki/Color_quantization) approach. The idea is to reduce the number of colors in an image, and representing the image with a reduced (and lossy) color palette (i.e compressing). In our earlier example, we could replace all of the different black pixels with (0,0,0), (0, 2, 0), or (1,0,0).
 
-There are a lot of approaches to quantization, but *machine learning* (clustering) is a fairly popular choice. The tradeoff is that clustering can take a decent amount of time depending on the number of clusters or size of the dataset, and if we're running a clustering algorithm on several thousand frames of a movie, the overall processing time is long. Below are some examples of color quantization run on some random images/frames. 
+There are a lot of approaches to quantization, but *machine learning* (clustering) is a fairly popular choice. The trade-off is that clustering can take a decent amount of time depending on the number of clusters or size of the dataset, and if we're running a clustering algorithm on several thousand frames of a movie, the overall processing time is long. Below are some examples of color quantization run on some random images/frames. 
 
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="a/IaiP8tc"><a href="//imgur.com/a/IaiP8tc">Comparisons of Average vs Color Quanitifaction</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
@@ -176,7 +176,7 @@ Yarghhh me matey (I think you can figure it out from there).
 Probably not. I have a fairly beefy desktop and it took 7-8 hours to process a 2 hour movie.
 
 ##### What about filtering out common colors (ex: removing (0,0,0) and (255,255,255) pixels)?
-I've thought about it, and it's feasible to do. The problem is that it doesn't catch a fairly significant amount of pixels that aren't pitch black (0,0,0) but extremely close, such as (0,0,3) or (5,0,1).
+I've thought about it, and it's feasible to do (ex: filtering out colors whose distance from (0,0,0) or (255,255,255) is less than 10). The problem is that it doesn't catch a fairly significant amount of pixels that aren't pitch black (0,0,0) but effectively so, such as (0,15,3) or (5,12,1).
 
 ##### What about representing color variance (through a standard deviation) in colors to augment the "averaging" barcode?
 I tried representing a standard deviation for each R, G, B vector, and creating a color gradient based off of that. I struggled to think of a clear way of visualizing this in a barcode format, so I'm adding this to a list of "TODO's" 
