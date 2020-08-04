@@ -159,7 +159,7 @@ To recap moments where we have loss of information:
 - I used 1080p movies for processing
 
 # Conclusion & Next Steps
-In conclusion, I tried improving a genre of barcode visualizations by using some machine learning to process our data. I think achieved my goal of showing a richer study of colors in movies; however, the visualization is not perfect. As of now, there are quite a few flaws. 
+In conclusion, I tried improving a genre of barcode visualizations by using some machine learning to process our data. I think I achieved my goal of showing a richer study of colors in movies; however, the visualization is not perfect. As of now, there are quite a few flaws. 
 
 In the near-future, I would like to explore other methods of extracting colors from the movie. In these visualizations you can observe how lighting influences our color extraction, this is most clear when we see how the "most frequent" colors often are  dark. For example, I'm thinking about applying a TF-IDF (term frequency-inverse document frequency) weighting scheme to a movie - treating the "frames" as documents and the "colors (r,g,b)" as words. The reason why I haven't done it yet is because programming and optimizing TF-IDF calculations for color is a large commitment, and scikit-learn's implementation of TF-IDF is focuses (obviously) on language[^3]. 
 
