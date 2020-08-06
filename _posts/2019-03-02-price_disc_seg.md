@@ -155,9 +155,16 @@ For some reason, Intel's consumer processors don't offer ECC-support, while thei
 ##### Graphics Processing Units (GPU)
 A Graphics Processing Unit (GPU) is a specialized processor used to accelerated calculations used in graphics generation (i.e gaming). In the past 20 years, people have realized that they could use the GPU's parallel structure to accelerate  calculations in other fields (popular examples include machine learning, cryptocurrencies, image processing, etc).
 
-The [Titan XP](https://www.nvidia.com/en-us/titan/titan-xp/#) and the [GTX 1080TI](https://www.nvidia.com/en-sg/geforce/products/10series/geforce-gtx-1080-ti/) were similar GPUs with drastically different prices. For example, both GPUs  used the same chip (the GP102), but the Titan XP was \\$1200 and the 1080TI was \\$699 (a \\$500 price gap). The other features of the cards were similar. The only difference was the number of "cuda cores" (3840 vs 3584), memory bandwidth (354 bit bus vs 384 bit bus) which resulted in a theoretical difference of 547.7 GB/S vs 484 GB/s. Otherwise, the cards had identical base clocks, and a marginal difference in memory capacity. In fact, various gaming benchmarks showed that the Titan XP and 1080TI had (almost) identical game performance. 
+The [Titan XP](https://www.nvidia.com/en-us/titan/titan-xp/#) and the [GTX 1080TI](https://www.nvidia.com/en-sg/geforce/products/10series/geforce-gtx-1080-ti/) were similar GPUs with drastically different prices. For example, both GPUs  used the same chip (the GP102), but the Titan XP was \\$1200 and the 1080TI was \\$699 (a \\$500 price gap). The other features of the cards were similar. The only difference was the number of "cuda cores" (3840 vs 3584), memory bandwidth (354 bit bus vs 384 bit bus) which resulted in a theoretical difference of 547.7 GB/S vs 484 GB/s. Otherwise, the cards had identical base clocks, and a marginal difference in memory capacity. In fact, various gaming benchmarks showed that the Titan XP and 1080TI had (almost) identical game performance. For reference, upgrading from a lower-tier GPUs offered a much greater jump in performance for less money
 
-For reference, upgrading from a lower-tier GPUs offered a much greater jump in performance for less money(\\$599 for the 1080, \\$449 for the 1070TI). **Why is their such a large price discepancy between the Titan XP & 1080TI?** The answer is once again, price discrimination. People who would want a Titan XP (it's higher memory, more cuda cores, higher bandwidth) makes it ideal for advanced computing. A typical video game does not need these specs to play a game "better". As a result, Nvidia can use these features to let their serious consumers separate from the hobbyists - and charge them more for it.
+|Graphic Card SKU 		| Price 			|
+|:--------------------: |:-----------------:|
+| TitanXP         		| \\$1200.00   		|
+| 1080TI            	| \\$699.00  		|
+| 1080				 	| \\$599.00			|
+| 1070TI				| \\$449.00			|
+
+**Why is their such a large price discepancy between the Titan XP & 1080TI?** The answer is once again, price discrimination. People who would want a Titan XP (it's higher memory, more cuda cores, higher bandwidth) makes it ideal for advanced computing. A typical video game does not need these specs to play a game "better". As a result, Nvidia can use these features to let their serious consumers separate from the hobbyists - and charge them more for it.
 
 ##### Overclocked Processors
 "[Overclocking](https://en.wikipedia.org/wiki/Overclocking)" is the process of increasing the frequency (the speed) over the stock, pre-configured speed that your CPU was validated for. Faster is always better (but your chip will also produce more heat)! How much a processor can overclock is determined by the quality of the silicon during the manufacturing process. If you got lucky, then your processor could overclock significantly better (called the "Silicon Lottery") than a "losing chip".
@@ -209,7 +216,7 @@ They're are genuine reasons for a business to raise or lower prices. For example
 
 
 
-# How Tech Helps Price Discrimination
+# How Tech Improves Price Discrimination
 With the spotlight on giant tech companies in the past few years for abuses in privacy, democracy, and competition in the industry, people do not yell things like "tech companies are abusing their power to charge me 2 dollars more for gloves".
 
 **"The internet is a medium for personalized pricing"** (Shaprio, Varian, "Information Rules: A Strategic Guide to the Network Economy", 42)
@@ -219,7 +226,7 @@ I used to use Lyft quite a fair bit, I didn't bother using Uber because the ride
 
 > At the same time, I was amused at how clever rideshare companys have been. My friend was a religious Uber user, and only tried using lyft because I suggested it. This might be a wrong assumption (but not a blind guess), but I assumed Lyft was giving an increased discount to my friend to get them to switch over. Uber & Lyft were using technology to create personalized pricing schemes to compete with each other. 
 
-I haven't kept track if practices like these were still allowed (with secuirty on mobile devices increasing) 
+I haven't kept track if practices like these were still allowed (with security on mobile devices increasing) 
 
 
 
@@ -275,7 +282,7 @@ Insulin is expensive, just because it can be in the US
 
 You could argue that insane medicine prices are a result of America's failure in the medical sector.
 
-However, people forget that hospital's charge high intitial prices for treatment because the insurance companies were trying to negotiate lower WTP.
+However, people forget that hospital's charge high initial prices for treatment because the insurance companies were trying to negotiate lower WTP.
 
 In short, it's because hospitals know that Insurance companies have such high WTP that they try to take as much money as possible
 
@@ -324,11 +331,7 @@ https://www.economist.com/free-exchange/2016/02/29/disney-discovers-peak-pricing
 https://www.economist.com/free-exchange/2011/11/22/the-adult-book-premium
 https://theconversation.com/the-economics-behind-ubers-new-pricing-model-78180#:~:text=Economists%20generally%20refer%20to%20three,extracting%20all%20of%20their%20WTP.
 
-https://news.ycombinator.com/item?id=10029341
 
-https://youtu.be/A_1lGkbIx7M?t=191
-
-https://www.investopedia.com/terms/v/versioning.asp
 
 # Corrections or Complaints?
 Email me at nablags97 [at] gmail [dot] com 
