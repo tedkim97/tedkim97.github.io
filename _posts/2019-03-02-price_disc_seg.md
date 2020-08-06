@@ -212,8 +212,15 @@ They're are genuine reasons for a business to raise or lower prices. For example
 # How Tech Helps Price Discrimination
 With the spotlight on giant tech companies in the past few years for abuses in privacy, democracy, and competition in the industry, people do not yell things like "tech companies are abusing their power to charge me 2 dollars more for gloves".
 
+**"The internet is a medium for personalized pricing"** (Shaprio, Varian, "Information Rules: A Strategic Guide to the Network Economy", 42)
 
-### The internet is a medium for personalized pricing [pg 42]
+>**My Personal Vendetta: Lyft**  
+I used to use Lyft quite a fair bit, I didn't bother using Uber because the ride-share prices were cheaper on Lyft (when I checked). One summer, my friend and I were trying to get a ride from the annual Chicago jazz festival to a nearby restaurant. His 2-person lyft ride was $8, while my ride was a whopping $10! It was only two dollars, but I felt betrayed - I swore to never use their services again (and I have not since then).
+
+> At the same time, I was amused at how clever rideshare companys have been. My friend was a religious Uber user, and only tried using lyft because I suggested it. This might be a wrong assumption (but not a blind guess), but I assumed Lyft was giving an increased discount to my friend to get them to switch over. Uber & Lyft were using technology to create personalized pricing schemes to compete with each other. 
+
+I haven't kept track if practices like these were still allowed (with secuirty on mobile devices increasing) 
+
 
 
 Ebate & Honey - You think these companies are just a platform for uploading coupons and getting rebates? They're studying your behavior and stealing your data 
@@ -225,40 +232,14 @@ DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition 
 
 My friend got me a certain game on steam for $10 less by purchasing it within his home country (thailand).
 
-# My Personal Rant on E-Textbooks
-I think it's OKAY\* if businesses charge a lot for different textbooks on the world.
-
-For example, if I buy a linear algebra textbook for $200 - yes it is expensive, but in theory I have "information" that I can keep for a lifetime, or sell to recoup some of the cost. 
-
-Online textbooks don't let you do this
-My only frustration is how businesses impose restrictions in 
-
-
->**My Personal Vendetta: Lyft**  
-I used to use Lyft quite a fair bit, I didn't bother using Uber because the ride-share prices were cheaper on Lyft (when I checked). One summer, my friend and I were trying to get a ride from the annual Chicago jazz festival to a nearby restaurant. His 2-person lyft ride was $8, while my ride was a whopping $10! It was only two dollars, but I felt betrayed - I swore to never use their services again (and I have not since then).
-
-> At the same time, I was amused at how clever rideshare companys have been. My friend was a religious Uber user, and only tried using lyft because I suggested it. This might be a wrong assumption (but not a blind guess), but I assumed Lyft was giving an increased discount to my friend to get them to switch over. Uber & Lyft were using technology to create personalized pricing schemes to compete with each other. 
-
-I haven't kept track if practices like these were still allowed (with secuirty on mobile devices increasing) 
-
-
 # Pros of Price Segmentation
 It seems that price discrimination is just a loss for consumers where every customer is unable to find "good deals" on anything they want anymore. 
+
+In addition, it's a big win for "businesses" as they can extract every single dollar from each company that they can. 
 
 Despite the cynical presentation, price discrimination has upsides as well - mainly that it increases the accessibility of a good for (some) people. 
 
 Whether you benefit or lose from this segmentation depends on where you are on the demand curve. If your willingness to pay is above the equilibrium price, you benefit from no price discrimination. If your WTP is below the equilibrium price, then you're out of luck. With price discrimination, the people who aren't able to afford the product, will be able to at their WTP. If we could not price discriminate, people would have to pay the "supply and demand" cost and pay. Suddenly less wealthy individuals cannot afford the newest hardware or adobe suite, while businesses will be happy that their margins have gone up!
-
->**JCPenney: A Case Study**
-We may not be able to even live in a world without tactics like this 
-
-THe drive behind the increase sales due to seasonal discounts is NOT purely out of price discrimnation!
-
-If we examine JCPeneny,  
-
-Surprisingly yes, even ignoring the need to provide people a product or service that they need, 
-
-https://hbr.org/2012/05/can-there-ever-be-a-fair-price
 
 ### Welfare Economics
 Your first impression is that price discrimination is a greedy move by companies to suck out each dollar from its  consumers, and you're right.
