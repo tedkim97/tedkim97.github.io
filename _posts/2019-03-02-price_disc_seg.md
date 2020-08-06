@@ -243,12 +243,22 @@ I haven't kept track if practices like these were still allowed (with secuirty o
 
 
 # Pros of Price Segmentation
-It seems that price discrimination is just a loss for consumers. For example, if I wanted 
-This presentation of price discrimination/segmentation seems to be very cynical, but it does have its upsides
+It seems that price discrimination is just a loss for consumers where every customer is unable to find "good deals" on anything they want anymore. 
 
-Benefiting from Price Discrimination depends on where you are on the demand curve. If your willingness to pay is above the equlibrium price, you're balling. If your price is below the equilibrium price, than you're out of luck.  
+Despite the cynical presentation, price discrimination has upsides as well - mainly that it increases the accessibility of a good for (some) people. 
 
-If we could not price discrimnate, people would have to pay the "supply and demand" cost and pay. Suddently less wealthy individuals cannot afforrd the newest processor or adobe suite, while businesses will be happy that their margins have gone up!
+Whether you benefit or lose from this segmentation depends on where you are on the demand curve. If your willingness to pay is above the equilibrium price, you benefit from no price discrimination. If your WTP is below the equilibrium price, then you're out of luck. With price discrimination, the people who aren't able to afford the product, will be able to at their WTP. If we could not price discriminate, people would have to pay the "supply and demand" cost and pay. Suddenly less wealthy individuals cannot afford the newest hardware or adobe suite, while businesses will be happy that their margins have gone up!
+
+>**JCPenney: A Case Study**
+We may not be able to even live in a world without tactics like this 
+
+THe drive behind the increase sales due to seasonal discounts is NOT purely out of price discrimnation!
+
+If we examine JCPeneny,  
+
+Surprisingly yes, even ignoring the need to provide people a product or service that they need, 
+
+https://hbr.org/2012/05/can-there-ever-be-a-fair-price
 
 ### Welfare Economics
 Your first impression is that price discrimination is a greedy move by companies to suck out each dollar from its  consumers, and you're right.
@@ -291,22 +301,6 @@ In short, it's because hospitals know that Insurance companies have such high WT
 ### Big Data and Privacy
 In addition to healthcare, this desire for information has d
 
-
-# Can we live in a world without price discrimnation?
-##### JCPenney: A Case Study
-
-THe drive behind the increase sales due to seasonal discounts is NOT purely out of price discrimnation!
-
-If we examine JCPeneny,  
-
-Surprisingly yes, even ignoring the need to provide people a product or service that they need, 
-
-https://hbr.org/2012/05/can-there-ever-be-a-fair-price
-
-# Economics is not about Normatives (unfortunately)
- 
-
-
 # The Future 
 Price discrimination/segmentation is a new business idea in the slighest 
 "QUOTE FROM THE BOOK ABOUT UNDERCOVER ECONOMIST"
@@ -325,12 +319,6 @@ https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/B
 https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/
 
 https://theconversation.com/buyer-beware-online-shopping-prices-vary-user-to-user-33439
-
-# Appendix
-
-##### Market Outcomes in Monopolistic Competition & Monoppolies
-
-##### Showing that P > MR = MC 
 
 # Readings & Sources
 
