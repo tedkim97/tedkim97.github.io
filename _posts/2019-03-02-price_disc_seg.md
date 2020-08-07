@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Price Discrimination in (and with) the Tech Industry
-subtitle: An exploration of a clever trick applied to the tech sector with a compilation of examples, and a driver to a dystopian future (and trying to get value out of my degree)
+subtitle: A description of a clever trick applied to the tech sector (with examples), and an exploration of how technology makes it more efficient
 published: true
 enable_latex: true
 permalink: /price_differential
@@ -12,7 +12,6 @@ funstuff: true
 
 <!-- * TOC
 {:toc} -->
-<a href="#corrections-or-complaints">testlink</a>
 
 # Introduction
 This writeup is about **price discrimination** - the practice of selling the same* product at prices unique to a customer or group (Professionals seem to label it **price segmentation** or **differential pricing**). 
@@ -23,7 +22,9 @@ Working in Tech makes the economics of it seem unimportant or invisible, but I t
 
 I'll try to be inclusive so that non-techies can still understand the examples
 
-I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency. 
+I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency.
+- <a href="#examples-of-price-discrimination-in-tech">If you just want to skip to examples</a>
+- <a href="#how-tech-improves-price-discrimination">if you want to skip to price discrimination with tech</a>
 
 \**The word "same" may not be literal, but effectively the same. For example, a super-sized big-mac and a regular big-mac are different, but they are basically the same thing*
 
@@ -111,19 +112,20 @@ Isn't that a bit scummy? Pocketing the "premium" price for a fair-trade product 
 
 The takeaway is that Costa Coffee didn't increase the price of their "fair trade" option because it was more expensive, they increased the price because they were convinced that consumers were willing to pay that much!
 
-**So what are the takeaways?**
+>**So what are the takeaways?**   
 
->We should abandoned pro-social behavior? &#10060;  
+We should abandoned pro-social behavior? &#10060;  
 We should haggle the barista? &#10060;  
 Seize the means of production? &#10067; &#10071;  
 **Pricing is not about costs, but willingness to pay?** &#9989;  
 
 # The Practice: Price Segmentation in Tech
-Before we get into fun examples of price discrimination, we need to discuss "consumer vs enterprise" market segments. In all the examples we gave, price discrimination have been about people. Naturally businesses are not sensitive to prices like consumers. Enterprises purchase goods to increase productivity for their workers (like chairs, printers, computers, etc) which increases their revenue as well. People purchase goods to "consume" and live with. 
+Before we get into fun examples of price discrimination, we need to discuss "consumer vs enterprise" market segments. In all the examples we gave, price discrimination have been about people. Businesses differ in price sensitivity compared to people. Companies purchase goods or material to deliver a product or service (silicon, metals, plastics, etc) or
+to increase productivity (computers, office equipment, etc). For businesses, buying is for increasing revenue rather than personal consumption. 
 
-Unlike humans, businesses have metrics to determine whether a purchase will increase revenue by \\$X or increase workforce happiness by Y%. For example, if upgrading your existing IT infrastructure could increase productivity and save time, netting the company an additional \\$1 million in revenue, how much would the company pay? Any reasonable amount less than \\$1 mil!
+Unlike humans, businesses can estimate the effect of a purchase and judge if its necessary. For example buying a new tool will increase revenue by \\$X, increase productivity by Y%, or reduce expenses by Z%. For example, if upgrading your existing IT infrastructure could increase productivity and save time, netting the company an additional \\$5 million in revenue, how much would the company pay? Any reasonable amount less than \\$5 mil!
 
-Understanding this difference is important because when you're in the realm of tech, products can be sold to anyone - hobbyists, start-ups, enterprises, etc. In the examples I'll describe, price discrimination is used more to charge enterprises more money, while charging regular people much less- rather than sorting their customers as "premium vs discount". Although that does happen a lot. 
+Understanding this difference is important because when you're in the realm of tech, products can be sold to anyone - hobbyists, start-ups, enterprises, etc. A decent chunk of these examples involves charging people who use the tool more (and therefore are more willing to pay), while charging regular people much less - rather than sorting their customers as "premium vs discount". Although that does happen a lot. 
 
 ##### Versioning:
 Price discrimination in tech is closely to "quality versioning" (or second degree price discrimination). The idea is that a business will created slightly different models of the same product, adding or removing (usually removing) features and changing the price as a result. The company will choose their features carefully, as they can easily separate their hobbyist vs enterprise market segments on enterprise-critical features. 
@@ -171,50 +173,97 @@ The [Titan XP](https://www.nvidia.com/en-us/titan/titan-xp/#) and the [GTX 1080T
 
 The aptly named [Silicon Lottery.com](https://siliconlottery.com/) was a site dedicated to selling chips that were validated to reach certain overclocked frequencies - allowing customers to pay a premium to avoid the gambling. This arbitrage seemed to indicate that there was decent money in further splitting up your premium processors by their overclock ability. As a result, Intel released the i9-9900KS and the i9-9900K processor. The only difference was that the "KS" model could reach 5GHz on all 8 cores while the "K" model could not. The release price for these chips were \\$560 and \\$499 respectively. However, the price discrepancies quickly increased, and[by 2020 the price of the "K" model was \\$438.99, and the "KS" model was \\$ 1099.99.](https://camelcamelcamel.com/product/B005404P9I?context=search)
 
+The target market for "overclocked" chips is actually not enterprises. The tradeoffs, risks, and additional costs with overclocking every processor is generally not worth it for most companies. Overclocked chips seemed to be more targetted towards the "enthusiast" market.
+
 ##### Mining Cards
 The Nvidia GTX 1060 and the Nvidia P106-100 seem to be different cards - one is for gaming while the other is for mining cryptocurrencies. The P106 had drivers locked, and their was no physical output to put in a cable. [However, hacking the 106 drivers and finding hardware workarounds indicated that they could perform similarly to the GTX 1060!](https://youtu.be/TY4s35uULg4). Nvidia locked down the features of a traditional "gaming" card and marketed it towards miners (who are sensitive to their mining returns). To prevent gamers from buying a cheaper GTX 1060, Nvidia locked down the features that could make this card play video games.
 
-# Software
-**What makes software unique** 
-An interesting quirk of software products is that coding is a massive cost, but selling additional licenses (ignoring acquisition costs) is basically free. 
+### Software
+"Information Rules: A Strategic Guide to the Network Economy" notes that software products face a massive, development cost, but can distribute licenses for (almost) free! Unfortunately, the book was written in an era of proprietary software dominance. The book may seem old with respect to how frequently the software landscape changes: introduction of new development frameworks (Scrum, Agile, Waterfall, etc), new monetization schemes (SAAS), or the introduction of open-source software. However, the strategies they describe are still practical and exist today.  
 
-Another detail that's complicating the software landscape is that open-source has become popular. For instance [Stata](https://en.wikipedia.org/wiki/Stata) used to be decently popular statistical software. However, the license fees have turned away new individuals from using the tool. Moreover, Statacorp couldn't add new features or performance improvements unlike a whole international community in R, where people could contribute improvements. As a result, Stata has died as a popular statistical programming language (as it should). Of course, I'm not capturing every reason why Stata is not as popular, and people still use it - but hopefully the audience gets the idea. 
+> **Open-source versus proprietary software**    
+Software faces a unique problem in that some of its "competitors" can offer a product for free. For instance [Stata](https://en.wikipedia.org/wiki/Stata) used to be a popular statistical software. However, the license fees have turned away new individuals from using the tool and encouraged them to seek alternatives. With the introduction of the open-source [R (the programming language)](https://en.wikipedia.org/wiki/R_(programming_language)), individuals could add features that benefit the community as a whole. Statacorp couldn't keep up with new features or performance improvements and gradually faded away. These aren't the only reasons why Stata fell behind (people still use the software), but Stata is no longer a popular statistical programming software it once was. 
 
-### Adobe's Pricing
+> **Open-source with proprietary software**
+On a more positive note, instead of competing against open-source software, companies have begun to adopt it. By incorporating open-source into their own products, companies can reduce costs and errors of their software while focusing on improving it for their customers. In fact, a majority of the big tech companies make huge contributions to the open-source community. Even Microsoft (I hope you get the irony) has made multiple contributions to open source and acquired github.
+
+> **Proprietary Software Still Strives**  
+Proprietary software and services will strive - and that's natural. Bloomberg terminals (software that provides financial data) can't be out-competed with open-source (as easily). Collecting, transcribing, and recording financial information cannot be done better (yet) - it's purely a function of resources invested into the collection of information and infrastructure.
+
+
+##### Adobe's Pricing
 Let's examine Adobe pricing strategy through their "All Apps" package for adobe subscriptions. The table was transcribed from their [plans page](https://www.adobe.com/creativecloud/plans.html).
 
 |Plan target          	| Price (per month) |
 |:--------------------: |:-----------------:|
 | Individuals         	| \\$52.99   		|
 | Business            	| \\$79.99   		|
-| Students & Teachers 	| \\$29.99 or \\$19.99 (first year)|
+| Students & Teachers 	| \\$19.99 (first year) - \\$29.99 (afterwards) |
 | Schools & Universities| \\$34.99			|
 
-All of these packages offer the same thing (the adobe suite) with minimal differences between them (from my understanding the "School & University" option offers tech support). Everyone downloads the same software (with all the features) and uses their license key to access their tools. This seems like a pretty clear example of Group Pricing- Adobe is offering the same product at different prices depending on the group. Arbitrage is relatively infeasible for Adobe, as the software is validated through licenses (there aren't millions of university or teacher email addresses to create discount keys for Adobe) - and you can't 
+All of these subscription plans offer the same thing (the adobe suite) with minimal differences between them (the "School & University" option offers 24/7 tech support). Everyone downloads the same software (with all the features) and uses their license key to access their tools. This seems like a pretty clear example of Group Pricing- Adobe is offering the same product at different prices depending on the group. Arbitrage is relatively infeasible for Adobe, as the software is validated through licenses (there aren't millions of university or teacher email addresses to create discount keys for Adobe) - and you can't 
 
 It is important to note that pricing adobe suite for students is more than just "maximizing profits". By making Adobe accessible to students, Adobe is trying to "lock-in" young users into their platform. Since learning adobe proficiently takes a lot of effort, students will be reluctant to switch out for alternatives in the future.  
 
-### Database Services (Mongodb)
-MongoDB offers so many different services and products, it's hard to keep track of everything. For now, let's focus on their software. MongoDB segments their prices based on versioning.
+##### Operating Systems (Windows, Redhat)
+
+**Windows 10**
+Microsoft sells it's non-server operating systems in three tiers: Windows 10 Home, Pro, and "Pro for workstations". In fact, not only does Microsoft price discriminate by offering different versions of their operating system, but also through differential pricing in different geographic locations!
+
+**Differentiation by Versioning**
+Below is a basic table of the operating system versions and their "features". [The data was taken from the Microsoft Store](https://www.microsoft.com/en-us/store/b/windows?activetab=tab%3ashopwindows10). I'm not going to list all of the differences, but it's important to know that the most expensive tier has "all" of the features.
+
+|OS Version          			 | Price 	 | Features                    |
+|:------------------------------:|:---------:| :---------:                 | 
+| Windows 10 Home         		 | \\$139.00 | The base operating system   |
+| Windows 10 Pro    	 		 | \\$199.00 | All of Home Features + More |
+| Windows 10 Pro For Workstations| \\$309.00 | All of Pro Features + More  |
+
+Essentially their versions are divided by Home Users, Businesses, and Businesses that need more power. Windows 10 Home is a good OS, and the users probably only browse the internet, watching TV, or playing video games. These users don't need advanced features like Hyper-V virtualization,  Bitlocker device encryption, or remote desktop (although these would be nice to have!). People who run companies and could be managing hundreds of machines would be at risk if they used Windows 10 Home as their licenses and must use the Pro version. 
+
+Finally, most businesses will not need hardware and file system optimizations that the "Pro for Workstation" license offers. The page claims that this OS is targeted for "researchers, engineers, video editors, graphics artist, teams that work with big data .." i.e where time and output can make a huge difference on the bottom line. 
+
+Did it cost Microsoft a ton of money to add these features to their operating system? Maybe. It's more likely that they started with the highest quality version of the operating system, and stripped away features to create the discrepancy. 
+
+**Differential Pricing by Location**
+However, Microsoft **also** segments their Windows 10 licenses through **geography**. To be fair, the price of Windows 10 can differ across borders because of international tax differences (i.e Windows 10 is more expensive because of the government). Other times, Microsoft offers cheaper Windows 10 license keys where the retail price is disproportionate to the cost of living. Residents in some of these countries don't have enough money (or enough willingness) to pay the full American retail price.
+
+I cannot find any primary evidence of this, but there are suspicious services that sell discounted Windows 10 keys (illegally). They acquire these keys through several means (stolen credit cards, volume licenses, education versions, etc), but **sometimes** these vendors buy keys from countries that are offered windows 10 at a much cheaper price. 
+
+**Redhat Linux**
+Price Differentials can still exist with open source software! For example, Red Hat (now an IBM subsidiary) offers
+a free version of their Linux Distro in addition to their "Red Hat Enterprise Linux" Distro. 
+
+Both of these operating systems use Linux as their kernel, and are probbaly similar. 
+
+However, the open-source version is at the whim of the community, while enterprise versions have more technical support for their staff, 
+in addition to having sway over development of what they need,
+
+and longer support cycles. 
+
+
+##### Database Services (Mongodb)
+MongoDB offers many different services and products (so much that I can't keep track of everything). For now, let's focus on their main database software. MongoDB segments their prices based on versioning.
 
 MongoDB offers both a "Community" and "Enterprise" version of their database software - that are almost identical feature. The core database system and its features are the same among both features (same encryption, memory & storage limits, scalability, etc). However, the "enterprise" software has add-ons and extra services that greatly increase the quality of life for enterprises. [The full list is here](https://www.mongodb.com/products/mongodb-enterprise-advanced), but some examples include monitoring software, 24/7 support team, visualization tools, security tools, training, etc. 
 
-
-### Text Editors (Sublime Text)  
+##### Text Editors (Sublime Text)  
 Sublime text doesn't suffer from versioning we might see in other software and offers the full-featured version for free! The only downside being that an occasional pop-up appears that suggests you purchase a license (as a long-time user I think it's not that annoying). Paying a full-license only removes the pop-up! However, sublime isn't free because the developers are generous people (they could be). Sublime needs to compete with other free text editors that have plenty of community support and plugins - keeping Sublime free is a matter of survival. 
 
 # An Important Aside:
 
 >**Counterpoint: Versioning your product creates new products which breaks the definition**  
+
 This is true. The definition of "price discrimination" is selling the same product and different prices - NOT different products at different prices. However, a lot of businesses start from one product, and chop it up into multiple different ones to target different markets. Moreover, we can treat differences as variations on "quality" because these versions never have trade-offs in features, the premium version is strictly better than all other versions. Finally, Varian (who is also the "chief economist" at Google) classifies versioning as a price discrimination.
 
 >**Is everything price discrimination? (no)**  
+
 Not everything is price discrimination! Sometimes, the materials and costs of items genuinely warrant a higher price
 They're are genuine reasons for a business to raise or lower prices. For example, higher than expected demand can raise prices. Lower than expected demand can also lower costs (the cost of holding inventory may be too high, which will cause the company to try to get rid of it ASAP).  
->Pricing has a strategic component beyond taking as much money as they can. We saw some of this strategy in some of our software examples. You might point to sublime having a fully-featured free version as an example of price discrimination! This might be partially true - there are strategic component to pricing. Offering a competent free-tier can be thought of as a way of acquiring users and developers in to create a network effect for your product. In addition, the more people that use your software, the more "stuck" they become in the ecosystem (also known as "Lock In"). These practices are very popular in other software as well (like the Microsoft suite, Adobe products, etc).   
->For the sublime example, you need to realize that the company competes with other great, free, open-source options. SublimeText might be free because the developers are generous (they are awesome people), but it's also because they are competing with open-source editors such as VIM, EMACS, Notepad++ (VSCode, atom, etc).
 
+Pricing has a strategic component beyond taking as much money as they can. We saw some of this strategy in some of our software examples. You might point to sublime having a fully-featured free version as an example of price discrimination! This might be partially true - there are strategic component to pricing. Offering a competent free-tier can be thought of as a way of acquiring users and developers in to create a network effect for your product. In addition, the more people that use your software, the more "stuck" they become in the ecosystem (also known as "Lock In"). These practices are very popular in other software as well (like the Microsoft suite, Adobe products, etc).   
 
+For the sublime example, you need to realize that the company competes with other great, free, open-source options. SublimeText might be free because the developers are generous (they are awesome people), but it's also because they are competing with open-source editors such as VIM, EMACS, Notepad++ (VSCode, atom, etc).
 
 # How Tech Improves Price Discrimination
 With the spotlight on giant tech companies in the past few years for abuses in privacy, democracy, and competition in the industry, people do not yell things like "tech companies are abusing their power to charge me 2 dollars more for gloves".
@@ -228,16 +277,23 @@ I used to use Lyft quite a fair bit, I didn't bother using Uber because the ride
 
 I haven't kept track if practices like these were still allowed (with security on mobile devices increasing) 
 
+**Other Uses of Technology in Price Discrimination**
+DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition to being very annoying to use.
+
+
+
+VPN & Locations for Plane Tickets - You used to be able to get discount tickets using a VPN! 
+
+
+
+Cookies - The store cookies in your browser to track who you arte and where you are
+Web Pages - 
 
 
 Ebate & Honey - You think these companies are just a platform for uploading coupons and getting rebates? They're studying your behavior and stealing your data 
-Big Data - They're using SQL Joins on your online spending habits using your personal information as the key (i.e matching your information on different platforms to build a complete profile of you), 
-Cookies - The store cookies in your browser to track who you arte and where you are
-Web Pages - 
-VPN & Locations for Plane Tickets - You used to be able to get discount tickets using a VPN! 
-DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition to being very annoying to use.
 
-My friend got me a certain game on steam for $10 less by purchasing it within his home country (thailand).
+Big Data - They're using SQL Joins on your online spending habits using your personal information as the key (i.e matching your information on different platforms to build a complete profile of you), 
+
 
 # Pros of Price Segmentation
 It seems that price discrimination is just a loss for consumers where every customer is unable to find "good deals" on anything they want anymore. 
@@ -333,5 +389,5 @@ https://theconversation.com/the-economics-behind-ubers-new-pricing-model-78180#:
 
 
 
-# Corrections or Complaints?
-Email me at nablags97 [at] gmail [dot] com 
+# Corrections, Complaints, Questions?
+Did I get something wrong, misinterpret something, or do you have a question? I'll gladly chat - email me at nablags97 [at] gmail.com.
