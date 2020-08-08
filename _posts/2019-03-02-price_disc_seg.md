@@ -261,6 +261,8 @@ In the earlier single pricing scheme example, there are certain market situation
 
 With price discrimination, the business is able to make the sale to both Alice and Bob - removing the inefficiency. One downside is that the Alice doesn't get a great deal on her sprite anymore. Her \\$3 of "consumer surplus" - the difference between the price she paid and her willingness to pay - has become the supermarket's net profit. On the other hand, Bob is able to purchase a sprite for himself at his \\$1 price. 
 
+**It's important to note that only perfect price discrimination offers the "ultimate" efficiency.** Second and third degree price discrimination **reduce** inefficiency, but can't eliminate it. 
+
 This may seem trivial with soda, but this matters for essential goods like medicine. You might dislike the fact that Alice paid \\$5 for her sprite while Bob paid \\$1. However, another example is that Alice pays \\$100 for a life-saving drug, and Bob in a poorer-country pays \\$10 in his country. If Bob could not afford his medicine at \\$100 and the medicine were cheap to produce, wouldn't the pharmaceutical company be ethically obligated to find some way to save Bob's life? **The pricing of medicine is situation is more nuanced than this, so take this example with a grain of salt**. 
 
 **In theory**, price discrimination results in the win for the world! Whether an individual benefits or loses from this segmentation depends on where you are on the demand curve. 
@@ -299,14 +301,15 @@ Anyways, ticket booking websites use the cookies stored in your browser or your 
 
 [An exploit](https://youtu.be/Utsnt6GFrKo) to beat this dynamic pricing model is to constantly delete the cookies in your brwoser, and use a VPN (virtual private network) to fake your location in a different country. LTT were able to get book a flight from Denver to London for \~\\$2800 less. I can't verify how well this exploit works because companies dislike location spoofing. Advertisers claim that VPNs can play region-locked content, but fail to mention that streaming services will actively sniff out VPN addresses and blacklist them from region-locked content. 
 
-##### ECommerce & Shopping Behavior [Ebates (Rakuten) and Honey (Paypal)]
-Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). 
-
 ##### Big Data
 Despite this buzz word, "big data" allows individuals to stitch together information about you from different platforms using some identifier or key (like your email address or username).
 
 https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/
 https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/Big_Data_Report_Nonembargo_v2.pdf?utm_source=Bruegel+Updates&utm_campaign=656e7da39b-Blogs+review+11%2F02%2F2017&utm_medium=email&utm_term=0_eb026b984a-656e7da39b-278510293
+
+##### ECommerce & Shopping Behavior [Ebates (Rakuten) and Honey (Paypal)]
+Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). 
+
 
 ### A Tangent: Big Data and Health care
 A common misconception is that the different quotes you get from insurance is price discrimination - it's not. The quotes you get from insurance are based on how likely you are to file a claim. Given what the insurer knows about you and your habits (age, number of serious car crashes, smoking habits, etc) they get an idea of what it costs to insure you and proportionally charges you for that risk. However, insurance companies are looking for more factors (that can flawed) such as credit score, employment, etc. If you want to understand why this might be an issue, read chapter 8 and 9 of "Weapons of Math Destruction".
@@ -322,7 +325,7 @@ I got an advertisement for "Sweatcoin" an app/virtual currency that rewarded you
 Traditionally, price discrimination is described as having no major "cons". Sure the consumers lose a bit, but the business will capture it as profit ([AND SURELY THOSE PROFITS WILL TRICKLE DOWN RIGHT?!](https://en.wikipedia.org/wiki/Trickle-down_economics#Criticisms)) and the economy becomes more efficient. However, has this idea of charging your customers their maximum willingness to pay gone too far? I think the free market can solve a lot of problems, but aren't there some situations where someone needs to step in?
 
 ### Insulin
-Even though segmentation sounds wonderful, there are still egregious cases where this segmentation and desire to maximize profits have gone too far. A prominent example is Insulin in the US. In 2016, the average out of pocket monthly diabetes cost was [\\$360 in the US, \\$112 in India, \\$70 in Japan, \\$65 in the UK, and \\$19 in Italy.](https://www.bbc.com/news/world-us-canada-47491964#:~:text=Now%2C%20retail%20prices%20in%20the,have%20been%20making%20national%20headlines.) If you want a more indepth description of why insulin is so expensive, watch these: [businessinsider](https://youtu.be/7Ycd8zEdoVk), [verge](https://youtu.be/9CdydQNfAXE). At the end of the day, insulin is insulin!
+Even though segmentation sounds nice, there are still egregious cases where this segmentation and desire to maximize profits have gone too far. A prominent example is Insulin in the US. In 2016, the average out of pocket monthly diabetes cost was [\\$360 in the US, \\$112 in India, \\$70 in Japan, \\$65 in the UK, and \\$19 in Italy.](https://www.bbc.com/news/world-us-canada-47491964#:~:text=Now%2C%20retail%20prices%20in%20the,have%20been%20making%20national%20headlines.) If you want a more indepth description of why insulin is so expensive, watch these: [businessinsider](https://youtu.be/7Ycd8zEdoVk), [verge](https://youtu.be/9CdydQNfAXE).
 
 ##### Common "devil's advocate" responses:
 **Companies need to be rewarded with high profits for how high-risk developing medicine**
@@ -335,43 +338,31 @@ Even though segmentation sounds wonderful, there are still egregious cases where
 > None of the links or articles I have shown you have explicitly talked about price discrimination (and it's not). I would argue that the idea is the same. A company sells Insulins to people at a higher price wherever they can. While this is more "efficient" and makes sense with printers, it's cruel to do this for life-saving medicine. 
 
 # The Future & Conclusion
-If you have a good product odds are you can sell it without no troubles and your company will do fine. However, if you want ever dollar you can squeeze out of your customers, than you want to version your product such that your customers are forced to buy the appropriate version.
+If you have a good product you can sell it at a single price and your company will do fine. If you want ever dollar you can squeeze out of your customers, than you want to version your product such that your customers are forced to buy the appropriate version.
 
-If you can't tell - I am much more interested in second degree price discrimination than first or third. 
+I am not looking forward to the future of price discrimination. 
 
-Mainyl becauuse second degree price discrimination is breaking up a product in clever ways to let your consumers decide
+I think that second degree price discrimination is a much "fair" mainly because second degree price discrimination involves being smart about devising your products to let your consumers decide. While perfect price discrimination is incredibly invasive. 
+
 
 while perfect price discrimination is incredibly invasive
 
 while third degree price discrimination feels arbitrary as a consumer.
 
-### Links
 
-https://wearecitizensadvice.org.uk/markets-dont-work-like-they-used-to-and-people-are-starting-to-notice-af00ed38014d
-
-https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/Big_Data_Report_Nonembargo_v2.pdf?utm_source=Bruegel+Updates&utm_campaign=656e7da39b-Blogs+review+11%2F02%2F2017&utm_medium=email&utm_term=0_eb026b984a-656e7da39b-278510293
-
-https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/
-
-https://theconversation.com/buyer-beware-online-shopping-prices-vary-user-to-user-33439
 
 # Readings & Sources
 
 **Fun & Informative**
-Underground Economist (Fun Reads). A lot of these examples are from britain, so I personally was very confused. 
-Naked Economics
-Weapons of Math Destruction (Fun Read. Not about economics, but flaws in big data)
+**Underground Economist**: A lot of these examples are about Britain, so the examples were a bit confusing. However, it's a great exploration of economics with minimal jargon.
+**Weapons of Math Destruction**: Not about economics, but the flaws in big data. There's nothing "fun" (it's actually sort of depressing) but a very engaging book. 
 
 **Dry & Informative**
-Principles of Economics (A classic econ-101 beginner textbook, but it has all the fundamentals. I would never reccommend reading the whole thing, but treating it as a resource if you need to consult about basic concepts.)
+**Principles of Economics**: This is a classic econ-101 beginner textbook, but it has all the fundamentals. I would never recommend reading the whole thing, but treating it as a resource if you need to consult about basic concepts.
 
-Information Rules: A Strategic Guide to the Network Economy (an interesting formalization/guide to the economics of business in the digital age. The book may "seem old" in an industry that is defined by rapid change (its age reflects in its examples), but as the authors state "technology changes. Economic laws do not.") For example, chapter 2 of the book talks about hwo companies can tracke user behavior through cookies, but it had its limitations (before the explosion in popularity of javascript). 
+**Information Rules: A Strategic Guide to the Network Economy**: An interesting formalization and guide to the economics of business in the digital age. The book may "seem old" in an industry that is defined by rapid change its age reflects in its examples), but as the authors state "technology changes. 
 
-The "Observation" section of chapter 2 (around page 36 and onwards) makes me laugh
-
-The Strategy and Tactics of Pricing (A different book about pricing, but more general )
-
-**Articles and Links I've looked at**
+**The Strategy and Tactics of Pricing**. A very different book about pricing that is more general. 
 
 
 # Corrections, Complaints, Questions?
