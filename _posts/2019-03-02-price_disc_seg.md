@@ -75,21 +75,20 @@ Popular examples of enforcing this "no arbitrage" restriction is using a ticket 
 >There are ways to beat this tactic (like having 15 different people come in and buy 1 raspberry pi), but they're a  waste time and resources. In addition, even though I like this strategy adding a "one discount per customer" rule is equally as offering the discount. 
 
 ### Classic Examples of Price Discrimination 
-Here are some examples of Price discrimination that you'll find in any textbook or investopedia!
+Here are some examples of Price discrimination that you'll find whenever price discrimination is mentioned (textbooks, books, articles, investopedia, etc)- these examples are essentially common knowledge.
 
 >**Elderly & Children Movie Tickets - 3rd degree**  
 Very young and old people (normally) don't have a disposable income from a job source, and are sensitive to prices as a result. As a movie theater adding an additional person to a half-filled theater comes at no extra cost. You can offer a special discount to these price-sensitive customers. This is also true for senior discounts in (Japanese) public transportation.
 
 >**Books (hardcover vs paperback) - 2nd degree**  
 I have experienced this example personally. When I was 10, I was confused why I needed to pay \\$20 for the new Percy Jackson book and that they were no cheaper, paperback options. One might argue that hardcover is more expensive to the produce (heavier books means more shipping, hardcover books are usually higher quality, etc).  
-The reality is that even though cost is higher, they usually aren't "enough" to justify a \\$10 additional markup. The publishing company knows that fans are desperate for the new book, and can charge more as a result. The "Arbitrage" in this situation is borrowing my friend's copy after he was done reading it.
+The reality is that even though cost is higher, they usually aren't "enough" to justify a \\$10 additional markup. The publishing company knows that fans are desperate for the new book, and can charge more as a result.
 
 >**Coupons - 3rd (or 1st) degree price discrimination**
 Traditionally, coupons have been distributed broadly so that anyone could use them. If you were picky about prices, you would wait until the coupons were valid to buy your stuff. If you didn't really care, you could be effectively paying a "premium" to buy it whenever. However, some coupon schemes have become targeted. Companies will try to target specific goods at certain customers depending on their zipcode or online purchasing habits, but we'll talk about that more later. 
 
 >**Airfare tickets (first/business/economics) - 2nd degree**
-First class is expensive, and economy class is cheap(er). Customers don't need to be forced into one or the other, but they choose to. 
-
+People might argue that third-class seats are narrow and uncomfortable so that the flight can fit as many individuals in the flight as possible. This reasoning is true to a certain extent, but airlines frequently make the "economy" option uncomfortable to disincentive business or first-class passengers from getting a cheaper flight ticket. The airline doesn't want to lose the larger margins on their high WTP customers, and so they make the discount option as undesirable as possible. 
 
 # Pricing Parable: Pricing is never about cost, but willingness to pay
 You might see some of these examples and think "That's not fair. You can't call everything price discrimination, you're not an insider." While this is a fair critique, people fall into this trap when they try to justify a purchase by the "cost of the materials or service". **Pricing isn't about cost, but the market's willingness to pay**. 
@@ -142,12 +141,18 @@ I suspect that since Lenovo laptops are bought in bulk from enterprises, the com
 ##### ECC support on Intel and AMD CPUs
 One of Intel & AMD's core products is a [CPU](https://en.wikipedia.org/wiki/Central_processing_unit). Essentially, the CPU is the "brains" of the computer is responsible for performing the math, logic, input/output on your computer. Error-correcting code memory (ECC) is a special feature to some memory sticks (RAM) that can correct some kinds of data corruption. These data corruptions are imperceivable to people reading articles or watching TV, but can be catastrophic for servers or scientific computing. 
 
-For some reason, Intel's consumer processors don't offer ECC-support, while their enterprise server chips do. You could argue that ECC support is a new feature, and that is very costly. Adding ECC support would only increase the cost for consumers. In addition, it could not be up to Intel, but the motherboard manufacturers to bake-in ECC support. However, I suspect this reasoning isn't true because the AMD consumer processors series offers ECC memory support along with their server-grade chips (at similar prices as well)! 
+For some reason, Intel's consumer processors don't offer ECC-support, while their enterprise server chips do. You could argue that ECC support is a new feature, and that is very costly. Adding ECC support would only increase the cost for consumers. In addition, it could not be up to Intel, but the motherboard manufacturers to bake-in ECC support. However, I suspect this reasoning isn't true because the AMD consumer processors series offers ECC memory support along with their server-grade chips (at similar prices as well)!
+
+{% assign caption_memory = "An example of a ECC memory stick"%}
+{% include caption_image.html imgpath="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Micron_PC2700_DDR_ECC_REG.JPG/300px-Micron_PC2700_DDR_ECC_REG.JPG" alt="a nvidia gpu" caption=caption_memory%}
 
 [Some people on enthusiast forums grumble and call this an "Intel Tax"](https://news.ycombinator.com/item?id=10029341), but the reality is that it's just price discrimination. Intel understands that customers who need ECC memory support do high-stakes work. These people tend to be coders, researchers, or data centers, and that means their organization is willing to pay a pretty penny for it to be done properly. 
 
 ##### Graphics Processing Units (GPU)
 A Graphics Processing Unit (GPU) is a specialized processor used to accelerated calculations used in graphics generation (i.e gaming). In the past 20 years, people have realized that they could use the GPU's parallel structure to accelerate  calculations in other fields (popular examples include machine learning, cryptocurrencies, image processing, etc).
+
+{% assign caption_gpu = "An example of a newer generation of GPU's from Nvidia"%}
+{% include caption_image.html imgpath="https://www.nvidia.com/content/dam/en-zz/Solutions/shop/nvidia-consumer-store-portal-geforce-2080-ti-um@2x.png" alt="a nvidia gpu" caption=caption_gpu%}
 
 The [Titan XP](https://www.nvidia.com/en-us/titan/titan-xp/#) and the [GTX 1080TI](https://www.nvidia.com/en-sg/geforce/products/10series/geforce-gtx-1080-ti/) were similar GPUs with drastically different prices. For example, both GPUs  used the same chip (the GP102), but the Titan XP was \\$1200 and the 1080TI was \\$699 (a \\$500 price gap). The other features of the cards were similar. The only difference was the number of "cuda cores" (3840 vs 3584), memory bandwidth (354 bit bus vs 384 bit bus) which resulted in a theoretical difference of 547.7 GB/S vs 484 GB/s. Otherwise, the cards had identical base clocks, and a marginal difference in memory capacity. In fact, various gaming benchmarks showed that the Titan XP and 1080TI had (almost) identical game performance. For reference, upgrading from a lower-tier GPUs offered a much greater jump in performance for less money
 
@@ -182,8 +187,8 @@ On a more positive note, instead of competing against open-source software, comp
 > **Proprietary Software Still Strives**  
 Proprietary software and services will strive - and that's natural. Bloomberg terminals (software that provides financial data) can't be out-competed with open-source (as easily). Collecting, transcribing, and recording financial information cannot be done better (yet) - it's purely a function of resources invested into the collection of information and infrastructure.
 
-
 ##### Adobe's Pricing
+
 Let's examine Adobe pricing strategy through their "All Apps" package for adobe subscriptions. The table was transcribed from their [plans page](https://www.adobe.com/creativecloud/plans.html).
 
 |Plan target          	| Price (per month) |
@@ -202,40 +207,29 @@ It is important to note that pricing adobe suite for students is more than just 
 ###### Windows 10
 Microsoft sells it's non-server operating systems in three tiers: Windows 10 Home, Pro, and "Pro for workstations". In fact, not only does Microsoft price discriminate by offering different versions of their operating system, but also through differential pricing in different geographic locations!
 
-###### Differentiation by Versioning
+###### Differentiating Windows Pricing by Versioning
 
 Below is a basic table of the operating system versions and their "features". [The data was taken from the Microsoft Store](https://www.microsoft.com/en-us/store/b/windows?activetab=tab%3ashopwindows10). I'm not going to list all of the differences, but it's important to know that the most expensive tier has "all" of the features.
 
-|OS Version          			 | Price 	 | Features                    |
-|:------------------------------:|:---------:| :---------:                 | 
-| Windows 10 Home         		 | \\$139.00 | The base operating system   |
-| Windows 10 Pro    	 		 | \\$199.00 | All of Home Features + More |
-| Windows 10 Pro For Workstations| \\$309.00 | All of Pro Features + More  |
+|OS Version          			 | Price 	 | Features                     |
+|:------------------------------:|:---------:| :---------:                  | 
+| Windows 10 Home         		 | \\$139.00 | The base operating system    |
+| Windows 10 Pro    	 		 | \\$199.00 | All of Home Features + More* |
+| Windows 10 Pro For Workstations| \\$309.00 | All of Pro Features + More*  |
 
-Essentially their versions are divided by Home Users, Businesses, and Businesses that need more power. Windows 10 Home is a good OS, and the users probably only browse the internet, watching TV, or playing video games. These users don't need advanced features like Hyper-V virtualization,  Bitlocker device encryption, or remote desktop (although these would be nice to have!). People who run companies and could be managing hundreds of machines would be at risk if they used Windows 10 Home as their licenses and must use the Pro version. 
-
-Finally, most businesses will not need hardware and file system optimizations that the "Pro for Workstation" license offers. The page claims that this OS is targeted for "researchers, engineers, video editors, graphics artist, teams that work with big data .." i.e where time and output can make a huge difference on the bottom line. 
+Essentially their versions are divided by Home users, Businesses, and Businesses that need more compute. Windows 10 Home is a good OS, and the users probably only browse the internet, watching TV, or playing video games. These users don't need advanced features like Hyper-V virtualization, Bitlocker device encryption, or remote desktop (although these would be nice to have!). People who run companies and could be managing hundreds of machines would be at risk if they used Windows 10 Home as their licenses and must use the Pro version. As a result, the business would choose the "Pro" version. Most businesses will not need hardware and file system optimizations that the "Pro for Workstation" license offers. The page states that this OS is targeted for "researchers, engineers, video editors, graphics artist, teams that work with big data .." i.e where time and output can make a huge difference on the bottom line. 
 
 Did it cost Microsoft a ton of money to add these features to their operating system? Maybe. It's more likely that they started with the highest quality version of the operating system, and stripped away features to create the discrepancy. 
 
-###### Differential Pricing by Location
+###### Differential Windows Pricing by Location
 
-However, Microsoft **also** segments their Windows 10 licenses through **geography**. To be fair, the price of Windows 10 can differ across borders because of international tax differences (i.e Windows 10 is more expensive because of the government). Other times, Microsoft offers cheaper Windows 10 license keys where the retail price is disproportionate to the cost of living. Residents in some of these countries don't have enough money (or enough willingness) to pay the full American retail price.
-
-I cannot find any primary evidence of this, but there are suspicious services that sell discounted Windows 10 keys (illegally). They acquire these keys through several means (stolen credit cards, volume licenses, education versions, etc), but they also buy keys from countries that are offered windows 10 at a much cheaper price. 
+Microsoft **also** segments their Windows 10 licenses through **geography**. To be fair, the price of Windows 10 can differ across borders because of international tax differences (i.e Windows 10 is more expensive because of the government). Other times, Microsoft offers cheaper Windows 10 license keys where the retail price is disproportionate to the cost of living. Residents in some of these countries don't have enough money (or enough willingness) to pay the full American retail price. As a disclaimer, I cannot find any primary evidence of this - I've only heard of this through "word of mouth". There are suspicious services that sell discounted Windows 10 keys (illegally). They acquire these keys through several means (stolen credit cards, volume licenses, education versions, etc), but they also buy keys from countries that are offered windows 10 at a much cheaper price. 
 
 ###### Redhat Linux
-
 Price Differentials can still exist with open source software! For example, Red Hat (now an IBM subsidiary) offers
-a free version of their Linux Distro in addition to their "Red Hat Enterprise Linux" Distro. 
-
-Both of these operating systems use Linux as their kernel, and are probbaly similar. 
-
-However, the open-source version is at the whim of the community, while enterprise versions have more technical support for their staff, 
-in addition to having sway over development of what they need,
-
-and longer support cycles. 
-
+a free version (a "no-cost developer subscription") of their "Red Hat Enterprise Linux" Distro in addition to having their complete source code online. In this situation, the differences between the free version and the paid version is: 
+- **Legality:** You're only allowed to use the free version for personal use or development purposes - NOT for running a company. However, there doesn't seem to be any binary that tracks your usage)
+- **Support:** Red Hat will offer longer life-cycle support on the operating system (rather than abandoning a version after 2-3 years). In addition, they'll experts that you can consult, professional training materials, etc. 
 
 ##### Database Services (MongoDB)
 MongoDB offers many different services and products (so much that I can't keep track of everything). For now, let's focus on their main database software. MongoDB segments their prices based on versioning.
@@ -260,7 +254,25 @@ Pricing has a strategic component beyond taking as much money as they can. We sa
 
 For the sublime example, you need to realize that the company competes with other great, free, open-source options. SublimeText might be free because the developers are generous (they are awesome people), but it's also because they are competing with open-source editors such as VIM, EMACS, Notepad++ (VSCode, atom, etc).
 
-# Price Discrimination With Tech
+# Pros of Price Segmentation & Welfare Economics
+My first impression is that price discrimination is a greedy move by companies to suck out each dollar from its customers, and it's true. Despite my cynical take, price discrimination has its benefits as well - mainly that it's economically "efficient" and that it increases the accessibility of a good for people.
+
+In the earlier single pricing scheme example, there are certain market situations where a business could sell a Sprite to a customer (Bob) above the product's marginal cost, but below the market price. As a result, the business couldn't sell Bob a sprite and lose \\$0.50 profit. Economists consider this a "deadweight loss" - which is considered an inefficiency in the market. 
+
+With price discrimination, the business is able to make the sale to both Alice and Bob - removing the inefficiency. One downside is that the Alice doesn't get a great deal on her sprite anymore. Her \\$3 of "consumer surplus" - the difference between the price she paid and her willingness to pay - has become the supermarket's net profit. On the other hand, Bob is able to purchase a sprite for himself at his \\$1 price. 
+
+This may seem trivial with soda, but this matters for essential goods like medicine. You might dislike the fact that Alice paid \\$5 for her sprite while Bob paid \\$1. However, another example is that Alice pays \\$100 for a life-saving drug, and Bob in a poorer-country pays \\$10 in his country. If Bob could not afford his medicine at \\$100 and the medicine were cheap to produce, wouldn't the pharmaceutical company be ethically obligated to find some way to save Bob's life? **The pricing of medicine is situation is more nuanced than this, so take this example with a grain of salt**. 
+
+**In theory**, price discrimination results in the win for the world! Whether an individual benefits or loses from this segmentation depends on where you are on the demand curve. 
+
+**Under No Price Discrimination:**
+- If ${WTP} \geq {Market Price}$, you benefit from no price discrimination.
+- If ${WTP} < {Market Price}$, you are not able to buy the product.
+
+**With Price Discrimination:**  
+This will depend on the degree of price discrimination, but the people who had $WTP < {Market Price}$ can now buy the product (if their willingness to pay is above the marginal cost). If price discriminate were illegal, people would have to pay the "supply and demand" cost and pay. Now, less wealthy individuals cannot afford the newest hardware or software, while giant corporations will be happy that equipment costs have gone down!
+
+# Price Discrimination With Tech  
 With the focus on tech companies abuses in privacy, democracy, and competition in the industry, people do not complain about "tech companies are abusing their power to charge me 2 dollars more for gloves". However, technology plays an increasingly larger role in pricing today. 
 
 A personal anecdote I had with Lyft is below, but feel free to ignore it.
@@ -275,9 +287,9 @@ I used to use Lyft quite a fair bit, I didn't bother using Uber because (I remem
 
 **"The internet is a medium for personalized pricing"** (Shaprio, Varian, "Information Rules: A Strategic Guide to the Network Economy", 42)
 
-Even before "Deep Learning" became a thing, people understood that technology has large potential to augment price segmentation. 
+Even before "Big Data" became more popular, people understood that technology has large potential to augment price segmentation.
 
-
+In 2003, there was an [economist article](https://www.economist.com/finance-and-economics/2003/10/16/theyre-watching-you) outlining the erosion of user privacy motivated by a desire for more money through price discrimination. The paper the article summarizes states that the "powerful movement to reduce privacy that is coming from the private sector is motivated by the incentives to price discriminate" (Andrew Odlyzko. 2003. Privacy, economics, and price discrimination on the Internet. In Proceedings of the 5th international conference on Electronic commerce (ICEC ’03). Association for Computing Machinery, New York, NY, USA, 355–366. DOI:https://doi.org/10.1145/948005.948051)
 
 **Other Uses of Technology in Price Discrimination**
 DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition to being very annoying to use.
@@ -296,56 +308,34 @@ Ebate & Honey - You think these companies are just a platform for uploading coup
 
 Big Data - They're using SQL Joins on your online spending habits using your personal information as the key (i.e matching your information on different platforms to build a complete profile of you), 
 
+### Why is our privacy being eroded?
+Here's an Economist article describing the erosion of user privacy motivated a desire for more money ...in 2003!
 
-# Pros of Price Segmentation
-It seems that price discrimination is just a loss for consumers where every customer is unable to find "good deals" on anything they want anymore. 
+In this paper, Professor Odlyzko suggests that the gradual erosion of privacy on the internet is **motivated by price discrimination**.
 
-In addition, it's a big win for "businesses" as they can extract every single dollar from each company that they can. 
+While he makes a good point, and I do agree with other points in the paper - I'm a bit skeptical to accept that it's **solely** through price discrimination. I do agree that a large component for this need for our personal infromation is motivated by a desire to make more money. 
 
-Despite the cynical presentation, price discrimination has upsides as well - mainly that it increases the accessibility of a good for (some) people. 
-
-Whether you benefit or lose from this segmentation depends on where you are on the demand curve. If your willingness to pay is above the equilibrium price, you benefit from no price discrimination. If your WTP is below the equilibrium price, then you're out of luck. With price discrimination, the people who aren't able to afford the product, will be able to at their WTP. If we could not price discriminate, people would have to pay the "supply and demand" cost and pay. Suddenly less wealthy individuals cannot afford the newest hardware or adobe suite, while businesses will be happy that their margins have gone up!
-
-### Welfare Economics
-Your first impression is that price discrimination is a greedy move by companies to suck out each dollar from its  consumers, and you're right.
-
-However, price discrimination can increase effiency in **some** (this part is important) market situations, as well being more equitable giving
-
-The example you might think of is that Alice paid \$5 for her pizza while Bob paid \$3 (which is just unfair!).
-However, another example is that Alice pays \$50 for a life-saving drug, and Bob in a poorer-country pays \$10 in his country (which may be proportionate to \$50 in his country's currency)\*.
-
-\* However, the situation is more nuanced and there are some cases worth discussing later. 
+However, this paper was published in 2003.
 
 
-# Cons of Cashing out Willingness to Pay (Has it gone to far?)
-The idea behind price discriminatino to grab every dollar that the customer is willing to pay. People argue that this desire to maximize profit is natural and important for keeping the free hand of the market yadda yadada. 
+# Cons of Price Discrimination (and getting a little political)
+Traditionally, price discrimination is described as having no major "cons". Sure the consumers lose a bit, but the business will capture it as profit ([AND SURELY THOSE PROFITS WILL TRICKLE DOWN RIGHT?!](https://en.wikipedia.org/wiki/Trickle-down_economics#Criticisms)) and the economy becomes more efficient.
 
-However, can this diea go too far?
+However, has this idea of charging your customers their maximum willingness to pay gone too far? I think the free market can solve a lot of problems, but aren't there some situations where someone needs to step in?
 
 ### Insulin
-Even though segmentation sounds wonderful, there are still egregious cases where this segmentation and desire to maximize profits have gone too far. 
+Even though segmentation sounds wonderful, there are still egregious cases where this segmentation and desire to maximize profits have gone too far. A prominent example is Insulin in the US. In 2016, the average out of pocket monthly diabetes cost was [\\$360 in the US, \\$112 in India, \\$70 in Japan, \\$65 in the UK, and \\$19 in Italy.](https://www.bbc.com/news/world-us-canada-47491964#:~:text=Now%2C%20retail%20prices%20in%20the,have%20been%20making%20national%20headlines.) If you want a more indepth description of why insulin is so expensive, watch these: [businessinsider](https://youtu.be/7Ycd8zEdoVk), [verge](https://youtu.be/9CdydQNfAXE). At the end of the day, insulin is insulin!
 
-A prominent example is the healthcare system (at least in the US). Insulin is like $300 in America, while in other first to third world countries, Insulin is much cheaper. 
+##### Common "devil's advocate" responses:
+**Companies need to be rewarded with high profits for how high-risk developing medicine**
+> This is true for a lot of medicines, and I think that medicine-patent is okay for encouraging live-saving medicine research. This isn't the case with Insulin. It's almost a 100 years old. There are "innovations" in the production and quality of the medicine, but there does not seem to be such jarring differences in the quality of it to justify this egregious case.
 
-(Don't even argue, insulin is so old and nothing new has fundamentally changed)
+**"It's not an economic problem, but a political one"**
+> I agree that "politics" interferes with a "better" market outcome in the US, but it's clearly someone's fault when the [players (pharmaceutical companies) can actively lobby politicians](https://www.cnn.com/2019/01/23/health/phrma-lobbying-costs-bn/index.html) 
 
-It's good that people in poorer countries that have an easy to access quality 
+**"Insulin prices (and other healthcare costs) aren't high because of price discrimination"**
+> None of the links or articles I have shown you have explicitly talked about price discrimination (and it's not). I would argue that the idea is the same. A company sells Insulins to people at a higher price wherever they can. While this is more "efficient" and makes sense with printers, it's cruel to do this for life-saving medicine. 
 
-however, this isn't economics faults - its politics (although businesses being able to lobby politicans make it a business fault).  
-
-https://youtu.be/7Ycd8zEdoVk
-https://youtu.be/9CdydQNfAXE
-
-Insulin is expensive, just because it can be in the US
-
-You could argue that insane medicine prices are a result of America's failure in the medical sector.
-
-However, people forget that hospital's charge high initial prices for treatment because the insurance companies were trying to negotiate lower WTP.
-
-In short, it's because hospitals know that Insurance companies have such high WTP that they try to take as much money as possible
-
-### Big Data and Privacy
-In addition to healthcare, this desire for information has d
 
 # The Future 
 Price discrimination/segmentation is a new business idea in the slighest 
@@ -383,12 +373,6 @@ The "Observation" section of chapter 2 (around page 36 and onwards) makes me lau
 The Strategy and Tactics of Pricing (A different book about pricing, but more general )
 
 **Articles and Links I've looked at**
-https://hbr.org/2012/05/can-there-ever-be-a-fair-price
-
-https://www.economist.com/free-exchange/2016/02/29/disney-discovers-peak-pricing
-https://www.economist.com/free-exchange/2011/11/22/the-adult-book-premium
-https://theconversation.com/the-economics-behind-ubers-new-pricing-model-78180#:~:text=Economists%20generally%20refer%20to%20three,extracting%20all%20of%20their%20WTP.
-
 
 
 # Corrections, Complaints, Questions?
