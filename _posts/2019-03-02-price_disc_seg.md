@@ -40,7 +40,7 @@ However, the supermarket isn't happy with that. Management knows that Alice is w
 In fact, there are classifications for price discrimination that describe to what "degree" that they can identify buyer's and their WTP. These levels of price discrimination are categorized as "first", "second", and "third" degree price discrimination. If you've read "Information Rules: A Strategic Guide to the Network Economy" the authors refer to these as "personalized pricing", "versioning", and "group pricing".
 
 **1) First Degree** (also known as perfect price discrimination):
-A company can identify each customer and charge the consumer's WTP. 
+A company can identify each customer and charge the consumer's WTP. This is almost impossible and largely considered impossible... for now.
 
 > In our example with Alice & Bob, perfect price discrimination is when the supermarket charges \\$5 to Alice, \\$1 to Bob, and the willing-to-pay for any other customer. At market price, the supermarket would have net profit of \\$1.50. Under perfect price discrimination, they're able to make \\$5 in profit (5-0.5 + 1-0.5).
 
@@ -284,44 +284,42 @@ I used to use Lyft quite a fair bit, I didn't bother using Uber because (I remem
 
 > You might think this is a bit "crazy", but there is evidence that Uber [has collected "more than necessary" information using it's "God View" tool](https://www.wired.com/insights/2015/01/uber-privacy-woes-cautionary-tale/). In fact, the [Uber got into trouble with Apple by including a snippet of code that tagged user's iphones after deleting the app (to prevent fraud)](https://www.nytimes.com/2017/04/23/technology/travis-kalanick-pushes-uber-and-himself-to-the-precipice.html?_r=1). If you think this is only an "Uber" thing, [Lyft has had it's own privacy issues as well](https://www.theinformation.com/articles/lyft-moves-to-restrict-employee-access-to-customer-data). If you don't trust this source, the [BBC](https://www.bbc.com/news/technology-42827636) and [techcrunch](https://techcrunch.com/2018/01/25/lyft-god-view/) have seem to report it as well. I'm not sure if these practices continue given efforts to increase security and privacy requirement on mobile OS's, but I'm sure there will always be workarounds. 
 
+### "The internet is a medium for personalized pricing"** 
+The above quote is (once again) from "Information Rules: A Strategic Guide to the Network Economy" page 42. Even before "Big Data" became popular, people understood that technology had the potential to augment price segmentation. Even in 2003, [people worried about the movement to erode privacy]((https://www.economist.com/finance-and-economics/2003/10/16/theyre-watching-you)) for the sake of price discrimination. The full paper states that "powerful movement to reduce privacy that is coming from the private sector is motivated by the incentives to price discriminate" (Andrew Odlyzko. 2003. Privacy, economics, and price discrimination on the Internet. In Proceedings of the 5th international conference on Electronic commerce (ICEC ’03). Association for Computing Machinery, New York, NY, USA, 355–366. DOI:https://doi.org/10.1145/948005.948051)
 
-**"The internet is a medium for personalized pricing"** (Shaprio, Varian, "Information Rules: A Strategic Guide to the Network Economy", 42)
+### Other Uses of Technology in Price Discrimination
 
-Even before "Big Data" became more popular, people understood that technology has large potential to augment price segmentation.
+##### DRM (Digital Rights Management)
+This section is more about pricing rather than enforcement, but DRM is implemented to prevent arbitrage. This is essential in software, where people can literally copy-paste your program. There are countless ways that DRM has been proposed or implemented - this is [one of my favorite ways](https://www.youtube.com/watch?v=ccneE_gkSAs).
 
-In 2003, there was an [economist article](https://www.economist.com/finance-and-economics/2003/10/16/theyre-watching-you) outlining the erosion of user privacy motivated by a desire for more money through price discrimination. The paper the article summarizes states that the "powerful movement to reduce privacy that is coming from the private sector is motivated by the incentives to price discriminate" (Andrew Odlyzko. 2003. Privacy, economics, and price discrimination on the Internet. In Proceedings of the 5th international conference on Electronic commerce (ICEC ’03). Association for Computing Machinery, New York, NY, USA, 355–366. DOI:https://doi.org/10.1145/948005.948051)
+##### Airline Industry & Locations (Cookies)
+The airline industry sure does come appear in these examples a lot &#128064;&#128064;... 
 
-**Other Uses of Technology in Price Discrimination**
-DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition to being very annoying to use.
+Anyways, ticket booking websites use the cookies stored in your browser or your account information to "dynamically price" your plane ticket to you. They can do it the silliest of ways, as in [Orbitz showing Mac users pricier hotel rooms](https://www.wsj.com/articles/SB10001424052702304458604577488822667325882) or more devilish ways like subtly increasing the flight ticket price each time you revisit the booking site. 
 
+[An exploit](https://youtu.be/Utsnt6GFrKo) to beat this dynamic pricing model is to constantly delete the cookies in your brwoser, and use a VPN (virtual private network) to fake your location in a different country. LTT were able to get book a flight from Denver to London for \~\\$2800 less. I can't verify how well this exploit works because companies dislike location spoofing. Advertisers claim that VPNs can play region-locked content, but fail to mention that streaming services will actively sniff out VPN addresses and blacklist them from region-locked content. 
 
+##### ECommerce & Shopping Behavior [Ebates (Rakuten) and Honey (Paypal)]
+Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). 
 
-VPN & Locations for Plane Tickets - You used to be able to get discount tickets using a VPN! 
+##### Big Data
+Despite this buzz word, "big data" allows individuals to stitch together information about you from different platforms using some identifier or key (like your email address or username).
 
+https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/
+https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/Big_Data_Report_Nonembargo_v2.pdf?utm_source=Bruegel+Updates&utm_campaign=656e7da39b-Blogs+review+11%2F02%2F2017&utm_medium=email&utm_term=0_eb026b984a-656e7da39b-278510293
 
+### A Tangent: Big Data and Health care
+A common misconception is that the different quotes you get from insurance is price discrimination - it's not. The quotes you get from insurance are based on how likely you are to file a claim. Given what the insurer knows about you and your habits (age, number of serious car crashes, smoking habits, etc) they get an idea of what it costs to insure you and proportionally charges you for that risk. However, insurance companies are looking for more factors (that can flawed) such as credit score, employment, etc. If you want to understand why this might be an issue, read chapter 8 and 9 of "Weapons of Math Destruction".
 
-Cookies - The store cookies in your browser to track who you arte and where you are
-Web Pages - 
+A concern issue that people consider is that companies can uncover medical conditions that are prohibited by the government, or discover a health issues that the consumer is unaware - [a common anecdote is how Target's marketing team discovering a girl was pregnant](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html). I personally dislike this Target anecdote because I don't know how accurate this marketing system works. It might have sent a million pregnacy-related ads to people, and it happened to be right once. However, this anecdote is still valid because using unclear, unverifiable classification systems shouldn't be used to determine such important things (and what Cathey O'Neil argues as well). If you want to read more about Big Data and insurance, I encourage you to read chapter 9 of "Weapons of Math Destruction".
 
+<!-- ### Convincing Consumers to buy: targetting and behavioral nudging 
 
-Ebate & Honey - You think these companies are just a platform for uploading coupons and getting rebates? They're studying your behavior and stealing your data 
-
-Big Data - They're using SQL Joins on your online spending habits using your personal information as the key (i.e matching your information on different platforms to build a complete profile of you), 
-
-### Why is our privacy being eroded?
-Here's an Economist article describing the erosion of user privacy motivated a desire for more money ...in 2003!
-
-In this paper, Professor Odlyzko suggests that the gradual erosion of privacy on the internet is **motivated by price discrimination**.
-
-While he makes a good point, and I do agree with other points in the paper - I'm a bit skeptical to accept that it's **solely** through price discrimination. I do agree that a large component for this need for our personal infromation is motivated by a desire to make more money. 
-
-However, this paper was published in 2003.
-
+##### Sweatcoin
+I got an advertisement for "Sweatcoin" an app/virtual currency that rewarded you for walking (this was when cryptocurrencies were wildly popular). I suspected that they were trying to aggregate walking pattern of their users to sell to some data vendor. The website promises that they do not sell their data and they keep their information private - the company's main form of monetization was showing advertisements to the users while they have the app open/walking. However, this is a classic example of targeting users to encourage them to buy the advertised goods. -->
 
 # Cons of Price Discrimination (and getting a little political)
-Traditionally, price discrimination is described as having no major "cons". Sure the consumers lose a bit, but the business will capture it as profit ([AND SURELY THOSE PROFITS WILL TRICKLE DOWN RIGHT?!](https://en.wikipedia.org/wiki/Trickle-down_economics#Criticisms)) and the economy becomes more efficient.
-
-However, has this idea of charging your customers their maximum willingness to pay gone too far? I think the free market can solve a lot of problems, but aren't there some situations where someone needs to step in?
+Traditionally, price discrimination is described as having no major "cons". Sure the consumers lose a bit, but the business will capture it as profit ([AND SURELY THOSE PROFITS WILL TRICKLE DOWN RIGHT?!](https://en.wikipedia.org/wiki/Trickle-down_economics#Criticisms)) and the economy becomes more efficient. However, has this idea of charging your customers their maximum willingness to pay gone too far? I think the free market can solve a lot of problems, but aren't there some situations where someone needs to step in?
 
 ### Insulin
 Even though segmentation sounds wonderful, there are still egregious cases where this segmentation and desire to maximize profits have gone too far. A prominent example is Insulin in the US. In 2016, the average out of pocket monthly diabetes cost was [\\$360 in the US, \\$112 in India, \\$70 in Japan, \\$65 in the UK, and \\$19 in Italy.](https://www.bbc.com/news/world-us-canada-47491964#:~:text=Now%2C%20retail%20prices%20in%20the,have%20been%20making%20national%20headlines.) If you want a more indepth description of why insulin is so expensive, watch these: [businessinsider](https://youtu.be/7Ycd8zEdoVk), [verge](https://youtu.be/9CdydQNfAXE). At the end of the day, insulin is insulin!
@@ -336,15 +334,16 @@ Even though segmentation sounds wonderful, there are still egregious cases where
 **"Insulin prices (and other healthcare costs) aren't high because of price discrimination"**
 > None of the links or articles I have shown you have explicitly talked about price discrimination (and it's not). I would argue that the idea is the same. A company sells Insulins to people at a higher price wherever they can. While this is more "efficient" and makes sense with printers, it's cruel to do this for life-saving medicine. 
 
+# The Future & Conclusion
+If you have a good product odds are you can sell it without no troubles and your company will do fine. However, if you want ever dollar you can squeeze out of your customers, than you want to version your product such that your customers are forced to buy the appropriate version.
 
-# The Future 
-Price discrimination/segmentation is a new business idea in the slighest 
-"QUOTE FROM THE BOOK ABOUT UNDERCOVER ECONOMIST"
-"QUOTE FROM THE BOOK BIG DATA BOOK"
+If you can't tell - I am much more interested in second degree price discrimination than first or third. 
 
-# Conclusion
-Takeaways, if you have a good product odds are you can sell it without no troubles and your company will do fine. However, if you want ever dollar you can squeeze out of your customers, than you want to version your product (by adding or removing features) such that they would be unable to buy different versions. 
+Mainyl becauuse second degree price discrimination is breaking up a product in clever ways to let your consumers decide
 
+while perfect price discrimination is incredibly invasive
+
+while third degree price discrimination feels arbitrary as a consumer.
 
 ### Links
 
