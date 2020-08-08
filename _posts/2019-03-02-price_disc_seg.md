@@ -342,18 +342,7 @@ Even though segmentation sounds nice, there are still egregious cases where this
 > None of the links or articles I have shown you have explicitly talked about price discrimination (and it's not). I would argue that the idea is the same. A company sells Insulins to people at a higher price wherever they can. While this is more "efficient" and makes sense with printers, it's cruel to do this for life-saving medicine. 
 
 # The Future & Conclusion
-If you have a good product you can sell it at a single price and your company will do fine. If you want ever dollar you can squeeze out of your customers, than you want to version your product such that your customers are forced to buy the appropriate version.
-
-I am not looking forward to the future of price discrimination. 
-
-I think that second degree price discrimination is a much "fair" mainly because second degree price discrimination involves being smart about devising your products to let your consumers decide. While perfect price discrimination is incredibly invasive. 
-
-
-while perfect price discrimination is incredibly invasive
-
-while third degree price discrimination feels arbitrary as a consumer.
-
-
+If you have a good product you can sell it at a single price and your company will do fine. If you want ever dollar you can squeeze out of your customers, than you can version your product such that your customers choose the appropriate version. Given how I dislike pricing strategies today, I am not looking towards the future of price segmentation. I already believe that current e-commerce pricing schemes are too invasive, and will only become more invasive without regulation. In addition, group pricing feels unfair due to its arbitrary nature (as a consumer, it feels like paying a "premium" for being in a specific group). If you couldn't tell, my favorite alternative is "versioning". Overall it feels more "fair" because the company has to be smart about setting up their product line, and this strategy allows the consumer choose for themselves. 
 
 # Readings & Sources
 
