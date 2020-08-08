@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Price Discrimination in (and with) the Tech Industry
-subtitle: A description of a clever trick applied to the tech sector (with examples), and an exploration of how technology makes it more efficient
+subtitle: A description of a clever trick applied to the tech sector (with examples), and an exploration of how technology makes it "better"
 published: true
 enable_latex: true
 permalink: /price_differential
-frontpage: false
+frontpage: true
 technical: false
 funstuff: true
 ---
@@ -301,20 +301,23 @@ Anyways, ticket booking websites use the cookies stored in your browser or your 
 
 [An exploit](https://youtu.be/Utsnt6GFrKo) to beat this dynamic pricing model is to constantly delete the cookies in your brwoser, and use a VPN (virtual private network) to fake your location in a different country. LTT were able to get book a flight from Denver to London for \~\\$2800 less. I can't verify how well this exploit works because companies dislike location spoofing. Advertisers claim that VPNs can play region-locked content, but fail to mention that streaming services will actively sniff out VPN addresses and blacklist them from region-locked content. 
 
-##### Big Data
-Despite this buzz word, "big data" allows individuals to stitch together information about you from different platforms using some identifier or key (like your email address or username).
+##### Big Data & PERFECT PRICE DISCRIMINATION
+As an oversimplification "Big Data" systems allows organizations to stitch together information about you from different platforms using some identifier or key (like your email address or username). When you sign-up for a loyalty or reward program, the company can use your email address to find additional information about you from other sources to send targeted ads.
 
-https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/
-https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/Big_Data_Report_Nonembargo_v2.pdf?utm_source=Bruegel+Updates&utm_campaign=656e7da39b-Blogs+review+11%2F02%2F2017&utm_medium=email&utm_term=0_eb026b984a-656e7da39b-278510293
+Despite my ominous for shadowing, there isn't really any perfect price discrimination. [A Febuary 2015 report from the whitehouse shows that there was little evidence for personalized pricing at the time](https://obamawhitehouse.archives.gov/sites/default/files/whitehouse_files/docs/Big_Data_Report_Nonembargo_v2.pdf?utm_source=Bruegel+Updates&utm_campaign=656e7da39b-Blogs+review+11%2F02%2F2017&utm_medium=email&utm_term=0_eb026b984a-656e7da39b-278510293). However, the report does outline other suspicious activities companies will do try to make more money (showing different demographics different prices, or targeting ads to users). 
+
+However, just because price discrimination still seems infeasible, there are efforts to increase its viability. [This article contains a nice summary of research in the field of perfect price discrimination](https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/)
+
+
 
 ##### ECommerce & Shopping Behavior [Ebates (Rakuten) and Honey (Paypal)]
 Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). 
 
 
 ### A Tangent: Big Data and Health care
-A common misconception is that the different quotes you get from insurance is price discrimination - it's not. The quotes you get from insurance are based on how likely you are to file a claim. Given what the insurer knows about you and your habits (age, number of serious car crashes, smoking habits, etc) they get an idea of what it costs to insure you and proportionally charges you for that risk. However, insurance companies are looking for more factors (that can flawed) such as credit score, employment, etc. If you want to understand why this might be an issue, read chapter 8 and 9 of "Weapons of Math Destruction".
+A common misconception is that the different quotes you get from insurance is price discrimination - it's not. The quotes you get from insurance are based on how likely you are to file a claim. Given what the insurer knows about you and your habits (age, number of serious car crashes, smoking habits, etc) they get an idea of what it costs to insure you and proportionally charges you for that risk. However, insurance companies look for more factors that can help determine that risk such as credit score, employment, etc. [One examples is car insurers using your email domain as a factor](https://uk.finance.yahoo.com/news/email-address-can-see-pay-car-insurance-103744431.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAMSjLAf5e_jmjJz0MRG03MUyyuN670BcpmWwxMhfWe5furQa29lrIMHUADo3DoDXJoBExy_QGfSLnv97cZg2LHf01f9o9OXuAFPdRHgah0eDjpzuJB5iQgsZb9qAF6qT304vLmzha_GAug4GDM9vCYIReO4Hw_H47c7-NkIPDddl&_guc_consent_skip=1596872406). Overall, these factors are incredibly flawed and problematic, if you want to understand why this might be an issue, read chapter 8 and 9 of "Weapons of Math Destruction".
 
-A concern issue that people consider is that companies can uncover medical conditions that are prohibited by the government, or discover a health issues that the consumer is unaware - [a common anecdote is how Target's marketing team discovering a girl was pregnant](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html). I personally dislike this Target anecdote because I don't know how accurate this marketing system works. It might have sent a million pregnacy-related ads to people, and it happened to be right once. However, this anecdote is still valid because using unclear, unverifiable classification systems shouldn't be used to determine such important things (and what Cathey O'Neil argues as well). If you want to read more about Big Data and insurance, I encourage you to read chapter 9 of "Weapons of Math Destruction".
+A concern issue that people consider is that companies can uncover medical conditions that are prohibited by the government, or discover a health issues that the consumer is unaware - [a common anecdote is how Target's marketing team discovering a girl was pregnant](https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html). I personally dislike this Target anecdote because I don't know how accurate this marketing system works. It might have sent a million pregnacy-related ads to people, and it happened to be right once. However, this anecdote is still valid because using unclear, unverifiable classification systems shouldn't be used to determine such important things (and what Cathey O'Neil argues as well). Read chapter 9 of "Weapons of Math Destruction" if you want details on Big Data and insurance.
 
 <!-- ### Convincing Consumers to buy: targetting and behavioral nudging 
 
@@ -353,11 +356,11 @@ while third degree price discrimination feels arbitrary as a consumer.
 
 # Readings & Sources
 
-**Fun & Informative**
-**Underground Economist**: A lot of these examples are about Britain, so the examples were a bit confusing. However, it's a great exploration of economics with minimal jargon.
+### Fun & Informative  
+**Underground Economist**: A lot of these examples are about Britain, so the examples were a bit confusing. However, it's an engaging exploration of economics with minimal jargon.  
 **Weapons of Math Destruction**: Not about economics, but the flaws in big data. There's nothing "fun" (it's actually sort of depressing) but a very engaging book. 
 
-**Dry & Informative**
+### Dry & Informative  
 **Principles of Economics**: This is a classic econ-101 beginner textbook, but it has all the fundamentals. I would never recommend reading the whole thing, but treating it as a resource if you need to consult about basic concepts.
 
 **Information Rules: A Strategic Guide to the Network Economy**: An interesting formalization and guide to the economics of business in the digital age. The book may "seem old" in an industry that is defined by rapid change its age reflects in its examples), but as the authors state "technology changes. 
