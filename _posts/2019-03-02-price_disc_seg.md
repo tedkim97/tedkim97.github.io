@@ -16,7 +16,7 @@ funstuff: true
 # Introduction
 This writeup is about **price discrimination** - the practice of selling the same* product at prices unique to a customer or group (Professionals seem to label it **price segmentation** or **differential pricing**). The innovation of technology makes the economics of it seem unimportant or invisible, but I think it's worth learning some constants in the industry. I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency.
 - <a href="#examples-of-price-discrimination-in-tech">If you just want to skip to examples</a>
-- <a href="#how-tech-improves-price-discrimination">if you want to skip to price discrimination with tech</a>
+- <a href="#examples-of-price-discrimination-with-tech  ">if you want to skip to price discrimination with tech</a>
 
 \**The word "same" may not be literal, but effectively the same. For example, a super-sized big-mac and a regular big-mac are different, but they are basically the same thing*
 
@@ -276,7 +276,7 @@ This may seem trivial with soda, but this matters for essential goods like medic
 **With Price Discrimination:**  
 This will depend on the degree of price discrimination, but the people who had $WTP < {Market Price}$ can now buy the product (if their willingness to pay is above the marginal cost). If price discriminate were illegal, people would have to pay the "supply and demand" cost and pay. Now, less wealthy individuals cannot afford the newest hardware or software, while giant corporations will be happy that equipment costs have gone down!
 
-# Price Discrimination With Tech  
+# Examples of Price Discrimination With Tech  
 With the focus on tech companies abuses in privacy, democracy, and competition in the industry, people do not complain about "tech companies are abusing their power to charge me 2 dollars more for gloves". Despite this, technology still plays an increasingly larger role in pricing today. 
 
 A personal anecdote I had with Lyft is below, but feel free to ignore it.
