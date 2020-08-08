@@ -14,15 +14,7 @@ funstuff: true
 {:toc} -->
 
 # Introduction
-This writeup is about **price discrimination** - the practice of selling the same* product at prices unique to a customer or group (Professionals seem to label it **price segmentation** or **differential pricing**). 
-
-People think that the constant evolution and innovation in technology means that economics can't possibly be used to describe it (spoiler alert: it still does).
-
-Working in Tech makes the economics of it seem unimportant or invisible, but I think it's worth getting a ground-up understanding of a very common strategy. 
-
-I'll try to be inclusive so that non-techies can still understand the examples
-
-I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency.
+This writeup is about **price discrimination** - the practice of selling the same* product at prices unique to a customer or group (Professionals seem to label it **price segmentation** or **differential pricing**). The innovation of technology makes the economics of it seem unimportant or invisible, but I think it's worth learning some constants in the industry. I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency.
 - <a href="#examples-of-price-discrimination-in-tech">If you just want to skip to examples</a>
 - <a href="#how-tech-improves-price-discrimination">if you want to skip to price discrimination with tech</a>
 
@@ -207,10 +199,11 @@ It is important to note that pricing adobe suite for students is more than just 
 
 ##### Operating Systems (Windows, Redhat)
 
-**Windows 10**
+###### Windows 10
 Microsoft sells it's non-server operating systems in three tiers: Windows 10 Home, Pro, and "Pro for workstations". In fact, not only does Microsoft price discriminate by offering different versions of their operating system, but also through differential pricing in different geographic locations!
 
-**Differentiation by Versioning**
+###### Differentiation by Versioning
+
 Below is a basic table of the operating system versions and their "features". [The data was taken from the Microsoft Store](https://www.microsoft.com/en-us/store/b/windows?activetab=tab%3ashopwindows10). I'm not going to list all of the differences, but it's important to know that the most expensive tier has "all" of the features.
 
 |OS Version          			 | Price 	 | Features                    |
@@ -225,12 +218,14 @@ Finally, most businesses will not need hardware and file system optimizations th
 
 Did it cost Microsoft a ton of money to add these features to their operating system? Maybe. It's more likely that they started with the highest quality version of the operating system, and stripped away features to create the discrepancy. 
 
-**Differential Pricing by Location**
+###### Differential Pricing by Location
+
 However, Microsoft **also** segments their Windows 10 licenses through **geography**. To be fair, the price of Windows 10 can differ across borders because of international tax differences (i.e Windows 10 is more expensive because of the government). Other times, Microsoft offers cheaper Windows 10 license keys where the retail price is disproportionate to the cost of living. Residents in some of these countries don't have enough money (or enough willingness) to pay the full American retail price.
 
-I cannot find any primary evidence of this, but there are suspicious services that sell discounted Windows 10 keys (illegally). They acquire these keys through several means (stolen credit cards, volume licenses, education versions, etc), but **sometimes** these vendors buy keys from countries that are offered windows 10 at a much cheaper price. 
+I cannot find any primary evidence of this, but there are suspicious services that sell discounted Windows 10 keys (illegally). They acquire these keys through several means (stolen credit cards, volume licenses, education versions, etc), but they also buy keys from countries that are offered windows 10 at a much cheaper price. 
 
-**Redhat Linux**
+###### Redhat Linux
+
 Price Differentials can still exist with open source software! For example, Red Hat (now an IBM subsidiary) offers
 a free version of their Linux Distro in addition to their "Red Hat Enterprise Linux" Distro. 
 
@@ -242,7 +237,7 @@ in addition to having sway over development of what they need,
 and longer support cycles. 
 
 
-##### Database Services (Mongodb)
+##### Database Services (MongoDB)
 MongoDB offers many different services and products (so much that I can't keep track of everything). For now, let's focus on their main database software. MongoDB segments their prices based on versioning.
 
 MongoDB offers both a "Community" and "Enterprise" version of their database software - that are almost identical feature. The core database system and its features are the same among both features (same encryption, memory & storage limits, scalability, etc). However, the "enterprise" software has add-ons and extra services that greatly increase the quality of life for enterprises. [The full list is here](https://www.mongodb.com/products/mongodb-enterprise-advanced), but some examples include monitoring software, 24/7 support team, visualization tools, security tools, training, etc. 
@@ -265,17 +260,24 @@ Pricing has a strategic component beyond taking as much money as they can. We sa
 
 For the sublime example, you need to realize that the company competes with other great, free, open-source options. SublimeText might be free because the developers are generous (they are awesome people), but it's also because they are competing with open-source editors such as VIM, EMACS, Notepad++ (VSCode, atom, etc).
 
-# How Tech Improves Price Discrimination
-With the spotlight on giant tech companies in the past few years for abuses in privacy, democracy, and competition in the industry, people do not yell things like "tech companies are abusing their power to charge me 2 dollars more for gloves".
+# Price Discrimination With Tech
+With the focus on tech companies abuses in privacy, democracy, and competition in the industry, people do not complain about "tech companies are abusing their power to charge me 2 dollars more for gloves". However, technology plays an increasingly larger role in pricing today. 
+
+A personal anecdote I had with Lyft is below, but feel free to ignore it.
+
+>**A Personal Vendetta: Lyft**  
+I used to use Lyft quite a fair bit, I didn't bother using Uber because (I remembered that) the ride-share prices were cheaper on Lyft. One summer, my friend and I were trying to get a ride from the annual Chicago jazz festival to a nearby restaurant. His 2-person lyft ride was \\$8, while my ride was a whopping \\$10! After confirming that we had all the same coupons/deals - there was still a two dollar in our rides. I swore to never use their services again (and I have not since then). 
+
+> Despite feeling betrayed, I was impressed at how clever these rideshare companies have been. My friend was a religious Uber user and rarely used Lyft because I suggested it. I speculated that Lyft was giving an increased discount to my friend to get them to switch from Uber to Lyft. 
+
+> You might think this is a bit "crazy", but there is evidence that Uber [has collected "more than necessary" information using it's "God View" tool](https://www.wired.com/insights/2015/01/uber-privacy-woes-cautionary-tale/). In fact, the [Uber got into trouble with Apple by including a snippet of code that tagged user's iphones after deleting the app (to prevent fraud)](https://www.nytimes.com/2017/04/23/technology/travis-kalanick-pushes-uber-and-himself-to-the-precipice.html?_r=1). If you think this is only an "Uber" thing, [Lyft has had it's own privacy issues as well](https://www.theinformation.com/articles/lyft-moves-to-restrict-employee-access-to-customer-data). If you don't trust this source, the [BBC](https://www.bbc.com/news/technology-42827636) and [techcrunch](https://techcrunch.com/2018/01/25/lyft-god-view/) have seem to report it as well. I'm not sure if these practices continue given efforts to increase security and privacy requirement on mobile OS's, but I'm sure there will always be workarounds. 
+
 
 **"The internet is a medium for personalized pricing"** (Shaprio, Varian, "Information Rules: A Strategic Guide to the Network Economy", 42)
 
->**My Personal Vendetta: Lyft**  
-I used to use Lyft quite a fair bit, I didn't bother using Uber because the ride-share prices were cheaper on Lyft (when I checked). One summer, my friend and I were trying to get a ride from the annual Chicago jazz festival to a nearby restaurant. His 2-person lyft ride was $8, while my ride was a whopping $10! It was only two dollars, but I felt betrayed - I swore to never use their services again (and I have not since then).
+Even before "Deep Learning" became a thing, people understood that technology has large potential to augment price segmentation. 
 
-> At the same time, I was amused at how clever rideshare companys have been. My friend was a religious Uber user, and only tried using lyft because I suggested it. This might be a wrong assumption (but not a blind guess), but I assumed Lyft was giving an increased discount to my friend to get them to switch over. Uber & Lyft were using technology to create personalized pricing schemes to compete with each other. 
 
-I haven't kept track if practices like these were still allowed (with security on mobile devices increasing) 
 
 **Other Uses of Technology in Price Discrimination**
 DRM (Digital Rights Management) - DRM is used to prevent arbitrage, in addition to being very annoying to use.
@@ -390,4 +392,4 @@ https://theconversation.com/the-economics-behind-ubers-new-pricing-model-78180#:
 
 
 # Corrections, Complaints, Questions?
-Did I get something wrong, misinterpret something, or do you have a question? I'll gladly chat - email me at nablags97 [at] gmail.com.
+Did I get something wrong, misinterpret something, or do you have a question? I'll gladly chat - email me at nablags97[at]gmail.com.
