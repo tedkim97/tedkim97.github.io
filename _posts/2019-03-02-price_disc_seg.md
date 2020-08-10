@@ -72,10 +72,10 @@ Popular examples of enforcing this "no arbitrage" restriction is using a ticket 
 {% assign caption1 = "An example of Micro Center pricing on Raspberry Pi Zero(s)" %}
 {% include caption_image.html imgpath="/figures/microcenter.jpg" alt="fig1" caption=caption1 %}
 
->There are ways to beat this tactic (like having 15 different people come in and buy 1 raspberry pi), but they're a  waste time and resources. In addition, even though I like this strategy adding a "one discount per customer" rule is equally as offering the discount. 
+>There are ways to beat this tactic (like having 15 different people come in and buy 1 raspberry pi), but they're a  waste time and resources. Even though I think this strategy to beat arbitrage is clever, adding a "one discount per customer" rule is just as effective as this discount scheme. 
 
 ### Classic Examples of Price Discrimination 
-Here are some examples of Price discrimination that you'll find whenever price discrimination is mentioned (textbooks, books, articles, investopedia, etc)- these examples are essentially common knowledge.
+Here are some examples of Price discrimination that you'll find whenever price discrimination is mentioned (textbooks, books, articles, investopedia, etc). These are so ubiquitous I would consider these common knowledge. 
 
 >**Elderly & Children Movie Tickets - 3rd degree**  
 Very young and old people (normally) don't have a disposable income from a job source, and are sensitive to prices as a result. As a movie theater adding an additional person to a half-filled theater comes at no extra cost. You can offer a special discount to these price-sensitive customers. This is also true for senior discounts in (Japanese) public transportation.
@@ -84,13 +84,13 @@ Very young and old people (normally) don't have a disposable income from a job s
 I have experienced this example personally. When I was 10, I was confused why I needed to pay \\$20 for the new Percy Jackson book and that they were no cheaper, paperback options. One might argue that hardcover is more expensive to the produce (heavier books means more shipping, hardcover books are usually higher quality, etc).  
 The reality is that even though cost is higher, they usually aren't "enough" to justify a \\$10 additional markup. The publishing company knows that fans are desperate for the new book, and can charge more as a result.
 
->**Coupons - 3rd degree price discrimination**
+>**Coupons - 3rd degree price discrimination**  
 Traditionally, coupons have been distributed broadly so that anyone could use them. If you were picky about prices, you would wait until the coupons were valid to buy your stuff. If you didn't really care, you could be effectively paying a "premium" to buy it whenever. However, some coupon schemes have become targeted. Companies will try to target specific goods at certain customers-groupings depending on their zipcode or online purchasing habits. There's a limit to how well they can target customers, and so it's still 3rd degree. 
 
->**Airfare tickets (first/business/economics) - 2nd degree**
-People might argue that third-class seats are narrow and uncomfortable so that the flight can fit as many individuals in the flight as possible. This reasoning is true to a certain extent, but airlines frequently make the "economy" option uncomfortable to disincentive business or first-class passengers from getting a cheaper flight ticket. The airline doesn't want to lose the larger margins on their high WTP customers, and so they make the discount option as undesirable as possible. 
+>**Airfare tickets (first/business/economics) - 2nd degree**  
+People argue that third-class seats are narrow and uncomfortable so that the flight can fit as many individuals in the flight as possible. This reasoning is true to an extent. Airlines make the "economy" seats uncomfortable to dissuade business or first-class passengers from getting a cheaper flight ticket. The airline doesn't want to lose the larger margins on their high WTP customers, and so they make the discount option as undesirable as possible. 
 
-# Pricing Parable: Pricing is never about cost, but willingness to pay
+# Pricing Parable: Pricing is never about cost, but willingness to pay  
 You might see some of these examples and think "That's not fair. You can't call everything price discrimination, you're not an insider." While this is a fair critique, people fall into this trap when they try to justify a purchase by the "cost of the materials or service". **Pricing isn't about cost, but the market's willingness to pay**. 
 
 I'll give an anecdote from Tim Hartford's "The Undercover Economist" to convince you that higher costs does not mean higher prices. 
@@ -101,7 +101,7 @@ Something was wrong though. If you did the math... something didn't **add** up. 
 
 Isn't that a bit scummy? Pocketing the "premium" price for a fair-trade product that was supposed to help others? Well at the end of 2004, the company admitted this practice was "misleading" and made it so that people can request fair trade coffee without an extra charge.
 
-The takeaway is that Costa Coffee didn't increase the price of their "fair trade" option because it was more expensive, they increased the price because they were convinced that consumers were willing to pay that much!
+The takeaway is that Costa Coffee didn't increase the price of their "fair trade" option because it was more expensive to maintain, they increased the price because they were convinced that consumers were willing to pay that much!
 
 >**So what are the takeaways?**   
 
@@ -111,15 +111,14 @@ Seize the means of production? &#10067; &#10071;
 **Pricing is not about costs, but willingness to pay?** &#9989;  
 
 # The Practice: Price Segmentation in Tech
-Before we get into fun examples of price discrimination, we need to discuss "consumer vs enterprise" market segments. In all the examples we gave, price discrimination have been about people. Businesses differ in price sensitivity compared to people. Companies purchase goods or material to deliver a product or service (silicon, metals, plastics, etc) or
-to increase productivity (computers, office equipment, etc). For businesses, buying is for increasing revenue rather than personal consumption. 
+Before we get into fun examples of price discrimination, we need to discuss "consumer vs enterprise" market segments. In all the examples we gave, price discrimination have been about people, but tech can be used by both people and enterprises. Naturally, businesses differ in price sensitivity compared to people. Companies purchase goods or material to deliver a product or service (silicon, metals, plastics, etc) or to increase productivity (computers, office equipment, etc). For businesses, buying is for **increasing revenue** rather than **personal consumption**. 
 
 Unlike humans, businesses can estimate the effect of a purchase and judge if its necessary. For example buying a new tool will increase revenue by \\$X, increase productivity by Y%, or reduce expenses by Z%. For example, if upgrading your existing IT infrastructure could increase productivity and save time, netting the company an additional \\$5 million in revenue, how much would the company pay? Any reasonable amount less than \\$5 mil!
 
-Understanding this difference is important because when you're in the realm of tech, products can be sold to anyone - hobbyists, start-ups, enterprises, etc. A decent chunk of these examples involves charging people who use the tool more (and therefore are more willing to pay), while charging regular people much less - rather than sorting their customers as "premium vs discount". Although that does happen a lot. 
+Understanding this difference is important because when you're selling something as versatile as technology, products can be sold to anyone - hobbyists, start-ups, enterprises, etc. A decent chunk of these examples involves charging people who use the tool more (and therefore are more willing to pay), while charging regular people much less - rather than sorting their customers as "premium vs discount".
 
-##### Versioning:
-Price discrimination in tech is closely to "quality versioning" (or second degree price discrimination). The idea is that a business will created slightly different models of the same product, adding or removing (usually removing) features and changing the price as a result. The company will choose their features carefully, as they can easily separate their hobbyist vs enterprise market segments on enterprise-critical features. 
+##### The importance of Versioning (2nd degree price discrimination):
+Price discrimination in tech is closely tied to "quality versioning" (or second degree price discrimination). The idea is that the producer will created variations of a core model, adding or removing (usually removing) features and changing the price as a result. The company will choose their features carefully, as they can easily separate their hobbyist vs enterprise market segments on critical features. 
 
 > **How is this clever?**  
 Versioning the quality of the product (2nd degree price discrimination) is more elegant than personal or group pricing. The other pricing schemes requires effort to collect information on their customers or enforce groupings and restrictions to prevent arbitrage (and is not even enforceable in some situations)! Versioning is clever because by adding or removing features (or adding a few bells and whistles), the **customers will sort themselves**. We'll see examples and details later!
@@ -131,7 +130,9 @@ There are a lot of examples, I could be missing way too many. I've compiled exam
 ##### IBM Laser Printers ("Information Rules", 59)
 An example that is older than me is the IBM LaserPrinter Series. The discount "LaserPrinter Series E" model was almost identical to the standard "LasterPrinter" model. The Series E printer printed at half the speed of the standard model (5 pages per minute vs 10 pages per minute). If the printers used the same parts, how could they print as such different speeds? 
 
-The "Series E" model had an additional chip that **deliberately slowed down printing speed**. The two printers were **identical, but the slower model had an additional component meant to hinder performance**! This is actually an instance, where the cost of producing and engineering the discount product is **higher** than the standard/premium product! If the "lower quality" model printed pages at a comparable speed, enterprise customers would not have a reason to purchase the professional model. As a result, IBM needed to hinder the "consumer" version so that it wasn't viable for enterprises to cheap out and use it.
+The "Series E" model had an additional chip that **deliberately slowed down printing speed**. The two printers were **identical, but the slower model had an additional component meant to hinder performance**! This is actually an instance, where the cost of producing and engineering the discount product is **higher** than the standard/premium product! Another reminder that price is not usually a function of cost! 
+
+If the "lower quality" model printed pages at a comparable speed, enterprise customers would not have a reason to purchase the professional model. As a result, IBM needed to hinder the "consumer" version so that it wasn't viable for enterprises to cheap out and use it.
 
 ##### Lenovo Thinkpad Laptops
 An important thing to establish is that Lenovo X1 Carbon laptops tend to be expensive compare to the competition. Lenovo offers good quality laptops that seem to be overpriced in terms of hardware quality to dollar. Other brands (dell, HP, etc) offer similar quality laptops for \\$200-500 less. This is important to understand as Lenovo also launches "special" sales frequently to discount their laptops by \\$200 to \\$500-600. Some of these sales made sense (Black Friday, Christmas, Labor day, etc) but other events were not-real reasons to host a sale (July sale, Spring Sale, graduation sale, etc). 
@@ -139,14 +140,14 @@ An important thing to establish is that Lenovo X1 Carbon laptops tend to be expe
 I suspect that since Lenovo laptops are bought in bulk from enterprises, the company maintains higher prices to get every dollar they can from these companies. In order to sell to regular consumers, Lenovo uses sales as a "coupon" to let them buy these laptops as well.
 
 ##### ECC support on Intel and AMD CPUs
-One of Intel & AMD's core products is a [CPU](https://en.wikipedia.org/wiki/Central_processing_unit). Essentially, the CPU is the "brains" of the computer is responsible for performing the math, logic, input/output on your computer. Error-correcting code memory (ECC) is a special feature to some memory sticks (RAM) that can correct some kinds of data corruption. These data corruptions are imperceivable to people reading articles or watching TV, but can be catastrophic for servers or scientific computing. 
+One of Intel & AMD's core products is a [CPU](https://en.wikipedia.org/wiki/Central_processing_unit). Essentially, the CPU is the "brains" of the computer is responsible for performing the math, logic, input/output on your computer. Error-correcting code memory (ECC) is a special feature to some memory sticks (RAM) that can correct instances of data corruption. These data corruptions are imperceivable to people reading articles or watching TV, but can be catastrophic for servers or scientific computing. 
 
-For some reason, Intel's consumer processors don't offer ECC-support, while their enterprise server chips do. You could argue that ECC support is a new feature, and that is very costly. Adding ECC support would only increase the cost for consumers. In addition, it could not be up to Intel, but the motherboard manufacturers to bake-in ECC support. I suspect this reasoning isn't true because the AMD consumer processors series offers ECC memory support along with their server-grade chips (at similar prices as well)!
+Intel's consumer processors don't offer ECC-support, while their enterprise server chips do. You could argue that ECC support is a new feature, and that is very costly. Adding ECC support would only increase the cost for consumers. In addition, it could not be up to Intel, but the motherboard manufacturers to bake-in ECC support. However, AMD consumer processors (a competitor that is fighting for more market share) series offers ECC memory support along with their server-grade chips (at similar prices as well)!
 
 {% assign caption_memory = "An example of a ECC memory stick"%}
 {% include caption_image.html imgpath="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Micron_PC2700_DDR_ECC_REG.JPG/300px-Micron_PC2700_DDR_ECC_REG.JPG" alt="a nvidia gpu" caption=caption_memory%}
 
-[Some people on enthusiast forums grumble and call this an "Intel Tax"](https://news.ycombinator.com/item?id=10029341), but the reality is that it's just price discrimination. Intel understands that customers who need ECC memory support do high-stakes work. These people tend to be coders, researchers, or data centers, and that means their organization is willing to pay a pretty penny for it to be done properly. 
+[Some people on enthusiast forums grumble and call this an "Intel Tax"](https://news.ycombinator.com/item?id=10029341), but the reality is that it's just price discrimination. Intel understands that customers who need ECC memory support do high-stakes work. These people tend to be coders, researchers, or data centers, and that means their organization is willing to pay a pretty penny for their infrastructure to be setup properly. 
 
 ##### Graphics Processing Units (GPU)
 A Graphics Processing Unit (GPU) is a specialized processor used to accelerated calculations used in graphics generation (i.e gaming). In the past 20 years, people have realized that they could use the GPU's parallel structure to accelerate  calculations in other fields (popular examples include machine learning, cryptocurrencies, image processing, etc).
@@ -163,7 +164,14 @@ The [Titan XP](https://www.nvidia.com/en-us/titan/titan-xp/#) and the [GTX 1080T
 | 1080				 	| \\$599.00			|
 | 1070TI				| \\$449.00			|
 
-**Why is their such a large price discepancy between the Titan XP & 1080TI?** The answer is once again, price discrimination. People who would want a Titan XP (it's higher memory, more cuda cores, higher bandwidth) makes it ideal for advanced computing. A typical video game does not need these specs to play a game "better". As a result, Nvidia can use these features to let their serious consumers separate from the hobbyists - and charge them more for it.
+|Graphic Card SKU | # CUDA cores | Memory      | Memory Interface Width | Memory Bandwidth (GB/s) | 
+|:--------------: |:------------:|:-----------:|:----------------:      | :----------------:
+| TitanXP   	  | 3840   	     | 12 GB	   | 384-bit 		        | 547.7 GB/s |
+| 1080TI          | 3584  	     | 11 GB       | 352-bit                | 484 GB/s | 
+| 1080			  | 2560	     | 8 GB        | 256-bit                | 320 GB/s |
+| 1070TI		  | 2432	     | 8 GB        | 256-bit                | 256 GB/s |
+
+**Why is their such a large price discepancy between the Titan XP & 1080TI?**  The features of the Titan XP (it's higher memory, more cuda cores, higher bandwidth) makes it ideal for advanced computing. A typical video game does not need these specs to play a game "better", but datacenters and ML platforms do. As a result, Nvidia can use these features to let their serious consumers separate from the hobbyists - and charge them more for it.
 
 ##### Overclocked Processors
 "[Overclocking](https://en.wikipedia.org/wiki/Overclocking)" is the process of increasing the frequency (the speed) over the stock, pre-configured speed that your CPU was validated for. Faster is always better (but your chip will also produce more heat)! How much a processor can overclock is determined by the quality of the silicon during the manufacturing process. If you got lucky, then your processor could overclock significantly better (called the "Silicon Lottery") than a "losing chip".
@@ -173,7 +181,7 @@ The aptly named [Silicon Lottery.com](https://siliconlottery.com/) was a site de
 The target market for "overclocked" chips is actually not enterprises. The tradeoffs, risks, and additional costs with overclocking every processor is generally not worth it for most companies. Overclocked chips seemed to be more targetted towards the "enthusiast" market.
 
 ##### Mining Cards
-The Nvidia GTX 1060 and the Nvidia P106-100 seem to be different cards - one is for gaming while the other is for mining cryptocurrencies. The P106 had drivers locked, and their was no physical output to put in a cable. [Hacking the 106 drivers and finding hardware workarounds indicated that they could perform similarly to the GTX 1060!](https://youtu.be/TY4s35uULg4). Nvidia locked down the features of a traditional "gaming" card and marketed it towards miners (who are sensitive to their mining returns). To prevent gamers from buying a cheaper GTX 1060, Nvidia locked down the features that could make this card play video games.
+The Nvidia GTX 1060 and the Nvidia P106-100 seem to be different cards - one is for gaming while the other is for mining cryptocurrencies. The P106 had drivers locked, and their was no physical output to put in a cable. [Hacking the 106 drivers and finding hardware workarounds indicated that they could perform similarly to the GTX 1060!](https://youtu.be/TY4s35uULg4). Nvidia locked down the features of a traditional "gaming" card and marketed it towards miners (who want the lowest price possible to maximize their mining returns). To prevent gamers from buying a cheaper GTX 1060, Nvidia locked down the features that could make this card play video games.
 
 ### Software
 "Information Rules: A Strategic Guide to the Network Economy" notes that software products face a massive, development cost, but can distribute licenses for (almost) free! Unfortunately, the book was written in an era of proprietary software dominance. The book may seem old with respect to how frequently the software landscape changes: introduction of new development frameworks (Scrum, Agile, Waterfall, etc), new monetization schemes (SAAS), or the introduction of open-source software. Despite the changes, the strategies they describe are still practical and exist today.  
@@ -182,12 +190,12 @@ The Nvidia GTX 1060 and the Nvidia P106-100 seem to be different cards - one is 
 Software faces a unique problem in that some of its "competitors" can offer a product for free. For instance [Stata](https://en.wikipedia.org/wiki/Stata) used to be a popular statistical software; however, the license fees have turned away new individuals from using the tool and encouraged them to seek alternatives. With the introduction of the open-source [R (the programming language)](https://en.wikipedia.org/wiki/R_(programming_language)), individuals could add features that benefit the community as a whole. Statacorp couldn't keep up with new features or performance improvements and gradually faded away. These aren't the only reasons why Stata fell behind (people still use the software), but Stata is no longer a popular statistical programming software it once was. 
 
 > **Open-source with proprietary software**
-On a more positive note, instead of competing against open-source software, companies have begun to adopt it. By incorporating open-source into their own products, companies can reduce costs and errors of their software while focusing on improving it for their customers. In fact, a majority of the big tech companies make huge contributions to the open-source community. Even Microsoft (I hope you get the irony) has made multiple contributions to open source and acquired github.
+On a more positive note, instead of competing against open-source software, companies have begun to adopt it. By incorporating open-source into their own products, companies can reduce costs and errors of their software while focusing on improving it for their customers. In fact, a majority of the big tech companies make huge contributions to the open-source community. Even Microsoft (if you're old enough to understand the irony) has made multiple contributions to open source and acquired github.
 
 > **Proprietary Software Still Strives**  
 Proprietary software and services will strive - and that's natural. Bloomberg terminals (software that provides financial data) can't be out-competed with open-source (as easily). Collecting, transcribing, and recording financial information cannot be done better (yet) - it's purely a function of resources invested into the collection of information and infrastructure.
 
-##### Adobe's Pricing
+##### Adobe's Pricing (3rd degree price discrimination)
 
 Let's examine Adobe pricing strategy through their "All Apps" package for adobe subscriptions. The table was transcribed from their [plans page](https://www.adobe.com/creativecloud/plans.html).
 
@@ -239,9 +247,9 @@ MongoDB offers both a "Community" and "Enterprise" version of their database sof
 ##### Text Editors (Sublime Text)  
 Sublime text doesn't suffer from versioning we might see in other software and offers the full-featured version for free! The only downside being that an occasional pop-up appears that suggests you purchase a license (as a long-time user I think it's not that annoying). Paying a full-license only removes the pop-up! 
 
-Don't mistake sublime's pricing as generosity. sublime isn't free because the developers are generous people (they could be). Sublime needs to compete with other free text editors that have plenty of community support and plugins - keeping Sublime free is a matter of survival. 
+Don't mistake sublime's pricing as generosity. Sublime isn't free because the developers are generous people (they could be). Sublime needs to compete with other free text editors that have plenty of community support and plugins - keeping Sublime free is a matter of survival. 
 
-# An Important Aside:
+# Answering some important questions & interjections:
 
 >**Counterpoint: Versioning your product creates new products which breaks the definition**  
 
@@ -249,15 +257,14 @@ This is true. The definition of "price discrimination" is selling the same produ
 
 >**Is everything price discrimination? (no)**  
 
-Not everything is price discrimination! Sometimes, the materials and costs of items genuinely warrant a higher price
-They're are genuine reasons for a business to raise or lower prices. For example, higher than expected demand can raise prices. Lower than expected demand can also lower costs (the cost of holding inventory may be too high, which will cause the company to try to get rid of it ASAP).  
+Not everything is price discrimination! Sometimes, the materials and costs of items genuinely warrant a higher price. They're are genuine reasons for a business to raise or lower prices. For example, higher than expected demand can raise prices. Lower than expected demand can also lower costs (the cost of holding inventory may be too high, which will cause the company to try to get rid of it ASAP).  
 
 Pricing has a strategic component beyond taking as much money as they can. We saw some of this strategy in some of our software examples. You might point to sublime having a fully-featured free version as an example of price discrimination! This might be partially true - there are strategic component to pricing. Offering a competent free-tier can be thought of as a way of acquiring users and developers in to create a network effect for your product. In addition, the more people that use your software, the more "stuck" they become in the ecosystem (also known as "Lock In"). These practices are very popular in other software as well (like the Microsoft suite, Adobe products, etc).   
 
 For the sublime example, you need to realize that the company competes with other great, free, open-source options. SublimeText might be free because the developers are generous (they are awesome people), but it's also because they are competing with open-source editors such as VIM, EMACS, Notepad++ (VSCode, atom, etc).
 
 # Pros of Price Segmentation & Welfare Economics
-My first impression is that price discrimination is a greedy move by companies to suck out each dollar from its customers, and it's true. Despite my cynical take, price discrimination has its benefits as well - mainly that it's economically "efficient" and that it increases the accessibility of a good for people.
+My first impression is that price discrimination is a greedy move by companies to suck out each dollar from its customers, and it's true. Despite my cynical take, price discrimination has its benefits as well - mainly that it's economically "efficient" and that it increases the accessibility of a good for people. These two benefits are actually two sides of the same coin. 
 
 In the earlier single pricing scheme example, there are certain market situations where a business could sell a Sprite to a customer (Bob) above the product's marginal cost, but below the market price. As a result, the business couldn't sell Bob a sprite and lose \\$0.50 profit. Economists consider this a "deadweight loss" - which is considered an inefficiency in the market. 
 
@@ -269,12 +276,14 @@ This may seem trivial with soda, but this matters for essential goods like medic
 
 **In theory**, price discrimination results in the win for the world! Whether an individual benefits or loses from this segmentation depends on where you are on the demand curve. 
 
-**Under No Price Discrimination:**
+**Who benefits from No Price Discrimination?**
 - If ${WTP} \geq {Market Price}$, you benefit from no price discrimination.
-- If ${WTP} < {Market Price}$, you are not able to buy the product.
+- If ${WTP} < {Market Price}$, you are not able to buy the product - so you lose out.
 
-**With Price Discrimination:**  
-This will depend on the degree of price discrimination, but the people who had $WTP < {Market Price}$ can now buy the product (if their willingness to pay is above the marginal cost). If price discriminate were illegal, people would have to pay the "supply and demand" cost and pay. Now, less wealthy individuals cannot afford the newest hardware or software, while giant corporations will be happy that equipment costs have gone down!
+**Who benefits from Price Discrimination?**  
+The business will (usually) always benefit from price discrimination. For people, this depends on the degree of price discrimination, but the people who had $WTP < {Market Price}$ can now buy the product (if their willingness to pay is above the marginal cost). 
+
+If price discriminate were illegal, people would have to pay the "supply and demand" cost and pay. Now, less wealthy individuals cannot afford the newest hardware or software, while giant corporations will be happy that equipment costs have gone down.
 
 # Examples of Price Discrimination With Tech  
 With the focus on tech companies abuses in privacy, democracy, and competition in the industry, people do not complain about "tech companies are abusing their power to charge me 2 dollars more for gloves". Despite this, technology still plays an increasingly larger role in pricing today. 
@@ -288,7 +297,7 @@ I used to use Lyft quite a fair bit, I didn't bother using Uber because (I remem
 
 > You might think this is a bit "crazy", but there is evidence that Uber [has collected "more than necessary" information using it's "God View" tool](https://www.wired.com/insights/2015/01/uber-privacy-woes-cautionary-tale/). In fact, the [Uber got into trouble with Apple by including a snippet of code that tagged user's iphones after deleting the app (to prevent fraud)](https://www.nytimes.com/2017/04/23/technology/travis-kalanick-pushes-uber-and-himself-to-the-precipice.html?_r=1). If you think this is only an "Uber" thing, [Lyft has had it's own privacy issues as well](https://www.theinformation.com/articles/lyft-moves-to-restrict-employee-access-to-customer-data). If you don't trust this source, the [BBC](https://www.bbc.com/news/technology-42827636) and [techcrunch](https://techcrunch.com/2018/01/25/lyft-god-view/) have seem to report it as well. I'm not sure if these practices continue given efforts to increase security and privacy requirement on mobile OS's, but I'm sure there will always be workarounds. 
 
-### "The internet is a medium for personalized pricing"** 
+### "The internet is a medium for personalized pricing" 
 The above quote is (once again) from "Information Rules: A Strategic Guide to the Network Economy" page 42. Even before "Big Data" became popular, people understood that technology had the potential to augment price segmentation. Even in 2003, [people worried about the movement to erode privacy]((https://www.economist.com/finance-and-economics/2003/10/16/theyre-watching-you)) for the sake of price discrimination. The full paper states that "powerful movement to reduce privacy that is coming from the private sector is motivated by the incentives to price discriminate" (Andrew Odlyzko. 2003. Privacy, economics, and price discrimination on the Internet. In Proceedings of the 5th international conference on Electronic commerce (ICEC ’03). Association for Computing Machinery, New York, NY, USA, 355–366. DOI:https://doi.org/10.1145/948005.948051)
 
 ### Other Uses of Technology in Price Discrimination
@@ -310,8 +319,8 @@ Despite my ominous for shadowing, there isn't really any perfect price discrimin
 
 Just because price discrimination seems infeasible, doesn't mean researchers aren't trying to increase its viability. [This article contains a nice summary of research in the field of perfect price discrimination](https://www.bruegel.org/2017/02/big-data-and-first-degree-price-discrimination/)
 
-##### ECommerce & Shopping Behavior [Ebates (Rakuten) and Honey (Paypal)]
-Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). 
+##### ECommerce & Shopping Behavior: Ebates (Rakuten) and Honey (Paypal)
+Ebates (parent company: Rakuten) and Honeys (parent company: Paypal) are tools that help you get discount items you buy online through rebates and coupons respectively. They normally use app extensions to help look for and apply discounts, as well as collecting some of your activity while shopping. I **suspect** (i.e not confirmed) that these companies are monitoring your shopping behavior in order to profile shopping behavior and price sensitivity. Although you can verify the information [Rakuten collects and Why](https://www.rakuten.com/help/article/what-data-rakuten-collects-and-why-360041231553). Whether you trust it or not is up to you.
 
 ### A Tangent: Big Data and Health care
 A common misconception is that the different quotes you get from insurance is price discrimination, but it's not! The quotes you get from insurance are based on the probability you file a claim. Given what the insurer knows about you and your habits (age, number of serious car crashes, smoking habits, etc) they get an idea of what it costs to insure you and proportionally charge you for that risk. However, insurance companies look for more factors that can help determine that risk such as credit score, employment, etc. [One examples is car insurers using your email domain as a factor](https://uk.finance.yahoo.com/news/email-address-can-see-pay-car-insurance-103744431.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAMSjLAf5e_jmjJz0MRG03MUyyuN670BcpmWwxMhfWe5furQa29lrIMHUADo3DoDXJoBExy_QGfSLnv97cZg2LHf01f9o9OXuAFPdRHgah0eDjpzuJB5iQgsZb9qAF6qT304vLmzha_GAug4GDM9vCYIReO4Hw_H47c7-NkIPDddl&_guc_consent_skip=1596872406). These factors tend to be flawed and problematic, but if you want to understand why, I recommend reading chapter 8 and 9 of "Weapons of Math Destruction".
