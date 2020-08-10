@@ -16,42 +16,42 @@ funstuff: true
 # Introduction
 This writeup is about **price discrimination** - the practice of selling the same* product at prices unique to a customer or group (Professionals seem to label it **price segmentation** or **differential pricing**). The innovation of technology makes the economics of it seem unimportant or invisible, but I think it's worth learning some constants in the industry. I'll describe the theory, use in the tech industry, and a peek of how technology and big data is used to augment its efficiency.
 - <a href="#examples-of-price-discrimination-in-tech">If you just want to skip to examples</a>
-- <a href="#examples-of-price-discrimination-with-tech  ">if you want to skip to price discrimination with tech</a>
+- <a href="#examples-of-price-discrimination-with-tech">If you want to skip to price discrimination with tech</a>
 
 \**The word "same" may not be literal, but effectively the same. For example, a super-sized big-mac and a regular big-mac are different, but they are basically the same thing*
 
 ##### Why Price Discrimination (Segmentation, Differential, etc) is interesting
-Price segmentation is interesting because it's simple in theory, but clever when its implementation. We're accustomed to this strategy because it's ubiquitous, and as a result it's almost invisible to us. However, once someone points out the illusion, you can't help but see it. 
-
-Once you've seen some examples and how it works, you'll see price discrimination all around you. 
+Price segmentation is interesting because it's simple in theory, but clever when its implemented. We (as consumers) have become to accustomed this practice that it's almost invisible to us. However, once someone points out the illusion, you can't help but see it. Once we cover the basics and some examples and how it works, you'll see price discrimination all around you. 
 
 # The Theory: Price Discrimination
-Since this is supposed to be about ***technology***, I'll try to keep the economics to a minimum. I'll try to include auxiliary information or sources in a different appendix-post if you want more details. If you want to learn more, I recommend reading an introductory econ textbook (Mankiw's "Principle of Economics"). If you want more math and proofs, a more advanced textbook is for you (Varian's "Intermediate Microeconomics: A Modern Approach" is very popular). 
+Since this is supposed to be about ***technology***, I'll try to keep the economics to a minimum. I'll try to include auxiliary information or sources in a different source if you want more details. If you want to learn more, I recommend reading an introductory econ textbook (Mankiw's "Principle of Economics"). If you want more math and proofs, a more advanced textbook is for you (Varian's "Intermediate Microeconomics: A Modern Approach" is very popular). 
 
 ### What is Price Discrimination?
 Before we get into "how or why", let's start with the basic vocabulary. **Price discrimination** is "the practice of selling the same good at different prices to different consumers" (Mankiw 837). "**Willingness to pay**" (WTP) is the "maximum amount that a buyer will pay for a good" (Mankiw 838).
 
 In layman's term, willingness to pay (WTP) is the limit to how much you would pay for a product - and people tend to have different WTP for different things. For example, Alice is addicted to sprite so her WTP for a sprite is \\$5. On the other hand, Bob prefers other drinks to sprite so his WTP for a sprite is \\$1.
 
-Due to "supply and demand" dictating a single price - people rarely pay as much as they would for a product. Let's say that a supermarket's price for a sprite is \\$2. As a result, Alice pays \\$3 less than what she was willing to pay, and Bob doesn't buy the sprite! 
+Due to "supply and demand" dictating a single price - people rarely pay as much as they would for a product. Let's say that to overall supply and demand, a supermarket's price for a sprite is \\$2. As a result, Alice pays \\$3 less than what she was willing to pay, and Bob doesn't buy the sprite! 
 
-Despite the outcome, the supermarket isn't happy with that. Management knows that Alice is willing to pay a lot more for sprite. Moreover, management buys each can of sprite for \\$0.50 from the manufacturer and understands they can sell sprite for \\$1 and still profit from Bobby. The supermarket wants to be able to get every dollar that they can and there exists a way to do it! Price discrimination is the supermarket charging Alice and Bob different prices for soda through direct (or indirect) means. 
+Despite this outcome, the supermarket isn't happy with that. Management (magically) knows that Alice is willing to pay a lot more for sprite. Moreover, management buys each can of sprite for \\$0.50 from the manufacturer and understands they can sell sprite for \\$1 and still profit from Bobby. 
+
+The supermarket wants to be able to get every dollar that they can and there exists a way to do it! Price discrimination is the supermarket charging Alice and Bob different prices for the sprite through direct (or indirect) means. 
 
 In fact, there are classifications for price discrimination that describe to what "degree" that they can identify buyer's and their WTP. These levels of price discrimination are categorized as "first", "second", and "third" degree price discrimination. If you've read "Information Rules: A Strategic Guide to the Network Economy" the authors refer to these as "personalized pricing", "versioning", and "group pricing".
 
 **1) First Degree** (also known as perfect price discrimination):
 A company can identify each customer and charge the consumer's WTP. This is almost impossible and largely considered impossible... for now.
 
-> In our example with Alice & Bob, perfect price discrimination is when the supermarket charges \\$5 to Alice, \\$1 to Bob, and the willing-to-pay for any other customer. At market price, the supermarket would have net profit of \\$1.50. Under perfect price discrimination, they're able to make \\$5 in profit (5-0.5 + 1-0.5).
+> In our example with Alice & Bob, perfect price discrimination is when the supermarket charges \\$5 to Alice, \\$1 to Bob, and the willing-to-pay for any other customer. At market price, the supermarket would have net profit of \\$1.50. Under perfect price discrimination, they're able to make \\$5 in profit (5-0.5 + 1-0.5) = \\$5.
 
 **2) Second Degree** - 
 The traditional description of 2nd degree price discrimination involves quantity or quality - giving "bulk-buy" discounts to consumers or having first-class vs economy class airline tickets. Textbooks normally give an example of "bulk-buy" discounts as an example of price discrimination, where the price per good varies with the quantity you buy (i.e buying more is cheaper). Note that the consumer **chooses** which product to pick, and that a high WTP customer may opt to purchase in bulk or the "value-brand". 
 
-In tech, we'll focus on the variations in quality (as this is a very popular choice). Shapiro and Varian describe second degree price discrimination as "offering a product line that lets users choose the version of the product that is appropriate for them."
+In tech, we'll focus on the variations in quality (as this is a very popular technique). Shapiro and Varian describe second degree price discrimination as "offering a product line that lets users choose the version of the product that is appropriate for them."
 
-> **Quantity example:** The supermarket offers individual cans of sprite for \\$4, but offers 24-packs of sprite for \\$24 (\\%1 per can). The net profit from Alice and Bob would be \\$15 (3.50 + 24 x 0.5)
+> **Quantity example:** The supermarket offers individual cans of sprite for \\$4, but offers 24-packs of sprite for \\$24 (\\$1 per can). The net profit from Alice and Bob would be \\$15 (3.50 + 24 x 0.5).
 
-> **Quality Example:** The supermarket offers "Sprite-Premium" that comes in a glass bottle for \\$4.50, but offers a "Sprite-value" that comes in a paper cup for \\$0.75. 
+> **Quality Example:** The supermarket offers "Sprite-Premium" that comes in a glass bottle for \\$4.50, but offers a "Sprite-value" that comes in a paper cup for \\$0.75. The net profit would be \\$4.25.
 
 **3) Third Degree** 
 A company will set different prices for groupings of their customers (such as senior discounts, student discounts, kids-eat free, grocery-members, etc). 
