@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fun Stuff & Hobbies
+title: Hobbies & Fun Stuff
 order: 3
 permalink: tomfoolery
 ---
