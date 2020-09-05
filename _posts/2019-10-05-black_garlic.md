@@ -7,7 +7,6 @@ published: false
 frontpage: false
 technical: false
 funstuff: true
-author: Ted
 ---
 
 
@@ -17,25 +16,39 @@ author: Ted
 # A Warning: 
 
 # Context
-<img src="/figures/chocolate_fig1.png" loading="lazy" alt="fig1" class="center-image"/> 
-<center> <font size="2"> <i>
-The final product in the video
-</i> </font> </center>  
-<br> 
 
 # Requirements
-# The Ideal Chocolate is Tempered
-
-<!-- ![tempered chocolate curve](https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg){: .center-image }  -->
-<img src="https://cdn11.bigcommerce.com/s-ham8sjk/product_images/uploaded_images/tempering-dark-chocolate.jpg" loading="lazy" alt="tempered chocolate curve" class="center-image"/> 
-<center> <font size="2"> <i>
-An example of the temperatures shifts when tempering chocolate. If the linked image link fails, google "chocolate tempering curve" to get an idea of the process
-</i> </font> </center>
-<br>
 
 
-# Sourcing Chocolate
+# Introduction
 
+In my experience, my black-garlic 
+
+I've hear descriptions that black garlic is incredibly "umami"
+
+
+# The Science Behind Black Garlic 
+
+Some people say that the process of turning garlic into black garlic is "fermentation", but in reality the process is more of "carmaliztion" or "maillardization"
+
+
+# The Rice Cooker Method
+
+### WHy does the rice cooker method work?
+I remember being very shocked that the rice cooker method working.
+
+Often when I try to recreate/reproduce tutorials on the internet, something almost always goes wrong. I was expecting the results of this black garlic tutorial to completely fail because there might be differences in our rice cookers or cooking conditions in our environment. 
+
+Why does this hack/heuristic work?
+
+**This process works because cooking rice is a very specific process**
+
+# What's eating Dan clip
+https://youtu.be/JOOSikanIlI
+
+https://youtu.be/RSTNhvDGbYI
+
+[Technology connection video]
 
 # Commentary Footnotes
 
