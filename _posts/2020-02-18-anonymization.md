@@ -7,6 +7,12 @@ permalink: data_anonymization
 frontpage: false
 technical: true
 funstuff: false
+tags:
+  - scrape
+  - data-sci
+  - scrape
+  - db
+  - security
 ---
 
 * TOC

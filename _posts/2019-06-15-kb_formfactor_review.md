@@ -38,6 +38,8 @@ However, the degree of customizability is much better.
 
 You might evaluate that the 
 
+Even though it's literally the same size as the full size keyboard, I find my hands resting at a naturally pronated position. 
+
 # 60% (no arrow keys)
 
 Too awkward without using dedicated arrow keys. If you really love VIM, you could program a dedicated layer to vim controls; however, I think it's incredibly annoying for when I need to work with an occasional CSV or spreadsheet

@@ -7,6 +7,10 @@ published: false
 frontpage: false
 technical: false
 funstuff: true
+tags:
+  - cooking
+  - misc
+  - sci
 ---
 
 

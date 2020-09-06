@@ -7,6 +7,11 @@ permalink: webscraping_tips
 frontpage: false
 technical: true
 funstuff: false
+tags:
+  - scrape
+  - data-sci
+  - db
+  - misc
 ---
 
 * TOC

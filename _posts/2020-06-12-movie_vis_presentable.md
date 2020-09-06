@@ -8,6 +8,12 @@ permalink: /barcode_critique
 frontpage: true
 technical: true
 funstuff: true
+tags: 
+  - vis
+  - ml
+  - data-sci
+  - metrics
+  - stats
 ---
 
 # Introduction

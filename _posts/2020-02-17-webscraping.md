@@ -8,6 +8,11 @@ permalink: webscraping
 frontpage: true
 technical: true
 funstuff: false
+tags:
+  - scrape
+  - data-sci
+  - db
+  - stats
 ---
 
 * TOC

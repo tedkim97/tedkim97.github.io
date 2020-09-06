@@ -7,7 +7,11 @@ published: true
 frontpage: true
 technical: false
 funstuff: true
-author: Ted
+tags:
+  - cooking
+  - misc
+  - conf
+  - sci
 ---
 
 

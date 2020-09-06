@@ -8,6 +8,8 @@ permalink: /price_differential
 frontpage: true
 technical: false
 funstuff: true
+tags:
+  - econ
 ---
 
 <!-- * TOC
