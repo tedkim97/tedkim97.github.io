@@ -2,7 +2,7 @@
 layout: post
 title: Reviewing Ratings Reviews
 subtitle: A discussion of review metrics  
-published: true 
+published: false 
 enable_latex: false
 permalink: rating_movies
 frontpage: false
