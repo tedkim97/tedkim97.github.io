@@ -9,7 +9,6 @@ technical: false
 funstuff: true
 tags:
   - cooking
-  - misc
   - conf
   - sci
 ---

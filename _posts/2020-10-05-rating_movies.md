@@ -1,14 +1,21 @@
 ---
 layout: post
-title: Movie Rating Metrics
-subtitle: A discussion of movie review metrics
-published: false
+title: Reviewing Ratings Reviews
+subtitle: A discussion of review metrics  
+published: true 
 enable_latex: false
-permalink: /rating_movies
+permalink: rating_movies
 frontpage: false
 technical: false
 funstuff: true
+tags:
+  - metrics
+  - movie
+  - review
 ---
+
+
+&#x1F440;
 
 # TODO: 
 LOOK AT OTHER MOVIE REVIEWERS ON YOUTUBE
@@ -26,6 +33,15 @@ In reality, movie ratings are not metrics, but a way of communicating informatio
 
 The reason why I bring this up is because no one wants to read a 20 page article discussing the merits and flaws of "The Emoji Movie".
 
+
+A lot of people will havbe different ways of communicating their "rating" - whethere it's a letter grade, star rating, number rating. 
+
+### The many ways ratings are used
+"Should I watch"
+"Opinion Validation"
+"Dick Measuring"
+Dick Measuring 
+
 # One Dimensional Metrics
 These measures capture the whole experience of watching a movie script, acting, cinematography, directing into a one-dimensional 
 
@@ -38,9 +54,12 @@ ex: you don't like the same movies in the same ways.
 ### Ratings (/100)
 Terrible. There's nothing more I hate than multiplying. Just because there are more numbers/values, doesn't mean that there is increased granularity. 
 
-Provides an unrealizable amount of precision between different movies (i.e this movie X is 2 points better tgab movie Y).  
+Provides an unrealizable amount of precision between different movies (i.e this movie X is 2 points better than movie Y).  
+Provides an (almost) arbitrary/inconsistent distinction between people.
 
-Provides an (almost) arbitrary 
+Out of "100" scores really only work for aggregate reviews (which to be fair is how they occur).
+
+Very sensitive to "review bombing"
 
 ### Ratings (5 star)
 Much clearly - provides the ability to compare 3 star vs 4 start
@@ -49,7 +68,29 @@ Furthermore, half values (3.5, 2.5)
 CON - Still doesn't provide good intro comparison
 Although this doesn't apply to just 5 star reviews or movies, but faces a weird skew. 
 
-https://xkcd.com/1098/
+{% assign xkcd_caption = "XKCD demonstrating how we really understand reviews"%}
+{% include caption_image.html imgpath="https://imgs.xkcd.com/comics/star_ratings.png" alt="fig2" caption=xkcd_caption%}
+
+
+### Letter Grades
+I actually think letter grades reflect
+
+### Like/Dislike
+
+### Recommend and Not Recommend
+
+
+### Recommend / Not Recommend
+Overwhelmingly Positive
+Very Postive
+Positive (few reviews)
+Most Positive
+Mixed 
+Mostly Negative
+Negative (few reviews)
+Very Negative
+Overwhelmingly Negative
+
 
 # Multi-dimensional Metrics
 PRO: Gives the audience the ability to make comparisons

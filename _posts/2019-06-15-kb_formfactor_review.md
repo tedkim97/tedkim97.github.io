@@ -8,6 +8,9 @@ permalink: /rating_movies
 frontpage: false
 technical: false
 funstuff: true
+tags:
+  - kb
+  - review
 ---
 
 I was an impressionable child, and I was enthralled with how all my favorite pro-gamers used "mechanical keyboards". After using a mechanical keyboard, I was impressed with the feeling of using one, and I really enjoyed the "click" they made (although you can't really live with/near anyone if you have a lcicky mechanical keyboard).
