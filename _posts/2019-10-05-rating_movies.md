@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rating Ratings
-subtitle: Reviewing how people rate media &#x1F440;
+subtitle: Reviewing how people rate things/media
 published: false 
 enable_latex: false
 permalink: rating_ratings
@@ -15,61 +15,59 @@ tags:
   - stats
 ---
 
-# Introduction / Why Ratings Exist 
+# Introduction 
+This is my review of review/rating systems! This sounds really dumb and is a "for-fun" project, but I think there's value in examining the metrics people use to evaluate media. 
 
-When we think of a "rating", we tend to think of some metric that represents the quality of something like a movie, song, or game. 
+### What is a rating really & my hot take?
 
-The problem with ratings describing media is that we automatically imagine them as "objective" because we're used to metrics describing objective measures (weight, volume, speed, etc).
+The definition of "rating" is a classification relating to rank or grade (i.e quality). When people think of a "rating", people think of a letter grade (A, B, C) or star system () that represents the quality of a thing (product quality, performance, etc). 
 
-Naturally, you might think of "movie" ratings as a metric for the quality of the movie. 
+Naturally, ratings are seen as "objective" through their association with measurable/indisputable qualities (performance, form factor, build quality, customer service, etc).
 
-This might seem fine superficially, except that when we try to rate somehting as abstract as "quality of media", we end up describing the **subjective** opinion on a piece of content rather on some objective attribute (that can be verified by everyone).
+
+As a result, a problem occurs when people think about ratings as a metric for the quality of media (like movies, songs, plays, or games). 
+
+Naturally, you might think of movie ratings as an objective measure for the quality of the movie, but the problem is that when people try to rate something as abstract as "quality of media", we end up describing the **subjective** opinion on a piece of content rather on some objective attribute.
+
 
 This definition might seem fitting at first, but the problem is that the "quality" of the movie is subjective. You can't measure quality of a movie when a ton of people have different opinions on how to do that. 
 
-In reality, ratings are not metrics, but a way of communicating information about the quality of the movie.
 
-The reason why I bring this up is because no one wants to read a 20 page article discussing the merits and flaws of "The Emoji Movie".
+After we realize this, we understand the problem with some rating schemes/ideas, but people are not up in arms about how flawed ratings. 
+
+This is a very pedantic/trivial aspect, but ratings (when describing media) is not a system to measure the quality of a media, but rather a system to communicate opinions about media. 
+
+### Ratings are not a measure of value, but a message about quality
+
+You might argue "if ratings are a communication means, wouldn't it be more effective and indepth ro write opinions about movies?" Maybe, but no one wants to read a 20 page article discussing the merits and flaws of "The Emoji Movie".
 
 
-A lot of people will have different ways of communicating their "rating" - whethere it's a letter grade, star rating, number rating. 
+A lot of people will have different ways of communicating their "rating" - whether it's a letter grade, star rating, number rating. 
+
+
+### The ways ratings are used
+To get everyone on the same page, I want to establish what the possible use cases for evaluating media through media is:
+
+- Recommendation, "should I watch this?"
+- Opinion Validation, "I liked this movie, does the rest of the world like this movie too?"
+- Competition, "My favorite game is 15% better than your favorite game"
+
+
+
 
 # My Tier List of Statistical ratings
 
 **Include Table of it**
 
-S - 5 Star, Recommend/Don't Recommend
-A - Tier Lists, 
+S - Recommend/Don't Recommend
+A - Tier Lists, 5 Star 
 B - 
 C - 
 D - 
 F - X/Y ratings that are greater than 10 
 
-### The ways ratings are used
-
-"Should I watch"
-"Opinion Validation" - Maybe other people don't do this (but I certainly have).
-"Dick Measuring"
-
 I like to categorize reviews in two buckets: One dimensional metrics, and multi-dimensional metrics. 
 
-### How we understand measurement 
-
-https://stattrek.com/statistics/measurement-scales.aspx
-https://towardsdatascience.com/data-types-in-statistics-347e152e8bee
-
-Steven's Four Scales: https://psychology.okstate.edu/faculty/jgrice/psyc3214/Stevens_FourScales_1946.pdf
-
-Nominal - Determination of Equality
-Ordinal - Determination of greater or less
-Interval - Determination of equality of intervals or differences
-Ratio - Determination of equality of ratios (subset of interval, but has an additional caveat that RATIO 0 is a meaningful attribute)
-
-##### "Permissible Statistics"
-Nominal - Number of cases, Mode, contingency correlation
-Ordinal - Median, Percentiles
-Interval - Mean, STD/VAR, Rank-order correlation, Product-moment correlation
-Ratio - Coefficient of variation
 
 # One Dimensional Metrics
 These measures capture the whole experience of watching a movie script, acting, cinematography, directing into a one-dimensional 
@@ -80,10 +78,6 @@ Furthermore, half values (3.5, 2.5)
 
 CON - Still doesn't provide good intro comparison
 Although this doesn't apply to just 5 star reviews or movies, but faces a weird skew. 
-
-This XKCD (although it's for amazon product reviews) demonstrates potential falls with aggregate reviews
-{% assign xkcd_caption = "XKCD demonstrating how we really understand reviews"%}
-{% include caption_image.html imgpath="https://imgs.xkcd.com/comics/star_ratings.png" alt="fig2" caption=xkcd_caption%}
 
 
 Ordinal - While restaurant ratings have a number to them, the differences between numbers don’t have a
@@ -129,12 +123,18 @@ I actually think letter grades reflect
 
 Just like our education system, media reviews 
 
+### MEH: Pro Con
+Pro: let's people weigh their own pro-cons about a movie 
+Con: Has the effect of blowing things out of proportion
+
 ### Bad: Cinema Sins
 Way of tallying how "bad" a movie is
 These tend to be problematic because you just end up watching the movie in the process.
 In addition, these movies tend to be overly critical and cringey. 
 
 To be fair I watched these cinema sins a lot! And these are not mean to be a serious critique on movies, but they're lacking and provide a distortion about the actual quality of the movie. 
+
+
 
 # Multi-dimensional Metrics
 Another under-rated factor is the quality of multi-dimensional metrics. They communicate more infromation, but they're also vulnerable to subjectivity on even **more** degrees of freedom. 
@@ -187,3 +187,33 @@ I enjoy it because I can guess movies that might appeal to hardcore movie enthus
 In conclusion, picking the right metric depends on who you're trying to communicate to.
 
 If you're trying to communicate your complex nuance about the complicated nuance of a piece of media, you shouldn't picking a one dimensional metrics 
+
+### How we understand measurement 
+
+https://stattrek.com/statistics/measurement-scales.aspx
+https://towardsdatascience.com/data-types-in-statistics-347e152e8bee
+
+Steven's Four Scales: https://psychology.okstate.edu/faculty/jgrice/psyc3214/Stevens_FourScales_1946.pdf
+
+Nominal - Determination of Equality
+Ordinal - Determination of greater or less
+Interval - Determination of equality of intervals or differences
+Ratio - Determination of equality of ratios (subset of interval, but has an additional caveat that RATIO 0 is a meaningful attribute)
+
+##### "Permissible Statistics"
+Nominal - Number of cases, Mode, contingency correlation
+Ordinal - Median, Percentiles
+Interval - Mean, STD/VAR, Rank-order correlation, Product-moment correlation
+Ratio - Coefficient of variation
+
+Why don't people use medians in ratings? Well, I suspect that the median rating for a lot of "things" look something like this:
+
+This XKCD (although it's for amazon product reviews) demonstrates potential falls with aggregate reviews
+{% assign xkcd_caption = "XKCD demonstrating how we really understand reviews"%}
+{% include caption_image.html imgpath="https://imgs.xkcd.com/comics/star_ratings.png" alt="fig2" caption=xkcd_caption%}
+
+# Rating Media is not fair because there is a bias with respect to media
+We rate things we enjoy, unlikely (or at least for me) to watch/play/listen to something unless I know i'll like it, or hate it. 
+
+### Vote Manipulation & Curation
+I used to be a big aggregate guy, that a single reviewer might not understand the needs of lay person like me

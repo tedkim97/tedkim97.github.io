@@ -12,7 +12,7 @@ tags:
   - scrape
   - data-sci
   - db
-  - prog
+  - programming
 ---
 
 * TOC

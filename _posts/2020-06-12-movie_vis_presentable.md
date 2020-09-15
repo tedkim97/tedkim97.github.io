@@ -15,7 +15,7 @@ tags:
   - metrics
   - stats
   - movie
-  - prog
+  - programming
 ---
 
 # Introduction
