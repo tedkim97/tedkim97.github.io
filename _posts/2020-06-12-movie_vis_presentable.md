@@ -16,6 +16,9 @@ tags:
   - stats
   - movie
   - programming
+curated:
+  - gaitkeep
+  - data_anonymization
 ---
 
 # Introduction

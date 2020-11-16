@@ -13,6 +13,10 @@ tags:
   - data-sci
   - db
   - programming
+curated:
+  - data_anonymization
+  - webscraping_tips
+  - gaitkeep
 ---
 
 * TOC

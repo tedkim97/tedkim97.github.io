@@ -14,6 +14,9 @@ tags:
   - db
   - misc
   - prog
+curated:
+  - data_anonymization
+  - webscraping
 ---
 
 * TOC

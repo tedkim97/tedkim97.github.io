@@ -13,6 +13,9 @@ tags:
   - scrape
   - db
   - security
+curated:
+  - webscraping_tips
+  - webscraping
 ---
 
 * TOC
