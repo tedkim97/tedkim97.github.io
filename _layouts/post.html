@@ -21,4 +21,10 @@ layout: default
   {{ content }}
 </div>
 
-{% include related_posts.html %}
+{% if page.curated %}
+  {% include curated_posts.html %}
+{% elsif page.tags %}
+  {% include advanced_related_posts.html %}
+{% else %}
+  <h3><a href="{{ site.url }}"> I don't really have anything related for now, so check out the homepage!</a></h3>
+{% endif %}
