@@ -154,7 +154,7 @@ Out of the alternative I made, I think all of them ("most frequent", "least freq
 Finally, I think my approach to fitting information into the barcode form factor is wrong. When I calculated proportion, I made this visualization more of a stacked area graph or a density time series - which is probably more fitting and visually appealing for what I'm trying to do (and I will try... later). 
 
 {% assign capex1 = "serialmentor.com giving an example of a stacked proportion chart"%}
-{% include caption_image.html imgpath="https://serialmentor.com/dataviz/visualizing_proportions_files/figure-html/health-vs-age-1.png" alt="fig3" caption=capex1%}
+{% include caption_image.html imgpath="https://clauswilke.com/dataviz/visualizing_proportions_files/figure-html/health-vs-age-1.png" alt="fig3" caption=capex1%}
 
 
 ### Concessions with Compression
