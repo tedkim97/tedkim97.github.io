@@ -12,8 +12,7 @@ tags:
   - scrape
   - data-sci
   - db
-  - misc
-  - prog
+  - programming
 curated:
   - data_anonymization
   - webscraping

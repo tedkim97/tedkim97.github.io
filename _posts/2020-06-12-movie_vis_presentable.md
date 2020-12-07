@@ -16,6 +16,8 @@ tags:
   - stats
   - movie
   - programming
+  - python
+  - numpy
 curated:
   - gaitkeep
   - data_anonymization
@@ -25,7 +27,7 @@ curated:
 There are a series of movie "barcode" visualizations that are fairly popular on the internet (I've seen them a lot on [reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/)). An example that I like is ["The average color of every 10th frame of The Lion King (1994) from beginning to end"](https://www.reddit.com/r/dataisbeautiful/comments/d6l2d0/oc_the_average_color_of_every_10th_frame_of_the/).
 
 {% assign caption1 = "An example of a popular movie visualization made by /u/SylphKnot" %}
-{% include caption_image.html imgpath="https://preview.redd.it/3w2kfg8xhmn31.jpg?width=1024&auto=webp&s=90658c02b89e48c95964c35c1e126b0357afbdb5" alt=example1 caption=caption1 %}
+{% include caption_image.html imgpath="https://preview.redd.it/3w2kfg8xhmn31.jpg?width=1024&auto=webp&s=90658c02b89e48c95964c35c1e126b0357afbdb5" alt="example1" caption=caption1 %}
 
 While these barcodes are cool visualizations about the still images (frames) in a movie, I think these visualizations could show richer detail about the colors used in our movie. This post is about my *attempt* at making a visualization scheme that shows more about how color is used while preserving the artistic qualities.
 
