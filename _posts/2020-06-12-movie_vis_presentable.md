@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Movie Visualization Critique & Improvements&#58; Movie Barcodes 
-subtitle: My critique of a popular movie-visualization genre and my suggested barcode
+title: Movie Visualization Critique & Engineering&#58; Movie Barcodes 
+subtitle: My critique of a popular visualization subgenre and a demonstration of my improved version
 published: true
 enable_latex: false
 permalink: barcode_critique
