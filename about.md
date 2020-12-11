@@ -1,12 +1,13 @@
 ---
 layout: page
-title: About
+title: About Me
 order: 5
 permalink: about
 ---
 
-# About Me
-I am currently a systems engineer at McMaster-Carr. I completed undergrad at the University of Chicago with a bachelors of arts in economics and computer science with a specialization in machine learning. Outside of work, I'm interested in machine learning for increased automation capabilities, silly visualizations, and understanding media through data science techniques. 
+I am currently a systems engineer at McMaster-Carr. I completed undergrad at the University of Chicago with a bachelors of arts in economics and computer science with a specialization in machine learning. 
+
+Outside of work, I'm interested in machine learning for increased automation capabilities, silly visualizations, and understanding media through data science techniques. 
 
 If you're interested, you can check out my [Github](https://github.com/tedkim97) or [Linkedin](https://www.linkedin.com/in/ted-kim/).
 
