@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A (More) Complete Guide To Web Scraping
-subtitle: A guide to web scraping from experience I've accumulated from different projects
+subtitle: A guide to web scraping built from my past experiences
 published: true
 enable_latex: true
 permalink: webscraping
