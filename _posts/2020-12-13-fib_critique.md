@@ -83,11 +83,15 @@ F(2n-1) = F(n)^2+F(n-1)^2 \\
 $$
 	
 # First Critique: Approximate vs Exact Solutions 
-People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for certain N's. Capel's method relies on storing large numbers as an exponentiation of two `float`'s (more specifically `numpy.float64`). [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) is useful, but doesn't provide an infinite amount of precision[^1]. 
+People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for large N's. 
+
+Capel's method relies on storing fibonacci numbers as an exponentiation of two `float`'s like $ f1 x e^{f2} $. 
+
+This is a great optimization and a nifty way of storing large numbers in less space, but [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) doesn't provide an infinite amount of precision[^1]. 
 
 [^1]: To be fair, calculating Fibonacci numbers with unsigned integers will cause errors, as the numbers of the Fibonacci sequence cause the values to overflow for most languages
 
-As a result, Capel's method for computing the sequence diverges from the actual sequence for around the `67th` term of the Fibonacci sequence. 
+As a result, Capel's method for computing the sequence becomes inaccurate from the actual sequence for around the `67th` term of the Fibonacci sequence. 
 
 ```python
 from functools import lru_cache
