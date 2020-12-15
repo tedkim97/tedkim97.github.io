@@ -81,14 +81,9 @@ F(2n+1) = F(n+1)^2+F(n)^2 \\
 F(2n) = F(n)F(n+1)+F(n-1)F(n) \\
 F(2n-1) = F(n)^2+F(n-1)^2 \\
 $$
-
-The resulting code would look something like this:
-```python
-
-```
 	
 # First Critique: Approximate vs Exact Solutions 
-People can compute the `Nth` term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for certain N's. Capel's method relies on storing large numbers as an exponentiation of two `float`'s (more specifically `numpy.float64`). [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) is useful, but doesn't provide an infinite amount of precision[^1]. 
+People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for certain N's. Capel's method relies on storing large numbers as an exponentiation of two `float`'s (more specifically `numpy.float64`). [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) is useful, but doesn't provide an infinite amount of precision[^1]. 
 
 [^1]: To be fair, calculating Fibonacci numbers with unsigned integers will cause errors, as the numbers of the Fibonacci sequence cause the values to overflow for most languages
 
