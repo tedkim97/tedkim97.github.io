@@ -60,8 +60,8 @@ The question was interesting because it didn't seem like there were any (clear) 
 
 The way you calculate the negative color is to calculate $(255, 255, 255) - (R,G,B)$. 
 
-# How to fix the behavior
-The easiest way to fix the above snippet is to change method 2's line to `255 - copy2[:,:,:3]` and all of the problems go away!
+# How to fix the behavior with `method 3`
+The easiest way to fix the above snippet is to change method 2's line to `255 - copy2[:,:,:3]` and all of the problems go away! I'll call this approach `Method 3` for now. 
 
 ```python
 copy2[:,:,:3] = 255 - copy2[:,:,:3] # no more problem
@@ -78,7 +78,7 @@ But that doesn't really explain **why** the code is behaving this way.
 Intuitively, the two snippets should behave the same! Moreover, calculating `np.abs(x - 255)` should behave the same as `255 - x`! After all $ f(x) = | x-255 |$ and $f(x) = 255 -x$ are identical for $x \leq 255$! Why does the minor fix solve the problem?
 
 ### Why it *shouldn't* work
-The reason why `np.abs(x-255) != 255-x` is because the datatype of our array is `np.uint8` - [short for "unsigned Integer with 8 bits"](https://en.wikipedia.org/wiki/Integer_(computer_science)). "Unsigned" means that the values are only positive, while the 8 represents the number of bits in our datatype - meaning that our values can only stretch from [0,255]. Evaluating `uint8 - 255` doesn't result in a negative number, but an overflow of x - 255. The relationship is represented by `(x + 1) % 256` or $(x+1) mod 256$.
+The reason why `np.abs(x-255) != 255-x` is because the datatype of our array is `np.uint8` - [short for "unsigned Integer with 8 bits"](https://en.wikipedia.org/wiki/Integer_(computer_science)). "Unsigned" means that the values are only positive, while the 8 represents the number of bits in our datatype - meaning that our values can only stretch from [0,255]. Evaluating `uint8 - 255` doesn't result in a negative number, but an overflow of x - 255. The relationship is represented by `(x + 1) % 256` or $(x+1)\mod 256$.
 
 A Demonstration:
 ```python
@@ -103,8 +103,8 @@ print(type(255 - copy1[40,125,2]))
 >> 'numpy.int32'
 ```
 
-# Which should we use? (pick `Method 2`)
-The natural extension follow-up question is, "which method should we use?", and I think hands down, `method 2` is the better option. `Method 2` is concise, cleaner, less work to write (no typing in loops), and most importantly faster (by letting the library do the heavy lifting). The trade-off is that it's harder for a beginner to understand what's happening, but I think it this case that's fine. 
+# Which should we use? (pick `Method 3`)
+The natural extension follow-up question is, "which method should we use?", and I think hands down, `method 3` is the better option. `Method 3` is concise, cleaner, less work to write (no typing in loops), and most importantly faster (98% faster by letting `numpy` do the heavy lifting). The trade-off is that it's harder for a beginner to understand what the code is doing, but I think this is fine for the time being. 
 
 We can even measure the performance increase! We can trust our results since we used the [`timeit` library](https://docs.python.org/3/library/timeit.html) to precisely measure execution time. Feel free to try on your own machine.
 

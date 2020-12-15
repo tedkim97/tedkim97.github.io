@@ -16,7 +16,7 @@ tags:
   - math
 ---
 
-[I read this interesting post about the new "fastest way" to compute the N-th term of the Fibonacci sequence](https://medium.com/cantors-paradise/fastest-fibonacci-9273e2a1805d). Overall, the post was a good read and had incredibly clever optimizations; however, I feel that the author was makes an unfair claim for "The Fastest Way to Compute the Fibonacci Sequence". Even claiming that its faster than the ["fast doubling" method for computing the Fibonacci sequence](https://www.nayuki.io/page/fast-fibonacci-algorithms) for large N.
+[I read this interesting post about the new "fastest way" to compute the N-th term of the Fibonacci sequence](https://medium.com/cantors-paradise/fastest-fibonacci-9273e2a1805d). Overall, the post was a good read and had incredibly clever optimizations; however, I feel that the author makes an unfair claim for "The Fastest Way to Compute the Fibonacci Sequence". Even claiming that its faster than the ["fast doubling" method for computing the Fibonacci sequence](https://www.nayuki.io/page/fast-fibonacci-algorithms) for large N.
 
 # A Summary of the approaches
 
@@ -24,7 +24,7 @@ tags:
 The core of the approach is to use the Binet Formula to calculate the terms of Fibonacci sequence ([link to proof](http://mathonline.wikidot.com/a-closed-form-of-the-fibonacci-sequence)) and apply some conversions using the binomial theorem and log properties. If you want to see exactly how the approach is defined, [I encourage you to read the article!](https://medium.com/cantors-paradise/fastest-fibonacci-9273e2a1805d).
 
 ##### The Binet Formula:
-$$ f(n) = \frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n} -\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right] $$
+$ fib(n) = \frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n} -\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right] $
 
 ##### The End Code (Binomial Theorem & Logs)
 
@@ -61,7 +61,7 @@ def fib_medium(n):
 ### Fast Double Matrix Exponentiation
 [If you want a more complete explanation with better examples, I recommend you read the Project Nayuki post describing and proving this fast exponentiation algorithm!](https://www.nayuki.io/page/fast-fibonacci-algorithms)
 
-Anyways - the idea behind the fast exponentiation method is that $Fib(n)$ ($F(n)$ for short) can be computed through matrix multiplication. More specifically: 
+Anyways - the idea behind the fast exponentiation method is that $fib(n)$ - $F(n)$ for short - can be computed through matrix multiplication. More specifically: 
 
 $$ \left[ \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right]^{n} = \left[ \begin{matrix} F(n+1) & F(n) \\ F(n) & F(n-1) \end{matrix} \right] $$
 
@@ -85,7 +85,7 @@ $$
 # First Critique: Approximate vs Exact Solutions 
 People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for large N's. 
 
-Capel's method relies on storing fibonacci numbers as an exponentiation of two `float`'s like $ f1 x e^{f2} $. 
+Capel's method relies on storing fibonacci numbers as an exponentiation of two `float`'s like $ f_{1} \times e^{f_{2}} $. 
 
 This is a great optimization and a nifty way of storing large numbers in less space, but [Floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) doesn't provide an infinite amount of precision[^1]. 
 
