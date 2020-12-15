@@ -118,7 +118,7 @@ expanded_form == tail_recur
 
 The proposed method is fast, but being faster (and incorrect) isn't exactly a fair comparison.
 
-# Second Critique An Easy Performance Boost
+# Second Critique: An Easy Performance Boost
 Running the snippet provided by the article on my local machine shows that the modified Binet formula is 21% faster.
 
 ```python
