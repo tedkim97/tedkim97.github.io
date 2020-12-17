@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solving a small numpy bug
+title: Solving A Small Numpy Bug
 subtitle: Quirky edge case that emphasizes the importance of understanding data types
 published: true
 enable_latex: true
