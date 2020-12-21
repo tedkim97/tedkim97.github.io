@@ -40,23 +40,35 @@ Each one-pixel wide (1px) column of this visualization represents a frame sample
 [^1]: "Significant" as in colors extracted from a clustering algorithm.
 
 ### Labeled Barcode
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="QRhzs9m"><a href="https://imgur.com/QRhzs9m">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+
+{% assign showViews = "false" %}
+
+{% include imgur.html href="https://imgur.com/QRhzs9m" id="QRhzs9m" context=showViews caption="see on imgur" %}
 
 ### The Original Image Barcode
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="xYcu3Gz"><a href="https://imgur.com/xYcu3Gz">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+{% include imgur.html href="https://imgur.com/xYcu3Gz" id="xYcu3Gz" context=showViews caption="see on imgur" %}
 
 In addition to creating this psuedo-stacked-area color chart, I tried creating some visualizations derived from the original.
 
 ### An alternative visualization: The most frequent colors
 This was created by taking the top pixel in each column of our original visualization, and creating a new one from it.
+
+{% include imgur.html href="https://imgur.com/frmAQ3Q" id="frmAQ3Q" context=showViews caption="see on imgur" %}
+
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="frmAQ3Q"><a href="https://imgur.com/frmAQ3Q">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 ### An alternative visualization: the least frequent colors
 This was created by taking the bottom pixel in each column of our original visualization.
+
+{% include imgur.html href="https://imgur.com/FghC82P" id="FghC82P" context=showViews caption="see on imgur" %}
+
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="FghC82P"><a href="https://imgur.com/FghC82P">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 ### The colors of the movie shown with equal representation
 Instead of representing colors by their frequency on the frame, we just represent them all equally. You'll notice some redundancies (as in very similar) in the colors chosen in some of the columns due to our color extraction method (more on that later).
+
+{% include imgur.html href="https://imgur.com/aCfh7sW" id="aCfh7sW" context=showViews caption="see on imgur" %}
+
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="aCfh7sW"><a href="https://imgur.com/aCfh7sW">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 
@@ -88,6 +100,8 @@ For example, our lion king visualization shows an interesting use of colors over
 
 The Bladerunner visualization shows color over time but focuses on the content of the frame (through a middle slice), rather than color. I ran an implementation of the barcode visualization described in the [blade runner post](https://redd.it/d7nw9p) on "The Simpson's Movie". If you examine the slices - you can see the faces if the Simpsons - stitched together (like Homer and Marge). This is a result of the "camera" being focused on a character speaking at those times. These visualizations only capture a small sample of color in center-frame rather than being centered. 
 
+{% include imgur.html href="https://imgur.com/HKidawr" id="HKidawr" context=showViews caption="see on imgur" %}
+
 <center><blockquote class="imgur-embed-pub" lang="en" data-id="HKidawr"><a href="https://imgur.com/HKidawr">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 # Averaging misrepresents colors
@@ -101,20 +115,17 @@ Even though these one-pixel slices can capture color schemes used in the film, a
 
 Below is an Imgur album that demonstrates some of the ideas that I'm talking about. On the left, there is an original image, and on the right is a generated color from averaging them. 
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/DvFPIRy"><a href="//imgur.com/a/DvFPIRy">Examples of Averaging Colors in Images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
-
+{% include imgur.html href="//imgur.com/a/DvFPIRy" id="a/DvFPIRy" context=showViews caption="Examples of Averaging Colors in Images" %}
 
 # Interpolation isn't about colors (but the center of the frame)
 The blade runner visualization seems to do a better job of showing variety and color. Looking at it, we can see that there are a lot of different colors on the x & y axis!
 
 The only problem is that downsampling frames to a size (image_height x 1) only **provides a vertical slice in the middle of the frame**. If you apply this process to "The Simpsons Movie", you can see faces of the characters because the director dedicates time to center framing its characters (long enough to show up in the vis). Interpolation **doesn't provide color information, but rather colors in a small center slice**. Below are other examples of this process, I recommend looking at the album below and seeing the interpolation results. If you can't, I recommend going to Imgur and zooming in to see my point. 
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/th0wXPm"  ><a href="//imgur.com/a/th0wXPm">Examples of interpolation on images</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+{% include imgur.html href="//imgur.com/a/th0wXPm" id="a/th0wXPm" context=showViews caption="Examples of interpolation on images" %}
 
 # Creating the Visualization
 The barcodes were created with opencv2, PIL, numpy, and scikit-learn. The annotations and labels were create with matplotlib. Creating these visualizations took 6-7 hours for a 2 hour movie with an 8-core processor at 4.1 GHz (100% usage). [Link to the repo: https://github.com/tedkim97/movie_visualizations](https://github.com/tedkim97/movie_visualizations).
-
-
 
 ### Color Quantization using KMeans
 I've referred to "extracting colors" with a clustering algorithm, but I'll be more specific here. When analyzing an image, the number of "colors" will probably be less than the number of unique (R,G,B) values. While humans can semantically understand the number of unique colors in an image (red, turquoise, brown) a computer can have a much harder time doing that. For example, a black image (to a human) could be composed of 40 values close to (0,0,0) such as (0,0,1), (1,0,2), (0,1,0), but a computer can struggle to determine one "color" to systematically describe them all. While I could pause every second and tally the colors used in the film, I would prefer not to do that. 
@@ -123,7 +134,7 @@ The solution to this problem is to extract colors algorithmically using the ["co
 
 There are a lot of approaches to quantization, but *machine learning* (clustering) is a fairly popular choice. The trade-off is that clustering can take a decent amount of time depending on the number of clusters or size of the dataset, and if we're running a clustering algorithm on several thousand frames of a movie, the overall processing time is long. Below are some examples of color quantization run on some random images/frames. 
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/IaiP8tc"><a href="//imgur.com/a/IaiP8tc">Comparisons of Average vs Color Quanitifaction</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+{% include imgur.html href="//imgur.com/a/IaiP8tc" id="a/IaiP8tc" context=showViews caption="Comparisons of Average vs Color Quanitifaction" %}
 
 ### Making Movies more Computable/Computationally Tractable
 Another problem is that each individual frame is too large for (relatively quick) processing through quantization. A (1920 x 1080) frame will result in \~2,000,000 million pixels. While having more, high fidelity data is nice - there is a tradeoff. 
@@ -133,7 +144,7 @@ As a result, I resized frames (with interpolation) into a fourth of their origin
 # Demonstrative Comparisons: A short clip from the "2001: The Space Odysesey"
 Let's try a clip from the ["Stargate Sequence - 2001: A Space Odyssey"](https://youtu.be/ebmwYqoUp44?t=6) to get a better idea between all of the visualizations. The clip is from 0:06 to 1:15. The sequence is a motion of colored light on a dark background (but you should just watch it yourself). To make the extracted colors more visible, the width of each "slice" in the barcode was increased for each visualization. In addition, the sampling rate was increased. 
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/f4asdaM"><a href="//imgur.com/a/f4asdaM">Space Odyssey Visualizations (sample_rate = 12, slice_width=16)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+{% include imgur.html href="//imgur.com/a/f4asdaM" id="a/f4asdaM" context=showViews caption="Space Odyssey Visualizations (sample_rate = 12, slice_width=16)" %}
 
 In the average barcode, we see that the dark background has muted the "vibrancy" in each of the colors. Since most of the frames are monochromatic (colors of the same hue), we don't see how averages collapse color variation. In the interpolated barcode, the reason why the colors are bright is that the center frame is illuminated by a white light. Finally, our extracted color visualization is able to capture the colors used in each frame, but represent the transition in the light streams as well. Using a higher number of cluster centers also doesn't show a human-perceivable difference in color.
 
@@ -144,7 +155,7 @@ The number of clusters does change the visualization, but after 5 clusters there
 
 [^2]: There wasn't a huge rationale behind the choices of these movies, these were the movies that came to mind when I thought "movies with distinct colors".
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="a/9RQDEkD"  ><a href="//imgur.com/a/9RQDEkD">Colors of (proportional)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
+{% include imgur.html href="//imgur.com/a/9RQDEkD" id="a/9RQDEkD" context=showViews caption="Space Odyssey Visualizations (sample_rate = 12, slice_width=16)" %}
 
 Off the bat, looking at a few of these images show that the *light* prevents us from getting the "pure" color palette I desire. This isn't very surprising given how lighting plays a big role in live-action and computer graphic films. 
 
