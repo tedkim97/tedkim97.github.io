@@ -41,7 +41,7 @@ Each one-pixel wide (1px) column of this visualization represents a frame sample
 
 ### Labeled Barcode
 
-{% assign showViews = "false" %}
+{% assign showViews = "true" %}
 
 {% include imgur.html href="https://imgur.com/QRhzs9m" id="QRhzs9m" context=showViews caption="see on imgur" %}
 
@@ -55,22 +55,15 @@ This was created by taking the top pixel in each column of our original visualiz
 
 {% include imgur.html href="https://imgur.com/frmAQ3Q" id="frmAQ3Q" context=showViews caption="see on imgur" %}
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="frmAQ3Q"><a href="https://imgur.com/frmAQ3Q">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
-
 ### An alternative visualization: the least frequent colors
 This was created by taking the bottom pixel in each column of our original visualization.
 
 {% include imgur.html href="https://imgur.com/FghC82P" id="FghC82P" context=showViews caption="see on imgur" %}
 
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="FghC82P"><a href="https://imgur.com/FghC82P">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
-
 ### The colors of the movie shown with equal representation
 Instead of representing colors by their frequency on the frame, we just represent them all equally. You'll notice some redundancies (as in very similar) in the colors chosen in some of the columns due to our color extraction method (more on that later).
 
 {% include imgur.html href="https://imgur.com/aCfh7sW" id="aCfh7sW" context=showViews caption="see on imgur" %}
-
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="aCfh7sW"><a href="https://imgur.com/aCfh7sW">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
-
 
 # Critique 
 In addition to the barcode visualization in the introduction - below are two more popular examples (with their links). The titles usually explain the visualization, so I won't re-describe them to you.
@@ -101,8 +94,6 @@ For example, our lion king visualization shows an interesting use of colors over
 The Bladerunner visualization shows color over time but focuses on the content of the frame (through a middle slice), rather than color. I ran an implementation of the barcode visualization described in the [blade runner post](https://redd.it/d7nw9p) on "The Simpson's Movie". If you examine the slices - you can see the faces if the Simpsons - stitched together (like Homer and Marge). This is a result of the "camera" being focused on a character speaking at those times. These visualizations only capture a small sample of color in center-frame rather than being centered. 
 
 {% include imgur.html href="https://imgur.com/HKidawr" id="HKidawr" context=showViews caption="see on imgur" %}
-
-<center><blockquote class="imgur-embed-pub" lang="en" data-id="HKidawr"><a href="https://imgur.com/HKidawr">see on imgur</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script></center>
 
 # Averaging misrepresents colors
 Averaging colors for movies are a problem because they: 
