@@ -220,7 +220,6 @@ a.sidebar-nav-item:focus {
  * within blog posts. To use, add the class of your choosing to the `body`.
  */
 
-
 .ted-theme .sidebar {
   background-color: #2E8B57;
 }
@@ -228,8 +227,6 @@ a.sidebar-nav-item:focus {
 .ted-theme .related-posts li a:hover {
   color: #2E8B57;
 }
-
-/* Base16 (http://chriskempson.github.io/base16/#default) */
 
 /* Red */
 .theme-base-08 .sidebar {
