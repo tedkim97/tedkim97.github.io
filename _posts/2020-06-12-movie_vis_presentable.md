@@ -35,7 +35,7 @@ While these barcodes are cool visualizations about the still images (frames) in 
 Since the critique and description of techniques are a bit long, let's start by looking at a few proposals I have for movie visualizations. 
 
 ##### How to read:
-Each one-pixel wide (1px) column of this visualization represents a frame sampled from the movie while the colors in each column represent the "significant"[^1] colors extracted from the frames. Their height is proportional to how frequently the color was used in the frame (i.e the bigger the portion, the more frequently the color appeared). Frames were sampled from the target movie every 24 frames, and the movies I processed were 23.98 frames per second, meaning each column approximates a second in the film.
+Each one-pixel wide (1px) column of this visualization represents a frame sampled from the movie while the colors in each column represent the "significant"[^1] colors extracted from the frames. Their height is proportional to how frequently the color was used in the frame (i.e the bigger the portion, the more frequently the color appeared). Frames were sampled from the target movie every 24 frames, and the movies I processed were 23.98 frames per second, meaning each column approximates a second in the film. If you're interested in making your own visualization, [here is a link to the repo](https://github.com/tedkim97/movie_visualizations).
 
 [^1]: "Significant" as in colors extracted from a clustering algorithm.
 
