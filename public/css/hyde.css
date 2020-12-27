@@ -228,6 +228,15 @@ a.sidebar-nav-item:focus {
   color: #2E8B57;
 }
 
+.post-concept {
+  background-color: #2E8B57;
+  padding: 4px;
+  border-radius: 5px; 
+  margin-top: 3px;
+  margin-right: 4px;
+  color: #001200;
+}
+
 /* Red */
 .theme-base-08 .sidebar {
   background-color: #ac4142;
