@@ -61,9 +61,9 @@ def fib_medium(n):
 ```
 
 ### Fast Double Matrix Exponentiation
-[If you want a more complete explanation with better examples, I recommend you read the Project Nayuki post describing and proving this fast exponentiation algorithm!](https://www.nayuki.io/page/fast-fibonacci-algorithms)
+[If you want a more complete breakdown of this method, I recommend you read the Project Nayuki post describing and proving this fast exponentiation algorithm!](https://www.nayuki.io/page/fast-fibonacci-algorithms) 
 
-Anyways - the idea behind the fast exponentiation method is that $fib(n)$ - $F(n)$ for short - can be computed through matrix multiplication. More specifically: 
+Anyways - the idea behind the fast exponentiation method is that $fib(n)$ - $F(n)$ for short - can be computed through identities derived from matrix multiplication. More specifically: 
 
 $$ \left[ \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right]^{n} = \left[ \begin{matrix} F(n+1) & F(n) \\ F(n) & F(n-1) \end{matrix} \right] $$
 
@@ -73,16 +73,25 @@ $$ \left[ \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right]^{2n} = \left[ \begi
 
 We can also use Equation (1) to derive an alternative expression for the square of our matrix:
 
-$$ \left( \left[ \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right]^n \right)^2 = \left[ \begin{matrix} F(n+1) & F(n) \\ F(n) & F(n-1) \end{matrix} \right]^2 \\ = \left[ \begin{matrix} F(n+1)^2+F(n)^2 & F(n+1)F(n)+F(n)F(n-1) \\ F(n)F(n+1)+F(n-1)F(n) & F(n)^2+F(n-1)^2 \end{matrix} \right]
+$$ \left( \left[ \begin{matrix} 1 & 1 \\ 1 & 0 \end{matrix} \right]^n \right)^2 = \left[ \begin{matrix} F(n+1) & F(n) \\ F(n) & F(n-1) \end{matrix} \right]^2 \\ = \left[ \begin{matrix} F(n+1)^2+F(n)^2 & F(n+1) \cdot F(n)+F(n) \cdot F(n-1) \\ F(n) \cdot F(n+1)+F(n-1) \cdot F(n) & F(n)^2+F(n-1)^2 \end{matrix} \right]
 $$
 
-Therefore we can write $F(2n)$ and $F(2n+1)$ in terms of $F(n)$ and $F(n+1)$: 
+With our two matrices, we observe that $F(2n)$ and $F(2n+1)$ can be written in terms of $F(n)$ and $F(n+1)$.
 
-$$
+$$ 
 F(2n+1) = F(n+1)^2+F(n)^2 \\
-F(2n) = F(n)F(n+1)+F(n-1)F(n) \\
-F(2n-1) = F(n)^2+F(n-1)^2 \\
+F(2n) = F(n) \cdot [2F(n+1) - F(n)]
 $$
+
+Just for clarification, $F(2n)$ *seems* like it relies on $F(n-1)$, but we can substitute an identity from the Fibonacci sequence ($F(n-1) = F(n+1) - F(n)$) to get rid of it.
+
+$$ 
+F(2n) = F(n) \cdot F(n+1) + F(n-1) \cdot F(n) \\
+= F(n) \cdot F(n+1) + F(n) \cdot [F(n+1) - F(n)] \\
+= F(n) \cdot [2F(n+1) - F(n)]\\
+$$
+
+This technique makes computing large N of the Fibonacci sequence really fast! For instance, calculating $ Fib(10000) $ requires us to compute $ Fib(5001), Fib(5000)$, which requires us to compute $Fib(2501), Fib(2500)$ until we reach $Fib(0), Fib(1)$. At most we make $\left \lfloor \log_{2} N \right \rfloor + 1$ calculations (opposed to the $N$ calculations we would need for the traditional approach). 
 	
 # First Critique: Approximate vs Exact Solutions 
 People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for large N's. 
@@ -104,7 +113,7 @@ from functools import lru_cache
 def fib_tail_recur(n, a0, a1):
     if(n == 0):
         return a0
-    return fib_tail_recur(n-1, a1,a1+a0)
+    return fib_tail_recur(n-1, a1, a1+a0)
 
 MIN = 0
 MAX = 70
