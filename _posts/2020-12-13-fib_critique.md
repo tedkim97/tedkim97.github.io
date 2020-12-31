@@ -12,8 +12,9 @@ tags:
   - programming
   - python
   - c
-  - optimizations
+  - optimization
   - math
+  - fibonacci
 ---
 
 [I read this interesting post about the new "fastest way" to compute the N-th term of the Fibonacci sequence](https://medium.com/cantors-paradise/fastest-fibonacci-9273e2a1805d). Overall, the post was a good read and had clever optimizations; however, I feel that the author makes an unfair claim for "The Fastest Way to Compute the Fibonacci Sequence". Even claiming that its faster than the ["fast doubling" method for computing the Fibonacci sequence](https://www.nayuki.io/page/fast-fibonacci-algorithms) for large N.
@@ -94,15 +95,11 @@ $$
 This technique makes computing large N of the Fibonacci sequence really fast! For instance, calculating $ Fib(10000) $ requires us to compute $ Fib(5001), Fib(5000)$, which requires us to compute $Fib(2501), Fib(2500)$ until we reach $Fib(0), Fib(1)$. At most we make $\left \lfloor \log_{2} N \right \rfloor + 1$ calculations (opposed to the $N$ calculations we would need for the traditional approach). 
 	
 # First Critique: Approximate vs Exact Solutions 
-People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for large N's. 
+People can compute the $N$th term of the Fibonacci sequence with a closed form expression, using the Binet formula. However, most implementations of the Binet formula give an **approximation** of the Fibonacci sequence for large N's. Capel's method relies on storing fibonacci numbers as an exponentiation of two `float`'s like $ f_{1} \times e^{f_{2}} $. 
 
-Capel's method relies on storing fibonacci numbers as an exponentiation of two `float`'s like $ f_{1} \times e^{f_{2}} $. 
-
-This is a great optimization and a nifty way of storing large numbers in less space, but [floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) doesn't provide an infinite amount of precision[^1]. 
+This is a great optimization and a nifty way of storing large numbers in less space, but [floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) doesn't provide an infinite amount of precision[^1]. As a result, Capel's method for computing the sequence becomes inaccurate from the actual sequence for around the `67th` term of the Fibonacci sequence. 
 
 [^1]: To be fair, calculating Fibonacci numbers with unsigned integers will cause errors, as the numbers of the Fibonacci sequence cause the values to overflow for most languages
-
-As a result, Capel's method for computing the sequence becomes inaccurate from the actual sequence for around the `67th` term of the Fibonacci sequence. 
 
 ```python
 from functools import lru_cache
@@ -132,9 +129,9 @@ expanded_form == tail_recur
 >> array([ True, ..., True,  True,  True,  True, False, False, False])
 ```
 
-The proposed method is fast, but being faster (and incorrect) isn't exactly a fair comparison.
+The proposed method is fast, but being faster (and incorrect) isn't exactly a fair comparison. To be clear, I think approximations are important and necessary; however, this one seems to make a large trade in accuracy for a small increase in performance. 
 
-# Second Critique: An Easy Performance Boost
+# Second Critique: An Easy Performance Boost (see Erratum)
 Running the snippet provided by the article on my local machine shows that the modified Binet formula is 21% faster.
 
 ```python
@@ -154,7 +151,7 @@ print(f'performance fibonacci_fde(): {t_fib.timeit(10)}')
 >> performance fibonacci_fde(): 4.60260459999995
 ```
 
-However, if we add memoization with [`functools.lru_cache()`](https://docs.python.org/3/library/functools.html) decorator to the fast double exponentiation algorithm, the algorithm becomes 87% faster than the new "fastest Fibonacci sequence".
+However, if we add memoization with [`functools.lru_cache()`](https://docs.python.org/3/library/functools.html) decorator to the fast double exponentiation algorithm, the algorithm becomes 87% faster than the new "fastest Fibonacci sequence". 
 
 ```python
 import timeit
@@ -183,13 +180,30 @@ t_fib_medium = timeit.Timer(functools.partial(fib_medium, n))
 print(f'performance fib_medium(): {t_fib_medium.timeit(10)}')
 
 t_fib_fd = timeit.Timer(functools.partial(fibonacci_fde, n)) 
-print(f'performance fibonacci_fde(): {t_fib.timeit(10)}')
+print(f'performance fibonacci_fde(): {t_fib_fd.timeit(10)}')
 >> performance performance fib_medium(): 3.6504553000000897
 >> performance fibonacci_fde(): 0.4611188000000084
 ```
 
+## Erratum:
+After posting this, I've realized that `lru_cache` was caching results from `_fib` between different runs - making the algorithm seem much faster than it is during timing. To make testing fair, I've added the function decorator to both functions, and the Binomial Exponent-Reduced Approximation approach is still faster. It is worth noting that converting this exponent-reduced returns an overflow error for $ N > 1500 $.
+
+# Third Critique: Code Results in Errors for moderate sized N
+My third critique is that converting our reduced values into a full Fibonacci number results in errors (limitations of numpy floats). Using `math.exp` also provides an error limit. As a result, we can't even use this implementation to retrieve the actuals terms of the Fibonacci past \~1500. 
+
+```python
+res, m = fib_medium(1500)
+
+int(np.round(res * np.exp(m))) 
+>> RuntimeWarning: overflow encountered in exp
+
+int(np.round(res * math.exp(m))) # returns error
+>> OverflowError: math range error
+
+```
+
 # Conclusion
-Overall I like the Medium post about a new strategy for computing the Fibonacci sequence - there was cool math and clever optimizations. However, the solution only provides an approximation that barely beats the Fast Double Exponentiation method, and loses if caching is implemented. 
+Overall I like the Medium post about a new strategy for computing the Fibonacci sequence - there was cool math and clever optimizations. However, the solution only provides an*approximation* that barely beats the Fast Doubling method, and isn't as usable. 
 
 
 
