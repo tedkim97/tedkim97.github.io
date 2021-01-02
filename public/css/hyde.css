@@ -32,7 +32,6 @@
  */
 
 html {
-  /*font-family: "PT Sans", Helvetica, Arial, sans-serif;*/
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
@@ -53,8 +52,6 @@ html {
   color: #9a9a9a;
 }
 
-/*still deciding on whether I want the scrollbar or not*/
-
 /*html::-webkit-scrollbar {
   display: none;
 }
@@ -64,7 +61,7 @@ html {
   scrollbar-width: none;
 }*/
 
-/*Markdown TOC styling*/
+/*Markdown Table of Content styling*/
 #markdown-toc::before {
     content: "Table of Contents";
     font-weight: bold;
@@ -97,7 +94,6 @@ html {
  * Flexible banner for housing site name, intro, and "footer" content. Starts
  * out above content in mobile and later moves to the side with wider viewports.
  */
-
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
@@ -151,7 +147,6 @@ a.sidebar-nav-item:focus {
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
  * contents to the bottom of the sidebar in tablets and up.
  */
-
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
@@ -161,13 +156,21 @@ a.sidebar-nav-item:focus {
   }
 }
 
+/*Related posts preview*/
+.post-concept {
+  background-color: #2E8B57;
+  padding: 4px;
+  border-radius: 5px; 
+  margin-top: 3px;
+  margin-right: 4px;
+  color: #001200;
+}
 
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
  * with a 25%-wide `.sidebar`.
  */
-
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
@@ -188,13 +191,11 @@ a.sidebar-nav-item:focus {
   }
 }
 
-
 /*
  * Reverse layout
  *
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
-
 @media (min-width: 48em) {
   .layout-reverse .sidebar {
     left: auto;
@@ -226,15 +227,6 @@ a.sidebar-nav-item:focus {
 .ted-theme .content a,
 .ted-theme .related-posts li a:hover {
   color: #2E8B57;
-}
-
-.post-concept {
-  background-color: #2E8B57;
-  padding: 4px;
-  border-radius: 5px; 
-  margin-top: 3px;
-  margin-right: 4px;
-  color: #001200;
 }
 
 /* Red */
