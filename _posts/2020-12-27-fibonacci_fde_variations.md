@@ -203,7 +203,7 @@ The fast doubling recursion for $Fib(n)$ makes a recursive call to $Fib(\left \l
 
 Implementing this with a "bottom-up" approach is complicated because there is no clear way of calculating all of the intermediate terms from $Fib(0)$ to $Fib(N)$. Our floor-division operation ($\left \lfloor N / 2 \right \rfloor$) is not [injective](https://en.wikipedia.org/wiki/Injective_function)[^1], meaning that it collapses values like $152$ or $153$ into the same value ($76$)! This means that given $Fib(n)$, it's unclear whether we should compute $Fib(2n)$ or $Fib(2n+1)$ to compute an arbitrary Fibonacci number. In order words, it's easy to compute a "top-down" path from $n$ to $0$, but difficult to compute a "bottom-up" path from $0$ from $n$. It might be easy to compute the sequence of N's for very small values like 2 or 3, but becomes difficult for large n like 10000, 999901, etc. 
 
-In terms of this visualization, it's easy to figure out a path from any node on the tree to the root $0$ (just divide by 2), but difficult to start at 0 and reach an arbitrary node.   
+In terms of this visualization, it's easy to figure out a path from any node on the tree to the root $Fib(0)$ (just divide by 2), but difficult to start at $Fib(0)$ and reach an arbitrary node.   
 
 [^1]: Therefore not bijective - ohohoho.
 
