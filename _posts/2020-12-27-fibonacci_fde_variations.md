@@ -21,12 +21,12 @@ tags:
 ---
 
 # Introduction
-As a programming exercise, I like to implement the iterative and tail-recursive versions of recursive functions (even if the language doesn't support [Tail Call Optimizations](https://en.wikipedia.org/wiki/Tail_call). This isn't necessarily a rewarding habit, but I just find it fun. [After critiquing a medium post about "the new fastest Fibonacci sequence"]({% link _posts/2020-12-13-fib_critique.md %}), I decided to try to write the fast doubling method for computing the Fibonacci sequence as iteratively and tail-recursively. This was one of the more complicated recursions I've converted, and I'll try to explain why. [If you just want to see the code, here's the repo.](https://github.com/tedkim97/fibonacci-fd-comparisons)
+As a programming exercise, I like to implement the iterative and tail-recursive versions of recursive functions (even if the language doesn't support [Tail Call Optimizations](https://en.wikipedia.org/wiki/Tail_call). This isn't really a rewarding habit, but I just find it fun. [After critiquing a medium post about "the new fastest Fibonacci sequence"]({% link _posts/2020-12-13-fib_critique.md %}), I decided to try to write the fast doubling algorithm iteratively and tail-recursively. This was one of the more complicated recursions I've converted, and I'll try to explain why. [If you just want to see the code, here's the repo.](https://github.com/tedkim97/fibonacci-fd-comparisons)
 
-As a quick spoiler/note - my implementations are not *true* translations of the naive recursion. While their time and space complexities are **asymptotically** the same, the runtime complexities of my implementation are O(log(n)) + O(log(n)) rather than O(log(n)). Furthermore, my versions take a bit more space. 
+As a quick spoiler/note - my implementations are not *true* translations of the naive recursion. While their time and space complexities are **asymptotically** the same, the runtime complexities of my implementation are $ O(log(n)) + O(log(n)) $ rather than $ O(log(n)) $. Although the python iterative/tail-recursive implementations were faster then the recursive method. The trade-off is that, my versions take a bit more memory. 
 
 ### What is Tail Call Recursion? What is Tail Call Optimization (TCO)?
-In a very quick and over-simplified way, [Tail Call Recursion](https://en.wikipedia.org/wiki/Tail_call) is a special recursive case where the last subroutine of a function is a call to itself. A very popular example is recursions for factorial. While a recursive version of the factorial function looks like this: 
+In an over-simplified description, [Tail Call Recursion](https://en.wikipedia.org/wiki/Tail_call) is a special recursive case where the last subroutine of a function is a call to itself. A very popular example is recursions for factorial. While a recursive version of the factorial function looks like this: 
 
 ```c
 int fac(int n){
@@ -51,11 +51,11 @@ The reason why we might want this tail call recursion is because our compiler/in
 
 ```asm
 fac:
-... ; other stuff
+... // other stuff that we can ignore
 .L15:
   .cfi_restore_state
   leal  -2(%rbx), %edi
-  call  fac ; RECURSION HERE
+  call  fac // RECURSION HERE
 ``` 
 
 ```asm
@@ -63,13 +63,14 @@ fac_tr:
 .LFB13:
   .cfi_startproc
   testl %edi, %edi
-... ; NO RECURSION HERE (you can check for yourself)
+... // NO RECURSION HERE (but feel free to compile and check)
 ```
 
 # Implementations
-I've programmed my implementations in C, C#, and Python (I might do Haskell or F# later). My first version was written in Python, but CPython provides no TCO optimizations! The second version was written in C because the gcc compiler provides optimizations on sibling and tail recursive calls, but the algorithm only produces wrong answers as the unsigned 64-bit integer overflows (I know that C also has Big Integer libraries - I just didn't feel like it). For my third implementation I decided on C# because it provides high-level abstractions like `BigInteger` with optimizations from the JIT. 
+I've programmed my implementations in C, C#, and Python (I might do Haskell or F# later). My first version was written in Python, but CPython provides no TCO optimizations! The second version was written in C because the gcc compiler provides optimizations on sibling and tail recursive calls, but the algorithm only produces wrong answers as the unsigned 64-bit integer overflows (I know people provide Big Integer libraries - I just didn't feel like using it). For my third implementation I decided on C# because it provides high-level abstractions like standard library `BigInteger` with optimizations from the JIT. 
 
-I'll just share the python versions because it's the simplest to understand. [The others are on a git repo](https://github.com/tedkim97/fibonacci-fd-comparisons).
+I'll display the python snippets because it's the simplest to understand. [The others (along with performance benchmarks) are on a git repo](https://github.com/tedkim97/fibonacci-fd-comparisons).
+
 ```python
 # Tail Recursive Fast Double Exponentiation - O(log n)
 def _fib_fd_tail_recursive(n: int, listn: list, ind: int):
@@ -141,7 +142,7 @@ FD Tail Recursion(100000) <BigInteger> (ticks)
 trials=1000 - avg=11331.992 - std=718.4570564313501 - min=10694 - max=17592
 ```
 
-Just for completeness, below are our results with using `ulong`. This datatype will run into the same problems as our C implementation.
+Just for fun, I also included results using `ulong`. This datatype will run into the same problems as our C implementation.
 ```bash
 Iteration(100000) <ulong> (ticks)
 trials=1000 - avg=2763.548 - std=549.7612679118089 - min=2499 - max=8785
@@ -165,7 +166,7 @@ fib_fd_tr(100000) => 4.225305200000008
 ```
 
 # Complications In Translation
-You might be wondering why my implementations look so complicated when they come from a [clean recursion this guy provides](https://www.nayuki.io/page/fast-fibonacci-algorithms). After all, the `O(n)` solution has a simple iterative and tail recursive forms. Why shouldn't the fast doubling method have one too?
+You might be wondering why my implementations look so complicated and ugly, especially when they come from a [clean recursion this guy provides](https://www.nayuki.io/page/fast-fibonacci-algorithms). The `O(n)` algorithm has a simple iterative and tail recursive forms - why shouldn't the fast doubling method have one too?
 
 ```python
 # Simple Iteration - O(n)
@@ -184,19 +185,28 @@ def fib_tail_recursive(n: int, n0, n1):
 ```
 
 ### Why isn't there a simple solution?
-Let's understand the complications of "bottom-up" algorithm writing by *visualizing (wow so cool)* recursions of the naive and fast doubling method!
+Let's understand the complications of writing a "bottom-up" algorithm by visualizing recursions of the `O(n)` recursion and fast doubling method!
 
 #### Visualizing O(n) Tail Recursion 
+Below are recursive calls $Fib(7)$ would make. 
+
 {% include fib_naive_vis.html %}
 
-Creating an iterative or tail recursive version of the `O(n)` Fibonacci sequence is simple is because solving the problem "bottom-up" is simple. The ordering of `n` doesn't matter because as long as we add properly and the right number of times, the "direction" of the operation doesn't matter. 
+Creating an iterative or tail recursive version of the $O(n)$ Fibonacci sequence is "easy" because solving the problem "bottom-up" is simple. The ordering of $n$ doesn't matter because as long as we add our numbers correctly (and the right number of times), the "direction" of the operation doesn't matter. In terms of the visualization, it's easy to find a path from $Fib(n)$ from $Fib(0)$ and vice versa. 
 
 #### Visualizing The Fast Doubling Method O(log(n))
-**For clarification:** Fib(n) returns a tuple with $n$ and $n+1$ term of the Fibonacci sequence. 
+Below are recursive calls $Fib(7), Fib(6), Fib(5), Fib(4)$ would make. (As a reminder: $Fib(n)$ returns a tuple with the $n$th and $n+1$th term of the Fibonacci sequence. Furthermore, the fast doubling method allows us to calculate $Fib(2n), Fib(2n+1)$ and given $Fib(n), Fib(n+1)$.)
 
 {% include fib_fd_vis.html %}
 
-Just to establish the basics, the fast doubling recursion for $Fib(n)$ makes a recursive call to $Fib(\left \lfloor n / 2 \right \rfloor)$. It takes those results and computes $(F(2n), F(2n+1))$. Depending on $n$ our function returns a tuple of $(F(2n), F(2n+1))$ or $F((2k+1), F(2k+2))$ respectively. Implementing this with a "bottom-up" approach is complicated because there is no clear way of calculating all of the intermediate terms from $Fib(0)$ to $Fib(N)$. Our floor-division operation ($\left \lfloor N / 2 \right \rfloor$) is **not** bijective - as a result it's not invertible! In terms of this visualization, it means we can compute a "top-down" path given $0$ to $n$, but it means we **can't** compute a "bottom-up" path to $n$ from $0$.
+The fast doubling recursion for $Fib(n)$ makes a recursive call to $Fib(\left \lfloor n / 2 \right \rfloor)$. Depending on the parity of $n$, our function will use $Fib(\left \lfloor n / 2 \right \rfloor)$ to compute $(Fib(n), Fib(n+1))$ (even) or $(Fib(n+1), Fib(n+2))$ (odd).
+
+Implementing this with a "bottom-up" approach is complicated because there is no clear way of calculating all of the intermediate terms from $Fib(0)$ to $Fib(N)$. Our floor-division operation ($\left \lfloor N / 2 \right \rfloor$) is not [injective](https://en.wikipedia.org/wiki/Injective_function)[^1], meaning that it collapses values like $152$ or $153$ into the same value ($76$)! This means that given $Fib(n)$, it's unclear whether we should compute $Fib(2n)$ or $Fib(2n+1)$ to compute an arbitrary Fibonacci number. In order words, it's easy to compute a "top-down" path from $n$ to $0$, but difficult to compute a "bottom-up" path from $0$ from $n$. It might be easy to compute the sequence of N's for very small values like 2 or 3, but becomes difficult for large n like 10000, 999901, etc. 
+
+In terms of this visualization, it's easy to figure out a path from any node on the tree to the root $0$ (just divide by 2), but difficult to start at 0 and reach an arbitrary node.   
+
+[^1]: Therefore not bijective - ohohoho.
+
 
 ### Asymptotically the same, but slightly different. 
 Like I mentioned earlier, my iterative and tail-recursive versions are not true translations of the fast doubling method. While the time and space complexities are asymptotically the same, my implementations take a bit more time and space than the naive recursion. The iterative and recursive versions have an overhead of `O(log n) + O(log n)`. The process of calculating the n to iterate takes \~O(log n), and the fast doubling calculations also takes another \~`O(log n)`. The space complexity of the iterative and tail-recursive function is `O(log n)`. Some people might say that the space complexity of the naive fast doubling algorithm is `O(1)`, but if you factor in memory taken on the stack, then the space complexities are the same. Although my tail recursive version requires takes more parameters (and a bit more memory as a result). 
@@ -249,4 +259,4 @@ fib_fde_tail_recursive:
 ```
 
 # Conclusion
-This was a lot of work for such little payoff. 
+This was a lot of work for a small payoff. 
