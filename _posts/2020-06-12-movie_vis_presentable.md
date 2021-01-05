@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Movie Visualization Critique & Engineering&#58; Movie Barcodes 
-subtitle: My critique of a popular visualization subgenre and a demonstration of my improved version
+subtitle: Critique of a popular visualization subgenre and a demonstration of my improved version
 published: true
 enable_latex: false
 permalink: barcode_critique
@@ -21,6 +21,12 @@ tags:
 curated:
   - gaitkeep
   - data_anonymization
+concepts:
+  - k-means
+  - color
+  - movies
+  - data visualizations
+  - machine learning
 ---
 
 # Introduction

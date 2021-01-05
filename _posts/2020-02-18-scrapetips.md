@@ -16,6 +16,10 @@ tags:
 curated:
   - data_anonymization
   - webscraping
+concepts:
+  - selenium
+  - javascript
+  - sms
 ---
 
 * TOC

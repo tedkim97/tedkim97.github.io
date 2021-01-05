@@ -18,6 +18,10 @@ tags:
   - optimization
   - recursion
   - fibonacci
+concepts:
+  - fibonacci
+  - recursion
+  - TCO
 ---
 
 # Introduction

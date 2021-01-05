@@ -17,6 +17,12 @@ curated:
   - data_anonymization
   - webscraping_tips
   - gaitkeep
+concepts:
+  - webdev
+  - html
+  - urls
+  - selenium
+  - javascript
 ---
 
 * TOC

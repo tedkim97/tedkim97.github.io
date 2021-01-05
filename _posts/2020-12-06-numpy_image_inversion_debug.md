@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Solving A Small Numpy Bug
-subtitle: Quirky edge case that emphasizes the importance of understanding data types
+subtitle: Quirky edge case that emphasizes the importance of data types
 published: true
 enable_latex: true
 permalink: numpy_dt_quirks
@@ -14,6 +14,10 @@ tags:
   - ml
   - bugfix
   - numpy
+concepts:
+  - image-processing
+  - numpy
+  - datatypes
 ---
 
 # Interesting Debug

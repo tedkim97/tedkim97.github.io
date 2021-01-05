@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Critique of "The Fastest Fibonacci Sequence"
-subtitle: Mainly my critique of the Binet Formula
+subtitle: (but really I'm just critiquing the Binet Formula)
 published: true
 enable_latex: true
 permalink: fib_critique
@@ -15,6 +15,10 @@ tags:
   - optimization
   - math
   - fibonacci
+concepts:
+  - fibonacci
+  - approximations
+  - math
 ---
 
 [I read this interesting post about the new "fastest way" to compute the N-th term of the Fibonacci sequence](https://medium.com/cantors-paradise/fastest-fibonacci-9273e2a1805d). Overall, the post was a good read and had clever optimizations; however, I feel that the author makes an unfair claim for "The Fastest Way to Compute the Fibonacci Sequence". Even claiming that its faster than the ["fast doubling" method for computing the Fibonacci sequence](https://www.nayuki.io/page/fast-fibonacci-algorithms) for large N.

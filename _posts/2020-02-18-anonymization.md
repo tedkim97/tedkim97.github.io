@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Anonymization Schemes
-subtitle: A technique for anonymization and/or pseudonymization
+subtitle: Technique for anonymization and/or pseudonymization
 published: true
 permalink: data_anonymization
 frontpage: false
@@ -16,6 +16,9 @@ tags:
 curated:
   - webscraping_tips
   - webscraping
+concepts:
+  - ethics
+  - cryptographic hashes
 ---
 
 * TOC

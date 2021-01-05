@@ -10,6 +10,10 @@ technical: false
 funstuff: true
 tags:
   - econ
+concepts:
+  - price-discrimination
+  - segmentation
+  - pricing
 ---
 
 <!-- * TOC
