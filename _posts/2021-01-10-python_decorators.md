@@ -168,7 +168,4 @@ train() # will send an email when done
 
 ```
 # Conclusion
-Feel free to use these if you think they can benefit you. [Github gist is right here.](https://gist.github.com/tedkim97/32e4ce8d371d2d726ba26b1a556f4790)
-
- 
- 
+Feel free to use these if you think they can benefit you. [Github gist is right here.](https://gist.github.com/tedkim97/32e4ce8d371d2d726ba26b1a556f4790) Maybe at a comment if this helped.
