@@ -157,15 +157,29 @@ a.sidebar-nav-item:focus {
   }
 }
 
+/*List Of Posts*/
+.list-of-posts {
+  margin: 0;
+  padding: 0;
+}
+
+.sans-marker {
+  list-style-type: none;
+  margin-bottom: 35px;
+}
+
 /*Related posts preview*/
 .post-concept {
+  display: inline-block;
   background-color: #2E8B57;
-  padding: 4px;
+  padding: 5px;
   border-radius: 5px; 
-  margin-top: 3px;
+  margin-top: 5px;
   margin-right: 4px;
-  color: #001200;
+  color: white;
 }
+
+
 
 /* Container
  *
@@ -215,13 +229,7 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
- */
-
+/* Color Themes */
 .ted-theme .sidebar {
   background-color: #2E8B57;
 }
@@ -229,40 +237,3 @@ a.sidebar-nav-item:focus {
 .ted-theme .related-posts li a:hover {
   color: #2E8B57;
 }
-
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
-.theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
-.theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
-.theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
