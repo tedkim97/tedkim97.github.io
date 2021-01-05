@@ -172,9 +172,11 @@ a.sidebar-nav-item:focus {
 .post-concept {
   display: inline-block;
   background-color: #2E8B57;
-  padding: 5px;
+  padding: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
   border-radius: 5px; 
-  margin-top: 5px;
+  margin-top: 4px;
   margin-right: 4px;
   color: white;
 }
