@@ -7,7 +7,7 @@ enable_latex: true
 permalink: fib_critique
 frontpage: false
 technical: true
-funstuff: true
+funstuff: false
 tags:
   - programming
   - python
