@@ -93,33 +93,33 @@ from bs4 import BeautifulSoup
 import os
 
 def download_urls(urls: list):
-	for index, link in enumerate(urls):
-		r = requests.get(link)
-		if(r.status_code == 200):
-			with open('saved{}.html'.format(index), 'wb') as file:
-				file.write(r.content)
-	return 
+  for index, link in enumerate(urls):
+    r = requests.get(link)
+    if(r.status_code == 200):
+      with open('saved{}.html'.format(index), 'wb') as file:
+        file.write(r.content)
+  return 
 
 def store_data(data):
-	'''
-	Store Data
-	'''
+  '''
+  Store Data
+  '''
 
 def scrape_saved_html(data_dir):
-	for fname in os.listdir(data_dir):
-		with open(fname, 'rb') as file:
-			soup = BeautifulSoup(file.read(), 'html.parser')
-			'''
-			Extract Information
-			'''
-			store_data(extracted_info)
-	return 
+  for fname in os.listdir(data_dir):
+    with open(fname, 'rb') as file:
+      soup = BeautifulSoup(file.read(), 'html.parser')
+      '''
+      Extract Information
+      '''
+      store_data(extracted_info)
+  return 
 
 if __name__ == '__main__':
-	pages = ['www.xyz.com/page={}'.format(i) for i in range(10)]
-	download_urls(pages)
-	scrape_saved_html('/')
-	print('done scraping')
+  pages = ['www.xyz.com/page={}'.format(i) for i in range(10)]
+  download_urls(pages)
+  scrape_saved_html('/')
+  print('done scraping')
 ```
 # Understanding HTML & URLs
 Now that we know the abstract steps to web scraping, the next step is to figure out implementation - the *how* to scrape and *which* pages to scrape. Having an "okay" understanding of the web will make requesting and parsing (steps 1 and 4) much easier. 
@@ -233,22 +233,22 @@ driver = webdriver.Chrome(options=browser_options)
 driver.get('somewebsite.com/test')
 
 try:
-    load_button = driver.find_element_by_class_name(button_class)
-    load_button.click()
-    time.sleep(2) # give time for the content to load
-    web_content = driver.page_source
-    '''
-    save web_content
-    '''
+  load_button = driver.find_element_by_class_name(button_class)
+  load_button.click()
+  time.sleep(2) # give time for the content to load
+  web_content = driver.page_source
+  '''
+  save web_content
+  '''
 except:
-	'''
-	NOTE: the webdriver might fail to find the button for several reasons.
-	Common reasons include: 
-	1) typo in the class name
-	2) the Internet did not load the button in time
-	3) the button does not exist on the page (ever) 
-	'''
-	print("failed to find button")
+  '''
+  NOTE: the webdriver might fail to find the button for several reasons.
+  Common reasons include: 
+  1) typo in the class name
+  2) the Internet did not load the button in time
+  3) the button does not exist on the page (ever) 
+  '''
+  print("failed to find button")
 ```
 Selenium offers a way of retrieving the first example that fits the criteria (`find_element_by_class_name`), or every element that fits the criteria (`find_elements_by_class_name`). It's up to you to decide how to locate the right elements to interact with, and how to ignore the wrong buttons. 
 
@@ -262,17 +262,17 @@ Selenium throws exceptions for situations where it can't execute an instruction.
 from selenium.common.exceptions import NoSuchElementException
 
 try:
-	button_press(x)
+  button_press(x)
 except NoSuchElementException:
-	print("could not clickbutton")
-	'''
-	However you handle it
-	'''
+  print("could not clickbutton")
+  '''
+  However you handle it
+  '''
 except:
-	print("Different exception")
-	'''
-	Do whatever you want
-	'''
+  print("Different exception")
+  '''
+  Do whatever you want
+  '''
 ```
 ##### Selenium Tip: Manage Browser Version 
 If you try to open a webdriver, and get an error like `...: Message: session not created: This version of ChromeDriver only supports Chrome version XYZ`. The solution is to install a compatible webdriver from the internet. There is another solution that requires no additional configuration detailed in this [stack exchange post](https://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path/52878725#52878725) if you don't want to manage something like that.
@@ -358,17 +358,17 @@ URLS = ['xyz.com/page1', 'xyz.com/page2', 'xyz.com/page3', ...]
 index_slice = len(URLS) / num_threads
 
 def download_html(datadir, urls):
-	for link in urls:
-		'''
-		Request Page 
-		'''
-		saveto(datadir, data)
-	return
+  for link in urls:
+    '''
+    Request Page 
+    '''
+    saveto(datadir, data)
+  return
 
 for i in range(num_threads):
-	thread_arg = ('mydata/', URLS[(i * index_slice): (i+1) * index_slice])
-	tmpt = threading.Thread(target=download_html, args=thread_arg)
-	tmpt.start()
+  thread_arg = ('mydata/', URLS[(i * index_slice): (i+1) * index_slice])
+  tmpt = threading.Thread(target=download_html, args=thread_arg)
+  tmpt.start()
 ```
 
 **Extracting:**
@@ -381,17 +381,17 @@ PAGES = ['mydata/{}'.format(fname) for fname in os.listdir('mydata/')]
 index_slice = len(PAGES) / num_threads
 
 def scrape_data(webpages: list, additional_params):
-	for src in webpages:
-		'''
-		Scrape 
-		'''
-		writeto(database, scraped_data)
-	return
+  for src in webpages:
+    '''
+    Scrape 
+    '''
+    writeto(database, scraped_data)
+  return
 
 for i in range(num_threads):
-	thread_arg = (PAGES[(i * index_slice): (i+1) * index_slice], 'abc', 6)
-	tmpt = threading.Thread(target=scrape_data, args=thread_arg)
-	tmpt.start()
+  thread_arg = (PAGES[(i * index_slice): (i+1) * index_slice], 'abc', 6)
+  tmpt = threading.Thread(target=scrape_data, args=thread_arg)
+  tmpt.start()
 ```
 
 ### Complications
