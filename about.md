@@ -12,7 +12,7 @@ Outside of work, I'm interested in machine learning for increased automation cap
 If you're interested, you can check out my [Github](https://github.com/tedkim97) or [Linkedin](https://www.linkedin.com/in/ted-kim/).
 
 # About this Site
-This is my dual blog-portfolio site that I update in my free time. This contains complete aspects of my side projects, notes and write-ups from my past experiences and research. 
+This is my dual blog-portfolio site that I update in my free time. This contains complete aspects of my side projects, notes and write-ups from my past activities, work, and research. Minimal javascript (except for occasional latex, d3, and some imgur linking).
 
 I try to not upload content that already exists (ex: numpy tips, how to run a linear regression) unless I can add value to it. I write these posts for completeness - meaning that their might be redundancies depending on your expertise. The "Technical Content" and "Hobbies" post tend to overlap because some of these projects tend to be my hobbies!
 
