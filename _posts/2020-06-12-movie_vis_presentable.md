@@ -4,7 +4,7 @@ title: Movie Visualization Critique & Engineering&#58; Movie Barcodes
 subtitle: Critique of a popular visualization subgenre and a demonstration of my improved version
 published: true
 enable_latex: false
-permalink: barcode_critique
+permalink: better_barcode_vis
 frontpage: true
 technical: true
 funstuff: true

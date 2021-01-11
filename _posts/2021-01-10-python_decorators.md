@@ -21,7 +21,9 @@ concepts:
 ---
 
 # TL;DR
-I wrote a set of Python decorators that I use while writing/debugging code. [Here's the link to the gist](https://gist.github.com/tedkim97/32e4ce8d371d2d726ba26b1a556f4790). Read more if you want a dramatization with the reasoning. 
+I wrote a set of Python decorators that I use while writing/debugging code. [Here's the link to the gist](https://gist.github.com/tedkim97/32e4ce8d371d2d726ba26b1a556f4790). Although if you have an incredibly complex piece of python code, odds are you should just use a IDE or debugger... 
+
+Read more if you want a dramatization with the reasoning. 
 
 # Introduction & Why
 I end up using python as a prototyping language because it has dynamic typing and deep library support. In addition, Python is a popular language for statistical libraries, so I also end up working with numpy arrays frequently.
