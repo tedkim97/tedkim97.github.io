@@ -139,7 +139,7 @@ Another problem is that each individual frame is too large for (relatively quick
 As a result, I resized frames (with interpolation) into a fourth of their original size. A (1920 x 1080) frame becomes (480 x 270) - which is only \~130,000 pixels. This resizing does result in a loss of image quality, and shifts in the coloring of the pixels, but when I examined the original and resized images, they seemed pretty close. 
 
 # Demonstration: A short clip from the "2001: The Space Odysesey"
-Let's try a clip from the ["Stargate Sequence - 2001: A Space Odyssey"](https://youtu.be/ebmwYqoUp44?t=6) to get a better idea between all of the visualizations. The clip is from 0:06 to 1:15. The sequence is a motion of colored light on a dark background (but you should just watch it yourself). To make the extracted colors more visible, the width of each "slice" in the barcode was increased for each visualization. In addition, the sampling rate was increased. 
+Let's try a clip from the ["Stargate Sequence - 2001: A Space Odyssey"](https://youtu.be/1DNbkKBW0K8?t=132) (the old clip has been deleted, so this is a new one) to get a better idea between all of the visualizations. The (new) clip starts from \~2:12 to the end. The sequence is a motion of colored light on a dark background (but you should just watch it yourself). To make the extracted colors more visible, the width of each "slice" in the barcode was increased for each visualization. In addition, the sampling rate was increased. 
 
 {% include imgur.html href="//imgur.com/a/f4asdaM" id="a/f4asdaM" context=showViews caption="Space Odyssey Visualizations (sample_rate = 12, slice_width=16)" %}
 
