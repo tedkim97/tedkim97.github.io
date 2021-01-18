@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Hip-Hop's Diss Tracks As Graphs (/Networks)
-subtitle: Analyzing beef throughout history
-published: false 
+title: Hip-Hop's Diss Tracks As Graphs (or Networks)
+subtitle: Analyzing beef in a genre
+published: true 
 enable_latex: false
 enable_d3: true
 permalink: diss_track_graphs
@@ -21,37 +21,25 @@ tags:
   - metrics
 concepts:
   - graph theory
+  - network analysis
   - networkx
   - d3
 ---
 
 # Introduction
-Over the weekend, I decided to construct diss tracks as [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) (or networks), analyze the results, and visualize them. 
+Over the weekend, I decided to construct diss tracks as [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) (or networks), analyze the results, and visualize them (not in that order). I was inspired by this [New York Times visualization on the Oscars](https://archive.nytimes.com/www.nytimes.com/interactive/2013/02/20/movies/among-the-oscar-contenders-a-host-of-connections.html), and I thought I would take a crack at doing something similar.
 
-Diss tracks are songs meant to verbally attack/disrespect another artist. During the song, the artists will reference past events or faults of their target. The more memorable diss tracks I remember are in hip-hop, but the archetype is not exclusive to hip hop. One of the more recent diss tracks is ["The Story Of Adidon"](https://genius.com/Pusha-t-the-story-of-adidon-lyrics) where Pusha T responds to [Drake's diss track Duppy Freestyle"](https://genius.com/Drake-duppy-freestyle-lyrics) and exposes Drake's hidden child in addition to just shitting on drake. Honestly I can't explain it all, so I recommend looking through the genius explanation. I don't think there is anything incredibly deep about their existence, but I think it's pretty fun to follow the feuds in hip hop. 
+{% include caption_image.html imgpath="/figures/diss_track_graph_main.jpg" alt="fig1" caption="a sample graph generate from a part of the dataset" %}
 
-I've sourced information from this [Wikipedia article](https://en.wikipedia.org/wiki/List_of_diss_tracks) and this [Complex Top 50 List](https://www.complex.com/music/2018/10/the-50-best-hip-hop-diss-songs/2pac-hit-em-up-1996). I'll upload the json file I've compiled at some later date. Below is a sample graph generated from the dataset.
+So everyone is on the same page, "diss tracks" are songs meant to verbally attack/disrespect another artist. The writer will usually reference their target's appearances, discography, controversies, or history to insult them. The diss tracks I remember are in hip-hop, but the archetype is not exclusive to hip hop. For example, ["The Story Of Adidon"](https://genius.com/Pusha-t-the-story-of-adidon-lyrics) is a diss track where Pusha T responds to [Drake's diss track Duppy Freestyle"](https://genius.com/Drake-duppy-freestyle-lyrics), exposing Drake's (at the time) hidden child. There's more to it, so I recommend looking through an explanation if you're curious.
 
-{% include caption_image.html imgpath="/figures/diss_track_graph_main.jpg" alt="fig1" caption="a noticeable cluster from the interactive d3 version of the graph" %}
-
-Read more if you want to see an interactive version, variations, and some graph statistics.
+I've sourced a list of diss tracks from this [Wikipedia article](https://en.wikipedia.org/wiki/List_of_diss_tracks) and this [Complex Top 50 List](https://www.complex.com/music/2018/10/the-50-best-hip-hop-diss-songs/2pac-hit-em-up-1996). Read more if you want to see an interactive version, graph statistics, and notes about the data.
 
 ### Disclaimer: Incomplete Dataset
-The dataset I'm using to visualize this information isn't complete nor comprehensive. When I started, I *assumed* that there would be a deeply descriptive and well cited catalog of all diss tracks in history, but there isn't. Unfortunately, I don't think I have the knowledge or energy to compile a comprehensive list of notable diss tracks throughout history. 
-
-As a result, I combined together some results from Wikipedia and complex to form a list. The graph only represents a sample of diss tracks - I'm sure there are plenty of songs out there that I've missed. I'll upload my data on a later date.
+The dataset I'm using to visualize this information isn't complete. When I started, I *assumed* that there would be a deeply descriptive and well cited catalog of all diss tracks in history, but there isn't. Unfortunately, I don't think I have the knowledge or energy to compile a comprehensive list of notable diss tracks throughout history. As a result, I combined together some results from Wikipedia and Complex to form a list. The graph only represents a sample of diss tracks - I'm sure there are plenty of songs out there that I've missed. I'll upload my data on a later date.
 
 # An Interactive Visualization
-The main problem I've had with visualizing graphs like these is that they're too large to display as a single image. In order to cover all of the nodes, the camera would need to be zoomed out all the way, and the labels would have to be large enough to see, but also small enough to not cover other nodes.
-
-
-Even with all of the different possible graph layouts
-
-Normally, this isn't a problem when 
-
-Iteratively form visualizations is viable in something like a jupyter notebook, but not very viable in a blog-style content.
-
-As a result, I decided to try creating an interactive diss track graph in d3.  
+The main problem I had with visualizing this graph is that it's too large to display as a single image. In order to cover all of the nodes, the camera would need to be zoomed out, and the labels would have to be large enough to see, but also small enough to not cover other nodes. Normally, this isn't a problem when you can create partial visualizations in an interactive notebook, but not very viable in a blog. As a result, I decided to create an interactive diss track graph in D3.js.  
 
 - **Hover** over a node to see the respective artists, and the artists 1st degree neighbors.
 - **Double click** on a node to toggle on this highlighting. Double clicking on the node (or any other node) will turn it off. 
@@ -65,54 +53,6 @@ As a result, I decided to try creating an interactive diss track graph in d3.
 - Some nodes *look* like they're connected (i.e an edge goes through them), but they aren't really. You can clarify the relationship by hovering over these nodes.
 - You might notice that it would be more proper for this graph to have arrow heads (indicating artist/target relationship). I agree, but creating the other d3 functionality took up too much time, so I tabled it for a later date.
 - The color combo used for highlighting nodes is not super aesthetic, but this color combo attempts to be more colorblind-friendly contrasts. 
-
-# Graph/Network Statistics:
-Graph construction and analysis was all done in [`networkx`](https://networkx.org/) - a python library for working with graphs. While I haven't worked with large-scale graphs, it's a pretty great library. Jupyter notebook will be released at a future date
-
-WHy do I include both results? It's because my page rank results for my 
-
-## Measure(s) of Centrality
-Centrality is a term used to identify the "importance" (a purposely abstract concept for now) of a network/graph.
-
-Centrality algorithms are used to determine the importance of distinct nodes in a network. The Neo4j GDS library includes the following centrality algorithms, grouped by quality tier:
-
-Find the most important 
-
-https://en.wikipedia.org/wiki/Centrality
-
-## Undirected
-- Number of nodes: 143
-- Number of edges: 163
-- Average degree: 2.2797
-- Density
-
-## Directed
-- Number of nodes: 143
-- Number of edges: 181
-- Average in degree: 1.2657
-- Average out degree: 1.2657
-- Density
-
-### In Degree Centrality & Out Degree Centrality
-
-
-
-### Page Rank
-
-age rank was the algorithm that start google searches
-
-Essentially, it's a way of "ranking" webpages thorugh their links.
-
-If hundredes of webpages linked one webpage (say a wikipedia article) it would have a high "rank".
-
-From my understanding, Google has modified/refined page rank even more
-
-There is no decisive "centrality" algorithm, but pagerank is the one that google uses, so that's good enough for us
-
-
-
-
-
 
 
 # Data Schema
@@ -136,8 +76,7 @@ Translating these **records** (pun) to a graph works like this:
 
 - Each artist, feature, and target exists as node. 
 - For each song, the "artist" is dissing each of the "targets". 
-- For each song, every person in the "features" is dissing each of the "targets".
--- This assumes that a feature is dissing each one of the targets, which **isn't** a fair assumption, but it makes my life a lot easier.
+- For each song, every person in the "features" is dissing each of the "targets". This assumes that a feature is dissing each one of the targets, which **isn't** a fair assumption, but it makes my life a lot easier.
 
 {% include caption_image.html imgpath="/figures/directed_fl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a force layout)" %}
 
@@ -171,6 +110,93 @@ However, it felt silly retooling my code for conversions and extractions for thi
 
 This solution is terrible for several reasons - you seriously shouldn't do this, but I've deemed this "okay" because I know it won't matter for the specific use-case I'm thinking about.
 
+# Graph/Network Statistics:
+Graph construction and analysis was all done in [`networkx`](https://networkx.org/) - a python library for working with graphs. While I haven't worked with large-scale graphs, it's a pretty great library. Jupyter notebook will be released at a future date.
+
+I've included both undirected graphs (where the edge weights are equal to the total "track" disputes between artists) and as a directed a graph (where diss track writers/targets are directed edges). 
+
+## Undirected
+- Number of nodes: 143
+- Number of edges: 163
+- Average degree: 2.2797
+- Density: 0.015955875
+
+## Directed
+- Number of nodes: 143
+- Number of edges: 181
+- Average in degree: 1.2657
+- Average out degree: 1.2657
+- Density: 0.008864375
+
+## Measure(s) of Centrality
+[Centrality](https://en.wikipedia.org/wiki/Centrality) is a term used to identify the importance of nodes in a graph/network. In the context of this graph, we can think of centrality has artists important to the diss track scene. However, there are multiple metrics used to define centrality, each with a different purpose or use. 
+
+### Normalized Degree Centrality (Undirected Graphs)
+The degree centrality is the number of neighbors a node has. If node `A` could have edges with 3 other nodes, it's degree centrality is 3. The *normalized* degree centrality is the a node's degree centrality, divided by the number of edges it could have. If there are 100 nodes in a graph, our Node A can have up to 99 connections. Therefore it's degree centrality is 3/99.
+
+Here are the top 10 rappers by normalized degree centrality.
+
+|Artist          	    | Normalized Degree Centrality (rounded)|
+|:--------------------: |:------------------------:|
+| 2Pac                  | 0.11268           |
+| Eminem                | 0.09155           |
+| Nas                   | 0.07746           |
+| 50 Cent               | 0.06338           |
+| Mobb Deep             | 0.06338           |
+| The Notorious B.I.G   | 0.06338           |
+| Snoop Dog             | 0.05634           |
+| Tim Dog               | 0.04930           |
+| Jay-Z                 | 0.04225           |
+| Common                | 0.04225           |
+
+### Normalized In Degree Centrality & Out Degree Centrality (Directed Graphs)
+The indegree and outdegree centrality have a similar definition to the regular degree centrality. If Node `B` has 2 incoming edges and 3 outgoing edges it's indegree and outdegree centrality are 2 and 3 respectively. We can think of "indegree" (number of incoming edges) and "outdegree" (number of outgoing edges) as receiving or giving conflict (i.e being the target of source of a diss track). Having a high indegree centrality means that the artist is the target for a lot of diss tracks from different people. Having a high outdegree centrality means that the artists makes a lot of diss tracks at different people. 
+
+|Artist          	    | Normalized Indegree Centrality (rounded)|
+|:--------------------: |:------------------------:|
+| Nas                   | 0.05634                  |
+| Eminem                | 0.04930                  |
+| Mobb Deep             | 0.03521                  |
+| Snoop Dogg            | 0.02817                  |
+| Jay-Z                 | 0.02817                  |
+| Dr. Dre               | 0.02817                  |
+| The Notorious B.I.G   | 0.02817                  |
+| Lil' Kim              | 0.02817                  |
+| Eazy-E                | 0.02113                  |
+| Remy Ma               | 0.02113                  |
+
+|Artist          	    | Normalized Outdegree Centrality (rounded)|
+|:--------------------: |:------------------------:|
+| 2Pac                  | 0.11268                  |
+| 50 Cent               | 0.06338                  |
+| Eminem                | 0.05634                  |
+| The Notorious B.I.G   | 0.04225                  |
+| The Outlawz           | 0.04225                  |
+| E.D.I. Mean           | 0.04225                  |
+| Young Noble           | 0.04225                  |
+| Snoop Dogg            | 0.03521                  |
+| Mobb Deep             | 0.03521                  |
+| Drake                 | 0.03521                  |
+
+### Katz Centrality
+The [Katz Centrality](https://en.wikipedia.org/wiki/Katz_centrality) is used to measure influence of nodes on a network as a whole. Unlike our previous measures which only rely on 1st degree neighbors, the Katz algorithm also weighs neighbors of neighbors and such. The reason why I picked the Katz centrality (versus Eigencentrality or Pagerank) is because our graph is not strong connected. As a result, only nodes that are in connected clusters or target of such a cluster will have significant eignvector centrality. This means that there are can be some seemingly, unexpected results when ranking results. For instance, Page rank (dampening parameter = 0.8) gives B.o.B and Neil DeGrasse Tyson (the astrophysicist) one of the highest centralitiy measures, despite them only making two diss tracks targeted towards each other.
+
+The inclusion of Mariah Carey is not a mistake. Even though she's not in the genre, she's had diss tracks with Eminem and was married to Nick Cannon for a while. If you're wondering why the infamous page-rank algorithm wasn't included, it was because it rated B.o.B and Neil Degrasse Tyson has the among a few other less popular rappers as influential nodes.  
+
+|Artist          	    | Katz Centrality (rounded)|
+|:--------------------: |:------------------------:|
+| Nas                   | 0.13922                  |
+| Eminem                | 0.12581                  |
+| Mobb Deep             | 0.11079                  |
+| Jay-Z                 | 0.10953                  |
+| Lil' Kim              | 0.10514                  |
+| Snoop Dogg            | 0.10514                  |
+| Dr. Dre               | 0.10514                  |
+| The Notorious B.I.G   | 0.10280                  |
+| Eazy-E                | 0.10084                  |
+| Tim Dog               | 0.10012                  |
+]
+
 # Scraping & Cleaning
 I collected the data by scraping these two web pages (a [Wikipedia article](https://en.wikipedia.org/wiki/List_of_diss_tracks) and a [Complex Top 50 List](https://www.complex.com/music/2018/10/the-50-best-hip-hop-diss-songs/2pac-hit-em-up-1996)) and parsing their contents into json. Parsing consisted of using `BeautifulSoup` to find the HTML tags that I needed (easy) and string splits with regular expressions to extract information (annoying). 
 
@@ -183,39 +209,39 @@ There were a lot of **little** things that I had to clean after I started buildi
 
 Furthermore I had to decide on exclusions of diss tracks from the WIkipedia article.
 
-- Aliases 
-2Pac as Tupac
-Luther Campbell/Luke
-Notorious B.I.G /Biggie Smalls
-
-- Casing/Hyphens/Quotes
-Casing/Hyphens/Quotes(is Pusha T Pusha-T or Pusha T?)
-Is N.W.A N.w.A. or N.W.A
-Lil Kim is Lil' Kim or Lil Kim
-
-- Removals
-"How To Rob" 50 cent - a bunch of different people
-Megadeth - who are these guys?
-Jermain Jackson
-
-Zayn Maluyk diss removed
-Ed Sheeran Removed
-
-- Abstract Concepts
-
-Abstract Concepts/Organizations (Records, Queens)
-For instance "new york new york" disses al lnew york rappers. How am I supposed to work with that? - But i kept it because a follow up diss track "L.A L.A" is a diss towrads the artist
-
-Tim Dogs's "F\*ck Compton" was labelled as dissing the gangster rap genre in addition to the N.W.A - (I removed the diss of gangster rap genre, but I kept the diss towards the N.W.A).
+#### Aliases 
+Aliases needed to be cleaned, for example some tracks had "2Pac" while others had "Tupac", "Luke" was written as "Luther Campbell" in Wikipedia, and "Notorious B.I.G" was also used for Biggie Smalls. In these instances, I choose the artist stage name over their real name.
 
 
-- Weird things
+#### Casing, Hyphens, Quotes
+Names also had to be cleaned for inconsistent casing, hyphens, or abbreviations. For instance, 
 
-Wikipedia included Nick Cannon's "The Invitation Canceled" featuring Emniem, dissing eminem (but in reality Nick Cannon sampled an old eminem track)
+- **Casing**
 
+I've seen minor casing incidents where "N.W.A" was written as "N.w.A" or "N.W.A.". 
+
+- **Hyphens**
+
+"Pusha T" is labelled as "Pusha-T" by Complex, but his twitter and facebook indicate that his stage name is "Pusha T".
+
+- **Abbreviations**
+
+Another source of issues was the writing of abbreviations such as "Lil". For instance, some tracks had Lil Kim as "Lil' Kim" and others had her as "Lil Kim". The use of the quotation is inconsistent, for example "Lil' Kim" twitter and instagram are "Lil' Kim" while "Lil Wayne"s instagram and facebook are "Lil Wayne". For these I just removed the single quote, even though it's technically wrong for certain artists.
+ 
+#### Abstract Concepts
+Some tracks/records were dissing abstract concepts or entire organizations ("gangster rap" as a genre, record labels, cities). For instance "New York, New York" by "Tha Dogg Pound" disses all NY rappers. I kept it vaguely as "NY rappers" because a follow up diss track "L.A., L.A" disses "That Dogg Pound". Tim Dogs's "F\*ck Compton" was labeled as dissing the gangster rap genre in addition to the N.W.A - (I removed the diss of gangster rap genre, but I kept the diss towards the N.W.A).
+
+#### Removals
+In addition to fixing aliases and inconsistencies, I choose to remove some tracks from the list for not being sufficiently close to the genre, or having poor information surrounding it:
+- Megadeth's (a heavy metal band) diss track on a former band member. 
+- Jermaine Jackson's "Word to the badd!" which is diss track on his brother Michael Jackson.  
+- Little Mix's (girl group) "Shout out to my ex" diss track of Zayn Malik 
+- Black Midi's (rock band) "ded sheeran" diss track of Ed Sheeran (I can't even find this song online).
+
+The only song that I'm unsure of removing was ["How To Rob" by 50 cent](https://en.wikipedia.org/wiki/How_to_Rob). It's song where 50 cent talks about robbing and mugging a lot of people in R&B and Hip Hop (like around 50 people). While it would be hilarious to have 50 cent be connected to 50 people from one song, I know that the inclusion of the song was going to skew the results and visualizations (there is a dataset where I include this track though). 
 
 ### Scraping Retrospective
-I really regret writing a scraper to collect the data. It would have taken an hour (at most) to just copy, paste, and clean these lists myself (Especially considering, I had to clean the end result anyways). I assumed that there would be a lot of data, so that the scraper would pay off, but there wasn't nearly enough data to justify this approach. 
+I regret writing a scraper to collect the data. It would have taken an hour (at most) to just copy, paste, and clean these lists myself (Especially considering, I had to clean the end result anyways). I assumed that there would be a lot of data, so that the scraper would pay off, but there wasn't nearly enough data to justify this approach. 
 
 {% include caption_image.html imgpath="https://imgs.xkcd.com/comics/the_general_problem.png" alt="xkcd" caption="why spend 30 minutes manually transcribing when you can spend 2 hours automating it?"%}
 
@@ -223,33 +249,23 @@ Instead it took me 2 minutes scraping the pages, and 2 hours finding a "clean, s
 the pages. At most it would have taken 30 short, but incredibly boring minutes to record this information manually
 
 
-# Things that failed to make it to the cut?
+# Things that didn't make it to the D3 Visualization
+Learning how to create D3 visualizations in a "top-down" way can be a painful process (one of the few instances where I would start with a book), so there were things I didn't implement (but wanted to) for my personal sanity. Maybe you can do them as an exercise!
 
-- Directed edges
-- Edge Hovering that indicates songs
+- Directed Edges
+- Edge Hovering that shows tracklist
 - Edge Hovering with weights
 - Better formatting
 - Representing number of interactions as edge thickness
 
-Because learning d3 can be a painful process if you don't know what you're doing, and I had other things to do :(. 
-
-I didn't feel like going all the way to implement these things in d3
-
 # TODOs: 
-- **Focus on an individual rather than a whole scene** 
-For example, there are a handful of rappers with pages dedicated to their feuds.
- Eminem has an entire page on Wikipedia dedicated to feuds -\_-
+Things to do in the future.
 
-https://en.wikipedia.org/wiki/Pusha_T#Feuds
-https://en.wikipedia.org/wiki/Eminem#Feuds
-https://en.wikipedia.org/wiki/50_Cent#Feuds
-https://en.wikipedia.org/wiki/Drake_(musician)#Feuds
-
-
-- **Finish the d3 visualizations**
-- **A more thorough analysis of the graphs** 
+- **Focus on an individual rather than a whole genre**
+- **A more thorough analysis of the graphs**
+Rather than focusing on a few centrality metrics 
+- **Finish the d3 vis**
 - **Genius API**
 Apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct. 
 
-I couldn't do certain things in the program because I couldn't easily determine uniqueness (so i decided not to touch it). 
-Genius API might help with that
+
