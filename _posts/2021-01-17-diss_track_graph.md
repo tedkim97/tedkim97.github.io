@@ -267,9 +267,10 @@ Learning how to create D3 visualizations in a "top-down" way can be a painful pr
 I think they're is always more to do. There's definitely a lot to fix, more I can add, different directions to take. For instance: 
 
 - **Focus on an individual or individuals** - rather than a whole genre
-- **A more thorough analysis of the graphs** - rather than focusing on a few centrality metrics 
-- **Finish the d3 vis** - with all the bells and whistles
-- **Try the Genius API** - apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct. 
+- **Analyze the graphs more thoroughly** - rather than focusing on a few centrality metrics 
+- **Learn more about network analysis**
+- **Finish the D3 vis** - with all the bells and whistles
+- **Try the Genius API** - apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct.
 
 but I guess that's for a later date.
 
