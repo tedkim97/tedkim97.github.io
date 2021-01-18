@@ -46,6 +46,7 @@ The main problem I had with visualizing this graph is that it's too large to dis
 - **Zoom** with the scroll wheel or by double clicking
 - **Pan** by holding down the mouse and dragging
 
+**It takes a few moments for the visualization to render:**
 {% include disstrack_vis.html %}
 
 ### Notes:
