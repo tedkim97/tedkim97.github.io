@@ -18,6 +18,7 @@ tags:
   - programming
   - python
   - numpy
+  - art
 curated:
   - gaitkeep
   - data_anonymization

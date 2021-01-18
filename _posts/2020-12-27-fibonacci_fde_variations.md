@@ -22,6 +22,9 @@ concepts:
   - fibonacci
   - recursion
   - TCO
+  - c
+  - c#
+  - python
 ---
 
 # Introduction

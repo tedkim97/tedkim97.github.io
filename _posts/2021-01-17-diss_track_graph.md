@@ -53,7 +53,9 @@ The main problem I had with visualizing this graph is that it's too large to dis
 - Some nodes *look* like they're connected (i.e an edge goes through them), but they aren't really. You can clarify the relationship by hovering over these nodes.
 - You might notice that it would be more proper for this graph to have arrow heads (indicating artist/target relationship). I agree, but creating the other d3 functionality took up too much time, so I tabled it for a later date.
 - The color combo used for highlighting nodes is not super aesthetic, but this color combo attempts to be more colorblind-friendly contrasts. 
+- Here's what the graph should **roughly** look like
 
+{% include caption_image.html imgpath="/figures/diss_track_graph_full.jpg" alt="full_graph" caption="(hopefully) what the graph looks like zoomed out on your machine" %}
 
 # Data Schema
 When the data was collected, the data was organized in tables using "songs" (track name) as a unique identifier. Each diss track would have fields for "artist", "features", and "targets". In terms of constraints, each song has one artist\*, and can have multiple features and targets.
@@ -179,7 +181,9 @@ The indegree and outdegree centrality have a similar definition to the regular d
 | Drake                 | 0.03521                  |
 
 ### Katz Centrality
-The [Katz Centrality](https://en.wikipedia.org/wiki/Katz_centrality) is used to measure influence of nodes on a network as a whole. Unlike our previous measures which only rely on 1st degree neighbors, the Katz algorithm also weighs neighbors of neighbors and such. The reason why I picked the Katz centrality (versus Eigencentrality or Pagerank) is because our graph is not strong connected. As a result, only nodes that are in connected clusters or target of such a cluster will have significant eignvector centrality. This means that there are can be some seemingly, unexpected results when ranking results. For instance, Page rank (dampening parameter = 0.8) gives B.o.B and Neil DeGrasse Tyson (the astrophysicist) one of the highest centralitiy measures, despite them only making two diss tracks targeted towards each other.
+The [Katz Centrality](https://en.wikipedia.org/wiki/Katz_centrality) is used to measure influence of nodes on a network as a whole. Unlike our previous measures which only rely on 1st degree neighbors, the Katz algorithm also weighs neighbors of neighbors and such. The reason why I picked the Katz centrality (versus Eigencentrality or Pagerank) is because our graph is not strong connected. As a result, only nodes that are in connected clusters or target of such a cluster will have significant eignvector centrality. This means that there are can be some seemingly, unexpected results when ranking results. For instance, Page rank (dampening parameter = 0.8) gives B.o.B and Neil DeGrasse Tyson (the astrophysicist) one of the highest centralitiy measures, despite them only making two diss tracks targeted towards each other[^1].
+
+[^1]: [Diss tracks about flat earth theory](https://www.npr.org/sections/thetwo-way/2016/01/26/464474518/neil-degrasse-tyson-gets-into-a-rap-battle-with-b-o-b-over-flat-earth-theory)
 
 The inclusion of Mariah Carey is not a mistake. Even though she's not in the genre, she's had diss tracks with Eminem and was married to Nick Cannon for a while. If you're wondering why the infamous page-rank algorithm wasn't included, it was because it rated B.o.B and Neil Degrasse Tyson has the among a few other less popular rappers as influential nodes.  
 
@@ -195,7 +199,7 @@ The inclusion of Mariah Carey is not a mistake. Even though she's not in the gen
 | The Notorious B.I.G   | 0.10280                  |
 | Eazy-E                | 0.10084                  |
 | Tim Dog               | 0.10012                  |
-]
+
 
 # Scraping & Cleaning
 I collected the data by scraping these two web pages (a [Wikipedia article](https://en.wikipedia.org/wiki/List_of_diss_tracks) and a [Complex Top 50 List](https://www.complex.com/music/2018/10/the-50-best-hip-hop-diss-songs/2pac-hit-em-up-1996)) and parsing their contents into json. Parsing consisted of using `BeautifulSoup` to find the HTML tags that I needed (easy) and string splits with regular expressions to extract information (annoying). 
@@ -258,14 +262,12 @@ Learning how to create D3 visualizations in a "top-down" way can be a painful pr
 - Better formatting
 - Representing number of interactions as edge thickness
 
-# TODOs: 
-Things to do in the future.
+# Conclusion & TODOs: 
+I'm "content" with the work so far but I think they're is always more to do.
 
-- **Focus on an individual rather than a whole genre**
-- **A more thorough analysis of the graphs**
-Rather than focusing on a few centrality metrics 
-- **Finish the d3 vis**
-- **Genius API**
-Apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct. 
+- **Focus on an individual or individuals** - rather than a whole genre
+- **A more thorough analysis of the graphs** - rather than focusing on a few centrality metrics 
+- **Finish the d3 vis** - with all the bells and whistles
+- **Try the Genius API** - apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct. 
 
 
