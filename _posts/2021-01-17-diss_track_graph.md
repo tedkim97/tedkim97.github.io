@@ -86,10 +86,10 @@ Translating these **records** (pun) to a graph works like this:
 {% include caption_image.html imgpath="/figures/directed_cl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a circular layout)" %}
 
 ### Schema Notes
-**Music Producers** are excluded from this schema, but they are important.
+#### **Music Producers** are excluded from this schema, but they are important.
 
-**What happened if multiple artists make the same song rather than feature?**
-Good question - this was a surprised to me as I didn't notice that ["No Frauds"](https://en.wikipedia.org/wiki/No_Frauds) was the only song in my list that was co-created by Nicki Minaj, Drake, and Lil Wayne. 
+#### **What happened if multiple artists make the same song rather than feature?**
+Good question (hypothetical audience) - this came as a surprise to me as I didn't notice that ["No Frauds"](https://en.wikipedia.org/wiki/No_Frauds) was the only song in my list that was co-created by Nicki Minaj, Drake, and Lil Wayne. 
 
 It's not correct to say that any of these artists were features because (from my understanding) they had created the song together.
 
@@ -264,11 +264,13 @@ Learning how to create D3 visualizations in a "top-down" way can be a painful pr
 - Representing number of interactions as edge thickness
 
 # Conclusion & TODOs: 
-I'm "content" with the work so far but I think they're is always more to do.
+I think they're is always more to do. There's definitely a lot to fix, more I can add, different directions to take. For instance: 
 
 - **Focus on an individual or individuals** - rather than a whole genre
 - **A more thorough analysis of the graphs** - rather than focusing on a few centrality metrics 
 - **Finish the d3 vis** - with all the bells and whistles
 - **Try the Genius API** - apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct. 
+
+but I guess that's for a later date.
 
 
