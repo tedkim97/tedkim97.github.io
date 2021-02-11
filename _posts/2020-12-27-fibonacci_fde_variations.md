@@ -4,7 +4,7 @@ title: Iterative & Tail Recursive Fast Fibonacci Sequence
 subtitle: Say that twice as fast
 published: true 
 enable_latex: true
-enable_d3: true
+enable_d3: false
 permalink: tail_recursive_fibonacci
 frontpage: false
 technical: true
@@ -197,14 +197,16 @@ Let's understand the complications of writing a "bottom-up" algorithm by visuali
 #### Visualizing O(n) Tail Recursion 
 Below are recursive calls $Fib(7)$ would make. 
 
-{% include fib_naive_vis.html %}
+<!-- {% include fib_naive_vis.html %} -->
+{% include vis_svg/fib_naive_vis.svg %}
 
 Creating an iterative or tail recursive version of the $O(n)$ Fibonacci sequence is "easy" because solving the problem "bottom-up" is simple. The ordering of $n$ doesn't matter because as long as we add our numbers correctly (and the right number of times), the "direction" of the operation doesn't matter. In terms of the visualization, it's easy to find a path from $Fib(n)$ from $Fib(0)$ and vice versa. 
 
 #### Visualizing The Fast Doubling Method O(log(n))
 Below are recursive calls $Fib(7), Fib(6), Fib(5), Fib(4)$ would make. (As a reminder: $Fib(n)$ returns a tuple with the $n$th and $n+1$th term of the Fibonacci sequence. Furthermore, the fast doubling method allows us to calculate $Fib(2n), Fib(2n+1)$ and given $Fib(n), Fib(n+1)$.)
 
-{% include fib_fd_vis.html %}
+<!-- {% include fib_fd_vis.html %} -->
+{% include vis_svg/fib_fd_vis.svg %}
 
 The fast doubling recursion for $Fib(n)$ makes a recursive call to $Fib(\left \lfloor n / 2 \right \rfloor)$. Depending on the parity of $n$, our function will use $Fib(\left \lfloor n / 2 \right \rfloor)$ to compute $(Fib(n), Fib(n+1))$ (even) or $(Fib(n+1), Fib(n+2))$ (odd).
 
