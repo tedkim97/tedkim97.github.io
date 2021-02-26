@@ -36,7 +36,7 @@ So everyone is on the same page, "diss tracks" are songs meant to verbally attac
 I've sourced a list of diss tracks from this [Wikipedia article](https://en.wikipedia.org/wiki/List_of_diss_tracks) and this [Complex Top 50 List](https://www.complex.com/music/2018/10/the-50-best-hip-hop-diss-songs/2pac-hit-em-up-1996). Read more if you want to see an interactive version, graph statistics, and notes about the data.
 
 ### Disclaimer: Incomplete Dataset
-The dataset I'm using to visualize this information isn't complete. When I started, I *assumed* that there would be a deeply descriptive and well cited catalog of all diss tracks in history, but there isn't. Unfortunately, I don't think I have the knowledge or energy to compile a comprehensive list of notable diss tracks throughout history. As a result, I combined together some results from Wikipedia and Complex to form a list. The graph only represents a sample of diss tracks - I'm sure there are plenty of songs out there that I've missed. I'll upload my data on a later date.
+The dataset I'm using to visualize this information isn't complete. When I started, I *assumed* that there would be a deeply descriptive and well cited catalog of all diss tracks in history, but there isn't. Unfortunately, I don't think I have the knowledge or energy to compile a comprehensive list of notable diss tracks throughout history. As a result, I combined together some results from Wikipedia and Complex to form a list. The graph only represents a sample of diss tracks - I'm sure there are plenty of songs out there that I've missed. ~~I'll upload my data on a later date~~ [Here's a link to the gist with d3 snippet and data](https://gist.github.com/tedkim97/ae3347e4ff05468296d53c9c68883ce5).
 
 # An Interactive Visualization
 The main problem I had with visualizing this graph is that it's too large to display as a single image. In order to cover all of the nodes, the camera would need to be zoomed out, and the labels would have to be large enough to see, but also small enough to not cover other nodes. Normally, this isn't a problem when you can create partial visualizations in an interactive notebook, but not very viable in a blog. As a result, I decided to create an interactive diss track graph in D3.js.  
@@ -272,6 +272,6 @@ I think they're is always more to do. There's definitely a lot to fix, more I ca
 - **Finish the D3 vis** - with all the bells and whistles
 - **Try the Genius API** - apparently Genius has an API for music. I was thinking that the Genius API could be used to source information and assume its correct.
 
-but I guess that's for a later date.
+but I guess that's a TODO.
 
 
