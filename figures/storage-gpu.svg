@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 170">
+	<title>PCIe Device to GPU</title>
+	  <defs>
+	    <marker id="arrowhead" markerWidth="4" markerHeight="7" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+	      <path d="M0,0 L0,6 L4,3 z" fill="#0000FF" />
+	    </marker>
+
+	    <marker id="nullarrowhead" markerWidth="4" markerHeight="7" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+	      <path d="M0,0 L0,6 L4,3 z" fill="#808080" />
+	    </marker>
+
+	  </defs>
+
+	<rect x="148" y="45" width="40" height="40" style="fill:#fff;stroke:#231f20;stroke-miterlimit:10"/>
+	<text transform="translate(158.05,68.3)" style="font-size:11px;fill:#231f20">CPU</text>
+	<rect x="261" y="99" width="60" height="60" style="fill:#fff;stroke:#231f20;stroke-miterlimit:10"/>
+	<text transform="translate(281.23,132.26)" style="font-size:11px;fill:#231f20">GPU</text>
+	<rect x="123" y="0.5" width="90" height="22" style="fill:#fff;stroke:#231f20;stroke-miterlimit:10"/>
+	<text transform="translate(148.38,14.72)" style="font-size:11px;fill:#231f20">Memory</text>
+	<rect x="132" y="109" width="70" height="40" style="fill:#fff;stroke:#231f20;stroke-miterlimit:10"/>
+	<text transform="translate(140,132)" style="font-size:11px;fill:#231f20">PCIe Switch</text>
+	<rect x="0.5" y="106.05" width="80" height="46" style="fill:#fff;stroke:#231f20;stroke-miterlimit:10"/>
+	<text transform="translate(7,124)" style="font-size:11px;fill:#231f20">Storage Device</text>
+	<text transform="translate(8,135)" style="font-size:7px;fill:#231f20">(Needs to be connected</text>
+	<text transform="translate(28,145)" style="font-size:7px;fill:#231f20">to PCIe)</text>
+	<line x1="80.5" y1="129" x2="124" y2="129" stroke="#0000FF" stroke-width="2" marker-end="url(#arrowhead)" />
+	<line x1="202.5" y1="129" x2="253" y2="129" stroke="#0000FF" stroke-width="2" marker-end="url(#arrowhead)" />
+	<line x1="158" y1="108.5" x2="158" y2="93" stroke="#808080" stroke-width="2" marker-end="url(#nullarrowhead)" />
+	<line x1="178" y1="85" x2="178" y2="101" stroke="#808080" stroke-width="2" marker-end="url(#nullarrowhead)" />
+</svg>
