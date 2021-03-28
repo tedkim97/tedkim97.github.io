@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Future plans for CUDA-accelerated KNN Movie Barcodes
-subtitle: Use your GPU to not hash! 
+subtitle: (I am not advertising for Nvidia)
 published: true
 enable_latex: false
 permalink: cuda_barcodes
@@ -90,7 +90,7 @@ Another motivational blocker is the *potential* bottlenecks using my GPU to acce
 Advancements in hardware & software [allow Nvidia GPU's to read from NVME storage rather than system memory](https://developer.nvidia.com/blog/gpudirect-storage/)[^2]. Even better, there are libraries that do these things for us! Unfortunately, these features are enterprise-tier which means 
 it's only enabled for enterprise tier GPUs (I only have a consumer card[^3]) and supports enterprise file systems (WekaFS, DDN Exascaler, VAST)](https://docs.nvidia.com/gpudirect-storage/design-guide/index.html). 
 
-{% include caption_image.html imgpath="/figures/storage-gpu.svg" alt="fig2" caption="Data flow in Nvidia's GPUDirect Storage. Data can flow from a storage device (needs to be PCIe connected) directly into the GPU. Of course there are a lot of hardware and file system requirements (that I can't fulfill) to use this feature." %}
+{% include caption_image.html imgpath="/figures/storage-gpu.svg" alt="fig2" caption="Data flow in Nvidia's GPUDirect Storage. Data can flow from a storage device (needs to be PCIe connected) directly into the GPU. According to Nvidia, this alleviates bottlenecks caused by CPU I/O and redundant operations. Of course there are a lot of hardware and file system requirements (that I can't fulfill) to use this feature." %}
 
 [^2]: I'm sure AMD's GPU and OpenCL has something equivalent - I'm just not technically competent enough to find it. 
 [^3]: There's always the cloud
