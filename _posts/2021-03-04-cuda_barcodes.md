@@ -20,6 +20,7 @@ tags:
   - numpy
   - art
   - cuda
+  - bottlenecks
 curated:
   - better_barcode_vis
   - gaitkeep
@@ -95,7 +96,7 @@ it's only enabled for enterprise tier GPUs (I only have a consumer card[^3]) and
 [^2]: I'm sure AMD's GPU and OpenCL has something equivalent - I'm just not technically competent enough to find it. 
 [^3]: There's always the cloud
 
-Suppose I *did* have an GPUDirect Storage enabled syste, I would still have complications loading a movie from my mass storage device storage (HDD) onto a NVMe solid-state storage device (NVMe SSD), and then load it directly onto the GPU for compute using something like [`cudf`](https://github.com/rapidsai/cudf). The problem is that you can't just "read" arbitrary frames from a movie - these frames cannot just be "picked out" by some (`Video_Width x Video_Height x Color_Depth x Number_Of_Frames`) byte offset. I've learned that modern video codecs (the thing that decodes your video files) are complicated, and [parsing arbitrary frames relies on the frames that come before it](https://stackoverflow.com/a/22706622). 
+Suppose I *did* have an GPUDirect Storage enabled system, I would still have complications loading a movie from my mass storage device storage (HDD) onto a NVMe solid-state storage device (NVMe SSD), and then load it directly onto the GPU for compute using something like [`cudf`](https://github.com/rapidsai/cudf). The problem is that you can't just "read" arbitrary frames from a movie - these frames cannot just be "picked out" by some (`Video_Width x Video_Height x Color_Depth x Number_Of_Frames`) byte offset. I've learned that modern video codecs (the thing that decodes your video files) are complicated, and [parsing arbitrary frames relies on the frames that come before it](https://stackoverflow.com/a/22706622). 
 
 It's not the end of the world. Some immediate work around solutions jump out to me:
 1. Preprocess the target movie from the HDD and copy the sampled frames onto the NVMe SSD. (Potentially excessive read-write cycles, could lower the lifespan of our hardware. Not ideal since I'm not made of money)
