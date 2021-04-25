@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rating Ratings
-subtitle: Reviewing how people rate things/media
+subtitle: Reviewing how people rate things/media (or having opinions on opinions)
 published: false 
 enable_latex: false
 permalink: rating_ratings
