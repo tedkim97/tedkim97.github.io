@@ -5,7 +5,7 @@ order: 5
 permalink: about
 ---
 
-I am currently a systems engineer at McMaster-Carr. I completed undergrad at the University of Chicago with a bachelors of arts in economics and computer science with a specialization in machine learning. 
+I am currently a software engineer at McDonalds. I completed undergrad at the University of Chicago with a bachelors of arts in economics and computer science with a specialization in machine learning. 
 
 Outside of work, I'm interested in machine learning for increased automation capabilities, silly visualizations, and understanding media through data science techniques. 
 
