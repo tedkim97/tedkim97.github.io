@@ -19,4 +19,4 @@ I try to not upload content that already exists (ex: numpy tips, how to run a li
 If you have a really large monitor, I recommend keeping your window at half width.
 
 ### How is this hosted?
-This site is hosted on github pages using Jekyll as the static site generator, and using the poole/hyde theme for the website.
+This site is hosted on github pages using Jekyll as the static site generator, and using a modified [poole/hyde](https://github.com/poole/hyde) theme for the website.
