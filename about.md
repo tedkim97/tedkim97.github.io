@@ -7,14 +7,10 @@ permalink: about
 
 I am currently a software engineer at McDonalds. I completed undergrad at the University of Chicago with a bachelors of arts in economics and computer science with a specialization in machine learning. 
 
-Outside of work, I'm interested in machine learning for increased automation capabilities, silly visualizations, and understanding media through data science techniques. 
-
-If you're interested, you can check out my [Github](https://github.com/tedkim97) or [Linkedin](https://www.linkedin.com/in/ted-kim/).
+My CS interests are in machine learning for increased automation capabilities, software documentation and reproducibility, silly visualizations, and understanding media through data science techniques. Check out my [Github](https://github.com/tedkim97) or [Linkedin](https://www.linkedin.com/in/ted-kim/).
 
 # About this Site
-This is my dual blog-portfolio site that I update in my free time. This contains complete aspects of my side projects, notes and write-ups from my past activities, work, and research. Minimal javascript (except for occasional latex, d3, imgur linking, and google analytics).
-
-I try to not upload content that already exists (ex: numpy tips, how to run a linear regression) unless I can add value to it. I write these posts for completeness - meaning that their might be redundancies depending on your expertise. The "Technical Content" and "Hobbies" post tend to overlap because some of these projects tend to be my hobbies!
+This is a combo of a side-project/educational/opinion blog that I update in my free time. This might include side projects, notes and write-ups from my past activities, work, and research. Minimal javascript (except for latex, d3, imgur linking, and google analytics when needed). I write these posts for completeness - meaning that their might be redundancies depending on your expertise. 
 
 If you have a really large monitor, I recommend keeping your window at half width.
 
