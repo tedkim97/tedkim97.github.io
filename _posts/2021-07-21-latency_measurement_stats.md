@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Practical Statistics for Software Engineering
+title: Practical Statistics for Software Engineering - Distributions
 subtitle: Case Study with Latency Measurements
 published: true
 enable_latex: true
@@ -15,9 +15,12 @@ tags:
   - statistics
   - software
   - metrics
+  - case-study
+  - guide
 concepts:
   - statistics
   - programming
+  - distributions
   - software engineering
 ---
 

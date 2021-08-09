@@ -13,6 +13,7 @@ tags:
   - data-sci
   - db
   - programming
+  - guide
 curated:
   - data_anonymization
   - webscraping_tips

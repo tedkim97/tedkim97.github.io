@@ -13,6 +13,7 @@ tags:
   - scrape
   - db
   - security
+  - guide
 curated:
   - webscraping_tips
   - webscraping
