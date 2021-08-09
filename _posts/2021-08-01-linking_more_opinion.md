@@ -106,7 +106,7 @@ Linking provides accountability to help deal with this. That way when a tweet or
 
 [^6]: But to be honest of my own biases, I'm a much more lax about verifying this information if I believe it
 
-[^7]: Of course, I'm guilty of not verifying information that aligns with my beliefs.
+[^7]: Of course, I've been guilty of being lazy about verifying information plenty of times
 
 # Weaknesses
 
