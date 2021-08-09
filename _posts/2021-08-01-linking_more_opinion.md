@@ -118,6 +118,5 @@ Another flaw is that links disappear - a well crafted, tested website you used m
 
 # Ending Note
 
-This is just my opinion, and I always welcome discourse! Feel free to reach out to me through email: `nablags97 [at] gmail [dot] com`.
+This was my reasoning (and opinion) for why we should pursue more rigorous citation styles with digital content. I always welcome discourse so reach out to me through email: `nablags97 [at] gmail [dot] com`.
 
-I think there's a lot of reason to pursue more aggressive linking styles in blogs. 
