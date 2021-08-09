@@ -5,7 +5,7 @@ subtitle: Citations Needed
 published: true
 enable_latex: false
 enable_d3: false
-permalink: suck
+permalink: link_more
 frontpage: false
 technical: false
 funstuff: true
