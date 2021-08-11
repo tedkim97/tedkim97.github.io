@@ -26,34 +26,40 @@ concepts:
 
 # Background & Opinion
 
-After reviewing the posts here I've realized that I'm a bit excessive with linking definitions, evidence, documentation, or external sites. I say this because it makes the reading experience feel distracting and deviates from other blogs - which tend to be more sparing with their linking. 
+After reviewing the posts here I've realized that I'm a bit excessive with linking definitions, evidence, documentation, or external sites. I say this because it makes the reading experience feel distracting, and it deviates from other blogs - which tend to be more sparing with their linking. 
 
-But at the risk of being harpooned for being an idiot or not getting the point, I'm going to state my opinion on the internet. Mainly I think that digital content should link and cite information more rigorously, something like the citation requirements in academia. 
+But at the risk of being harpooned for being an idiot, I'm going to state my opinion on the internet. Mainly I think that digital content should link and cite information more rigorously, something like the citation requirements in academia. 
 
-> While this is unrealistic for most blogs that relies on personal/professional experience, these sources can be explicit about distinctions from from papers/online sources vs knowledge passed down from teams.
-
-A part of the reason for linking is just to be fair - if one benefited from other's contributions, it's important to acknowledge their contribution. However, there's a more important reason for higher demand for info traceability - mainly that the internet has lots of flaws. 
+> While this is unrealistic for most blogs that relies on personal/professional experience, these sources can be explicit about distinctions from from papers/online sources vs knowledge passed down from teams. 
 
 # The Argument
 
-## You Can Say Publish (Almost) Anything On The Internet
+A part of my reasoning is fairness - if one benefited from other's contributions, it's important to acknowledge their contribution. However, the main reason for linking is because we need better information tracing because the web (as a resource) has lots of flaws.
 
-Anyone can say anything on the internet[^1]. With website creation tools, hosting services, affordable domain names it's much easier to put anything on the "mainstream" web than on an academic journal or newspaper[^2]; however, it is harder (or pricier) to get a random website to the top of search engines. 
+
+## You Can Publish (Almost) Anything On The Internet
+
+Anyone can publish on the internet[^1]. With website creation tools, hosting services, affordable domain names it's much easier untrue/slanderous content to put anything on the "mainstream" web than on an academic journal or newspaper[^2]. 
 
 [^1]: I'm pretty sure I don't need a citation on this...
 [^2]: I'm pretty sure I do need a citation on this
+
+A more horrific extension is when corporations publish content that is effectively propaganda on the web. Notable examples include the "amazon post" and "judgeforyourselves". 
+
+Amazon Post is Chevron sponsored "news site" dedicated to discrediting their target [Steven Donziger](https://en.wikipedia.org/wiki/Steven_Donziger), the human rights attorney who won in a case against them[^3]. Judgeforyourselves is a legal propaganda trying to divert blame regarding the opiode crisis.
+
+[^3]: Overall the situation surrounding Steven Donziger is depressing. While there is evidence that Donziger's prosecution against Chevron had ethical flaws, [the lawyer's disbarment in addition to 2 ongoing years of house arrest are examples of judicial harassment](https://youtu.be/0wxaIqc8o6s). Some other readings: [the intercept article](https://theintercept.com/2020/01/29/chevron-ecuador-lawsuit-steven-donziger/) and [vice](https://www.vice.com/en/article/neye7z/chevrons-star-witness-admits-to-lying-in-the-amazon-pollution-case). 
+
+Without linking, an individual could regurgitate information from these sources without accountability. 
 
 > With the recent case of [AWS](https://www.bloomberg.com/news/articles/2021-01-11/amazon-s-removal-of-parler-shows-cloud-unit-s-rarely-used-power) and [other cloud providers](https://www.businessinsider.com/parler-offline-hosting-ceo-john-matze-amazon-large-website-providers-2021-1) rejecting social media app Parler , there is an interesting precedent for companies boycotting certain content on the mainstream web. 
 
 ## Search Engines Are Trusted, but Imperfect
 For context, I grew up viewing "the internet" as an auxiliary parent. I could ask Google for help on my homework, and find the answers to questions like "how to convert Celsius to Fahrenheit", "area of a triangle", or *super embarrassing questions* I was too uncomfortable asking other people. 
 
-I don't think this is a crazy feeling either, as this [survey on statista (I don't have premium, so I can't see source information)](https://www.statista.com/statistics/381455/most-trusted-sources-of-news-and-info-worldwide/) show that search engines are the more trusted source.  
+I don't think this is a crazy feeling either, as this [survey on statista (I don't have premium, so I can't see source information)](https://www.statista.com/statistics/381455/most-trusted-sources-of-news-and-info-worldwide/) show that search engines are the more trusted source. The reason why I'm emphasizing this is because google can show questionable results especially when it [comes to opinions](https://www.wsj.com/articles/googles-featured-answers-aim-to-distill-truthbut-often-get-it-wrong-1510847867) or [advertisements](https://www.nytimes.com/2020/01/31/technology/google-search-results.html).
 
-The reason why I'm emphasizing this is because google can show questionable results especially when it [comes to opinions](https://www.wsj.com/articles/googles-featured-answers-aim-to-distill-truthbut-often-get-it-wrong-1510847867) or [advertisements](https://www.nytimes.com/2020/01/31/technology/google-search-results.html).
-
-## *Anecdotally* Search Engines Are Filled With Junk
-From my personal experiences, it seems that google search results are becoming increasingly polluted with garbage. Medium articles and Youtube videos have become incredibly more common as "top results" for technical searches. 
+From my personal (take with a grain a salt) experiences, it seems that google search results are becoming increasingly polluted with garbage. Medium articles and Youtube videos have become incredibly more common as "top results" for technical searches. 
 
 It might be because my cookies indicate that I click these links, so I get them recommended more, or because other people click these links and use them as helpful resources. In the end, most of these resources are poor alternatives to actual documentation, papers, wikipedia, etc. 
 
@@ -63,9 +69,9 @@ Search engine filters can fix this problem (which I eventually had to do), but t
 
 Internet content ends up copying content from textbooks, books, or other internet content. 
 
-An infamous example is Siraj Ravel who's earliest (and current) "tutorials" plagiarized of other people's repositories, official documentation, and academic papers[^3]. An example I found was his ["CUDA Tutorial"](https://www.youtube.com/watch?v=1cHx1baKqq0) copying the contents of [Nvidia's own "An Even Easier Introduction To CUDA"](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
+An infamous example is Siraj Ravel who's earliest (and current) "tutorials" plagiarized of other people's repositories, official documentation, and academic papers[^4]. An example I found was his ["CUDA Tutorial"](https://www.youtube.com/watch?v=1cHx1baKqq0) copying the contents of [Nvidia's own "An Even Easier Introduction To CUDA"](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
 
-[^3]: There is a ton of videos and articles covering this drama - too much to link
+[^4]: There is a ton of videos and articles covering this drama - here is a "unbiased" source: https://www.theregister.com/2019/10/14/ravel_ai_youtube/ but I recommend searching yourself.
 
 A worse version of this is when content points to each other with poor citations - leading to propagation of unverifiable information. For instance, the commonly cited fact "bugs found in requirements are 100x cheaper than bugs found in implementations" is unverified and probably made up. [This blogpost describes the wayne's adventure discovering this information and the struggles of academia in empirical software research - I recommend it](https://buttondown.email/hillelwayne/archive/i-ing-hate-science/).
 
@@ -73,15 +79,15 @@ A non programming example that I was personally upset about is when [I made cust
 
 ## Linking = Easier Verification
 
-It's possible for conventional wisdom to be wrong about a subject, and for the general public to take a while to catch up with the more "nuanced" wisdom[^4]. What's wonderful is that normal people can verify (or at least be convinced) that conventional wisdom is wrong with evidence (Science!). Without evidence, I just feel confused. 
+It's possible for conventional wisdom to be wrong about a subject, and for the general public to take a while to catch up with the more "nuanced" wisdom[^5]. What's wonderful is that normal people can verify (or at least be convinced) that conventional wisdom is wrong with evidence (Science!). However, if you don't provide a way to locate this evidence, the burden of verifying these claims is on the burden of the learner. This just ends up being an incredibly frustrating and confusing experience for the interested.
 
-[^4]: I can imagine anecdotal evidences, but no citations with systematic studies of "conventional knowledge vs reality"
+[^5]: I can imagine anecdotal evidences, but no citations with systematic studies of "conventional knowledge vs reality"
 
-In this ["best practices" post](https://newrelic.com/blog/best-practices/expected-distributions-website-response-times) by NewRelic, a company that provides monitoring services and apis, the article states that one of their engineers knows that latency distributions more follow an erlang distribution rather than a log-normal distribution. Then there is absolutely no citation, evidence, or reasoning, so I'm left furiously researching (and trying to find results)[^5]. On the other hand, the same post links research detailing reasoning and methodology for why log normal distributions generally fit latency measurements (Ciemiewicz, David M. "What Do You mean?-Revisiting Statistics for Web Response Time Measurements." In Int. CMG Conference, pp. 385-396. 2001) - where I can *pretend* to understand the research's and share it. 
+In this ["best practices" post](https://newrelic.com/blog/best-practices/expected-distributions-website-response-times) by NewRelic, a company that provides monitoring services and apis, the article states that one of their engineers knows that latency distributions more follow an erlang distribution rather than a log-normal distribution. Then there is absolutely no citation, evidence, or reasoning, so I'm left furiously researching (and trying to find results)[^6]. On the other hand, the same post links research detailing reasoning and methodology for why log normal distributions generally fit latency measurements (Ciemiewicz, David M. "What Do You mean?-Revisiting Statistics for Web Response Time Measurements." In Int. CMG Conference, pp. 385-396. 2001) - where I can *pretend* to understand the research's and share it. 
 
-[^5]: To be fair, the individual probably was pestered into contributing to this and had other priorities
+[^6]: To be fair, the individual probably was pestered into contributing to this and had other priorities
 
-The engineer in question could be right - but without a link it's incredibly difficult to verify these claims. As a result, the a skeptical audience is left confused and unconvinced. 
+The engineer in question could be right - but without a link or clue I found it incredibly difficult to verify these claims. As a result, I was just annoyed, confused, and unconvinced. 
 
 ## "Common Knowledge" is Rarely Common
 
@@ -97,16 +103,13 @@ These people (who I respect) might cite flawed statistics, faulty science, or li
 
 > I don't expect people to carry a bibliography for every bit of knowledge they have, but if one uses "science" to back a larger argument the least you can do is show *some* source.  
 
-> Some examples I've heard with some evidence demonstrating otherwise: ["undocumented immigrants take more from government resources than they contribute"](https://www.pbs.org/newshour/economy/making-sense/4-myths-about-how-immigrants-affect-the-u-s-economy), ["According to the Laffer Curve, lowering taxes will actually increase tax revenue"](https://www.washingtonpost.com/politics/2019/06/01/trump-is-giving-arthur-laffer-presidential-medal-freedom-economists-arent-laughing/)
+> Some examples I've heard with empirical evidence/expert testinomny demonstrating otherwise: ["undocumented immigrants take more resources from the government resources than they contribute"](https://www.pbs.org/newshour/economy/making-sense/4-myths-about-how-immigrants-affect-the-u-s-economy), ["the Laffer Curve says lowering taxes will actually increase tax revenue"](https://www.washingtonpost.com/politics/2019/06/01/trump-is-giving-arthur-laffer-presidential-medal-freedom-economists-arent-laughing/)
 
 My experiences and the attention on fake news and disinformation in the 21st century is just a reminder how bad this problem has become and demonstrates the need to verify "facts" we here. 
 
+Linking provides accountability to help combat this. That way when a tweet or blog links "scientific study: `some_antivax_blog.net`", people can judge the reliability of the info[^7]. 
 
-Linking provides accountability to help deal with this. That way when a tweet or blog links "scientific study: `some_antivax_blog.net` (or fox news)", my peers and I can judge the reliability of the info[^7]. 
-
-[^6]: But to be honest of my own biases, I'm a much more lax about verifying this information if I believe it
-
-[^7]: Of course, I've been guilty of being lazy about verifying information plenty of times
+[^7]: But to be honest of my own biases, I'm a a bit more lax about verifying this information if I already believed it
 
 # Weaknesses
 
@@ -114,7 +117,7 @@ I've spent most of this post arguing for more aggressive linking and citation pa
 
 Furthermore, you can't conflate the number of citations with the quality of the content. Plenty of peer-reviewed, published papers that end up being critiqued or rejected in the future, but that's the beauty of the scientific process!
 
-Another flaw is that links disappear - a well crafted, tested website you used might exist for the next 3-4 years, but might noe exist for the next 10 or 20. 
+Another flaw is that links disappear - a well crafted, tested website you used might exist for the next 3-4 years, but might not exist for the next 10 or 20. 
 
 # Ending Note
 
