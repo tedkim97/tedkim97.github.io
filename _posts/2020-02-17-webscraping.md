@@ -51,10 +51,10 @@ Situations that require scraping are niche; however, if you need data for:
 The data you want exists somewhere (how else would it exist?) - whether it's on a companies servers, massive tech aggregator, or data vendors. The problem is that the capital or security clearance needed isn't worth it for a hobby or small experiment.
 
 {% assign caption1 = "No access to official data or APIs (ex: scrape products and their information from various retailers)" %}
-{% include caption_image.html imgpath= "/figures/webscraping_fig1.png" alt="fig1" caption=caption1%}
+{% include caption_image.html imgpath= "/figures/webscraping/webscraping_fig1.png" alt="fig1" caption=caption1%}
 
 {% assign caption2 = "Need to find niche data that might not exist yet (ex: dataset on all the houses for sale in Hyde Park)" %}
-{% include caption_image.html imgpath= "/figures/webscraping_fig2.png" alt="fig2" caption=caption2%}
+{% include caption_image.html imgpath= "/figures/webscraping/webscraping_fig2.png" alt="fig2" caption=caption2%}
 
 
 ### Limitations of Web scraping
@@ -131,7 +131,7 @@ On a high level, HTML represents the content of the page while a URL indicates i
 HTML (Hypertext Markup Language) is the standard markup language for information on the web. HTML (along with CSS, JS, and more) is responsible for building all the pretty websites on the web. Websites have an underlying source that instructs your browser to display content properly. Building the contents of this site (like items on a store page) to be dynamic involves creating well-structured HTML (i.e don't randomly create elements and tags to store product information). Assuming the site maintains this structure, a crawler can exploit that to extract data on a larger scale. Not all websites are identical, and the more fluent we are with web dev the faster we can build the crawler. 
 
 {% assign caption3 = "A webpages content in browser (top) and its underlying source (bottom). Not pictured: CSS." %}
-{% include caption_image.html imgpath= "/figures/webscraping_fig3.jpg" alt="fig3" caption=caption3%}
+{% include caption_image.html imgpath= "/figures/webscraping/webscraping_fig3.jpg" alt="fig3" caption=caption3%}
 
 
 ##### HTML Tags & Elements

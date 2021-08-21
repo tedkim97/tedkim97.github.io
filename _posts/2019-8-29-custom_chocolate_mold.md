@@ -29,7 +29,7 @@ My experiences experimenting with chocolate was surprisingly complex (and expens
 My dad's birthday was coming in a month, and I was inspired by a [video about homemade custom chocolate bars](https://youtu.be/O5SwGr-84c4). 
 
 {% assign caption1 = "The final product in the video" %}
-{% include caption_image.html imgpath="/figures/chocolate_fig1.png" alt="fig1" caption=caption1 %}
+{% include caption_image.html imgpath="/figures/chocolate_bar/chocolate_fig1.png" alt="fig1" caption=caption1 %}
 
 My dad really likes sugar, so a custom chocolate bar seemed like a great birthday present! I assumed this would be really simple (melt, pour, and cool chocolate), but my experiences with chocolate have been incredibly complicated and painful.
 
@@ -106,7 +106,7 @@ This is a hacky solution, but I ended up using multiple passes on a laser cutter
 These two bars had the same text (16.7cm x 7.5cm), but etched in two different ways: 
 
 {% assign caption4 = "Identical wordings, but different etching technique: words engraved in (top) and words engraved out (bottom)" %}
-{% include caption_image.html imgpath= "/figures/chocolate_fig2.jpg" alt="chocolate mold" caption=caption4%}
+{% include caption_image.html imgpath= "/figures/chocolate_bar/chocolate_fig2.jpg" alt="chocolate mold" caption=caption4%}
 
 
 ### Creating a Mold
@@ -122,7 +122,7 @@ Oddly enough, I had a difficult time getting my hands on liquid rubber/putty mol
 Anyways, the idea behind thermoforming is to heat a piece of plastic where it's flexible, wrap it over the model, and use vacuums underneath to suck out air to form a tight fit. This has the added benefit of creating thin plastic molds that are easily storable, last a long time, and easy to work with (i.e get the chocolate out).
 
 {% assign caption5 = "A generalized visualization for thermoforming in our use case" %}
-{% include caption_image.html imgpath= "/figures/chocolate_fig3.jpg" alt="thermoforming" caption=caption5%}
+{% include caption_image.html imgpath= "/figures/chocolate_bar/chocolate_fig3.jpg" alt="thermoforming" caption=caption5%}
 
 The University's art center (with a thermoforming set-up) was closed for the summer so I had absolutely no access to a high quality machine. There are guides about making Vacuum Forming/Thermoforming machine at home, where the power and quality could be much higher for the same price. I did not have the time, space or desire to make this machine in the 2 weeks I had. If you're curious here are some resource excellent resources. [D.I.Y Thermoforming 1](https://youtu.be/DWWq2hH7imA), [D.I.Y Thermoforming 2](https://youtu.be/Tugr2juVWuk), [D.I.Y Thermoforming 3](https://youtu.be/Gx66mS7U2vY).
 
@@ -135,7 +135,7 @@ I validated whether polycarbonate is food safe, and easy to use for thermoformin
 **Note for people who want to do something similar:** If you look closely at my wooden chocolate bar models, you'll see **very small** drill holes in the engraved parts of both molds. This is to let the vacuum (under the thermoformer) suck out more air and more tightly wrap the mold. This did not have any noticeable effects on the plastic mold and produced better engravings - I would recommend doing this.
 
 {% assign caption6 = "One of the final molds! The text is a different and contains my dad's (censored) name " %}
-{% include caption_image.html imgpath= "/figures/chocolate_fig4.jpg" alt="chocolate template" caption=caption6%}
+{% include caption_image.html imgpath= "/figures/chocolate_bar/chocolate_fig4.jpg" alt="chocolate template" caption=caption6%}
 
 
 # Actually Tempering Chocolate
@@ -159,7 +159,7 @@ In Conclusion, Chocolate is stupid.
 Anyways, I'd like to think that the end result looked good and tasted good! I think I nailed the aesthetic look of the chocolate bar. I half succeeded with the flavor, although the taste was good (because I used good tasting chocolate), I completely failed with tempering the chocolate for a good texture/look. My goal to manage costs was an absolute failure. I told my dad I spent around $80 (mostly for the unused chocolate), but including transportation costs, acquisition of materials, hacker-space membership fees it came up to a $200.
 
 {% assign caption7 = "One of the final products! I wish I had taken more pictures... " %}
-{% include caption_image.html imgpath= "/figures/chocolate_fig5.jpg" alt="final chocolate" caption=caption7%}
+{% include caption_image.html imgpath= "/figures/chocolate_bar/chocolate_fig5.jpg" alt="final chocolate" caption=caption7%}
 
 
 In retrospect, I should have taken more steps to evaluate *how* I was spending money and readily give-up on certain ideas (like *needing* to thermoform a bar mold or not finding alternative ways to temper chocolate) after a few road blocks. My stubbornness and desire to make certain solutions work definitely hurt more than it helped this time. I'd advise anyone else to learn from my mistake and be willing to try alternative approaches.

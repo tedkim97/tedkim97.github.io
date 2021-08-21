@@ -29,7 +29,7 @@ concepts:
 # Introduction
 Over the weekend, I decided to construct diss tracks as [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) (or networks), analyze the results, and visualize them (not in that order). I was inspired by this [New York Times visualization on the Oscars](https://archive.nytimes.com/www.nytimes.com/interactive/2013/02/20/movies/among-the-oscar-contenders-a-host-of-connections.html), and I thought I would take a crack at doing something similar.
 
-{% include caption_image.html imgpath="/figures/diss_track_graph_main.jpg" alt="fig1" caption="a sample graph generate from a part of the dataset" %}
+{% include caption_image.html imgpath="/figures/hiphop_graphs/diss_track_graph_main.jpg" alt="fig1" caption="a sample graph generate from a part of the dataset" %}
 
 So everyone is on the same page, "diss tracks" are songs meant to verbally attack/disrespect another artist. The writer will usually reference their target's appearances, discography, controversies, or history to insult them. The diss tracks I remember are in hip-hop, but the archetype is not exclusive to hip hop. For example, ["The Story Of Adidon"](https://genius.com/Pusha-t-the-story-of-adidon-lyrics) is a diss track where Pusha T responds to [Drake's diss track Duppy Freestyle"](https://genius.com/Drake-duppy-freestyle-lyrics), exposing Drake's (at the time) hidden child. There's more to it, so I recommend looking through an explanation if you're curious.
 
@@ -56,7 +56,7 @@ The main problem I had with visualizing this graph is that it's too large to dis
 - The color combo used for highlighting nodes is not super aesthetic, but this color combo attempts to be more colorblind-friendly contrasts. 
 - Here's what the graph should **roughly** look like
 
-{% include caption_image.html imgpath="/figures/diss_track_graph_full.jpg" alt="full_graph" caption="(hopefully) what the graph looks like zoomed out on your machine" %}
+{% include caption_image.html imgpath="/figures/hiphop_graphs/diss_track_graph_full.jpg" alt="full_graph" caption="(hopefully) what the graph looks like zoomed out on your machine" %}
 
 # Data Schema
 When the data was collected, the data was organized in tables using "songs" (track name) as a unique identifier. Each diss track would have fields for "artist", "features", and "targets". In terms of constraints, each song has one artist\*, and can have multiple features and targets.
@@ -81,9 +81,9 @@ Translating these **records** (pun) to a graph works like this:
 - For each song, the "artist" is dissing each of the "targets". 
 - For each song, every person in the "features" is dissing each of the "targets". This assumes that a feature is dissing each one of the targets, which **isn't** a fair assumption, but it makes my life a lot easier.
 
-{% include caption_image.html imgpath="/figures/directed_fl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a force layout)" %}
+{% include caption_image.html imgpath="/figures/hiphop_graphs/directed_fl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a force layout)" %}
 
-{% include caption_image.html imgpath="/figures/directed_cl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a circular layout)" %}
+{% include caption_image.html imgpath="/figures/hiphop_graphs/directed_cl.jpg" alt="graph_demo" caption="a graph representation of the records above (with a circular layout)" %}
 
 ### Schema Notes
 #### **Music Producers** are excluded from this schema, but they are important.

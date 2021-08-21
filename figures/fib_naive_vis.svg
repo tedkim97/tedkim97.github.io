@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+  <g transform="translate(20,20)">
+    <g class="links">
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="0" x2="330" y2="94.28571428571429"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="94.28571428571429" x2="330" y2="188.57142857142858"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="188.57142857142858" x2="330" y2="282.8571428571429"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="282.8571428571429" x2="330" y2="377.14285714285717"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="377.14285714285717" x2="330" y2="471.42857142857144"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="471.42857142857144" x2="330" y2="565.7142857142858"/>
+      <line class="link" stroke="#ccc" stroke-width="4" x1="330" y1="565.7142857142858" x2="330" y2="660"/>
+    </g>
+    <g class="nodes">
+      <g>
+        <circle class="node" cx="330" cy="0" r="20"/>
+        <text x="350" y="0" dx="12" dy=".35em">fib(7)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="94.28571428571429" r="20"/>
+        <text x="350" y="94.28571428571429" dx="12" dy=".35em">fib(6)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="188.57142857142858" r="20"/>
+        <text x="350" y="188.57142857142858" dx="12" dy=".35em">fib(5)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="282.8571428571429" r="20"/>
+        <text x="350" y="282.8571428571429" dx="12" dy=".35em">fib(4)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="377.14285714285717" r="20"/>
+        <text x="350" y="377.14285714285717" dx="12" dy=".35em">fib(3)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="471.42857142857144" r="20"/>
+        <text x="350" y="471.42857142857144" dx="12" dy=".35em">fib(2)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="565.7142857142858" r="20"/>
+        <text x="350" y="565.7142857142858" dx="12" dy=".35em">fib(1)</text>
+      </g>
+      <g>
+        <circle class="node" cx="330" cy="660" r="20"/>
+        <text x="350" y="660" dx="12" dy=".35em">fib(0)</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -76,16 +76,16 @@ Adding `cuML` was easy and needed minimal rewrites because its mimics the `sciki
 [^2]: for some reason I had to convert an image from `np.uint8` to be `np.float32` to work with cuML
 
 {% assign caption1 = "KMeans movie barcode (processed with CUDA acceleration) on Coco" %}
-{% include caption_image.html imgpath="/figures/kmeans_vis_coco_cuda.png" alt="coco barcodes with cuda" caption=caption1 %}
+{% include caption_image.html imgpath="/figures/movie_barcodes/kmeans_vis_coco_cuda.png" alt="coco barcodes with cuda" caption=caption1 %}
 
 {% assign caption2 = "KMeans movie barcode (processed with just the CPU) on Coco" %}
-{% include caption_image.html imgpath="/figures/kmeans_vis_coco_regular.png" alt="coco barcode without cuda" caption=caption2 %}
+{% include caption_image.html imgpath="/figures/movie_barcodes/kmeans_vis_coco_regular.png" alt="coco barcode without cuda" caption=caption2 %}
 
 {% assign caption3 = "KMeans movie barcode (with CUDA) on Spider-Man: Into the Spider-Verse" %}
-{% include caption_image.html imgpath="/figures/kmeans_vis_spiderman_cuda.png" alt="spiderman: into the spider-verse with cuda" caption=caption3 %}
+{% include caption_image.html imgpath="/figures/movie_barcodes/kmeans_vis_spiderman_cuda.png" alt="spiderman: into the spider-verse with cuda" caption=caption3 %}
 
 {% assign caption4 = "KMeans movie barcode (without CUDA) on Spider-Man: Into the Spider-Verse" %}
-{% include caption_image.html imgpath="/figures/kmeans_vis_spiderman_regular.png" alt="spiderman: into the spider-verse without cuda" caption=caption4 %}
+{% include caption_image.html imgpath="/figures/movie_barcodes/kmeans_vis_spiderman_regular.png" alt="spiderman: into the spider-verse without cuda" caption=caption4 %}
 
 Furthermore, I timed how long each version of the process took to compute everything. Out of my two comparisons, there was a \~1.4x to \~1.7x speedup.
 

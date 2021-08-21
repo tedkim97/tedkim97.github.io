@@ -36,7 +36,7 @@ concepts:
 [Around a year ago I tried making a movie visualization that expressed color usage in movies with K-Means]({% link _posts/2020-06-12-movie_vis_presentable.md %}). While I'm proud of the product (or at least the process), a major flaw with the visualization is the amount of time spent creating the visualization. Holding the sampling rate fixed, the time to generate a "average color" or down-sampled frame" visualization took less than 5 minutes while the "KNN visualization" took around 10 **hours**. While I can live with that, I've been looking into ways to speed up the process.
 
 {% assign caption1 = "An example of a KMeans movie barcode with 8 cluster run on Coco" %}
-{% include caption_image.html imgpath="/figures/coco_movie_barcode_k8.png" alt="coco_barcode" caption=caption1 %}
+{% include caption_image.html imgpath="/figures/movie_barcodes/coco_movie_barcode_k8.png" alt="coco_barcode" caption=caption1 %}
 
 # Previous Attempts @ Acceleration: CuPy
 My goal was to speed up the visualization generation, but I also didn't want to spend a large amount of time developing a custom solution from scratch. I knew that neural network libraries received a lot of CUDA acceleration support, so I tried to accelerate processing using [`cupy`](https://cupy.dev/) - cuda-accelerated `numpy`. It was fairly easy to "rewrite" the code to use `cupy` instead of `numpy` because the library was designed for drop-in replacement in mind. Using `cupy` was a reminder why I should **profile the code** before trying to optimize anything - the new `cupy` functionality didn't decrease processing times because running K-means clustering on every `Nth` frame was the bottleneck (who would've guessed).
