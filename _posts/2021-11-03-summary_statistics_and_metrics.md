@@ -99,6 +99,10 @@ Ah here's the benchmark on the remote server, and here's my new feature promisin
 
 ## SonarQube Metrics
 
+## Averaging Color
+
+I made a whole blog post "critique" about someone using average colors and interpolated frames to represent color usage in movies, but that just isn't realistic
+
 # Tangent: Metrics
 
 Since this is a software context - something we need to mention are "metrics"
