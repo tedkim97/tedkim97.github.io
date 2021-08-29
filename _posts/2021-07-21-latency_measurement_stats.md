@@ -143,19 +143,19 @@ There's seems to be conversation on the best distribution to fit latency distrib
 
 # Conclusion
 
-This was a "starting off" discussion of distribution models to understand latency performance in software. As a reminder, these examples don't represent the intricacies and limitations when working with real data. I would recommend doing some more readings/research (that's not on the internet) or consulting with experts to learn more. 
+This was a "starting off" discussion of distribution models to understand latency performance in software. As a reminder, these examples don't represent the intricacies and limitations when working with real data - furthermore I jumped into using cumulative distribution functions without even talking about probability density functions (big theory gap here). I recommend doing some more readings/research (that's not on the internet) or consulting with experts to learn more. 
 
-As a controversial take, I'd note that that "rigorous statistics" should not always be the point of these exercises. Methodological correctness & rigor are ideal, but precision isn't always necessary. Estimating is fine, especially when it's a number managers don't prioritize[^4]! I would also note that there are nefarious reasons to lazy statistics, such as individuals *intentionally* misleading others about performance metrics. 
+As a controversial stance, I'd note that that "rigorous statistics" should not always be the point of these exercises. Methodological correctness & rigor are ideal, but precision isn't always necessary. Estimating is fine, especially when it's a number managers don't prioritize[^4]! I would also note that there are nefarious reasons to lazy statistics, such as individuals *intentionally* misleading others about performance metrics. 
 
 [^4]: Unless the metric is important, or the software has an important impact on people's lives
 
 ## Q & A
 
 ### How can you determine if data follows a certain theoretical distribution?
-There are several techniques, but a basic one I was taught is [Q-Q plots](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot).
+There are several techniques, and a basic one I was taught is [Q-Q plots](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot). I always encourage research into more techniques or consulting an expert. 
 
 ### Is there a difference between working with sample latencies and the whole population of latencies?
-Yes - to the point where I don't encourage applying techniques covered in this post in those situation.
+Yes - there is so much of a difference between a sample and a population that I discourage applying techniques covered without further research.
 
 ### How did you generate these histograms
 I used the provided functions within `np.random` to generate normal and lognormal distributions to generate data, and `matplotlib` to generate the figures. 
