@@ -27,53 +27,34 @@ curated:
   - better_barcode_vis
 ---
 
+
+: Descriptive statistics is often contrasted with "statistical inference" which focuses on valid generalizations from data - i.e taking a small portion (sample) of all possible data (population) and generating conclusions about the population. It's important to note that inference involves quantifying uncertainty when estimating the population, relying on probability and models to come to the conclusion. 
+
+https://brooker.co.za/blog/2021/08/05/utilization.html
+
 # Introduction 
 
-Continuing with statistics for software engineering - I thought I would continue with a summary of descriptive statistics and some tangents like "metrics and (TODO) measurability.
+I thought I would continue with a summary of descriptive statistics, and some random tangents like "metrics and (TODO) measurability.
 
-My goals isn't to list various summary statistics and their formulas. My goal is to demonstrate the nuance or details necessary for understanding the decision making of picking the correct summary statistics, and the broader practice of describing data. 
+My goals isn't to list summary statistics and their formulas, but to demonstrate the nuance and decision making necessary for creating descriptive statistics, and the broader practice of describing data. 
 
-# STATISTIC (NOT TO BE CONFUSED WITH STATISTICS)
+# What are Descriptive Statistics?
+The textbook "Statistics" defines "descriptive statistics" as the "art of summarizing data"[^1][^2]. Descriptive statistics should communicate as much information about data as simply as possible - i.e reducing the cognitive load of thinking. [The wikipedia definition is pretty much the same](https://en.wikipedia.org/wiki/Descriptive_statistics).
 
-A statistic (singular) or sample statistic is any quantity computed from values in a sample which is considered for a statistical purpose. Statistical purposes include estimating a population parameter, describing a sample, or evaluating a hypothesis. The average (aka mean) of sample values is a statistic. The term statistic is used both for the function and for the value of the function on a given sample. When a statistic is being used for a specific purpose, it may be referred to by a name indicating its purpose.
+[^1]: D.A. Freedman, R. Pisani, and R.A. Purves. Statistics (4th edition). (W.W. Norton, Inc. New York, 2005), xiv
+[^2]: Now that I have grabbed definitions from respectable resources - I'm just going to rely on wikipedia.
 
-When a statistic is used for estimating a population parameter, the statistic is called an estimator. A population parameter is any characteristic of a population under study, but when it is not feasible to directly measure the value of a population parameter, statistical methods are used to infer the likely value of the parameter on the basis of a statistic computed from a sample taken from the population. For example, the mean of a sample is an unbiased estimator of the population mean. This means that the expected value of the sample mean equals the true mean of the population.[1]
+A table of Descriptive statistics often comes with several [summary statistics](https://en.wikipedia.org/wiki/Summary_statistics) (a single number summarizing a large amount of data[^2]) or [visualizations](https://en.wikipedia.org/wiki/Data_visualization). 
 
-In descriptive statistics, a descriptive statistic is used to describe the sample data in some useful way. In statistical hypothesis testing, a test statistic is used to test a hypothesis. Note that a single statistic can be used for multiple purposes – for example the sample mean can be used to estimate the population mean, to describe a sample data set, or to test a hypothesis.
+[^2]: Diez, David M., Christopher D. Barr, and Mine Çetinkaya-Rundel. 2019. OpenIntro statistics. 10
 
-# Descriptive Statistics 
-Descriptive statistics is the "art of summarizing data" - meaning that the point of descriptive statistics is to communicate information about your data as simply as possible. 
-
-Descriptive statistics is often contrasted with "Statistical inference" which focuses on valid generalizations from the data collected - essentially taking a small portion of possible data (population) and generating conclusions about the population.
-
-This contrast is important because inference involves quantifying uncertainity when estimating the population, relying on probability and models to come to the conclusion. 
-
-On the otherhand, descriptive statistics focuses on accurately summarizing the data.
-
-
-
-A table of Descriptive statistics often comes with several summary statistics 
-
-The OpenIntro Statistics book describes a **summary statistic** as "**a single number summarizing a large amount of data**" 
-
-"Open Intro": A summary statistic is a single number summarizing a large amount of data. (pg 10, 4th edition) 
-
-"Statistics": Descriptive statistics — the art of summarizing data — is (Preface xiv, 4th edition)
-
-Let's be real though - we're probably going to rely on the wikpedia definition anyways
-
-According to wikipedia -
-
-"Descriptive statistics "
-and "Summary Statistics"
-
-https://en.wikipedia.org/wiki/Descriptive_statistics
-https://en.wikipedia.org/wiki/Summary_statistics
+TODO: include some random charts and tables (one of mine)
+TODO: include some data visualizations 
 
 ## Why do we need descriptive statistics?
 Inference is the main part of statistics people "care" about - often times people don't care about  
 
-While there are overlaps between summary statistics in both descriptive and inference statistics (variance/std, mean, median, etc), descriptive statistics arne't used for inference.  
+While there are overlapping formulas/calculations between summary statistics in both descriptive and inference statistics (variance/std, mean, median, etc), descriptive statistics aren't used for inference.  
 
 
 So why should we care about descriptive statistics?
@@ -95,14 +76,16 @@ One or two descriptive statistic will rarely communicate a complete picture abou
 
 3. They guide and inform decisions about what kind of tests we should use and run 
 - The standard deviation of our data is so large, any kind of inference we draw from it would be useless 
-- In the previous blog post (TODO: LINK) descriptive statisitcs along with our data visualization of our latency distributions informed us of the types of distributions we should use to model our inference. 
 
+- In [my previous blog post]({% link 2021-07-21-latency_measurement_stats.md %}), summary statistics and visualizations of our latency distributions guide us into the types of distributions we should use to model our inference (predicting the probability of certain slow cases). 
 
-## What are some examples of Summary Statistics?
+## What are the components of Descriptive Statistics?
 
-Fall into categories 
+Fall my understanding the components of descriptive statistics fit under two categories: summary statistics and visualizations. 
 
-### Numbers
+### Summary Statistics
+
+Some examples of summary statistics are averages, correlation, IQR ranges, measurement, error, median, etc
 
 average(s); correlation; interquartile range; measurement
 error; median; percentiles;
@@ -111,7 +94,35 @@ SD; slope"
 
 ### Visualizations
 
-Visualizations are also descriptive statistics as well - they are meant to summarize the data you are measuring - all of the distributions in the previous examples were summary statistics, with more summary statistics imposed on them!
+Visualizations are another important component of descriptive statistics as well.
+
+The reason visualizations are so important is because 
+
+Summary Statistics isn't (always) enough - we need Visualizations.
+
+
+#### Why do we need visualizations?
+In my undergrad I naively thought, "what is the point of data visualizations" - can't we just use summary statistics to understand.
+
+I was very wrong.
+
+
+A famous example of proving this point wrong is anscobme's quartet. https://en.wikipedia.org/wiki/Anscombe%27s_quartet
+
+
+The Autodesk team have demonstrated a pretty awesome of anscombe quartet version of this with data as well
+
+called the Datasaurus Dozen
+
+https://www.autodesk.com/research/publications/same-stats-different-graphs
+
+Research paper on how they did it
+https://damassets.autodesk.net/content/dam/autodesk/www/autodesk-reasearch/Publications/pdf/same-stats-different-graphs.pdf
+
+Here's a youtube summary of it
+https://youtu.be/DbJyPELmhJc
+
+#### Back to types of visualizations
 
 scatter plots, histograms for data;  normal curve;
 
@@ -124,7 +135,7 @@ Using our newfound knowledge of descriprive staitstics, which numbers should we 
 ## Let's say you need some dashboard in Datadog, New Relic, Splunk, etc
 
 ## Measuring how well the data fits does this the statistic fit  Is this an accurate number? (It Depends)
-Depenidng on what our data looks like the "correct" summary statistic you use could differ. 
+Depending on what our data looks like the "correct" summary statistic you use could differ. 
 
 If our data looks something like this:
 
@@ -133,7 +144,7 @@ If our data looks something like this:
 
 or this
 
-Completely flat distribbutions (although there is probably something seriously wrong if your data)
+Completely flat distributions (although there is probably something seriously wrong if your data)
 
 then using mean and standard deviation are perfectly fine.
 
