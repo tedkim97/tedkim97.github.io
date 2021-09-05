@@ -88,6 +88,22 @@ html {
     display: block;
 }
 
+.profile-image
+{
+    display: none;
+}
+
+@media (min-width: 48em) {
+  .profile-image {
+      width: auto;
+      height:300px; 
+      float: right;
+      margin-left:40px;
+      margin-top:25px;
+      display: block;
+  }
+}
+
 /*
  * Sidebar
  *
