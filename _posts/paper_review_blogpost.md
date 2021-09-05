@@ -23,9 +23,13 @@ concepts:
 
 # DATE (June, Maybe July?)
 
+https://dl.acm.org/doi/10.1145/3079856.3080246
+
+
+
 # Introduction 
 
-Things have been a bit slow because of the coronavirus pandemic (first refernece to the pandemic on my blog!).
+Things have been a bit slow because of the coronavirus pandemic (first reference to the pandemic on my blog!).
 
 One of the things I've resolved is so try to read more academic papers tangential to my primary interests (outside of being forced to for academic or work reasons).   
 
@@ -34,3 +38,4 @@ Here's a list of paper's I've read in the past year (more like 2.0 years) that I
 
 # AlphaGO
 I was in Korea at the time 
+
