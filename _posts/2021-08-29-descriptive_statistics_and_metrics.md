@@ -42,7 +42,7 @@ The textbook [Statistics](https://www.amazon.com/Statistics-4th-David-Freedman/d
 [^1]: D.A. Freedman, R. Pisani, and R.A. Purves. Statistics (4th edition). (W.W. Norton, Inc. New York, 2005), xiv
 [^2]: Now that I have grabbed definitions from academic resources - I'm just going to rely on wikipedia.
 
-A table of descriptive statistics often comes with several [summary statistics](https://en.wikipedia.org/wiki/Summary_statistics) (a single number summarizing a large amount of data[^3]) or [visualizations](https://en.wikipedia.org/wiki/Data_visualization). For example, here are some possible descriptive statistics (table of summary statistics and histogram) on an fictional dataset.
+A table of descriptive statistics often comes with several [summary statistics](https://en.wikipedia.org/wiki/Summary_statistics) (a single number summarizing a large amount of data[^3]) or [visualizations](https://en.wikipedia.org/wiki/Data_visualization). For example, here are some possible descriptive statistics for benchmarking two versions of a imaginary program.
 
 [^3]: Diez, David M., Christopher D. Barr, and Mine Çetinkaya-Rundel. 2019. OpenIntro statistics. 10
 
@@ -60,8 +60,11 @@ The components of descriptive statistics generally fall under two categories: **
 - Some examples of summary statistics are average/mean, median, mode, percentiles, correlation, regression slopes, standard deviation, IQR ranges, kurtosis, etc
 - Some examples of visualizations are histograms, frequency tables, scatter plots, line charts, cross tabulation, pie charts (but a lot of data visualization enthusiasts disapprove), etc
 
+## The Importance of Formulas
+Even though you'll be using programming/query languages that have these formulas baked in, it's still important to know the formula for each statistic. Comprehension of the underlying math gives you insight into when a formula is or isn't appropriate. 
+
 ## The Importance of Visualizations
-I lean towards using tables over charts, but visualizations are a critical component of any analysis. We need visualizations because summary statistics can be lacking. Visualizations can point out obvious details that summary statistics can't (sparing you a bunch of time). The classic example is ["Anscombe's Quartet"](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) - four datasets with (almost) identical summary statistics. In the quartet we have four different examples of linear regressions where: 
+Even though I lean towards using tables over charts, visualizations are a critical component of any analysis. We need visualizations because summary statistics can be lacking. Visualizations can point out obvious details that summary statistics can't (sparing you a bunch of time). The classic example is ["Anscombe's Quartet"](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) - four datasets with (almost) identical summary statistics. In the quartet we have four different examples of linear regressions where: 
 
 {% assign caption_quartet = "Anscombe Quartet" %}
 {% include caption_image.html imgpath="/figures/quartet.png" alt="small example of histogram of latencies" caption=caption_quartet %}
@@ -102,7 +105,7 @@ Summarizing data is important for brevity - most people won't have the time to c
 |   std                      | 5.1       | 
 
 ### Made-up Situation
-If someone asks how long it takes for a new program or process some input, you could provide them all the logs like this. 
+If someone asks how long it takes for a new program or process some input, you could provide them all the logs like this:
 
 |  Trial # | Time (ms) | 
 |:--------:|:---------:|
@@ -220,7 +223,7 @@ The point being that - when you're collecting data, are you measuring difference
 ## Meaningless Summary Statistics
 Sometimes people will calculate summary statistics in a context that makes no sense. These situations happen in the wild, but I've never bothered to record most of them. 
 
-A common example is taking the average of star ratings. Even though star ratings have numbers, they're imagined more on the [ordinal scale](https://en.wikipedia.org/wiki/Ordinal_data) rather than [interval/ratio scale](https://en.wikipedia.org/wiki/Level_of_measurement#Interval_scale). The ranking of the stars matter (5 stars is better than 1), but the difference between star values is not consistent (the difference between 3 to 5 stars is much larger than 1 to 3). As a result, taking the "average" is a meaningless operation that doesn't *really* provide any information. This idea falls under "permissible statistics".
+A common example is taking the average of star ratings. Star ratings have numbers, but they belong on an [ordinal scale](https://en.wikipedia.org/wiki/Ordinal_data) rather than [interval/ratio scale](https://en.wikipedia.org/wiki/Level_of_measurement#Interval_scale). The ranking of the stars matter (5 stars is better than 1), but the difference between star values is not consistent (the difference between 3 to 5 stars is much larger than 1 to 3). As a result, taking the "average" is a meaningless operation that doesn't *really* provide any information. This idea falls under "permissible statistics".
 
 [Another example I've critiqued is "averaging colors"]({% link _posts/2020-06-12-movie_vis_presentable.md %}) - there  visualizations using "average colors" as a representation of color usage in movies. The executive summary is that performing arithmetic operations on color is not a meaningful operations, especially the more colorful an image becomes. For example, averaging the (R, G, B) colors on a rainbow just results in the color brown.
 
