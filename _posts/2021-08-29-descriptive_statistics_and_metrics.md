@@ -35,7 +35,7 @@ I thought I would continue the series with a discussion of descriptive statistic
 - <a href="#imaginary-example">Imaginary Situation</a>
 - <a href="#case-study">Tangents</a>
 
-As an important reminder, a lot of the figures were drawn from fictional datasets I generated to make a point, and therefore very much have the possibility of not being realistic distributions.
+A lot of the figures/tables were made from fictional datasets and for demonstrative purposes only. They have the possibility of not being realistic distributions, so watch out for that.
 
 # What are Descriptive Statistics?
 
