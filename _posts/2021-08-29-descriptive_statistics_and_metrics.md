@@ -216,7 +216,7 @@ In the [previous case study]({% link _posts/2021-07-21-latency_measurement_stats
 
 This isn't a problem specific to rust or .NET as well. I saw a conference talk (I cannot find the link/paper) on a tool for randomizing path lengths for testing environments to better measure execution times of programs. The presenter gave a background how they discovered path lengths could lead to different execution times depending on the machine it was run on.
 
-[Here I made a mistake]({% link _posts/2021-07-21-latency_measurement_stats.md %}#erratum) thinking my recursive algorithm was incredibly fast because of the use of the `lru_cache` decorator, but in reality the cache was saved in the repeat trials of the benchmark.   
+[Here I made a mistake]({% link _posts/2020-12-13-fib_critique.md %}#erratum) thinking my recursive algorithm was incredibly fast because of the use of the `lru_cache` decorator, but in reality the cache was saved in the repeat trials of the benchmark.   
 
 The point being that - when you're collecting data, are you measuring differences in performance from code/algorithm/architecture changes or are you really measuring compiler optimizations, hardware acceleration, more provisioning? 
 
