@@ -5,11 +5,7 @@ title: Home
 order: 1
 ---
 
-Welcome to my blog - here are some of my write-ups that I'm proud of! 
-
-## My advice when reading:
-
-Feel free to skip/skim parts that aren't interesting. I write these blog posts for completeness and detail to let people reproduce results. As a result, posts tend to contain a lot more detail (and are a lot longer) than necessary.
+Welcome to my blog - here are some of my write-ups that I'm proud of! Feel free to skip/skim parts that aren't interesting to you. I try to write these blog posts for reproducibility (i.e a lot of detail and code snippets), so posts contain more detail than necessary.
 
 <ul class="list-of-posts">
 {% for node in site.posts %}

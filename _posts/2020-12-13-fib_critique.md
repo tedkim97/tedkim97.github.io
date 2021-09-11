@@ -189,7 +189,7 @@ print(f'performance fibonacci_fde(): {t_fib_fd.timeit(10)}')
 >> performance fibonacci_fde(): 0.4611188000000084
 ```
 
-## Erratum:
+## Erratum
 After posting this, I've realized that `lru_cache` was caching results from `_fib` between different runs - making the algorithm seem much faster than it is during timing. To make testing fair, I've added the function decorator to both functions, and the Binomial Exponent-Reduced Approximation approach is still faster. It is worth noting that converting this exponent-reduced returns an overflow error for $ N > 1500 $.
 
 # Third Critique: Code Results in Errors for moderate sized N
