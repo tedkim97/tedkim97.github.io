@@ -23,6 +23,7 @@ concepts:
   - distributions
   - software engineering
 curated:
+  - pract_stat_2
   - gaitkeep
   - better_barcode_vis
 ---
