@@ -35,6 +35,8 @@ I thought I would continue the series with a discussion of descriptive statistic
 - <a href="#imaginary-example">Imaginary Situation</a>
 - <a href="#case-study">Tangents</a>
 
+As an important reminder, a lot of the figures were drawn from fictional datasets I generated to make a point, and therefore very much have the possibility of not being realistic distributions.
+
 # What are Descriptive Statistics?
 
 The textbook [Statistics](https://www.amazon.com/Statistics-4th-David-Freedman/dp/8130915871/ref=sr_1_1?dchild=1&keywords=Statistics%2C+4th+Edition&qid=1631074097&s=books&sr=1-1) defines "descriptive statistics" as the "art of summarizing data"[^1][^2] [(and the Wikipedia definition is pretty much the same)](https://en.wikipedia.org/wiki/Descriptive_statistics). The goal of descriptive statistics is to communicate a lot information as simply as possible, reducing the cognitive load for the audience (and you). 
@@ -42,7 +44,7 @@ The textbook [Statistics](https://www.amazon.com/Statistics-4th-David-Freedman/d
 [^1]: D.A. Freedman, R. Pisani, and R.A. Purves. Statistics (4th edition). (W.W. Norton, Inc. New York, 2005), xiv
 [^2]: Now that I have grabbed definitions from academic resources - I'm just going to rely on wikipedia.
 
-A table of descriptive statistics often comes with several [summary statistics](https://en.wikipedia.org/wiki/Summary_statistics) (a single number summarizing a large amount of data[^3]) or [visualizations](https://en.wikipedia.org/wiki/Data_visualization). For example, here are some possible descriptive statistics for benchmarking two versions of a imaginary program.
+A table of descriptive statistics often comes with several [summary statistics](https://en.wikipedia.org/wiki/Summary_statistics) (a single number summarizing a large amount of data[^3]) or [visualizations](https://en.wikipedia.org/wiki/Data_visualization). For example, here are some possible descriptive statistics for benchmarking two versions of an imaginary program.
 
 [^3]: Diez, David M., Christopher D. Barr, and Mine Çetinkaya-Rundel. 2019. OpenIntro statistics. 10
 
