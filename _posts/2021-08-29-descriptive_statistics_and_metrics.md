@@ -95,7 +95,7 @@ For instance, we can use frequency tables to guide the next steps of your debugg
 |   `BusinessLogicException3("Toggle disabled")` | 47     | 
 
 ## Reason 1: Brevity 
-Summarizing data is important for brevity - most people won't have the time to comb through the data as you did. Instead of looking at all your logs, you can just have a 1-2 numbers to get an idea about the shape of your service. 
+Summarizing data is important for brevity - most people won't have the time or energy to comb through the logs as you did. Instead of looking at every individual record, you can just have a 2-4 numbers to get an idea about the status of your service/cron job/etc. 
 
 {% include image.html imgpath="/figures/distribution_figs/measuring_latency_simple_histogram.png" alt="small example of histogram of latencies" %}
 
@@ -177,14 +177,14 @@ The next step is to visualize your data *ahead* of time - this might save you a 
 Depending on the data, the "correct" summary statistic can differ - here's what I mean. 
 
 ### Ideal Scenarios
-If our data looks something like this:
+If our distribution looks something like this:
 
 {% include caption_image.html imgpath="/figures/distribution_figs/measuring_latency_simple_histogram.png" alt="small example of histogram of latencies" caption=caption1 %}
 
 then using mean and standard deviation are perfectly fine. However, data tends to be uglier and more chaotic than contrived example like this. 
 
 ### Skew + Outliers
-If the data has noticeable skews or outliers like these: 
+If the distribution has noticeable skews or outliers like these: 
 
 {% assign caption_skew = "Made up distribution with '[left skew](https://en.wikipedia.org/wiki/Skewness)'" %}
 {% include caption_image.html imgpath="/figures/distribution_figs/skew.png" alt="Contrived example with skew" caption=caption_skew %}
@@ -192,7 +192,7 @@ If the data has noticeable skews or outliers like these:
 {% assign caption_outlier = "Made up distribution with outliers" %}
 {% include caption_image.html imgpath="/figures/distribution_figs/normal_distribution_with_more_impactful_outliers.png" alt="Contrived example" caption=caption_outlier %}
 
-then we need more **robust statistics**. Very clearly most of your data occurs between 30 and 70 ms, but the abnormalities cause our mean (and standard deviation) to deviate from our understanding of the "center". From the histograms above, the median tends to be closer to the high frequency "center", at least more than the mean.  
+then we need more **robust statistics**. Very clearly most of your data occurs between 30 and 70 ms, but the abnormalities cause our mean to deviate from our understanding of the "center". From the histograms above, the median tends to be closer to the high frequency "center", at least more than the mean.  
 
 ### Different Distributions
 Finally - are you really dealing with skew, or is it just a different distribution? Not everything is a normal distribution, so don't fall into that trap.  
@@ -204,13 +204,13 @@ Finally - are you really dealing with skew, or is it just a different distributi
 # Tangents
 ## Caution w/ Measurements (Be careful about what you're **really** measuring)
 
-It's easy to *think* that a measurement/calculation is representing some idea, but it's very easy to get wrong - especially in a comparative context. A hypothetical might be average compilation time between Linux & Mac machines. When you average compilation time, you might think you're comparing the difference between operating systems, but in reality you could be measuring the difference between a bazillion confounding factors just with the hardware.
+It's easy to *think* that a measurement/calculation is accurate, but it's very easy to get wrong - especially in a comparative context. A hypothetical might be average compilation time between Linux & Mac machines. When you average compilation times, you might think you're comparing the difference between operating systems, but in reality you could be measuring the difference between a bazillion confounding factors just within the hardware (Processing speed, Storage, ISA, etc).
 
-In the [previous case study]({% link _posts/2021-07-21-latency_measurement_stats.md %}#multimodal-distributions), I mention multi-modal distributions because two different processes occurred depending on the parameters of a request. While being intentionally vague, the dashboard mean **seemed** like it was measuring the average time to complete a request to a new endpoint with a new feature pushed to develop, but the flow was disabled (as a toggle) in most production environments (i.e completion time = 5ms instead of 50). As a result, when you took the average the "completion time" was subtly low and showed a much more faster feature than reality.
+In the [previous case study]({% link _posts/2021-07-21-latency_measurement_stats.md %}#multimodal-distributions), I mention multi-modal distributions because two different processes occurred depending on the parameters of a request. While being intentionally vague, the dashboard mean **seemed** like it was measuring the average time to complete a request to a new endpoint with a new feature pushed to develop, but the flow was disabled (as a toggle) in most production environments (i.e completion time = 5ms instead of 60ms). As a result, when you took the average "completion time", the result was subtly low. Fast for what it was, but not suspicious to someone inexperienced.
 
-[This tweet shows that arbitrarily renaming a method from "A" to "B" improved runtime performance](https://twitter.com/badamczewski01/status/1423683244264988672?s=12). [The reason has to do with .NET's compilation order - complete twitter explanation is linked here](https://twitter.com/badamczewski01/status/1423687082581581824).
+[This tweet shows that arbitrarily renaming a method from "A" to "B" improved runtime performance](https://twitter.com/badamczewski01/status/1423683244264988672?s=12). [The reason has to do with .NET's compilation order - complete twitter explanation is linked here](https://twitter.com/badamczewski01/status/1423687082581581824). With such a ridiculous optimization from something as innocuous as naming, it's incredibly easy to attribute performance improvements to something like seemingly better logic or architecture. 
 
-[In a surrounding reddit thread, a commenter explained how they benchmarked rust code vs their feature branch in different directories would result in 10% faster code - independent of any changes the commenter made. The author learned to "Ever since then I've made sure to make directory names the same length when benchmarking"](https://www.reddit.com/r/programming/comments/ozytw8/why_two_identical_methods_run_at_different_times/h86klch/) 
+[In the reddit thread about this tweet, a commenter explained how they benchmarked rust code vs their feature branch in different directories would result in 10% faster code - independent of any changes the commenter made. The author learned to "Ever since then I've made sure to make directory names the same length when benchmarking"](https://www.reddit.com/r/programming/comments/ozytw8/why_two_identical_methods_run_at_different_times/h86klch/) 
 
 This isn't a problem specific to rust or .NET as well. I saw a conference talk (I cannot find the link/paper) on a tool for randomizing path lengths for testing environments to better measure execution times of programs. The presenter gave a background how they discovered path lengths could lead to different execution times depending on the machine it was run on.
 
@@ -254,11 +254,11 @@ Sometimes I appreciate the obsession over quantifying every aspect of the softwa
 
 This was a brief discussion of summarizing data with descriptive statistics, and a collection of tangents that give us insights into the process of making "accurate" descriptive statistics. 
 
-Unlike my previous post (where I note that "rigorous statistics" isn't always the main priority in software), I will argue that accuracy is critical with descriptive statistics. Never pick blatantly bad measures/metrics (for performance) because it will just cause pain for everyone down the road. The only trade-off I encourage is precision against effort/energy necessary.
+Unlike my previous post (where I note that "rigorous statistics" isn't always the main priority in software), I will argue that accuracy is critical with descriptive statistics. Never be lazy, nor pick blatantly bad measures/metrics because it will just cause pain for everyone down the road. The only trade-off I encourage is precision against expended collection effort/energy.
 
 More reading and research is always recommended. If you have any problems or notice any mistakes free to reach out to me at nablags97 [at] gmail.com.
 
-The next topic will be about inferential statistics (A/B Tests, Basic Hypothesis testing, Sampling)!   
+The next couple of topic will be about inferential statistics (A/B Tests, Basic Hypothesis testing, Sampling)!   
 
 # Citations
 Diez, David M., Christopher D. Barr, and Çetinkaya-Rundel Mine. “Introduction To Data”. In OpenIntro Statistics. OpenIntro, Inc., 2019.
