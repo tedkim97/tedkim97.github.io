@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Practical Statistics for Software Engineering - Descriptive Statistics
-subtitle: with tangents
+subtitle: With Tangents
 published: true
 enable_latex: false
 enable_d3: false
