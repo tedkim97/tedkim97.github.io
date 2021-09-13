@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Practical Statistics for Software Engineering - Descriptive Statistics
-subtitle: Latency Study with Tangents
+subtitle: with tangents
 published: true
 enable_latex: false
 enable_d3: false
