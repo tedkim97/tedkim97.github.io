@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Price Discrimination in (and with) the Tech Industry
-subtitle: A clever trick applied to the tech sector (with examples), and an exploration of how technology makes it "better"
+subtitle: clever trick in tech (with examples)
 published: true
 enable_latex: true
 permalink: price_differential

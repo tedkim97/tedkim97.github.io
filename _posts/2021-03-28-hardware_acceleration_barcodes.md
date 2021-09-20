@@ -1,7 +1,6 @@
 ---
 layout: post
 title: CUDA Acceleration of Movie Barcodes
-subtitle: Leveraging the RAPIDS api
 published: true
 enable_latex: false
 permalink: cuda_barcodes_implementation

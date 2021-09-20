@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Almost everything on this blog is TOO long
-subtitle: (see title)
 published: true
 enable_latex: false
 enable_d3: false

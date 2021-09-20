@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Future plans for CUDA-accelerated KNN Movie Barcodes
-subtitle: (I am not advertising for Nvidia)
 published: true
 enable_latex: false
 permalink: cuda_barcodes

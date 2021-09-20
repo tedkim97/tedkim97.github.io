@@ -13,10 +13,10 @@ Here are my more technical past-projects or guides. If you find anything that's 
   {% if node.layout == "post" %}
   <li class="sans-marker">
     <a href="{{ node.url }}"> <b> {{ node.title }} </b> </a> <br>
+    {% if node.subtitle != nil %}
     <span> <i> {{ node.subtitle }} </i> </span> <br>
-    {% comment %}
+    {% endif %}
     <span> {{ node.date | date: '%B %d, %Y'}} </span> <br>
-    {% endcomment %}
     {% if node.concepts %}
       {% for concept in node.concepts %}
         <span class="post-concept">{{ concept }}</span>

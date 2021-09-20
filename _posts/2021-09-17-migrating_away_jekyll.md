@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Personal Dread&#58; Migrating Away From Jekyll 
-subtitle: ugh
 published: true 
 enable_latex: false
 enable_d3: false

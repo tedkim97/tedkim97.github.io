@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dealing with Interactivity for Scraping
-subtitle: Using Selenium to deal with a common issue when web scraping
+subtitle: Using Selenium
 published: true
 enable_latex: false
 permalink: webscraping_tips

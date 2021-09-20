@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Solving A Small Numpy Bug
-subtitle: Quirky edge case that emphasizes the importance of data types
+subtitle: Quirky edge with numpy data types
 published: true
 enable_latex: true
 permalink: numpy_dt_quirks

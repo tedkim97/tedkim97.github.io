@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Iterative & Tail Recursive Fast Fibonacci Sequence
-subtitle: Say that twice as fast
 published: true 
 enable_latex: true
 enable_d3: false
