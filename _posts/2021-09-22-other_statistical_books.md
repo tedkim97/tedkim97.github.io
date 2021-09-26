@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Other "Practical" Statistics Books
+title: Other Practical Statistics Books
 published: true
 enable_latex: false
 enable_d3: false
