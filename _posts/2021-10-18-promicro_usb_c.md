@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Purchasing USB-C Pro Micro(s)
+title: Purchasing USB-C Pro Micros
 subtitle: (and other life updates)
 published: true
 enable_latex: false
@@ -42,5 +42,6 @@ I was unhappy with how the Pro Micro (a popular DIY part of custom boards) had a
 
 Here are some pictures for reference:
 
-{% include image.html imgpath="promicro_c_side_by_side.jpg" alt="top-down view"%}
-{% include image.html imgpath="promicro_c_side_by_side_2.jpg" alt="horizontal view"%}
+{% include image.html imgpath="figures/promicro_c_side_by_side.jpg" alt="top-down view"%}
+
+{% include image.html imgpath="figures/promicro_c_side_by_side_2.jpg" alt="horizontal view"%}
