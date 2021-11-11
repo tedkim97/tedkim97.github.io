@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Movie Visualization Critique & Engineering&#58; Movie Barcodes 
+title: Movie Visualization Critique & Engineering&#58; K-Means Based Visualization 
 subtitle: Critique of a popular visualization subgenre and a demonstration of my improved version
 published: true
 enable_latex: false
