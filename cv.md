@@ -41,7 +41,7 @@ This project was a final project for CS229 at Stanford University. The motivatio
 
 "Semantic Code Search Through Codebases" intends to use the semantic meaning of code through naming and function abstractions (functions named "abs", "average", "log", "PostPurchase", "UpdateClientInfo", etc) to search code through its semantic meaning. This technique processed code bases by using lexers & parsers to parse code, convert files into vectors using TF-IDF, and classifying using K-Means & KNN. 
 
-### GaitKeep 
+### GaitKeep: Gait Authentication w/ Sensor Fusion
 Gaitkeep was a final project for "CMSC23400: Mobile Computing" at UChicago. Gait-Keep was a machine-learning system for developing more robust biometric authentication methods. Previous methods to gait authentication suffered from a trade-off accessibility and security. Our method builds off academia’s research in sensing by using multiple sensors (accelerometers and gyroscopes in a smartphone) along with a video camera to reduce the mentioned trade-off. These methods use ConvNets to both classify accelerometer and gyroscope data along with video feed.
 - Methodology & Retrospective: https://nablag.com/gaitkeep
 - Repository: https://github.com/tedkim97/immobile-computing-project
