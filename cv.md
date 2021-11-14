@@ -5,6 +5,10 @@ hide_link: true
 permalink: cv
 ---
 
+**- <a href="#projects">Projects</a>**  
+**- <a href="#education--professional-experience">Education & Professional Experience</a>**   
+**- <a href="#courses--skills">Courses & Skills</a>**  
+
 # Ted Kim
 
 I am a software engineer specializing in back-end systems with experience ranging from programming to deployments and monitoring, but at night I'm also interested in working with high performance computing environments and machine learning applications.  
@@ -52,7 +56,7 @@ KMeans Based Movie Visualizations is a critique of popular subgenre of movie vis
 - Critique & Retrospective: https://nablag.com/better_barcode_vis
 - Repository: https://github.com/tedkim97/movie_visualizations
 
-# Education & Employment
+# Education & Professional Experience
 ### **University of Chicago**: B.A. Computer Science and Economics
 - Specialization in Machine Learning
 - *magna cum laude* (GPA 3.7/4.0)
@@ -93,7 +97,7 @@ I edited presentations, filled in spreadsheets,and sat in meetings. I appreciate
 - Collaborated with other interns to create company reports with an analyst’s recommendation
 - Research and engineered an experimental sentiment-based trading program for company testing
 
-# Skills & Courses
+# Courses & Skills
 
 ##### Computer Science
 - CMSC 25025: Machine Learning and Large-Scale Data Analysis
