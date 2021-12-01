@@ -11,7 +11,7 @@ permalink: cv
 
 # Ted Kim
 
-I am a software engineer specializing in back-end systems with experience ranging from programming to deployments and monitoring, but at night I'm also interested in working with high performance computing environments and machine learning applications.  
+I am a software engineer specializing in back-end systems with experience ranging from programming to deployments and monitoring, but at night I'm also interested in working with machine learning applied to HCI and high performance computing.  
 
 I currently work as a SDE II on McDonald's "order-core" services that handle **70 millions digital orders annually** (approximately 200,000 digital orders per day), resulting in **\~$250 million in yearly revenue**. I also work on a global deployment strategy for replacing the legacy core order infrastructure (orders 1.0) with new microservices for better scalability, market specific compatibility, maintainability, and reliability. In my previous roles I worked as a systems engineer at "McMaster-Carr Supply Company" where my major contribution was engineering a new search suggestion engine for the product catalog. The new engine used customer searches to serve "better" suggestions (opposed to the traditional method of using two SQL tables), and **Version 1 increased search success rate by 10%** (a "successful search" being defined as a search that directly results in "adding product to cart", "downloading product CAD", or "purchasing product"). 
 
