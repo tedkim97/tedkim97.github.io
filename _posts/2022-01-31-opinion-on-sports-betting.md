@@ -1,16 +1,34 @@
-# Disclaimer - I'm not an expert and this blog post is going to be more about opinios, I strongly recommend you to do more research on this topic before coming to conclusions
+---
+layout: post
+title: Opinions On Sports Betting
+published: false
+enable_latex: false
+permalink: sports_betting_sucks
+frontpage: false
+technical: true
+funstuff: true
+tags:
+  - opinion
+  - econ
+  - pricing
+concepts:
+  - opinion
+  - gambling
+  - market making
+---
 
-The weirdly large 
+# Disclaimer - this is strongly out of my fields of expertise and this blog post is going to be more about opinions, I strongly recommend you to do more research on this topic before coming to conclusions
 
 
-As an individual, I'm fairly removed from Sports and Trading.
+
+As an individual (that is fairly removed from Sports and Trading), I find the rising popularity of sport betting platforms a bit odd. 
 
 However, after reading this [NYTimes Article on Sports Betting](https://www.nytimes.com/2022/01/31/sports/football/super-bowl-sports-betting.html), I've realized we're witnessing a large rise in sports betting. 
 
 
 I don't really follow sports and I have almost no exposure to market making/prop trading. However, it is increasingly difficult to ignore sports gambling advertisements (DraftKings, Caesars Spotsbook, https://www.gamingtoday.com/sports-betting/) and increasing popularity of sports analytics positions[^1].
 
-[1]: Here is [SIG](https://www.sig.com/sports-analytics/?utm_source=linkedin&utm_medium=social&utm_campaign=01192022-sigcom-sports-analytics-et&fbclid=IwAR212ep7-d6HyMVis-tZCQ8H9GxXMA4bUmDWksQAg4lmgW5b1iqUvN2XAHg) 
+[^1]: Here is [SIG](https://www.sig.com/sports-analytics/?utm_source=linkedin&utm_medium=social&utm_campaign=01192022-sigcom-sports-analytics-et&fbclid=IwAR212ep7-d6HyMVis-tZCQ8H9GxXMA4bUmDWksQAg4lmgW5b1iqUvN2XAHg) 
 
 
 
@@ -68,3 +86,5 @@ To me its a bit predatory.
 
 I understand that trading firms in this situation are providing "liquitity" to people who want to gamble
 - But this situation gives a weird emphasis 
+
+You could argue this weird tongue in cheek "this is capitalism" and that they're providing value to people that demand this good, but I'm still going to think you're a massive prick when you're selling tap water for $5 an ounce.   
