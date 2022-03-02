@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Temporary Microservices
-subtitle: Description and Reflections
+title: Temporary Microservice Pattern
+subtitle: Description and Reflections on Service Patterns
 published: true
 enable_latex: false
 permalink: temporary_microservices
