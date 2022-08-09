@@ -43,7 +43,7 @@ Despite the increased number of headaches, there are ways that we can leverage s
 
 Originally this section was dedicated to a story. The gist of the story is that testing comes with a lot of little & large frustrations that are too difficult and erratic to describe, you just need to “feel” them.
 
-I wrote it to illustrate the testing experience within large service architecture to try to provide context for this post. I also wrote it because it was difficult to communicate the little & large developer frustrations - unless you've already run into these frustrations professionally. I cut out it because the story's length and tone was distracting from the actual purpose of this post The story is too long, too boring, and too difficult to make good, so I decided to [cut it out of this post and quarantine it to a different post. Feel free to read it, but it's incredibly boring and disorganized.]({% link _posts/2022-06-02-testing_a_tragic_short_story.md %})
+I wrote it to illustrate the testing experience within large service architecture to try to provide context for this post. I also wrote it because it was difficult to communicate the little & large developer frustrations - unless you've already run into these frustrations professionally. I cut out it because the story's length and tone was distracting from the actual purpose of this post The story is too long, too boring, and too difficult to make good, so I decided to [cut it out of this post and quarantine it to a different post. Feel free to read it, but it's incredibly boring and disorganized.]({% link _posts/2022-07-02-testing_a_tragic_short_story.md %})
 
 # Reviewing "Testing: A Tragedy"
 
