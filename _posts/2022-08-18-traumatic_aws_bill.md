@@ -1,7 +1,6 @@
 ---
 layout: post
-title: My Accidental AWS Bill
-subtitle: And Other Warnings
+title: My Traumatic AWS Bill
 published: true
 enable_latex: false
 permalink: big_fat_aws_billing
