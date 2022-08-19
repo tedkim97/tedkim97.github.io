@@ -9,11 +9,9 @@ frontpage: false
 technical: false
 funstuff: true
 tags:
-  - programming
+  - humor
   - opinion
   - microservices
-  - software
-  - architecture
   - testing
   - deployments
   - environments
