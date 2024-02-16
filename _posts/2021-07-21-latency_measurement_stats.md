@@ -28,6 +28,10 @@ curated:
   - better_barcode_vis
 ---
 
+# Editor's Note (Circa April 2023)
+
+At the time of writing this I was pretty lax with terminology of "latency" vs "processing time". There is a semantic difference between these words, but for the sake of this blog treat all usage of these words as "some measurement for time". 
+
 # Introduction
 
 In the infinite list of topics that programmers are expected to know[^1], I'm surprised statistics isn't on this list. 
