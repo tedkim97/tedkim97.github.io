@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Failed Branchless Optimization - are we actually optimizing anything?
+title: Failed Branchless Optimization - are we actually optimizing what we think we are?
 subtitle: Profiling a toy study with DNS headers
 published: true
 enable_latex: false
@@ -23,7 +23,7 @@ concepts:
 
 # TLDR
 
-This code change makes your code faster - but the reason is really simple/dumb. 
+This code change makes your code (slightly) faster - but the reason is really simple/dumb. 
 
 ```rust
 let mut flags: u16 = 0;
@@ -36,9 +36,7 @@ flags |= dns_header_masks::QR * (value.field1 as u16);
 ```
 
 
-# Context
-
-If you're not interested in the context and just want to get to the programming part, you can skip this section.
+# Context (you can skip this section)
 
 In DNS land, all communication is done as "messages" in a specific wire format originally defined in [RFC1035#4.1](https://datatracker.ietf.org/doc/html/rfc1035.html#section-4.1). I'm not going to dive into the RFC, but the relevant part is the "header" section. Every DNS Message includes a "header" that specify the remaining sections of the message for parsing, in addition to including query information like response codes, query parameters, etc.
 
@@ -141,10 +139,14 @@ The reason why I emphasize branches is because branches can be *potentially slow
 > Modern CPUs are complicated, and there are a lot of optimizations that make your code go fast. One of those optimizations is **[branch predictions](https://en.wikipedia.org/wiki/Branch_predictor)**[^1].
 > Essentially the processor will try to guess the outcome of a branch, and perform the subsequent computation. Predicting the outcome of a branch is a way of improving throughput on modern CPUs. If the branch is guessed correctly, great! If it was a wrong guess, your CPU will need to do backtrack throw away the results, backtrack and compute the correct branch. This is expensive, and the more frequently your CPU guesses wrong, the bigger a penalty your code pays (In practice CPUs are quite good at this). 
 > I wouldn't consider myself an expert on branch-predictions, so I recommend these resources: 
-> https://danluu.com/branch-prediction/ 
-> https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array
-> https://en.algorithmica.org/hpc/pipelining/ (this chapter in general)
-> https://blog.cloudflare.com/branch-predictor
+> 
+> - https://danluu.com/branch-prediction/ 
+> 
+> - https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array
+> 
+> - https://en.algorithmica.org/hpc/pipelining/ (this chapter in general)
+> 
+> - https://blog.cloudflare.com/branch-predictor
 
 
 [^1]: Branch predictions are also related to a set of [CPU vulnerabilities](https://en.wikipedia.org/wiki/Spectre_(security_vulnerability))
@@ -160,7 +162,7 @@ return (a > b) * a + (a <= b) * b;
 
 The tradeoff with the branchless version of code is that you're computing more (in this case we're performing additional arithmetic operations), while the branched version isn't registering the additional compute. Moreover, if the CPU correctly guesses the branch 100% of the time, the function will "free" compared to branchless code. However, depending on the language, compiler, CPU architecture, the branchless optimized assembly may have more or less instructions the non-optimized version. 
 
-Another tradeoff you'll get is that employing branchless logic really runs against "semantic" coding principles. If I saw a random optimzied branchless function, I wouldn't be able to tell if an idiot or a genius wrote it. That's a non-trivial argument that the branchless version hurts readability, thereby hurting maintainability. 
+Another tradeoff you'll get is that employing branchless logic really runs against "semantic" coding principles. If I saw a random branchless algo, I wouldn't be able to tell if an idiot or a genius wrote it. That's a non-trivial argument that the branchless version hurts readability, thereby hurting maintainability. 
 
 Finally, you should never assume your "branchless optimization" actually reduces branches. Smart compilers will be able to utilize the [`cmov` instruction and reduce their vulnerability to branch prediction failures](https://stackoverflow.com/questions/14131096/why-is-a-conditional-move-not-vulnerable-to-branch-prediction-failure) and compile `if/else` statements to use conditional moves to avoid branches. IN FACT, I expected this to be the case for rust. The rust compiler (and/or LLVM) should knows that we should just use a conditional move (`cmov`). Spoiler alert, the rust compiler is pretty good about that here, but I think you should still read on. 
 
@@ -224,7 +226,7 @@ pub fn branched_2(header: &DnsHeader, bytes: &mut [u8]) {
 
 I modeled `branched_1` to be like tailhook/dns-parser snippets, and `branched_2` to be like the hickory-dns lib. I did the basics of avoiding the compiler optimizing away the important bits here. [Repo is here for reproduction](https://github.com/tedkim97/dnsheader-conversion-microbenchmark).
 
-When I actually ran the benchmarks, I was genuinely surprised (and annoyed) that the branchless version was slightly faster. Out of 10K calls, we saved a whole 18 microseconds/iteration compared to the slowest implementation...! Increasing the number of trials maintained this speed difference - I'm going to skip the stat test for my sanity. 
+When I actually ran the benchmarks, I was genuinely surprised (and annoyed) that the branchless version was slightly faster. Out of 10K calls, we saved a whole 18 microseconds (18,000 NS) per iteration compared to the slowest implementation...! Increasing the number of trials maintained this speed difference - I'm going to skip the stat test for my sanity. 
 
 ```bash
 cargo bench
@@ -329,7 +331,7 @@ cargo asm header_util::header_conversion::convert_to_wire_format_branched_2
 cargo asm header_util::header_conversion::convert_to_wire_format_branchless
 ```
 
-I'll just save the assembly here because it takes too much space: https://github.com/tedkim97/dnsheader-conversion-microbenchmark/tree/139548ccc1ca3fa81ff2c4bfb6e66753ff2732a3/generated_assembly. If we count the number of instructions, each version of the function has:
+I'll just save the assembly in the [repo because it takes too much page space here](https://github.com/tedkim97/dnsheader-conversion-microbenchmark/tree/139548ccc1ca3fa81ff2c4bfb6e66753ff2732a3/generated_assembly). If we count the number of instructions, each version of the function has:
 - Branched1 has 134 instructions
 - Branched2 has 143 instructions
 - Branchless has 126 instructions 
@@ -348,19 +350,18 @@ Three thoughts:
 3. I do think language matters here. There are certain optimizations that C++ compiler can make that a Rust compiler wouldn't (I heard this is due to rust's aggressive safety checks). I'm curious how the C++ version with clang would behave, but that's only if I can finally decide on a build system...
 
 ## Appendix
-What OS/kernal
-- `uname -r` (`5.4.0-150-generic`) && `lsb_release -a` (`UBUNTU 18.04.05 LTS`)
+What OS/kernal?
+- `uname -r` (`5.4.0-150-generic`) && `lsb_release -a` (`UBUNTU 18.04.5 LTS`)
 
 
 Rust Version
-- 
+- `cargo 1.78.0-nightly` & `rustc 1.78.0-nightly`
 
 What about the debug versions (unoptimized) of the code?
 - The debug version of the code DOES have branches, and running `perf` on them did show the branched versions having ~0.15-0.20% more branch misses than the branchless version. However, I didn't think it was worth doing an analysis here because people are going to complain that I analyzed a debug build.
 
 Does the result change if use a struct method (`fn convert_to_wire_format_method_branchless(&self, bytes: &mut [u8])`)rather than a function like `convert_to_wire_format_branchless(header: &DnsHeader, bytes: &mut [u8])`
-- I tested this and No
-
+- No significant difference in runtime
 
 Does the assembly change with unsafe rust?
 - I wrapped the inside body of each function with a giant `unsafe {}` (and changed the function signature to `unsafe`) and the assembly didn't change. That result makes sense given what they say about the unsafe in the rust book: https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html
