@@ -11,6 +11,7 @@ technical: false
 funstuff: true
 tags:
   - probability
+  - lootboxes
   - video games
   - economics
 concepts:
