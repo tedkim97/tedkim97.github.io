@@ -23,7 +23,7 @@ concepts:
 
 # My April Fool's Joke: Ad Supported, Subscription DNS
 
-My april fools joke (briefly) made it to the front page of hackernews {% link _posts/2024-04-03-dns_with_ads_aprilfools_joke.md %}. 
+[My april fools joke (briefly) made it to the front page of hackernews]({% link _posts/2024-04-03-dns_with_ads_aprilfools_joke.md %}). 
 
 {% include image.html imgpath="figures/adcache/after_1_hour.png" alt="on the front page after one hour"%}
 
@@ -116,12 +116,14 @@ For roughly 24 hours of operation, the total bill ended up being $8.67 which inc
 
 I did get a decent amount of traffic - I even took screenshots and did some back of the napkin math. Also note that not all of the traffic I was receiving was from people resolving DNS traffic. Some of that traffic is just random crawlers/bots on the internet. 
 
-As I mentioned earlier, the amount of compute I provisioned for this service was compltely overkill.
+As I mentioned earlier, the amount of compute I provisioned for this service was completely overkill.
 
 # MISC Notes
 
-## Multicasting
-It would've been cute if I were able to have multicast support - and helped meet the performance goals for international audiences. However, I wasn't able to find a way to support multicasting with 1 IP address and multiple machines with GCP. Moreover, I wasn't going to fork over the cash to support such a niche functionality. [There was a comment saying that reddit.com took 11.4 seconds to resolve](https://news.ycombinator.com/item?id=39895453). I guess that this person was from a far away location from the server.
+## Anycast-ing
+It would've been cute if I were able to have anycast support. Anycast would help meet the performance goals for international audiences. However, I wasn't able to find a way to support anycast with 1 IP address and multiple machines with GCP (without using an additional loadbalancer product)[^1]. Moreover, I wasn't going to fork over the cash to support such a niche functionality. [There was a comment saying that reddit.com took 11.4 seconds to resolve](https://news.ycombinator.com/item?id=39895453). I guess that this person was from a far away location from the server.
+
+[^1]: Granted I put it only 30 minutes of research
 
 ## Monitoring
 I had this idea of tracking all the unique IP addresses that used my DNS resolver; however as the deadline got closer, I decided to cut that part out because I didn't have enough time.
