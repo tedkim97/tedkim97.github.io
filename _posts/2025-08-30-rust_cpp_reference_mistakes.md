@@ -43,7 +43,7 @@ void BusinessLogicThatCopies(const Data d) {
 }
 ```
 
-This simple typo is easy to miss and the performance penalty won't matter for people who aren't performance sensitive (although if you aren't strongly affected by stuff like this you probably don't need to be using C++). One could argue that this example is a one-off and no competent C++ developer would make this mistake, but I've even seen it in Google codebases (interpret that as you well). There are plenty of linters and tools to detect issues like this ([ex: clang-tidy can scan for unnecessary value params](https://clang.llvm.org/extra/clang-tidy/checks/performance/unnecessary-value-param.html)), but evidently these issues go unnoticed until a customer complains about it or someone actually bothers to profile the code. The fact that we have to be vigilant about such a minor behavior is exhausting, and that maybe we should design our language to guide us to sensible defaults.
+This simple typo is easy to miss and the penalty won't matter for people who aren't performance sensitive (although if you aren't strongly affected by stuff like this you probably don't need to be using C++). One could argue that this example is a one-off and no competent C++ developer would make this mistake, but I've even seen it in Google codebases (interpret that as you well). There are plenty of linters and tools to detect issues like this ([ex: clang-tidy can scan for unnecessary value params](https://clang.llvm.org/extra/clang-tidy/checks/performance/unnecessary-value-param.html)), but evidently these issues go unnoticed until a customer complains about it or someone actually bothers to profile the code. The fact that we have to be vigilant about such a minor behavior is exhausting, and that maybe we should design our language to guide us to sensible defaults.
 
 # Rust Defaults 
 
@@ -64,7 +64,7 @@ Data expensive_to_copy = Data{...};
 BusinessLogic(expensive_to_copy);
 ```
 
-Copying is desirable for types that are more performant to copy (like int, bool, floats, etc), but for larger objects/heap allocated objects, it will slow down our code. If you're trying to execute based on the contents of the string, an improvement might "pass by reference" like so:
+Copying is desirable for types that are more performant to copy (like int, bool, floats, etc), but for larger objects/heap allocated objects, it will slow down our code. If you're trying to execute based on the contents of the object, an improvement might "pass by reference" like so:
 
 ```cpp
 // note the `const` + `&`
@@ -90,7 +90,7 @@ Data expensive_to_copy = Data{...};
 auto data_owner = FactoryFunction(std::move(expensive_to_copy));
 ```
 
-However, moving in this context adds extra restrictions to the original type. After an object that have been "moved", that you're not supposed to use the original object after it's been moved or else you've introducing potential bugs. For example, even though the below compiles, the snippet is bad and linters will complain about it.
+However, moving in this context adds extra restrictions to the original object. After an object that have been "moved from", that you're not supposed to use the original object after it's been moved or else you've introducing potential bugs. For example, even though the below compiles, the snippet is bad and linters will complain about it.
 
 ```cpp
 Data expensive_to_copy = Data{...};
