@@ -24,9 +24,6 @@ concepts:
 
 [^1]: Although these defaults can feel frustrating and cause other parts of the language to feel clunky to me
 
-## Disclaimer
-I have written some truly garbage code, so take my opinion with a grain of salt.
-
 # Motivation
 
 I originally hesitated to write this because I thought the topic was too "obvious", but I did it anyways after watching this [presentation discussing migrating from C++14 to C++20](https://youtu.be/Nm9-xKsZoNI). I was specifically [inspired by a performance bug due to a typo](https://youtu.be/Nm9-xKsZoNI?t=1367). This mistake is the "value param" vs "reference param" where your function **copies** a value instead of passing it by reference because an ampersand (`&`) was missing... Here's a minimum version of the difference below: 
@@ -186,7 +183,7 @@ In fact, a rust struct that doesn't derive/implement the `Copy` trait is similar
 
 # Conclusion
 
-As a disclaimer, I'm not a fan of several aspects of Rust, but I do think some of its language defaults that are nice for performant programs. Moreover, these defaults let me reduce the mental burden of thinking about/double checking minor C++ traps, and lets me trust the compiler to do this for me.
+As a disclaimer, I'm not a fan of several aspects of Rust, but I do think some of its language defaults that are good for performant programs. More importantly, these defaults reduce the mental burden of double checking minor C++ traps, and lets me trust the compiler to do this for me.
 
 # Appendix
 
