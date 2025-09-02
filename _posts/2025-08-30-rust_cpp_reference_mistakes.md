@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Missing an Ampersand in C++ & Rust
+title: The repercussions of missing an Ampersand in C++ & Rust
 subtitle: Copying vs Passing by reference
 published: true
 enable_latex: false
